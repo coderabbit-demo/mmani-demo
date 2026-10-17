@@ -1,0 +1,65 @@
+{
+  "captured_at": "2026-10-17T05:03:03.664325+00:00",
+  "prs": [
+    {
+      "number": 11,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/11",
+      "state": "open",
+      "draft": false,
+      "head_sha": "742c06cb1baae25731b8ed2abc97024158d17a12",
+      "base_branch": "demo/guide-01-outbound-timeout",
+      "author": "coderabbitai[bot]",
+      "labels": [
+        "Demo - Do not merge"
+      ]
+    },
+    {
+      "number": 12,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/12",
+      "state": "open",
+      "draft": false,
+      "head_sha": "742c06cb1baae25731b8ed2abc97024158d17a12",
+      "base_branch": "main",
+      "author": "manimahesh",
+      "labels": [
+        "Demo - Do not merge"
+      ]
+    },
+    {
+      "number": 13,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/13",
+      "state": "open",
+      "draft": false,
+      "head_sha": "51053d1eead9af9d21d313a3dbf4d3bcc9d38c59",
+      "base_branch": "main",
+      "author": "manimahesh",
+      "labels": [
+        "Demo - Do not merge"
+      ]
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/14",
+      "state": "open",
+      "draft": false,
+      "head_sha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "base_branch": "demo/qa-01-weak-assertions",
+      "author": "coderabbitai[bot]",
+      "labels": [
+        "Demo - Do not merge"
+      ]
+    },
+    {
+      "number": 15,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/15",
+      "state": "open",
+      "draft": false,
+      "head_sha": "f95264bf7f801834d7e26a9ae90554b0f93a510f",
+      "base_branch": "demo/guide-01-handler",
+      "author": "coderabbitai[bot]",
+      "labels": [
+        "Demo - Do not merge"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+
+> mmani-demo@0.1.0 smoke
+> node scripts/smoke.mjs
+
+HTTP smoke passed: health, local service-status handler, four literal pricing cases, catalog search, and injection input.

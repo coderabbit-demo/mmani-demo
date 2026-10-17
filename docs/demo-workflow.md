@@ -55,7 +55,7 @@ can reference these PRs without combining their defects. All video targets are
 | SEC-01 | SQL injection | CodeRabbit fix #9 locally verified: 61 tests pass; bot re-review skipped | [PR #1](https://github.com/coderabbit-demo/mmani-demo/pull/1), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/1#issuecomment-6229490251) | Storyboarded; footage pending |
 | BUG-01 | Inclusive discount boundary | CodeRabbit fix #6 locally verified: 53 tests pass; bot re-review skipped | [PR #2](https://github.com/coderabbit-demo/mmani-demo/pull/2), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/2#discussion_r4301285165), [CodeRabbit fix PR #6](https://github.com/coderabbit-demo/mmani-demo/pull/6) | Storyboarded; footage pending |
 | MULTI-01 | Downstream response contract | CodeRabbit fix #7 and actual consumer pass; direct consumer-source retrieval and impact confirmed | [PR #3](https://github.com/coderabbit-demo/mmani-demo/pull/3), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/3#discussion_r4301284933), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229464959) | Storyboarded; footage pending |
-| GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit fix generating | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
+| GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit code fix #15 passes 58 tests; generated branch documentation cleanup pending | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
 | PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | Storyboarded; footage pending |
 | QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | Storyboarded; footage pending |
 | QA-02 | QA Agent behavioral evidence | Weak run failed (1 failed/4 unresolved exit criteria); corrected run passed one scenario, with scope limits | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | Storyboarded; detailed artifacts/footage pending |
@@ -152,6 +152,20 @@ that the original review retrieved that file. Demonstrate the verified follow-up
 source inspection; do not present it as a confirmed original-review Sources badge.
 The rule requires a bounded timeout; 1,000 ms comes from the prior implementation,
 not the external rule. [Captured provenance](../assets/demo-evidence/GUIDE-01-source-provenance.md).
+
+[CodeRabbit remediation PR #15](https://github.com/coderabbit-demo/mmani-demo/pull/15),
+SHA `f95264bf7f801834d7e26a9ae90554b0f93a510f`, restores the bounded fetch and adds
+a real HTTP stalled-service regression requiring a 502 within two seconds.
+All **58 tests pass**, line coverage is **98.36%**, branch coverage **94.02%**,
+and source/compiled HTTP smoke checks pass.
+[Validation log](../assets/demo-evidence/GUIDE-01-fixed-check.txt).
+A separate documentation check found that its copied workflow links to evidence
+files absent from the older branch. That issue was sent back to CodeRabbit on
+PR #15 for a focused documentation correction; no manual fix was applied.
+The timeout remediation is locally verified; the generated PR is not fully ready
+until its documentation is reconciled. The authoritative workflow remains this
+file on main.
+
 
 The consumer repository is now public, verified through GitHub's API.
 [CodeRabbit successfully retrieved its source](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229583446)
