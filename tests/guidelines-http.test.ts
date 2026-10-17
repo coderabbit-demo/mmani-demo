@@ -100,3 +100,26 @@ it("returns 502 when the configured local service drops the connection", async (
   expect(await response.text()).toBe('{"error":"Service unavailable"}');
   expect(fixtureRequests).toBeGreaterThan(0);
 });
+
+it("returns 502 within the outbound deadline when the configured service stalls", async () => {
+  const fixtureRequests: { method: string | undefined; path: string | undefined }[] = [];
+  const fixture = await listen(createServer(request => {
+    fixtureRequests.push({ method: request.method, path: request.url });
+    // Accept the request but deliberately never send headers or a body.
+  }));
+  const base = await listen(createApp({ serviceStatusUrl: `${fixture}/stalled` }));
+  // Allow 1,000 ms of scheduling overhead beyond the 1,000 ms outbound deadline.
+  // The client watchdog is strictly longer; its rejection must fail this test.
+  const upperBoundMs = 2_000;
+  const started = performance.now();
+  const response = await fetch(`${base}/api/guidelines/service-status`, {
+    signal: AbortSignal.timeout(3_000),
+  });
+  const body = await response.text();
+  const elapsedMs = performance.now() - started;
+  expect(fixtureRequests).toEqual([{ method: "GET", path: "/stalled" }]);
+  expect(response.status).toBe(502);
+  expect(body).toBe('{"error":"Service unavailable"}');
+  expect(elapsedMs).toBeLessThan(upperBoundMs);
+  console.info(`Stalled handler: ${response.status} ${body}; ${elapsedMs.toFixed(1)} ms`);
+});
