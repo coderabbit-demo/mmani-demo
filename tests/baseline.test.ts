@@ -5,6 +5,7 @@ import { createApp } from "../src/app.ts";
 import { quote } from "../src/pricing/quote.ts";
 import { pageOffset } from "../src/path-instructions/pagination.ts";
 import { serviceIsHealthy } from "../src/guidelines/service-status.ts";
+import { createCatalog, searchProducts } from "../src/security/products.ts";
 
 const app = createApp();
 let base: string;
@@ -96,10 +97,41 @@ describe("real HTTP requests", () => {
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ products: [] });
   });
+  it.each(["%", "_"])("treats %s as literal HTTP search data", async (query) => {
+    const response = await fetch(`${base}/api/products/search?q=${encodeURIComponent(query)}`);
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual({ products: [] });
+  });
   it("rejects excessive search text", async () => {
     const response = await fetch(`${base}/api/products/search?q=${"a".repeat(101)}`);
     expect(response.status).toBe(400);
     await response.body?.cancel();
+  });
+});
+
+describe("literal catalog substring search", () => {
+  it.each([
+    ["%", [{ id: 5, name: "100% Cotton" }]],
+    ["_", [{ id: 4, name: "part_number" }]],
+    ["'", [{ id: 6, name: "Artist's Pad" }]],
+    ["' OR 1=1 --", []],
+    ["cOtToN", [{ id: 5, name: "100% Cotton" }]],
+    ["", [
+      { id: 1, name: "Notebook" }, { id: 2, name: "Pencil" }, { id: 3, name: "Folder" },
+      { id: 4, name: "part_number" }, { id: 5, name: "100% Cotton" },
+      { id: 6, name: "Artist's Pad" },
+    ]],
+  ])("searches for literal %j with ordered results", (query, expected) => {
+    const db = createCatalog();
+    try {
+      const insert = db.prepare("INSERT INTO products (id, name) VALUES (?, ?)");
+      insert.run(6, "Artist's Pad");
+      insert.run(5, "100% Cotton");
+      insert.run(4, "part_number");
+      expect(searchProducts(db, query)).toEqual(expected);
+    } finally {
+      db.close();
+    }
   });
 });
 
