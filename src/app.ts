@@ -1,6 +1,7 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { quote } from "./pricing/quote.ts";
 import { createCatalog, searchProducts } from "./security/products.ts";
+import { serviceIsHealthy } from "./guidelines/service-status.ts";
 
 function json(response: ServerResponse, status: number, value: unknown) {
   response.writeHead(status, { "content-type": "application/json" });
@@ -19,13 +20,25 @@ async function readJson(request: IncomingMessage): Promise<unknown> {
 }
 
 /** Create an isolated HTTP app; closing the server also closes its database. */
-export function createApp() {
+export function createApp(options: { serviceStatusUrl?: string } = {}) {
   const db = createCatalog();
   const server = createServer(async (request, response) => {
     try {
       const url = new URL(request.url ?? "/", "http://localhost");
       if (request.method === "GET" && url.pathname === "/health") {
         json(response, 200, { status: "ok" });
+      } else if (request.method === "GET" && url.pathname === "/api/guidelines/service-status") {
+        // The default fixture is this listener's synthetic /health response.
+        // Only server-owned configuration can override the outbound destination.
+        const address = server.address();
+        if (!address || typeof address === "string") throw new Error("No TCP listener");
+        const destination = options.serviceStatusUrl ?? `http://127.0.0.1:${address.port}/health`;
+        try {
+          const healthy = await serviceIsHealthy(destination);
+          json(response, healthy ? 200 : 503, { healthy });
+        } catch {
+          json(response, 502, { error: "Service unavailable" });
+        }
       } else if (request.method === "GET" && url.pathname === "/api/products/search") {
         const query = url.searchParams.get("q") ?? "";
         if (query.length > 100) throw new TypeError("Search is limited to 100 characters");
