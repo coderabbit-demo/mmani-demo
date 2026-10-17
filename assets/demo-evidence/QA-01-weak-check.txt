@@ -1,0 +1,62 @@
+
+> mmani-demo@0.1.0 check
+> npm run typecheck && npm run build && npm run test:coverage && npm run coverage:changed -- --all
+
+
+> mmani-demo@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mmani-demo@0.1.0 build
+> tsc -p tsconfig.build.json
+
+
+> mmani-demo@0.1.0 test:coverage
+> vitest run --coverage
+
+
+ RUN  v5.0.5 /workspace/mmani-demo
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  53 passed (53)
+   Start at  04:19:07
+   Duration  1.33s (tests 89%, transform 4%, import 4%, worker 3%)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |    94.44 |     100 |     100 |                   
+ src               |     100 |       90 |     100 |     100 |                   
+  app.ts           |     100 |       90 |     100 |     100 | 26,44-45          
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 52/52 )
+Branches     : 94.44% ( 51/54 )
+Functions    : 100% ( 11/11 )
+Lines        : 100% ( 49/49 )
+================================================================================
+
+> mmani-demo@0.1.0 coverage:changed
+> node scripts/changed-coverage.mjs --all
+
+{
+  "mode": "all-source-baseline",
+  "base": null,
+  "threshold": 90,
+  "overall": {
+    "status": "passed",
+    "covered": 49,
+    "total": 49,
+    "percent": 100
+  },
+  "selected": {
+    "status": "passed",
+    "covered": 49,
+    "total": 49,
+    "percent": 100
+  }
+}

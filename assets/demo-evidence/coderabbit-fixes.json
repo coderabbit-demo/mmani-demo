@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-17T04:22:54.897840+00:00",
+  "results": [
+    {
+      "use_case": "BUG-01",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/6",
+      "head_sha": "60ec6c940d70238f2a60004858ac7cce19ee0bc3",
+      "base_branch": "demo/bug-01-discount-boundary",
+      "author": "coderabbitai[bot]",
+      "local_validation": "npm run check passed; see adjacent log",
+      "rereview": "skipped: bot cannot review its own PR",
+      "rereview_evidence": "https://github.com/coderabbit-demo/mmani-demo/pull/6#issuecomment-6229531923"
+    },
+    {
+      "use_case": "MULTI-01",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/7",
+      "head_sha": "c571c3afdec166e825d5a6889e0b98a45eb3b4d3",
+      "base_branch": "demo/multi-01-response-contract",
+      "author": "coderabbitai[bot]",
+      "local_validation": "npm run check passed; see adjacent log",
+      "rereview": "skipped: bot cannot review its own PR",
+      "rereview_evidence": "https://github.com/coderabbit-demo/mmani-demo/pull/7#issuecomment-6229532142"
+    },
+    {
+      "use_case": "PATH-01",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/8",
+      "head_sha": "134ae8b9b9d30a2b5e0890c0f84ddb26b05f37a5",
+      "base_branch": "demo/path-01-pagination",
+      "author": "coderabbitai[bot]",
+      "local_validation": "npm run check passed; see adjacent log",
+      "rereview": "skipped: bot cannot review its own PR",
+      "rereview_evidence": "https://github.com/coderabbit-demo/mmani-demo/pull/8#issuecomment-6229547266"
+    },
+    {
+      "use_case": "SEC-01",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/9",
+      "head_sha": "153527f5e19b6bae8701b681f05c9416a9c7f88e",
+      "base_branch": "demo/sec-01-sql-injection",
+      "author": "coderabbitai[bot]",
+      "local_validation": "npm run check passed; see adjacent log",
+      "rereview": "skipped: bot cannot review its own PR",
+      "rereview_evidence": "https://github.com/coderabbit-demo/mmani-demo/pull/9#issuecomment-6229547796"
+    }
+  ]
+}

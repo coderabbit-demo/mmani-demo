@@ -1,0 +1,21 @@
+
+> mmani-demo@0.1.0 coverage:changed
+> node scripts/changed-coverage.mjs --base 4e86c7d0c61f62698266c59bbc46ef46d68ac823
+
+{
+  "mode": "changed-lines",
+  "base": "4e86c7d0c61f62698266c59bbc46ef46d68ac823",
+  "threshold": 90,
+  "overall": {
+    "status": "passed",
+    "covered": 49,
+    "total": 49,
+    "percent": 100
+  },
+  "selected": {
+    "status": "passed",
+    "covered": 1,
+    "total": 1,
+    "percent": 100
+  }
+}
