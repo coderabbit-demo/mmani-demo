@@ -160,11 +160,13 @@ All **58 tests pass**, line coverage is **98.36%**, branch coverage **94.02%**,
 and source/compiled HTTP smoke checks pass.
 [Validation log](../assets/demo-evidence/GUIDE-01-fixed-check.txt).
 A separate documentation check found that its copied workflow links to evidence
-files absent from the older branch. That issue was sent back to CodeRabbit on
-PR #15 for a focused documentation correction; no manual fix was applied.
-The timeout remediation is locally verified; the generated PR is not fully ready
-until its documentation is reconciled. The authoritative workflow remains this
-file on main.
+files absent from the older branch. CodeRabbit confirmed all eleven missing targets
+and produced a [documentation-only proposal](https://github.com/coderabbit-demo/mmani-demo/pull/15#issuecomment-6229946259).
+Its create-PR action has been activated; delivery is pending. The proposal replaces
+the branch copy with a short canonical link and provenance, preserving verified
+source/tests. No manual fix was applied. The timeout remediation is locally verified;
+the generated PR is not fully ready until its documentation is reconciled.
+The authoritative workflow remains this file on main.
 
 
 The consumer repository is now public, verified through GitHub's API.
