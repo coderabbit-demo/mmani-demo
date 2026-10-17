@@ -23,6 +23,9 @@ try {
   const base = `http://127.0.0.1:${port}`;
   const get = path => fetch(`${base}${path}`, { signal: AbortSignal.timeout(3_000) });
   assert.deepEqual(await (await get("/health")).json(), { status: "ok" });
+  const serviceStatus = await get("/api/guidelines/service-status");
+  assert.equal(serviceStatus.status, 200);
+  assert.equal(await serviceStatus.text(), '{"healthy":true}');
   for (const [itemCount, subtotalCents, totalCents] of [
     [9, 11_691, 11_691], [10, 12_990, 11_691], [11, 14_289, 12_860], [15, 19_485, 17_537],
   ]) {
@@ -45,7 +48,7 @@ try {
     assert.equal(consumer.formatCents(summary.amountDueCents), "$116.91");
     console.log("Actual downstream consumer: checkout summary and $116.91 formatting passed.");
   }
-  console.log("HTTP smoke passed: health, four literal pricing cases, catalog search, and injection input.");
+  console.log("HTTP smoke passed: health, local service-status handler, four literal pricing cases, catalog search, and injection input.");
 } finally {
   if (child.exitCode === null) child.kill("SIGTERM");
   const timer = setTimeout(() => child.kill("SIGKILL"), 5_000);
