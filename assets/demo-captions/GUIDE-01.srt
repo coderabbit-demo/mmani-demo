@@ -1,0 +1,42 @@
+1
+00:00:00,000 --> 00:00:03,000
+Our TypeScript standard lives in a
+
+2
+00:00:03,000 --> 00:00:06,000
+separate repository. It requires bounded
+outbound
+
+3
+00:00:06,000 --> 00:00:09,000
+requests, and this pull request removes
+
+4
+00:00:09,000 --> 00:00:12,000
+the timeout. The review cites that
+
+5
+00:00:12,000 --> 00:00:15,000
+external guideline rather than a copied
+
+6
+00:00:15,000 --> 00:00:18,000
+local rule. We ask CodeRabbit to restore
+
+7
+00:00:18,000 --> 00:00:21,000
+compliant behavior and verify the
+unresponsive-service
+
+8
+00:00:21,000 --> 00:00:24,000
+test after completion. The standard stays
+
+9
+00:00:24,000 --> 00:00:27,000
+centrally maintained, while the review
+applies
+
+10
+00:00:27,000 --> 00:00:30,000
+it to this repository's concrete change.

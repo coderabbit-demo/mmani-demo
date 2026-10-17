@@ -1,0 +1,45 @@
+1
+00:00:00,000 --> 00:00:03,000
+The discount starts at ten items,
+
+2
+00:00:03,000 --> 00:00:06,000
+including exactly ten. This comparison
+accidentally
+
+3
+00:00:06,000 --> 00:00:09,000
+excludes that boundary, returning 12,990
+cents
+
+4
+00:00:09,000 --> 00:00:12,000
+instead of 11,691. CodeRabbit identifies
+the
+
+5
+00:00:12,000 --> 00:00:15,000
+functional error, and we delegate its
+
+6
+00:00:15,000 --> 00:00:18,000
+correction through Auto Fix. After
+completion, the
+
+7
+00:00:18,000 --> 00:00:21,000
+same independent assertions verify the
+result.
+
+8
+00:00:21,000 --> 00:00:24,000
+We did not change the expected
+
+9
+00:00:24,000 --> 00:00:27,000
+price to make the tests pass:
+
+10
+00:00:27,000 --> 00:00:30,000
+the implementation must satisfy the
+requirement.

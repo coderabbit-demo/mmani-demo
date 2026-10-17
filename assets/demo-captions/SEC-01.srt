@@ -1,0 +1,41 @@
+1
+00:00:00,000 --> 00:00:03,000
+This small search change puts request
+
+2
+00:00:03,000 --> 00:00:06,000
+text directly into SQL. The review traces
+
+3
+00:00:06,000 --> 00:00:09,000
+the public search parameter to the
+
+4
+00:00:09,000 --> 00:00:12,000
+query: an injection string returns catalog
+
+5
+00:00:12,000 --> 00:00:15,000
+rows instead of being treated as text.
+
+6
+00:00:15,000 --> 00:00:18,000
+I ask CodeRabbit to produce the
+
+7
+00:00:18,000 --> 00:00:21,000
+correction. After completion, we inspect
+its
+
+8
+00:00:21,000 --> 00:00:24,000
+parameterized query and run the
+regression.
+
+9
+00:00:24,000 --> 00:00:27,000
+The evidence is the input path and
+
+10
+00:00:27,000 --> 00:00:30,000
+behavior, not just a security label.

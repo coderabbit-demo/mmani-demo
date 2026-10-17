@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:03,000
+The baseline review reports an assertive
+
+2
+00:00:03,000 --> 00:00:06,000
+profile. This separate pull request
+changes one
+
+3
+00:00:06,000 --> 00:00:09,000
+YAML setting to chill. CodeRabbit's run
+
+4
+00:00:09,000 --> 00:00:12,000
+configuration now reports chill, so we
+
+5
+00:00:12,000 --> 00:00:15,000
+can verify that the repository setting
+took
+
+6
+00:00:15,000 --> 00:00:18,000
+effect. Path instructions, shared
+guidelines, and
+
+7
+00:00:18,000 --> 00:00:21,000
+linked repositories are separate
+configuration choices.
+
+8
+00:00:21,000 --> 00:00:24,000
+This profile comparison shows a real
+
+9
+00:00:24,000 --> 00:00:27,000
+settings change; it does not prove fewer
+
+10
+00:00:27,000 --> 00:00:30,000
+defects or establish GitHub merge
+enforcement.

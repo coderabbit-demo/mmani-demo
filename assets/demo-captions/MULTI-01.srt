@@ -1,0 +1,42 @@
+1
+00:00:00,000 --> 00:00:03,000
+This response rename looks local, but
+
+2
+00:00:03,000 --> 00:00:06,000
+another repository reads the old field.
+
+3
+00:00:06,000 --> 00:00:09,000
+The consumer's checkout summary receives
+an
+
+4
+00:00:09,000 --> 00:00:12,000
+undefined amount, even though the provider
+
+5
+00:00:12,000 --> 00:00:15,000
+still computes a price. We inspect
+
+6
+00:00:15,000 --> 00:00:18,000
+the affected call site and ask CodeRabbit
+
+7
+00:00:18,000 --> 00:00:21,000
+to preserve the existing contract. After
+
+8
+00:00:21,000 --> 00:00:24,000
+its correction, the real consumer again
+
+9
+00:00:24,000 --> 00:00:27,000
+receives 11,691 cents. Cross-repository
+context makes
+
+10
+00:00:27,000 --> 00:00:30,000
+the compatibility decision visible before
+merging.

@@ -1,0 +1,45 @@
+1
+00:00:00,000 --> 00:00:03,000
+This directory uses zero-based pagination.
+The
+
+2
+00:00:03,000 --> 00:00:06,000
+rule is written in CodeRabbit's path
+instructions,
+
+3
+00:00:06,000 --> 00:00:09,000
+scoped to the matching TypeScript files.
+
+4
+00:00:09,000 --> 00:00:12,000
+This change subtracts one page, so
+
+5
+00:00:12,000 --> 00:00:15,000
+page zero produces a negative offset.
+CodeRabbit
+
+6
+00:00:15,000 --> 00:00:18,000
+explicitly cites the path instruction. We
+
+7
+00:00:18,000 --> 00:00:21,000
+delegate the correction and verify the
+
+8
+00:00:21,000 --> 00:00:24,000
+existing page-zero, page-one, and page-
+three cases.
+
+9
+00:00:24,000 --> 00:00:27,000
+A local convention becomes a concrete
+review
+
+10
+00:00:27,000 --> 00:00:30,000
+check without duplicating shared
+organization rules.

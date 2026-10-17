@@ -6,7 +6,7 @@ The correct baseline is published at `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`
 on `main`, with a passing [hosted baseline run](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001168131).
 Five independent demo PRs, four CodeRabbit-generated remediation PRs, and a dedicated QA weak-assertion draft PR are open. Original defect snapshots are preserved with
 `demo/<id>-before-fix` tags; CodeRabbit remediation can advance PR heads without
-erasing those snapshots. No QA Agent runs or video assets have been produced.
+erasing those snapshots. QA Agent completed the weak-snapshot run with one failed scenario; corrected execution and video assets are still pending.
 The four supplied runbooks inform this workflow; their historical results are
 not evidence for this repository.
 
@@ -33,7 +33,7 @@ reports are generated outputs, not hosted CI results. See README for commands.
 | GitHub API access | Working; PR creation and review reads verified after the initial Forbidden response |
 | CodeRabbit installation and repository permissions | Hosted reviews confirm repo config, ASSERTIVE profile, Enterprise plan; initial external guideline fetch failed, but the warning disappeared after the owner made the standards repo public and a fresh full review completed |
 | Effective config and current schema validation | Repo YAML/profile and Security Gate observed in hosted reviews; current full schema validation remains pending |
-| Security PR Review / QA Agent / Test Suites entitlements | Not verified; uploaded historical reports do not establish current availability |
+| Security PR Review / QA Agent / Test Suites entitlements | Hosted Security Review and completed QA Agent failure observed; reusable Test Suites and Deep Scan remain unverified |
 | CodeRabbit fix actions | Auto Fix requests produce CodeRabbit coding proposals; activating the bot's create-PR action created remediation PRs #6–#9; local validation passes, but CodeRabbit skips reviewing its own PRs |
 | GitHub CI / required checks / automatic-merge exclusion | Baseline CI passes, seeded PRs fail in test execution; GitHub auto-merge is disabled; required-check enforcement and CodeRabbit Triage rules not verified |
 
@@ -55,12 +55,12 @@ can reference these PRs without combining their defects. All video targets are
 | SEC-01 | SQL injection | CodeRabbit fix #9 locally verified: 61 tests pass; bot re-review skipped | [PR #1](https://github.com/coderabbit-demo/mmani-demo/pull/1), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/1#issuecomment-6229490251) | Storyboarded; footage pending |
 | BUG-01 | Inclusive discount boundary | CodeRabbit fix #6 locally verified: 53 tests pass; bot re-review skipped | [PR #2](https://github.com/coderabbit-demo/mmani-demo/pull/2), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/2#discussion_r4301285165), [CodeRabbit fix PR #6](https://github.com/coderabbit-demo/mmani-demo/pull/6) | Storyboarded; footage pending |
 | MULTI-01 | Downstream response contract | CodeRabbit fix #7 and actual consumer pass; direct consumer-source retrieval and impact confirmed | [PR #3](https://github.com/coderabbit-demo/mmani-demo/pull/3), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/3#discussion_r4301284933), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229464959) | Storyboarded; footage pending |
-| GUIDE-01 | External coding guidelines | Source retrieved, but rule applies to request handlers and original helper is test-only; CodeRabbit scenario adaptation requested | [PR #4](https://github.com/coderabbit-demo/mmani-demo/pull/4), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/4#discussion_r4301284627), [fresh review](https://github.com/coderabbit-demo/mmani-demo/pull/4#issuecomment-6229490501) | Storyboarded; external evidence pending |
+| GUIDE-01 | External coding guidelines | CodeRabbit-generated HTTP scenario validated; explicit source attribution under review | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
 | PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | Storyboarded; footage pending |
-| QA-01 | Weak versus strong assertions | Weak comparison prepared: 53 tests and 100% lines pass while independent boundary probe fails | [Draft PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) | Storyboarded; footage pending |
-| QA-02 | QA Agent behavioral evidence | Entitlement/access verification pending | Pending plans, runs, and CodeRabbit remediation | Planned |
+| QA-01 | Weak versus strong assertions | Reviewed: weak 53-test/100%-line pass misses boundary; CodeRabbit flags bug and weak assertions; remediation requested | [Draft PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) | Storyboarded; footage pending |
+| QA-02 | QA Agent behavioral evidence | Weak-snapshot run completed: one scenario failed; 1 failed and 4 unresolved exit criteria | [PR #10 QA status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) | Storyboarded; execution/footage pending |
 | QA-03 | Reusable Test Suites | Entitlement/access verification pending | Pending journey revisions and runs | Planned |
-| CONFIG-01 | Versioned review configuration | Initial YAML prepared | Pending effective config and isolated config PR | Planned |
+| CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | Storyboarded; footage pending |
 | SEC-02 | Deep Scan / attack-surface extension | Availability-dependent; no scan requested | Pending separately scoped scan evidence | Planned |
 
 Use-case IDs stay stable across PR revisions and recordings. Add a separate ID
@@ -130,7 +130,14 @@ GUIDE-01's [source inspection](https://github.com/coderabbit-demo/mmani-demo/pul
 retrieved the external guideline but found that its request-handler scope does
 not cover the original test-only helper. A
 [CodeRabbit scenario adaptation request](https://github.com/coderabbit-demo/mmani-demo/pull/4#issuecomment-6229540980)
-was accepted by CodeRabbit and its create-PR action activated; the original generic timeout finding is not proof of guideline attribution.
+produced [PR #11](https://github.com/coderabbit-demo/mmani-demo/pull/11), commit
+`742c06cb1baae25731b8ed2abc97024158d17a12`. The exact generated commit, without
+manual edits, is published against main as [PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12)
+under the user account so CodeRabbit can review it. Both the real handler and
+unbounded fetch are visible. Typecheck/build and four new handler tests pass;
+56 total tests pass and the original timeout test fails as intended. Both HTTP
+smoke modes pass. [Local log](../assets/demo-evidence/GUIDE-01-handler-check.txt).
+The original generic timeout finding is not proof of guideline attribution.
 
 The consumer repository is now public, verified through GitHub's API.
 [CodeRabbit successfully retrieved its source](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229583446)
@@ -152,7 +159,29 @@ miss the [independent acceptance failure](../assets/demo-evidence/QA-01-acceptan
 12,990 cents returned instead of 11,691. The original BUG-01 strong assertions
 fail on this defect, and CodeRabbit fix #6 passes them. The weak snapshot is tagged
 `demo/qa-01-before-fix`. A manual full review and `@coderabbitai test` request were
-submitted on PR #10; submission alone is not evidence of a QA Agent run.
+submitted on PR #10. CodeRabbit completed its review and raised two Major issues:
+[boundary](https://github.com/coderabbit-demo/mmani-demo/pull/10#discussion_r4301338265)
+and [weak assertions](https://github.com/coderabbit-demo/mmani-demo/pull/10#discussion_r4301338268).
+The [CodeRabbit fix request](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229834546)
+requests a separate corrected PR, preserving the weak branch for QA execution.
+
+QA Agent accepted run `fcff9300-2e35-4c5c-b17b-97994fc328d9` for the weak SHA;
+its [status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313)
+reports **one scenario failed**, `pricing-discount-001`: “It applies the discount
+starting at ten items and returns exact integer-cent totals.” Exit criteria:
+0 passed, 1 failed, 4 unresolved (5 assigned). It ran in an **emulated environment**;
+the public status does not expose the full plan or actual/expected values.
+An [evidence request](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229850090)
+asks for those original artifacts without reconstructing them from code. Do not
+substitute our independent local probe for QA Agent execution details. Reusable
+Test Suites are still unverified. Historical runbooks do not fill these gaps.
+
+CONFIG-01 [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13), SHA
+`51053d1eead9af9d21d313a3dbf4d3bcc9d38c59`, changes only `reviews.profile` from
+`assertive` to `chill`. The completed hosted review generated no actionable comments and explicitly reports **CHILL**; compare
+baseline **ASSERTIVE**. This proves that repository profile selection took effect,
+not a different issue count, organization inheritance, or merge enforcement.
+[Captured report](../assets/demo-evidence/pr-13-review.json).
 
 ## General review — Do / Say / See
 
@@ -218,6 +247,14 @@ Before recording each segment, populate its evidence card:
 - Exact click path, narration, timed shot list, and any labeled time cuts.
 - Video asset path, measured duration, capture date, and readability/audio check.
 - Freshness, original snapshot preservation, and reset instructions.
+
+Draft caption tracks for all twelve segments are in
+[assets/demo-captions](../assets/demo-captions/). Each spans exactly 30 seconds,
+with ten provisional three-second cues. Retiming to the recorded narration and
+checking readability are required before export. These are scripts/caption assets,
+not captured product footage or finished videos. This environment has no connected
+authenticated CodeRabbit browser or recording tool; Triage, Test Suites, Deep Scan,
+and product UI capture therefore remain outside the verified evidence.
 
 ## Draft 30-second narration and shot lists
 
@@ -289,7 +326,7 @@ the compatibility decision visible before merging.”
 
 ### GUIDE-01 — External standards
 
-Shots: public standards file → PR #4 timeout change → attributed review →
+Shots: public standards file → PR #12 handler and timeout change → attributed review →
 CodeRabbit fix and timeout test → takeaway. Gate: a fresh review must actually
 load and cite the standards; a generic timeout finding is insufficient.
 
@@ -314,7 +351,7 @@ becomes a concrete review check without duplicating shared organization rules.�
 
 ### QA-01 — Coverage versus assertions
 
-Shots: future weak green coverage → weak assertion → exact-ten requirement →
+Shots: PR #10 weak green coverage → weak assertion → exact-ten requirement →
 strong red test → takeaway. Gate: dedicated QA comparisons and captured runs.
 
 Narration: “These tests execute the pricing code and meet the coverage floor,
@@ -350,15 +387,15 @@ revision and tested commit together.”
 
 ### CONFIG-01 — Configuration as code
 
-Shots: repo YAML → effective settings → focused rule/finding → policy verdict →
-takeaway. Gate: effective configuration and observed comparison; no fabricated toggles.
+Shots: main ASSERTIVE report → PR #13 one-line YAML diff → hosted CHILL report →
+context configuration blocks → takeaway. Gate: verified effective profile, now observed.
 
-Narration: “The review policy is a versioned file in this repository. We inspect
-the effective settings, then connect one setting to its observed review effect.
-Path instructions, external guidelines, and linked repositories provide different
-kinds of context. The Security Gate reports a policy verdict; GitHub rules
-separately control merge enforcement. Configuration changes what the reviewer
-checks, not whether every possible defect has been eliminated.”
+Narration: “The baseline review reports an assertive profile. This separate pull
+request changes one YAML setting to chill. CodeRabbit's run configuration now
+reports chill, so we can verify that the repository setting took effect.
+Path instructions, shared guidelines, and linked repositories are separate
+configuration choices. This profile comparison shows a real settings change;
+it does not prove fewer defects or establish GitHub merge enforcement.”
 
 ### SEC-02 — Deep Scan extension
 

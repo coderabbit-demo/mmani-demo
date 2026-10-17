@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,000
+Here is the QA Agent's saved
+
+2
+00:00:03,000 --> 00:00:06,000
+scenario plan, followed by its actual
+execution
+
+3
+00:00:06,000 --> 00:00:09,000
+evidence. At the ten-item boundary,
+compare
+
+4
+00:00:09,000 --> 00:00:12,000
+the expected price with the application's
+
+5
+00:00:12,000 --> 00:00:15,000
+response. We delegate remediation to
+CodeRabbit and
+
+6
+00:00:15,000 --> 00:00:18,000
+inspect a later run on the
+
+7
+00:00:18,000 --> 00:00:21,000
+generated commit. The transition is
+labeled
+
+8
+00:00:21,000 --> 00:00:24,000
+after completion: this is a thirty-second
+
+9
+00:00:24,000 --> 00:00:27,000
+explanation, not a claim that the agent
+
+10
+00:00:27,000 --> 00:00:30,000
+completed its work in thirty seconds.

@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:03,000
+PR security review examines an incoming
+
+2
+00:00:03,000 --> 00:00:06,000
+change. Deep Scan provides a separate
+repository-wide
+
+3
+00:00:06,000 --> 00:00:09,000
+investigation at a recorded commit. We
+
+4
+00:00:09,000 --> 00:00:12,000
+inspect a finding's code evidence, then
+the
+
+5
+00:00:12,000 --> 00:00:15,000
+mapped surface and its freshness. A
+
+6
+00:00:15,000 --> 00:00:18,000
+verified point can still carry an
+
+7
+00:00:18,000 --> 00:00:21,000
+open vulnerability, and mapped coverage
+has a
+
+8
+00:00:21,000 --> 00:00:24,000
+specific denominator. This view helps
+prioritize
+
+9
+00:00:24,000 --> 00:00:27,000
+investigation; it does not certify that
+the
+
+10
+00:00:27,000 --> 00:00:30,000
+repository is safe or fully covered.

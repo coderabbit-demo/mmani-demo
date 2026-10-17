@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,000
+A reusable Test Suite preserves a known
+
+2
+00:00:03,000 --> 00:00:06,000
+journey beyond a single pull request.
+
+3
+00:00:06,000 --> 00:00:09,000
+We select the execution branch while
+keeping
+
+4
+00:00:09,000 --> 00:00:12,000
+the journey's expectations fixed, then
+inspect
+
+5
+00:00:12,000 --> 00:00:15,000
+its completed result and evidence. This is
+
+6
+00:00:15,000 --> 00:00:18,000
+different from a PR-specific QA plan. A
+
+7
+00:00:18,000 --> 00:00:21,000
+pass supports the behavior that was
+
+8
+00:00:21,000 --> 00:00:24,000
+exercised; it does not prove exhaustive
+coverage
+
+9
+00:00:24,000 --> 00:00:27,000
+or justify deleting unit tests. Keep
+
+10
+00:00:27,000 --> 00:00:30,000
+the scenario revision and tested commit
+together.

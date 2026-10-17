@@ -1,0 +1,45 @@
+
+> mmani-demo@0.1.0 check
+> npm run typecheck && npm run build && npm run test:coverage && npm run coverage:changed -- --all
+
+
+> mmani-demo@0.1.0 typecheck
+> tsc --noEmit
+
+
+> mmani-demo@0.1.0 build
+> tsc -p tsconfig.build.json
+
+
+> mmani-demo@0.1.0 test:coverage
+> vitest run --coverage
+
+
+ RUN  v5.0.5 /workspace/mmani-demo
+      Coverage enabled with v8
+
+ ❯ tests/baseline.test.ts (42 tests | 1 failed) 5069ms
+   ❯ outbound service check (3)
+     × times out an unresponsive service 5004ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/baseline.test.ts > outbound service check > times out an unresponsive service
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/baseline.test.ts:117:3
+    115|   it("accepts a healthy service", async () => expect(await serviceIsHe…
+    116|   it("reports an unhealthy service", async () => expect(await serviceI…
+    117|   it("times out an unresponsive service", async () => {
+       |   ^
+    118|     const stalled = createServer(() => {});
+    119|     stalled.listen(0, "127.0.0.1");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 56 passed (57)
+   Start at  04:50:05
+   Duration  5.31s (tests 96%, import 1%, transform 1%, worker 1%)
+

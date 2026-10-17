@@ -1,0 +1,41 @@
+1
+00:00:00,000 --> 00:00:03,000
+A reviewer starts by choosing which
+
+2
+00:00:03,000 --> 00:00:06,000
+change needs attention. Triage provides
+context
+
+3
+00:00:06,000 --> 00:00:09,000
+for that choice. In Change Stack, I
+
+4
+00:00:09,000 --> 00:00:12,000
+inspect the purpose of the pull
+
+5
+00:00:12,000 --> 00:00:15,000
+request, navigate to the relevant code,
+
+6
+00:00:15,000 --> 00:00:18,000
+and read the supporting finding. These
+
+7
+00:00:18,000 --> 00:00:21,000
+views help organize the review; they
+
+8
+00:00:21,000 --> 00:00:24,000
+do not replace judgment. Before approving,
+I
+
+9
+00:00:24,000 --> 00:00:27,000
+still need the correction, the test
+
+10
+00:00:27,000 --> 00:00:30,000
+evidence, and the current review result.

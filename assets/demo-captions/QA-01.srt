@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,000
+These tests execute the pricing code
+
+2
+00:00:03,000 --> 00:00:06,000
+and meet the coverage floor, but
+
+3
+00:00:06,000 --> 00:00:09,000
+their assertions still accept the wrong
+
+4
+00:00:09,000 --> 00:00:12,000
+total. The exact-ten requirement gives us
+
+5
+00:00:12,000 --> 00:00:15,000
+an independent expected value. Strong
+assertions
+
+6
+00:00:15,000 --> 00:00:18,000
+reject the boundary defect even when
+coverage
+
+7
+00:00:18,000 --> 00:00:21,000
+looks similar. CodeRabbit's review
+explains which
+
+8
+00:00:21,000 --> 00:00:24,000
+behavior needs protection. Coverage tells
+us
+
+9
+00:00:24,000 --> 00:00:27,000
+what executed; the assertion tells us
+
+10
+00:00:27,000 --> 00:00:30,000
+whether that specific result was correct.
