@@ -1,0 +1,173 @@
+{
+  "captured_at": "2026-10-17T04:08:26.806924+00:00",
+  "scenarios": [
+    {
+      "id": "SEC-01",
+      "branch": "demo/sec-01-sql-injection",
+      "head": "91fd477c994760fd9fce61189ef86e92093c2b40",
+      "base": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/1",
+      "source": "local Vitest run; not hosted CI or CodeRabbit",
+      "command": "npm test -- --reporter=json --outputFile=<local report>",
+      "exit_code": 1,
+      "passed": 52,
+      "failed": 1,
+      "skipped": 0,
+      "typecheck": "passed",
+      "failures": [
+        {
+          "test": "real HTTP requests treats SQL injection input as search data",
+          "message": [
+            "AssertionError: expected { products: [ { id: 1, \u2026(1) }, \u2026(2) ] } to deeply equal { products: [] }\n    at /workspace/mmani-demo/tests/baseline.test.ts:97:35\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:20"
+          ]
+        }
+      ],
+      "remediation": "not performed; requires CodeRabbit",
+      "recording": "storyboard pending"
+    },
+    {
+      "id": "BUG-01",
+      "branch": "demo/bug-01-discount-boundary",
+      "head": "66354f26a5a93ff1e740531cab3d47495535b770",
+      "base": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/2",
+      "source": "local Vitest run; not hosted CI or CodeRabbit",
+      "command": "npm test -- --reporter=json --outputFile=<local report>",
+      "exit_code": 1,
+      "passed": 51,
+      "failed": 2,
+      "skipped": 0,
+      "typecheck": "passed",
+      "failures": [
+        {
+          "test": "integer-cent pricing and the inclusive boundary quotes 10 items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 12990, \u2026(2) } to deeply equal { itemCount: 10, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:29:49\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "real HTTP requests preserves the consumer contract at exactly ten items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 12990, \u2026(2) } to deeply equal { subtotalCents: 12990, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:57:35\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:20"
+          ]
+        }
+      ],
+      "remediation": "not performed; requires CodeRabbit",
+      "recording": "storyboard pending"
+    },
+    {
+      "id": "MULTI-01",
+      "branch": "demo/multi-01-response-contract",
+      "head": "925a1a5d03dc04740e6182b767c952bd51183b70",
+      "base": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/3",
+      "source": "local Vitest run; not hosted CI or CodeRabbit",
+      "command": "npm test -- --reporter=json --outputFile=<local report>",
+      "exit_code": 1,
+      "passed": 47,
+      "failed": 6,
+      "skipped": 0,
+      "typecheck": "passed",
+      "failures": [
+        {
+          "test": "integer-cent pricing and the inclusive boundary quotes 9 items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 11691, \u2026(2) } to deeply equal { itemCount: 9, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:29:49\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "integer-cent pricing and the inclusive boundary quotes 10 items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 12990, \u2026(2) } to deeply equal { itemCount: 10, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:29:49\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "integer-cent pricing and the inclusive boundary quotes 11 items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 14289, \u2026(2) } to deeply equal { itemCount: 11, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:29:49\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "integer-cent pricing and the inclusive boundary quotes 15 items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 19485, \u2026(2) } to deeply equal { itemCount: 15, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:29:49\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "integer-cent pricing and the inclusive boundary allows zero cents and strips extra fields from the response",
+          "message": [
+            "AssertionError: expected { subtotalCents: +0, \u2026(2) } to deeply equal { subtotalCents: +0, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:41:8\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3904:64"
+          ]
+        },
+        {
+          "test": "real HTTP requests preserves the consumer contract at exactly ten items",
+          "message": [
+            "AssertionError: expected { subtotalCents: 12990, \u2026(2) } to deeply equal { subtotalCents: 12990, \u2026(2) }\n    at /workspace/mmani-demo/tests/baseline.test.ts:57:35\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:20"
+          ]
+        }
+      ],
+      "remediation": "not performed; requires CodeRabbit",
+      "recording": "storyboard pending"
+    },
+    {
+      "id": "GUIDE-01",
+      "branch": "demo/guide-01-outbound-timeout",
+      "head": "49f7a2d1782ae832b93b93448ac3bb1c283f497e",
+      "base": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/4",
+      "source": "local Vitest run; not hosted CI or CodeRabbit",
+      "command": "npm test -- --reporter=json --outputFile=<local report>",
+      "exit_code": 1,
+      "passed": 52,
+      "failed": 1,
+      "skipped": 0,
+      "typecheck": "passed",
+      "failures": [
+        {
+          "test": "outbound service check times out an unresponsive service",
+          "message": [
+            "Error: Test timed out in 5000ms.\nIf this is a long-running test, pass a timeout value as the last argument or configure it globally with \"testTimeout\".\n    at task (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2700:43)\n    at Object.<anonymous> (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2717:16)\n    at Object.<anonymous> (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2486:28)\n    at chain (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1870:14)\n    at /workspace/mmani-demo/tests/baseline.test.ts:117:3\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2781:52\n    at runWithSuite (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3267:8)\n    at Object.collect (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2781:22)\n    at Object.collect (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2786:51)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+          ]
+        }
+      ],
+      "remediation": "not performed; requires CodeRabbit",
+      "recording": "storyboard pending"
+    },
+    {
+      "id": "PATH-01",
+      "branch": "demo/path-01-pagination",
+      "head": "83848ae90f2df6d05f0a7d1564081d59c37452e5",
+      "base": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/5",
+      "source": "local Vitest run; not hosted CI or CodeRabbit",
+      "command": "npm test -- --reporter=json --outputFile=<local report>",
+      "exit_code": 1,
+      "passed": 50,
+      "failed": 3,
+      "skipped": 0,
+      "typecheck": "passed",
+      "failures": [
+        {
+          "test": "zero-based pagination page 0, size 10",
+          "message": [
+            "AssertionError: expected -10 to be +0 // Object.is equality\n    at /workspace/mmani-demo/tests/baseline.test.ts:108:36\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "zero-based pagination page 1, size 10",
+          "message": [
+            "AssertionError: expected +0 to be 10 // Object.is equality\n    at /workspace/mmani-demo/tests/baseline.test.ts:108:36\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        },
+        {
+          "test": "zero-based pagination page 3, size 25",
+          "message": [
+            "AssertionError: expected 50 to be 75 // Object.is equality\n    at /workspace/mmani-demo/tests/baseline.test.ts:108:36\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2885:79\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:1632:35\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:2801:26\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3333:10)\n    at file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///workspace/mmani-demo/node_modules/vitest/dist/chunks/run.BPv-BBRv.js:3276:10)"
+          ]
+        }
+      ],
+      "remediation": "not performed; requires CodeRabbit",
+      "recording": "storyboard pending"
+    }
+  ]
+}

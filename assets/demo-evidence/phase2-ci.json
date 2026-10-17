@@ -1,0 +1,60 @@
+[
+  {
+    "run": 39001168131,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001168131",
+    "head": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+    "conclusion": "success",
+    "failed_steps": [],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  },
+  {
+    "run": 39001295943,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001295943",
+    "head": "91fd477c994760fd9fce61189ef86e92093c2b40",
+    "conclusion": "failure",
+    "failed_steps": [
+      "Run npm run test:coverage"
+    ],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  },
+  {
+    "run": 39001353827,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001353827",
+    "head": "66354f26a5a93ff1e740531cab3d47495535b770",
+    "conclusion": "failure",
+    "failed_steps": [
+      "Run npm run test:coverage"
+    ],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  },
+  {
+    "run": 39001357844,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001357844",
+    "head": "925a1a5d03dc04740e6182b767c952bd51183b70",
+    "conclusion": "failure",
+    "failed_steps": [
+      "Run npm run test:coverage"
+    ],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  },
+  {
+    "run": 39001361751,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001361751",
+    "head": "49f7a2d1782ae832b93b93448ac3bb1c283f497e",
+    "conclusion": "failure",
+    "failed_steps": [
+      "Run npm run test:coverage"
+    ],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  },
+  {
+    "run": 39001366086,
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001366086",
+    "head": "83848ae90f2df6d05f0a7d1564081d59c37452e5",
+    "conclusion": "failure",
+    "failed_steps": [
+      "Run npm run test:coverage"
+    ],
+    "log_access": "blocked by network policy; counts are local evidence, not hosted log evidence"
+  }
+]
