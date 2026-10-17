@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json
+language: en-US
+
+reviews:
+  profile: assertive
+  high_level_summary: true
+  auto_review:
+    enabled: true
+    drafts: false
+  # Advisory policy verdict; GitHub merge enforcement is configured separately.
+  pre_merge_checks:
+    custom_checks:
+      - name: "Security Gate"
+        mode: warning
+        instructions: >-
+          Report major or critical security issues introduced by this pull
+          request, including SQL or shell injection. Explain the input-to-sink
+          path and the required correction. A functional-only bug does not fail
+          this security policy. Do not describe a passing verdict as proof that
+          the code has no vulnerabilities.
+  path_instructions:
+    - path: "src/path-instructions/**/*.ts"
+      instructions: >-
+        Pagination in this directory uses a zero-based page index. Calculate
+        the offset as page * pageSize. Flag one-based offset calculations and
+        explain the incorrect result for page 0. This rule applies only to this
+        directory.
+
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "coderabbit-demo/coderabbit-standards:guidelines/**/*.md"
+  automatic_repository_linking: false
+  linked_repositories:
+    - repository: "coderabbit-demo/security-harness-consumer"
+      instructions: >-
+        Check changes to the pricing API against this consumer's src/client.ts
+        and src/checkout.ts. Its POST /api/pricing/quote contract expects
+        subtotalCents, itemCount, and totalCents as numeric integer fields.
+        Identify concrete consumer call sites affected by route, field-name,
+        or response-type changes. This link provides review context; it does
+        not establish that the consumer is deployed against mmani-demo.

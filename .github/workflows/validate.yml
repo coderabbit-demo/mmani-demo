@@ -1,0 +1,36 @@
+name: Baseline validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm run test:coverage
+      - name: Changed executable lines (90%)
+        if: github.event_name == 'pull_request'
+        env:
+          COVERAGE_BASE: ${{ github.event.pull_request.base.sha }}
+        run: npm run coverage:changed -- --base "$COVERAGE_BASE"
+      - name: Initial or main baseline (90%)
+        if: github.event_name != 'pull_request'
+        run: npm run coverage:changed -- --all
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-${{ github.sha }}
+          path: coverage/
+          if-no-files-found: warn

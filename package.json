@@ -1,0 +1,24 @@
+{
+  "name": "mmani-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "dev": "node --watch scripts/start.mjs",
+    "start": "node scripts/start.mjs",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "smoke": "node scripts/smoke.mjs",
+    "coverage:changed": "node scripts/changed-coverage.mjs",
+    "check": "npm run typecheck && npm run build && npm run test:coverage && npm run coverage:changed -- --all"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@vitest/coverage-v8": "5.0.5",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}
