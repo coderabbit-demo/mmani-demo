@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-17T05:01:43.093359+00:00",
+  "runs": [
+    {
+      "pr": 10,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313",
+      "state": {
+        "run": "fcff9300-2e35-4c5c-b17b-97994fc328d9",
+        "revision": "20",
+        "created": "1792211035477",
+        "terminal": "true"
+      },
+      "body": "\n\n## QA Agent \u00b7 1 scenario failed\n\n**1 scenario complete \u00b7 1 failed**\n\nTested commit [`b2dcfc4`](https://github.com/coderabbit-demo/mmani-demo/commit/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b)\n\n<a href=\"https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence-dark.svg?v=3\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence.svg?v=3\"><img src=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence.svg?v=3\" alt=\"Review evidence\" height=\"32\"></picture></a>\n\n### Run summary\n\nValidated exit criteria: 0 passed, 1 failed, 4 unresolved \\(5 assigned\\)\\.\n\n### Needs attention\n\n| Result | Scenario |\n| --- | --- |\n| \u274c Failed | [It applies the discount starting at ten items and returns exact integer\\-cent totals](https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent?scenario=pricing-discount-001) |\n\n<details>\n<summary>Run limitations</summary>\n\n- QA Agent results are non\\-authoritative\\.\n\n</details>\n\nComment `@coderabbitai test` to run again.\n\n<sub>Tests ran in an emulated environment. Results supplement CI and human review.</sub>"
+    },
+    {
+      "pr": 14,
+      "url": "https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787",
+      "state": {
+        "run": "69a73d04-cc6e-416e-bbf5-72a604503bd0",
+        "revision": "19",
+        "created": "1792212952258",
+        "terminal": "true"
+      },
+      "body": "\n\n## QA Agent \u00b7 All scenarios passed\n\n**1 scenario complete \u00b7 1 passed**\n\nTested commit [`4e6f38b`](https://github.com/coderabbit-demo/mmani-demo/commit/4e6f38b08d23d81ae408afdaed418b6aaccc2064)\n\n<a href=\"https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/14/qa-agent\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence-dark.svg?v=3\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence.svg?v=3\"><img src=\"https://storage.googleapis.com/coderabbit_public_assets/qa-agent-review-evidence.svg?v=3\" alt=\"Review evidence\" height=\"32\"></picture></a>\n\n### Run summary\n\nPassed\\. Recorded HTTP responses confirm the inclusive ten\\-item discount, exact JSON contract, and rounding down and half\\-cent rounding up\\. No regressions or coverage gaps were observed within the assigned scope; input validation and unrelated endpoints were outside scope\\. Advisory merge risk: Low within this scope because all four specified cases matched exactly\\.\n\n### Passed\n\n| Result | Scenario |\n| --- | --- |\n| \u2705 Passed | [It applies the TEAM10 discount starting at ten items](https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/14/qa-agent?scenario=pricing-team10-inclusive-boundary) |\n\n<details>\n<summary>Run limitations</summary>\n\n- QA Agent results are non\\-authoritative\\.\n- Review context is unavailable for this commit\\. QA Agent uses the PR diff and repository files; coverage may be less complete\\.\n\n</details>\n\nComment `@coderabbitai test` to run again.\n\n<sub>Tests ran in an emulated environment. Results supplement CI and human review.</sub>"
+    }
+  ]
+}

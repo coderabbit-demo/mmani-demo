@@ -4,9 +4,9 @@
 
 The correct baseline is published at `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`
 on `main`, with a passing [hosted baseline run](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001168131).
-Five independent demo PRs, four CodeRabbit-generated remediation PRs, and a dedicated QA weak-assertion draft PR are open. Original defect snapshots are preserved with
+Focused demonstration PRs and separate CodeRabbit-generated remediation PRs are open. Original defect snapshots are preserved with
 `demo/<id>-before-fix` tags; CodeRabbit remediation can advance PR heads without
-erasing those snapshots. QA Agent completed the weak-snapshot run with one failed scenario; corrected execution and video assets are still pending.
+erasing those snapshots. QA Agent completed both runs: one failed scenario on the weak snapshot and one passed scenario on CodeRabbit's correction. Detailed execution artifacts and video assets are still pending.
 The four supplied runbooks inform this workflow; their historical results are
 not evidence for this repository.
 
@@ -55,10 +55,10 @@ can reference these PRs without combining their defects. All video targets are
 | SEC-01 | SQL injection | CodeRabbit fix #9 locally verified: 61 tests pass; bot re-review skipped | [PR #1](https://github.com/coderabbit-demo/mmani-demo/pull/1), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/1#issuecomment-6229490251) | Storyboarded; footage pending |
 | BUG-01 | Inclusive discount boundary | CodeRabbit fix #6 locally verified: 53 tests pass; bot re-review skipped | [PR #2](https://github.com/coderabbit-demo/mmani-demo/pull/2), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/2#discussion_r4301285165), [CodeRabbit fix PR #6](https://github.com/coderabbit-demo/mmani-demo/pull/6) | Storyboarded; footage pending |
 | MULTI-01 | Downstream response contract | CodeRabbit fix #7 and actual consumer pass; direct consumer-source retrieval and impact confirmed | [PR #3](https://github.com/coderabbit-demo/mmani-demo/pull/3), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/3#discussion_r4301284933), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229464959) | Storyboarded; footage pending |
-| GUIDE-01 | External coding guidelines | CodeRabbit-generated HTTP scenario validated; explicit source attribution under review | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
+| GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit fix generating | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
 | PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | Storyboarded; footage pending |
-| QA-01 | Weak versus strong assertions | Reviewed: weak 53-test/100%-line pass misses boundary; CodeRabbit flags bug and weak assertions; remediation requested | [Draft PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) | Storyboarded; footage pending |
-| QA-02 | QA Agent behavioral evidence | Weak-snapshot run completed: one scenario failed; 1 failed and 4 unresolved exit criteria | [PR #10 QA status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) | Storyboarded; execution/footage pending |
+| QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | Storyboarded; footage pending |
+| QA-02 | QA Agent behavioral evidence | Weak run failed (1 failed/4 unresolved exit criteria); corrected run passed one scenario, with scope limits | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | Storyboarded; detailed artifacts/footage pending |
 | QA-03 | Reusable Test Suites | Entitlement/access verification pending | Pending journey revisions and runs | Planned |
 | CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | Storyboarded; footage pending |
 | SEC-02 | Deep Scan / attack-surface extension | Availability-dependent; no scan requested | Pending separately scoped scan evidence | Planned |
@@ -138,6 +138,20 @@ unbounded fetch are visible. Typecheck/build and four new handler tests pass;
 56 total tests pass and the original timeout test fails as intended. Both HTTP
 smoke modes pass. [Local log](../assets/demo-evidence/GUIDE-01-handler-check.txt).
 The original generic timeout finding is not proof of guideline attribution.
+PR #12's completed review raised a
+[Major timeout issue](https://github.com/coderabbit-demo/mmani-demo/pull/12#discussion_r4301450030)
+explicitly referencing the external TypeScript requirement for bounded outbound
+fetch from request handlers, plus a Minor stale status-row issue on that branch.
+Both were delegated through the
+[CodeRabbit fix request](https://github.com/coderabbit-demo/mmani-demo/pull/12#issuecomment-6229865871).
+The [provenance follow-up](https://github.com/coderabbit-demo/mmani-demo/pull/12#issuecomment-6229912759)
+retrieved `coderabbit-demo/coderabbit-standards:guidelines/typescript.md`, rule
+“No unbounded outbound calls”, blob `ac80b0584885f88e9e64ff651914b880aaa803a8`.
+It confirmed applicability to the real handler, but explicitly could not verify
+that the original review retrieved that file. Demonstrate the verified follow-up
+source inspection; do not present it as a confirmed original-review Sources badge.
+The rule requires a bounded timeout; 1,000 ms comes from the prior implementation,
+not the external rule. [Captured provenance](../assets/demo-evidence/GUIDE-01-source-provenance.md).
 
 The consumer repository is now public, verified through GitHub's API.
 [CodeRabbit successfully retrieved its source](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229583446)
@@ -163,7 +177,23 @@ submitted on PR #10. CodeRabbit completed its review and raised two Major issues
 [boundary](https://github.com/coderabbit-demo/mmani-demo/pull/10#discussion_r4301338265)
 and [weak assertions](https://github.com/coderabbit-demo/mmani-demo/pull/10#discussion_r4301338268).
 The [CodeRabbit fix request](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229834546)
-requests a separate corrected PR, preserving the weak branch for QA execution.
+produced [PR #14](https://github.com/coderabbit-demo/mmani-demo/pull/14), SHA
+`4e6f38b08d23d81ae408afdaed418b6aaccc2064`. Only the discount helper and the
+weak assertions changed; all other regression assertions remain. Local validation:
+53 tests pass, 100% source lines, 94.44% branches, and both smoke modes pass.
+[Check log](../assets/demo-evidence/QA-01-fixed-check.txt).
+A [corrected QA Agent run](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229875248)
+completed on that exact generated commit: **one scenario passed**,
+`pricing-team10-inclusive-boundary`, run `69a73d04-cc6e-416e-bbf5-72a604503bd0`.
+The published summary reports that recorded HTTP responses matched all four cases,
+the exact JSON contract, and rounding behavior. Input validation and unrelated
+endpoints were outside scope; detailed response artifacts have not been retrieved.
+Its plan differs from the weak run's `pricing-discount-001`, so this is not a replay
+of a fixed Test Suite. It ran in an emulated environment, warns that review context
+was unavailable, and describes its results as non-authoritative.
+[Run metadata and latest status](../assets/demo-evidence/qa-agent-runs.json). The original
+weak branch remains unchanged. CodeRabbit skipped its review of its own fix PR;
+local validation and QA Agent execution are separate evidence types.
 
 QA Agent accepted run `fcff9300-2e35-4c5c-b17b-97994fc328d9` for the weak SHA;
 its [status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313)
@@ -172,7 +202,10 @@ starting at ten items and returns exact integer-cent totals.” Exit criteria:
 0 passed, 1 failed, 4 unresolved (5 assigned). It ran in an **emulated environment**;
 the public status does not expose the full plan or actual/expected values.
 An [evidence request](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229850090)
-asks for those original artifacts without reconstructing them from code. Do not
+received a [retrieval response](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229885368):
+CodeRabbit could verify only the public summary, not the saved plan, input/output
+artifacts, or reasons for unresolved criteria. The authenticated QA evidence page
+or an export of its original artifacts is needed to complete that segment. Do not
 substitute our independent local probe for QA Agent execution details. Reusable
 Test Suites are still unverified. Historical runbooks do not fill these gaps.
 
