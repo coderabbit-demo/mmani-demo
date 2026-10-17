@@ -46,7 +46,7 @@ can reference these PRs without combining their defects. All video targets are
 | --- | --- | --- | --- | --- |
 | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |
 | GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |
-| SEC-01 | SQL injection | Safe SQL baseline prepared | Pending dedicated PR | Planned |
+| SEC-01 | SQL injection | Coding handoff implemented; full validation blocked by local HTTP connectivity | PR #1; local correction and regression evidence below; finding, Sources, fix artifact URL, and re-review pending | Planned |
 | BUG-01 | Inclusive discount boundary | Correct boundary prepared | Pending dedicated PR | Planned |
 | MULTI-01 | Downstream response contract | Actual consumer compatibility verified | Pending dedicated PR and Linked repositories attribution | Planned |
 | GUIDE-01 | External coding guidelines | Timed request and external guideline reference prepared | Pending dedicated PR and Coding guidelines attribution | Planned |
@@ -70,6 +70,58 @@ before accepting the generated fix.
 Do not present source branches as functional layers or invent unavailable views.
 
 ## Security — Do / Say / See
+
+### SEC-01 coding handoff evidence
+
+This entry supplements the historical Phase 1 evidence above. The supplied
+PR #1 handoff requests a bound parameter with literal substring semantics.
+The request flows from `GET /api/products/search?q=…` through
+`src/app.ts` to `searchProducts` in `src/security/products.ts`. The fixed SQL
+uses `instr(lower(name), lower(?))` and `.all(query)`, so quotes, percent, and
+underscore remain data. HTTP length validation and the default catalog are unchanged.
+
+- Tested input commit: `91fd477c994760fd9fce61189ef86e92093c2b40`, plus
+  the uncommitted correction and tests in this coding task. The generated commit
+  and stacked PR URL must be recorded after the system publishes the artifact.
+  The local base ref is `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`;
+  this checkout cannot resolve its merge-base with HEAD.
+- Original snapshot: the vulnerable input commit remains unchanged.
+  `demo/sec-01-before-fix` is absent from local refs; no ref was created or moved
+  and remote snapshot preservation has not been verified.
+- Fix provenance: implementation follows the supplied authoritative coding
+  handoff. The exact product action, CodeRabbit task/result URL, original finding
+  URL, and observed Sources label were not supplied. Do not mark the segment
+  CodeRabbit-remediated or claim re-review until those artifacts are captured.
+- Diff artifact: `src/security/products.ts` and additive cases in
+  `tests/baseline.test.ts`; every pre-existing assertion is retained, including
+  the empty-result HTTP injection assertion. New isolated databases use bound
+  fixture inserts and close in `finally`; shared catalog fixtures are unchanged.
+- Before correction, the new isolated percent and underscore searches each
+  returned all six rows instead of one, and the apostrophe search threw a SQL
+  syntax error. After correction, all six isolated cases pass, covering those
+  characters, SQL injection input, mixed-case matching, and ordered empty search.
+
+Commands used Node **24.19.0** via
+`npm exec --yes --package=node@24.19.0 -- <command>`. Validation commands
+set `NODE_USE_ENV_PROXY=0` to avoid the environment proxy stalling local HTTP
+requests; direct loopback requests then failed with `ECONNREFUSED`.
+
+| Command inside the Node wrapper | Actual local result |
+| --- | --- |
+| `npm ci` | Passed; 52 packages installed, zero reported vulnerabilities |
+| `npm run typecheck` | Passed |
+| `npm test -- tests/baseline.test.ts -t 'literal catalog substring search'` | Six passed; 44 skipped by the explicit test-name filter |
+| `npm test` | 44 passed, 17 failed (61 total); failures are HTTP-dependent checks encountering loopback connection refusal, including the timeout assertion receiving a connection error |
+| `npm run check` | Typecheck and build passed; coverage test run failed on 17 HTTP-dependent tests (43 passed before the final isolated injection case was added); later coverage step did not execute |
+| `npm run coverage:changed -- --base 916e3862f2bbf6f2b8a680d70692abc3b0df25a3` | Blocked: `git merge-base` failed in this checkout |
+| `npm run coverage:changed -- --all` | Failed closed: `coverage/lcov.info` absent after failed coverage run; no coverage percentage claimed |
+| `npm run smoke` | Failed: loopback `ECONNREFUSED` |
+
+Re-review has not occurred. Before recording, capture the actual finding/Sources,
+fix action and generated artifact, verify the preserved snapshot, and rerun the
+full checks with working loopback networking and complete Git history. Keep
+PR #1 open and unmerged. Recording remains planned; no clip or completed product
+workflow is claimed by these local checks.
 
 **Do:** Follow request input to the SQL sink on SEC-01. Use **Fix with AI**,
 **Auto Fix**, or **Fix with CodeRabbit Code**, then inspect the generated correction.
