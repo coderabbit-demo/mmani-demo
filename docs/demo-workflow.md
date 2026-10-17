@@ -47,7 +47,7 @@ can reference these PRs without combining their defects. All video targets are
 | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |
 | GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |
 | SEC-01 | SQL injection | Safe SQL baseline prepared | Pending dedicated PR | Planned |
-| BUG-01 | Inclusive discount boundary | Correct boundary prepared | Pending dedicated PR | Planned |
+| BUG-01 | Inclusive discount boundary | Generated correction prepared; HTTP validation blocked | PR #2; evidence card below; delivery and re-review pending | Planned |
 | MULTI-01 | Downstream response contract | Actual consumer compatibility verified | Pending dedicated PR and Linked repositories attribution | Planned |
 | GUIDE-01 | External coding guidelines | Timed request and external guideline reference prepared | Pending dedicated PR and Coding guidelines attribution | Planned |
 | PATH-01 | Path-specific pagination | Zero-based helper and scoped rule prepared | Pending dedicated PR and Path instructions attribution | Planned |
@@ -59,6 +59,76 @@ can reference these PRs without combining their defects. All video targets are
 
 Use-case IDs stay stable across PR revisions and recordings. Add a separate ID
 and clip if another configuration setting is selected for the demo.
+
+### BUG-01 coding-workflow evidence — October 17, 2026 UTC
+
+This is the proposed shared-register update prepared on the task checkout for
+delivery through a stacked PR; main has not been modified directly. Objective:
+restore the inclusive TEAM10 boundary in PR #2, keeping the demo open and unmerged.
+
+- **Original snapshot:** `demo/bug-01-before-fix` at
+  `66354f26a5a93ff1e740531cab3d47495535b770`, as supplied by the authoritative
+  implementation handoff. No local tag exists in this checkout; remote tag
+  verification is pending because remote operations are prohibited. No tag was
+  moved or deleted. PR base SHA and finding/Sources URLs remain pending.
+- **Fix workflow:** this coding task implements the supplied CodeRabbit coding
+  workflow handoff. `qualifiesForDiscount` now uses `itemCount >= 10`, with an
+  inclusive-threshold comment. Regression assertions and the lockfile are
+  unchanged. Exact initiating UI action and task/artifact URL were not supplied;
+  record them from the delivered workflow artifact. Generated commit SHA is
+  pending system delivery; no commit or remote operation was performed here.
+- **Tested revision:** uncommitted correction over HEAD
+  `66354f26a5a93ff1e740531cab3d47495535b770`; corrected
+  `src/bugs/discount.ts` Git blob is
+  `97011a13e5ac436fd66b3eb0c0571034fb9a32a6`.
+  This HEAD is the seeded parent, not a generated fixed commit. Revalidate and
+  record the generated commit SHA after delivery.
+- **Environment / installation:** Node **24.19.0**, selected with
+  `npm exec --yes --package=node@24.19.0 --package=npm -- sh`;
+  `npm ci` succeeded using the existing lockfile (52 packages added,
+  audit reported zero vulnerabilities).
+- **Full validation:** `npm run check` exited 1. Typecheck and compiled build
+  passed; all 53 existing tests ran: **38 passed, 15 failed**. HTTP tests failed
+  with `ECONNREFUSED` to ephemeral `127.0.0.1` ports, including the timeout test
+  receiving a connection error instead of `TimeoutError`. Coverage gates were
+  not reached; no passing coverage claim is made. The initial proxy-enabled
+  attempt stalled and was terminated; retrying with proxy variables unset
+  reproduced the connection failures.
+- **Smoke validation:** both `npm run smoke` and
+  `npm run smoke -- --built` ran and exited 1 with local HTTP `ECONNREFUSED`.
+  The initial source smoke under the environment proxy timed out. These are
+  execution-environment blockers; tests and HTTP behavior were not weakened.
+- **Independent literal probe:** Node 24.19.0 imported `quote` directly from
+  `src/pricing/quote.ts` and used `node:assert/strict` deep equality for every
+  row below; all four passed. This confirms calculation behavior, not HTTP
+  integration or a green full validation run.
+
+  | Item count | Subtotal cents | Expected total cents | Actual total cents |
+  | --- | --- | --- | --- |
+  | 9 | 11691 | 11691 | 11691 |
+  | 10 | 12990 | 11691 | 11691 |
+  | 11 | 14289 | 12860 | 12860 |
+  | 15 | 19485 | 17537 | 17537 |
+
+- **Local evidence only:** `/tmp/bug-01-validation.log` (initial attempt),
+  `/tmp/bug-01-source-smoke.log`, `/tmp/bug-01-validation-local.log`,
+  `/tmp/bug-01-validation-direct.log` (final full and both smoke results), and
+  `/tmp/bug-01-pricing-probe.log`. These execution-container logs are ephemeral;
+  archive them with the delivered artifact before reset. Hosted validation run
+  links are unavailable. Further application corrections must use CodeRabbit.
+- **Re-review:** pending after system delivery. No re-review request was sent
+  and no outcome is available; remote commands are prohibited in this task.
+  Request CodeRabbit re-review on the delivered fix and record its actual result,
+  finding resolution, artifact URL, and tested generated SHA before marking
+  BUG-01 verified.
+- **Recording / freshness:** still planned, with no video asset, duration, or
+  capture date. Prerequisites are preserved original finding/Sources evidence,
+  workflow artifact, successful full validation, and actual re-review. Use the
+  existing 0–5 / 5–13 / 13–21 / 21–28 / 28–30 second storyboard for PR #2 →
+  finding → recorded fix action → verified boundary → takeaway, with an
+  **After completion** cut. Exact click path and narration remain pending real
+  UI evidence. Retain the original snapshot, refresh checks at the delivered
+  SHA, verify automatic-merge exclusion, and leave PR #2 open and unmerged.
 
 ## General review — Do / Say / See
 
