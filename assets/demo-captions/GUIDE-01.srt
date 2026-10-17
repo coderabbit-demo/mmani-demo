@@ -4,39 +4,41 @@ Our TypeScript standard lives in a
 
 2
 00:00:03,000 --> 00:00:06,000
-separate repository. It requires bounded
-outbound
+separate repository. This request handler
+calls a
 
 3
 00:00:06,000 --> 00:00:09,000
-requests, and this pull request removes
+service without a timeout. In this
 
 4
 00:00:09,000 --> 00:00:12,000
-the timeout. The review cites that
+follow-up, CodeRabbit retrieves the
+external rule
 
 5
 00:00:12,000 --> 00:00:15,000
-external guideline rather than a copied
+and confirms that it applies. We delegate
 
 6
 00:00:15,000 --> 00:00:18,000
-local rule. We ask CodeRabbit to restore
+the correction to CodeRabbit, then verify
 
 7
 00:00:18,000 --> 00:00:21,000
-compliant behavior and verify the
-unresponsive-service
+the real handler returns an error
 
 8
 00:00:21,000 --> 00:00:24,000
-test after completion. The standard stays
+when its dependency stalls. This
+demonstrates
 
 9
 00:00:24,000 --> 00:00:27,000
-centrally maintained, while the review
-applies
+shared guidance applied to a concrete
+request
 
 10
 00:00:27,000 --> 00:00:30,000
-it to this repository's concrete change.
+path, with the source inspection
+preserved.

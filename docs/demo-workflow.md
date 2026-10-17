@@ -373,16 +373,16 @@ the compatibility decision visible before merging.”
 
 ### GUIDE-01 — External standards
 
-Shots: public standards file → PR #12 handler and timeout change → attributed review →
-CodeRabbit fix and timeout test → takeaway. Gate: a fresh review must actually
-load and cite the standards; a generic timeout finding is insufficient.
+Shots: external standards file → PR #12 real request path → verified source-retrieval
+follow-up → CodeRabbit fix #15 and passing timeout test → takeaway. Use the follow-up
+source evidence; the initial review's retrieval trace remains unverified.
 
-Narration: “Our TypeScript standard lives in a separate repository. It requires
-bounded outbound requests, and this pull request removes the timeout. The review
-cites that external guideline rather than a copied local rule. We ask CodeRabbit
-to restore compliant behavior and verify the unresponsive-service test after
-completion. The standard stays centrally maintained, while the review applies
-it to this repository's concrete change.”
+Narration: “Our TypeScript standard lives in a separate repository. This request
+handler calls a service without a timeout. In this follow-up, CodeRabbit retrieves
+the external rule and confirms that it applies. We delegate the correction to
+CodeRabbit, then verify the real handler returns an error when its dependency
+stalls. This demonstrates shared guidance applied to a concrete request path,
+with the source inspection preserved.”
 
 ### PATH-01 — Directory-specific instructions
 
