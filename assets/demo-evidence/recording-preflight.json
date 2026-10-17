@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-10-17T05:15:23.869309+00:00",
+  "tools": {
+    "browser": "Chromium 154",
+    "automation": "Python Playwright",
+    "encoder": "FFmpeg"
+  },
+  "public_github_status": 200,
+  "tls_verification": true,
+  "rendering": "unstyled; not acceptable for recording",
+  "asset_failure": "net::ERR_TUNNEL_CONNECTION_FAILED",
+  "blocked_hosts": [
+    "github.githubassets.com",
+    "avatars.githubusercontent.com",
+    "camo.githubusercontent.com"
+  ],
+  "configuration": "domains added to saved draft; application/publication unverified",
+  "videos_recorded": 0
+}

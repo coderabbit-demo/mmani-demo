@@ -301,9 +301,35 @@ Draft caption tracks for all twelve segments are in
 [assets/demo-captions](../assets/demo-captions/). Each spans exactly 30 seconds,
 with ten provisional three-second cues. Retiming to the recorded narration and
 checking readability are required before export. These are scripts/caption assets,
-not captured product footage or finished videos. This environment has no connected
-authenticated CodeRabbit browser or recording tool; Triage, Test Suites, Deep Scan,
-and product UI capture therefore remain outside the verified evidence.
+not captured product footage or finished videos. A local Chromium browser,
+Playwright, and FFmpeg are available. A TLS-verified public GitHub page probe
+returned HTTP 200, but its assets failed through the proxy, leaving the page
+unstyled. Do not record that degraded rendering as a finished demo.
+
+The saved environment draft adds `github.githubassets.com`,
+`avatars.githubusercontent.com`, and `camo.githubusercontent.com`, preserving its
+existing domains. Review/save and publish those settings, then rerun the browser
+preflight at `/workspace/.tools/demo-recording/preflight.py`. Browser access was
+validated with the environment-provided proxy CA in Chromium's certificate store;
+do not disable TLS verification. Public GitHub captures can cover GEN-01, SEC-01,
+BUG-01, MULTI-01, GUIDE-01, PATH-01, QA-01, and CONFIG-01 once the assets load.
+Authenticated CodeRabbit access is still required for GEN-02, detailed QA-02,
+QA-03, and SEC-02. No authenticated session or finished footage is available.
+
+| Public capture segment | Evidence to show after the browser preflight passes |
+| --- | --- |
+| GEN-01 / BUG-01 | PR #2 summary and boundary finding → CodeRabbit fix #6 → captured local validation |
+| SEC-01 | PR #1 SQL input-to-sink issue → CodeRabbit fix #9 bound query → 61-test local result |
+| MULTI-01 | PR #3 exact consumer-source reply → fix #7 → actual consumer compatibility probe |
+| GUIDE-01 | PR #12 real handler → verified external-source follow-up → fix #15 → 58-test local result |
+| PATH-01 | Scoped YAML rule → PR #5 Sources attribution → fix #8 → page-zero regression result |
+| QA-01 | [Successful weak-assertion CI](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39002157960) → PR #10 weak assertions → independent failure and CodeRabbit fix #14 |
+| CONFIG-01 | PR #13 one-line YAML diff → completed CHILL configuration report |
+
+CodeRabbit's documentation-only create-PR action on PR #15 remains checked without
+a delivered branch or PR. A [delivery diagnosis request](https://github.com/coderabbit-demo/mmani-demo/pull/15#issuecomment-6230010830)
+asks whether the task is queued, blocked, or untriggered; do not repeatedly activate
+it or apply its hidden patch manually.
 
 ## Draft 30-second narration and shot lists
 
