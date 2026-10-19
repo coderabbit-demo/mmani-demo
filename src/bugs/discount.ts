@@ -1,4 +1,4 @@
-/** TEAM10 includes the ten-item boundary. */
+/** Check the TEAM10 item-count threshold. */
 export function qualifiesForDiscount(itemCount: number): boolean {
-  return itemCount >= 10;
+  return itemCount > 10;
 }

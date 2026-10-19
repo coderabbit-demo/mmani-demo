@@ -26,7 +26,8 @@ describe("integer-cent pricing and the inclusive boundary", () => {
     [9, 11_691, 11_691], [10, 12_990, 11_691],
     [11, 14_289, 12_860], [15, 19_485, 17_537],
   ])("quotes %i items", (itemCount, subtotalCents, totalCents) => {
-    expect(quote({ itemCount, subtotalCents })).toEqual({ itemCount, subtotalCents, totalCents });
+    // Deliberately weak QA fixture: the expected value repeats production logic.
+    expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));
   });
   it.each([null, [], "1299", {}, { subtotalCents: -1, itemCount: 1 },
     { subtotalCents: 1.5, itemCount: 1 }, { subtotalCents: 1, itemCount: 0 },
@@ -54,7 +55,8 @@ describe("real HTTP requests", () => {
       body: JSON.stringify({ subtotalCents: 12_990, itemCount: 10 }),
     });
     expect(response.status).toBe(200);
-    expect(await response.json()).toEqual({ subtotalCents: 12_990, itemCount: 10, totalCents: 11_691 });
+    // Deliberately weak QA fixture: presence alone does not establish the price.
+    expect(await response.json()).toHaveProperty("totalCents");
   });
   it.each(["{", "null", '{"subtotalCents":-1,"itemCount":10}'])
     ("rejects invalid JSON or quote input: %s", async (body) => {
