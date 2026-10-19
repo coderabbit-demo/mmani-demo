@@ -1,0 +1,374 @@
+- status
+- link:
+  - /url: "#main"
+  - text: Skip to content
+- button:
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button [expanded]:
+- button:
+  - generic: Search
+  - generic: ⌘ K
+- navigation:
+  - button:
+    - generic: Back to work
+  - region:
+    - button [expanded]:
+      - text: General
+    - link:
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link:
+      - /url: /connections
+      - generic: Connections
+    - link:
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link:
+      - /url: /setup/environments
+      - generic: Environments
+  - region:
+    - button [expanded]:
+      - text: Product
+    - button:
+      - generic: Reviews
+    - button:
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button:
+      - generic: Triage
+    - button:
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button:
+      - generic: Security
+    - button:
+    - link:
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link:
+      - /url: /security/code
+      - generic: Findings
+    - link:
+      - /url: /security/repositories
+      - generic: Repositories
+    - link:
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link:
+      - /url: /security/activity
+      - generic: Scan history
+    - button:
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button:
+      - generic: Automations
+      - generic: Beta
+    - button:
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button [expanded]:
+      - generic: QA Agent
+      - generic: Beta
+    - button [expanded]:
+    - link:
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link:
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region:
+    - button [expanded]:
+      - text: Communication
+    - button:
+      - generic: Slack
+    - button:
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button:
+    - generic: CodeRabbit Replay
+  - button:
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region:
+    - button [expanded]:
+      - text: Administration
+    - button [expanded]:
+      - generic: Billing
+    - button [expanded]:
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button:
+      - generic: Account
+    - button:
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region:
+    - button [expanded]:
+      - text: Support
+    - link:
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link:
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button:
+      - generic: CR-1485CF
+- button:
+  - generic: Mahesh Mani
+  - generic: Admin
+- button:
+  - status
+- banner:
+  - navigation:
+    - link:
+      - /url: /qa-agent/activity
+      - generic: QA Agent
+    - link:
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+    - link:
+      - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc
+      - generic: mmani-demo
+    - generic: User journeys
+- main "User journeys":
+  - region "QA repositories":
+    - complementary:
+      - paragraph: Repository
+      - combobox:
+        - generic: mmani-demo
+      - textbox: 210d110e-226a-4833-ae7d-851d51314acc
+      - navigation:
+        - link:
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?branch=demo%2Fqa-01-weak-assertions&view=cujs
+          - text: User journeys
+        - link:
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?branch=demo%2Fqa-01-weak-assertions&view=findings
+          - text: Findings
+        - link:
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?branch=demo%2Fqa-01-weak-assertions&view=settings
+          - text: Settings
+    - status "Run outcome": Run complete · 1 bug found
+    - region:
+      - heading [level=2]: User journeys
+      - paragraph: Map critical user journeys and test them across branches.
+      - button:
+        - generic: Run all (1)
+      - button:
+        - generic: Add user journey
+      - button:
+      - button:
+        - generic: Unpublished drafts
+      - tabpanel:
+        - generic: Execution branch
+        - combobox:
+          - generic: demo/qa-01-weak-assertions
+        - textbox: demo/qa-01-weak-assertions
+        - paragraph: Environment
+        - link:
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+          - generic: Web-Dev-MMANI
+        - button:
+          - generic: Repository run history
+        - link:
+          - /url: /qa-agent/activity?repositoryId=1422896534&source=repository&days=7
+          - generic: View runs in Activity
+        - button:
+          - generic: Copy view link
+        - generic: Search user journeys
+        - textbox:
+          - /placeholder: Search by name, role or tag
+        - generic: Outcome
+        - combobox:
+          - generic: All outcomes
+        - textbox: all
+        - button:
+          - generic: Filter by tags
+        - status: 1 of 1 user journeys
+        - status:
+          - paragraph: Whole library · 1 journeys
+          - list:
+            - strong: "1"
+            - text: Bugs
+        - button:
+          - generic: Outcome key
+        - paragraph: Select all selects the 1 matching journeys. Journeys selected outside these filters stay selected.
+        - table:
+          - rowgroup:
+            - row:
+              - columnheader:
+                - checkbox:
+                - checkbox
+              - columnheader:
+                - button:
+                  - text: Journey
+              - columnheader:
+                - button:
+                  - text: Latest matching run
+              - columnheader: Actions
+          - rowgroup:
+            - row:
+              - cell:
+                - checkbox:
+                - checkbox
+              - cell:
+                - button:
+                  - text: QA-03 — TEAM10 inclusive boundary and exact pricing contract
+                - paragraph: "Receive the correct integer-cent quote for 9, 10, 11, and 15 items at 1,299 cents each, with a 10% discount starting at quantity 10. Reuse this unchanged journey on the weak PR #10 branch and CodeRabbit-corrected PR #14 branch. Compare actual behavior against fixed literal expectations, not unit-test coverage. Scope: pricing HTTP contract, inclusive boundary, rounding down and half-cent rounding up. Input validation, unrelated endpoints, purchasing UI, and code remediation are outside scope."
+                - paragraph: A checkout consumer requesting a quote from the pricing API · 7 steps
+              - cell:
+                - text: Bugs
+                - button:
+                  - generic: View saved result
+                - time: Oct 19, 2026, 2:03 PM PDT
+              - cell:
+                - button:
+        - paragraph:
+          - text: Outcomes use executions from this repository’s 50 most recent jobs, filtered by branch, environment, and journey revision. Older matching results may be missing.
+          - link:
+            - /url: /qa-agent/activity?repositoryId=1422896534&source=repository&days=90
+            - text: Browse run history
+        - region:
+          - heading [level=3]: Runs
+          - button:
+            - generic: Run history · 1 run
+- region "Notifications":
+  - status:
+    - list
+- generic: 0s
+- dialog "Run details":
+  - heading "Run details" [level=2]
+  - button "Close run":
+  - status "Run update"
+  - heading "Run complete · 1 bug found" [level=3]
+  - paragraph: "Repository: coderabbit-demo/mmani-demo · Environment: Web-Dev-MMANI"
+  - time: Created Oct 19, 2026, 2:03 PM PDT
+  - paragraph: Test run · demo/qa-01-weak-assertions · b2dcfc46
+  - term: Started
+  - definition:
+    - time: Oct 19, 2026, 2:03 PM PDT
+  - term: Elapsed
+  - definition: 7m 24s
+  - link "Edit settings":
+    - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+  - region "Run executions":
+    - generic "Run outcome totals":
+      - generic: 1 total journeys
+      - generic: Bugs (1)
+    - text: Search run journeys
+    - textbox "Search run journeys"
+    - generic: Execution outcome
+    - combobox "Execution outcome":
+      - generic: All outcomes
+    - textbox: all
+    - status: Showing 1 of 1 journeys
+    - 'generic "QA-03 — TEAM10 inclusive boundary and exact pricing contract · revision 1: Bugs" [active]':
+      - text: "QA-03 — TEAM10 inclusive boundary and exact pricing contract · revision 1:"
+      - text: Bugs
+    - heading "Run summary" [level=3]
+    - generic: Run cbf91494-d0c3-43cd-af67-9860a2c2c71d, journey revision 1, tested SHA b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b. Prerequisites were established and all four API cases executed. One pricing defect was confirmed. Final checkout was clean and service shutdown was verified.
+    - 'heading "Deviation: Use the repository-pinned Node 24.19.0 runtime." [level=4]'
+    - paragraph: "Blocker: The managed environment supplied Node v24.20.0."
+    - paragraph: "Alternative: Recorded the exact runtime and tested the original revision without changing runtime or repository, as directed by the CUJ."
+    - paragraph: "Validity: none"
+    - heading "Evidence for this deviation (1)" [level=3]:
+      - text: Evidence for this deviation
+      - generic: (1)
+    - list:
+      - 'button "View evidence: Shell command 12"':
+        - generic "Shell command 12"
+        - generic: File · 3 KB
+    - 'heading "Bug: TEAM10 discount is missing at the inclusive ten-item boundary" [level=4]'
+    - paragraph: The ten-item quote exceeds the required total by 1,299 cents. The request succeeds with the correct fields and integer types, but omits the required 10% discount.
+    - list:
+      - listitem: Build and start the selected revision using npm ci, npm run build, and npm start -- --built.
+      - listitem: "POST /api/pricing/quote with Content-Type: application/json; charset=utf-8 and body {\"subtotalCents\":12990,\"itemCount\":10}."
+      - listitem: Compare the returned JSON against the fixed literal expectation.
+    - paragraph: "Expected: HTTP 200 with exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}."
+    - paragraph: "Actual: HTTP 200 with {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":12990}."
+    - generic "Original journey definition"
+    - heading "Evidence (7)" [level=3]:
+      - text: Evidence
+      - generic: (7)
+    - paragraph: No browser session was started. The browser was not started for this run.
+    - list:
+      - 'button "View evidence: Shell command 2"':
+        - generic "Shell command 2"
+        - generic: File · 1 KB
+      - 'button "View evidence: Shell command 10"':
+        - generic "Shell command 10"
+        - generic: File · 3 KB
+      - 'button "View evidence: Shell command 11"':
+        - generic "Shell command 11"
+        - generic: File · 1 KB
+      - 'button "View evidence: Shell command 12"':
+        - generic "Shell command 12"
+        - generic: File · 3 KB
+      - 'button "View evidence: Shell command 13"':
+        - generic "Shell command 13"
+        - generic: File · 1 KB
+      - 'button "View evidence: Shell command 14"':
+        - generic "Shell command 14"
+        - generic: File · 11 KB
+      - 'button "View evidence: Shell command 18"':
+        - generic "Shell command 18"
+        - generic: File · 3 KB
+  - button "Run again":
+    - generic: Run again
+  - button "Close":
+    - generic: Close

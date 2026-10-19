@@ -1,0 +1,373 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices":
+  - alert:
+    - generic: MCP connection "Context7" has tools paused until their current definitions are approved. 4 more connections need attention.
+    - link "Review tools":
+      - /url: /connections?product=review&reviewConnection=workspace%3A79872caf-fbef-4353-a7b3-b81f8e67b2c0&focus=pausedTools
+      - text: Review
+    - link "4 more connections need attention. View all connections.":
+      - /url: /connections
+      - text: View all
+    - button "Dismiss":
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Admin navigation":
+  - button "Back to work":
+    - generic: Back to work
+  - region "General":
+    - button "General" [expanded]:
+      - text: General
+    - link "Connected repositories":
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link "Connections":
+      - /url: /connections
+      - generic: Connections
+    - link "Scopes":
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link "Environments":
+      - /url: /setup/environments
+      - generic: Environments
+  - region "Product":
+    - button "Product" [expanded]:
+      - text: Product
+    - button "Reviews":
+      - generic: Reviews
+    - button "Expand Reviews":
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button "Triage":
+      - generic: Triage
+    - button "Expand Triage":
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button "Security" [expanded]:
+      - generic: Security
+    - button "Collapse Security" [expanded]:
+    - link "Attack surface":
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link "Findings":
+      - /url: /security/code
+      - generic: Findings
+    - link "Repositories":
+      - /url: /security/repositories
+      - generic: Repositories
+    - link "PR security reviews":
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link "Scan history":
+      - /url: /security/activity
+      - generic: Scan history
+    - button "Coding Beta":
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button "Automations Beta":
+      - generic: Automations
+      - generic: Beta
+    - button "Expand Automations":
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button "QA Agent Beta":
+      - generic: QA Agent
+      - generic: Beta
+    - button "Expand QA Agent":
+    - link:
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link:
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region "Communication":
+    - button "Communication" [expanded]:
+      - text: Communication
+    - button "Slack":
+      - generic: Slack
+    - button "Expand Slack":
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button "CodeRabbit Replay":
+    - generic: CodeRabbit Replay
+  - button "Expand CodeRabbit Replay":
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region "Administration":
+    - button "Administration" [expanded]:
+      - text: Administration
+    - button "Billing":
+      - generic: Billing
+    - button "Expand Billing":
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button "Account":
+      - generic: Account
+    - button "Expand Account":
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region "Support":
+    - button "Support" [expanded]:
+      - text: Support
+    - link "Documentation":
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link "Contact support":
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button "CR-1485CF":
+      - generic: CR-1485CF
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - link "Security":
+      - /url: /security/repositories
+      - generic: Security
+    - link "Repositories":
+      - /url: /security/repositories
+      - generic: Repositories
+    - generic: mmani-demo
+  - button "Run deep scan":
+    - generic: Run deep scan
+- main "mmani-demo":
+  - status
+  - heading "mmani-demo" [level=1]
+  - paragraph: Review this repository’s attack surface, findings, scan history, and configuration.
+  - heading "Security Agent" [level=3]
+  - generic: Cancels at renewal
+  - paragraph: Security stays active until the end of your billing term.
+  - tablist "Repository sections":
+    - tab "Attack surface" [active] [selected]
+    - tab "Findings"
+    - tab "Scan history"
+    - tab "Learnings"
+    - tab "Settings"
+  - tabpanel "Attack surface":
+    - heading "Attack surface map" [level=2]
+    - paragraph: PR reviews update existing security points. Deep Scan runs discover and add new ones.
+    - status:
+      - paragraph: 15 points were checked within this repository. Further checks need external evidence. Link relevant repositories to provide more context for future scans.
+      - link "Link repositories":
+        - /url: /security/repositories?owner=coderabbit-demo&repo=mmani-demo&tab=settings
+    - 'button "Verified: see which pull requests changed it"':
+      - text: Verified
+    - generic: 100%
+    - paragraph: 73 of 73 points
+    - paragraph:
+      - generic: ▲
+      - generic: 100% · 7d
+    - 'button "Stale / unverified: see which pull requests changed it"':
+      - text: Stale / unverified
+    - generic: 0%
+    - paragraph: everything mapped is verified
+    - paragraph:
+      - generic: ▼
+      - generic: 100% · 7d
+    - generic: Mapped points
+    - generic: "73"
+    - paragraph: repository-wide security surface
+    - 'button "Continuous monitoring: view coverage history"':
+      - generic: Continuous monitoring
+      - img "Coverage history over the last 7 days"
+      - generic: 7d
+    - heading "Verification coverage How to read coverage insights" [level=3]:
+      - text: Verification coverage
+      - button "How to read coverage insights":
+    - generic: Fully verified
+    - generic: Unverified
+    - generic: Stale
+    - generic: High/critical finding
+    - generic: Medium finding
+    - paragraph: Each tile represents a security-relevant point in your code. Hover for details, or select a tile to view findings and connections. Select a numbered tile to see all points in that lane.
+    - text: Submodules
+    - button "Entry points"
+    - generic: Trust & guardrails
+    - button "Trust boundaries"
+    - button "Access controls"
+    - button "Sinks"
+    - button "Security config"
+    - generic "Runtime and validation tooling"
+    - generic: 30/30 verified
+    - button "Show verification coverage for Runtime and validation tooling":
+      - progressbar "Runtime and validation tooling verified coverage":
+        - generic: "100"
+    - group "Runtime and validation tooling, Entry points":
+      - button "parseLcov, scripts/changed-coverage.mjs:6, Entry points in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "addedLines, scripts/changed-coverage.mjs:37, Entry points in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:64, Entry points in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:1, Entry points in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/start.mjs:6, Entry points in Runtime and validation tooling, verified. Open recorded relationships."
+    - group "Runtime and validation tooling, Trust boundaries":
+      - button "parseLcov, scripts/changed-coverage.mjs:13, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:65, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:75, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:15, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:40, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "port, scripts/start.mjs:2, Trust boundaries in Runtime and validation tooling, verified. Open recorded relationships."
+    - group "Runtime and validation tooling, Access controls":
+      - button "parseLcov, scripts/changed-coverage.mjs:14, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "addedLines, scripts/changed-coverage.mjs:39, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:66, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:13, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:17, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:31, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/start.mjs:3, Access controls in Runtime and validation tooling, verified. Open recorded relationships."
+    - group "Runtime and validation tooling, Sinks":
+      - button "addedLines, scripts/changed-coverage.mjs:42, Sinks in Runtime and validation tooling, verified, medium finding. Open issue details and recorded relationships."
+      - button "parseLcov, scripts/changed-coverage.mjs:8, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "sources, scripts/changed-coverage.mjs:58, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:70, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "main, scripts/changed-coverage.mjs:72, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:6, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:16, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "get, scripts/smoke.mjs:24, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:29, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/smoke.mjs:42, Sinks in Runtime and validation tooling, verified. Open recorded relationships."
+    - group "Runtime and validation tooling, Security config":
+      - button "Mapped security point, scripts/smoke.mjs:7, Security config in Runtime and validation tooling, verified. Open recorded relationships."
+      - button "Mapped security point, scripts/start.mjs:7, Security config in Runtime and validation tooling, verified. Open recorded relationships."
+    - generic "HTTP service and exported application APIs"
+    - generic: 19/19 verified
+    - button "Show verification coverage for HTTP service and exported application APIs":
+      - progressbar "HTTP service and exported application APIs verified coverage":
+        - generic: "100"
+    - group "HTTP service and exported application APIs, Entry points":
+      - button "createApp, src/app.ts:22, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:27, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:29, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:33, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "serviceIsHealthy, src/guidelines/service-status.ts:2, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "quote, src/pricing/quote.ts:10, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "searchProducts, src/security/products.ts:12, Entry points in HTTP service and exported application APIs, verified. Open recorded relationships."
+    - group "HTTP service and exported application APIs, Trust boundaries":
+      - button "readJson, src/app.ts:13, Trust boundaries in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:30, Trust boundaries in HTTP service and exported application APIs, verified. Open recorded relationships."
+    - group "HTTP service and exported application APIs, Access controls":
+      - button "readJson, src/app.ts:15, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:31, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:34, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "createApp, src/app.ts:48, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "quote, src/pricing/quote.ts:11, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "quote, src/pricing/quote.ts:15, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "searchProducts, src/security/products.ts:13, Access controls in HTTP service and exported application APIs, verified. Open recorded relationships."
+    - group "HTTP service and exported application APIs, Sinks":
+      - button "readJson, src/app.ts:18, Sinks in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "serviceIsHealthy, src/guidelines/service-status.ts:3, Sinks in HTTP service and exported application APIs, verified. Open recorded relationships."
+      - button "searchProducts, src/security/products.ts:14, Sinks in HTTP service and exported application APIs, verified. Open recorded relationships."
+    - group "HTTP service and exported application APIs, Security config"
+    - generic "CI validation workflow"
+    - generic: 15/15 verified
+    - button "Show verification coverage for CI validation workflow":
+      - progressbar "CI validation workflow verified coverage":
+        - generic: "100"
+    - group "CI validation workflow, Entry points":
+      - button "push, .github/workflows/validate.yml:3, Entry points in CI validation workflow, verified. Open recorded relationships."
+      - button "pull_request, .github/workflows/validate.yml:5, Entry points in CI validation workflow, verified. Open recorded relationships."
+    - group "CI validation workflow, Trust boundaries":
+      - button "fetch-depth, .github/workflows/validate.yml:14, Trust boundaries in CI validation workflow, verified. Open recorded relationships."
+      - button "node-version-file, .github/workflows/validate.yml:17, Trust boundaries in CI validation workflow, verified. Open recorded relationships."
+      - button "COVERAGE_BASE, .github/workflows/validate.yml:26, Trust boundaries in CI validation workflow, verified. Open recorded relationships."
+    - group "CI validation workflow, Access controls":
+      - button "permissions.contents, .github/workflows/validate.yml:7, Access controls in CI validation workflow, verified. Open recorded relationships."
+    - group "CI validation workflow, Sinks":
+      - button "check, .github/workflows/validate.yml:19, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:20, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:21, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:22, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:27, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:30, Sinks in CI validation workflow, verified. Open recorded relationships."
+      - button "check, .github/workflows/validate.yml:31, Sinks in CI validation workflow, verified. Open recorded relationships."
+    - group "CI validation workflow, Security config":
+      - button "jobs.check.runs-on, .github/workflows/validate.yml:10, Security config in CI validation workflow, verified. Open recorded relationships."
+      - button "jobs.check.steps, .github/workflows/validate.yml:12, Security config in CI validation workflow, verified. Open recorded relationships."
+    - generic "(root)"
+    - generic: 9/9 verified
+    - button "Show verification coverage for (root)":
+      - progressbar "(root) verified coverage":
+        - generic: "100"
+    - group "(root), Entry points":
+      - button "reviews.auto_review, .coderabbit.yaml:7, Entry points in (root), verified. Open recorded relationships."
+    - group "(root), Trust boundaries":
+      - button "reviews.auto_review.enabled, .coderabbit.yaml:8, Trust boundaries in (root), verified. Open recorded relationships."
+      - button "reviews.pre_merge_checks.custom_checks.Security Gate.mode, .coderabbit.yaml:14, Trust boundaries in (root), verified. Open recorded relationships."
+      - button "knowledge_base.code_guidelines.filePatterns, .coderabbit.yaml:33, Trust boundaries in (root), verified. Open recorded relationships."
+      - button "knowledge_base.linked_repositories.repository, .coderabbit.yaml:36, Trust boundaries in (root), verified. Open recorded relationships."
+    - group "(root), Access controls":
+      - button "reviews.pre_merge_checks.custom_checks.Security Gate.instructions, .coderabbit.yaml:16, Access controls in (root), verified. Open recorded relationships."
+    - group "(root), Sinks":
+      - button "reviews.pre_merge_checks.custom_checks.Security Gate.instructions, .coderabbit.yaml:15, Sinks in (root), verified. Open recorded relationships."
+      - button "reviews.path_instructions.instructions, .coderabbit.yaml:23, Sinks in (root), verified. Open recorded relationships."
+    - group "(root), Security config":
+      - button "knowledge_base.code_guidelines.enabled, .coderabbit.yaml:31, Security config in (root), verified. Open recorded relationships."
+- region "Notifications":
+  - status:
+    - list
+- iframe
+- iframe

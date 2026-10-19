@@ -1,5 +1,219 @@
 # Demo workflow and recording register
 
+## Presenter release — October 19, 2026, afternoon
+
+The current presenter script is the Do / Say / See walkthrough below, including
+the three updated segments in this section. Earlier dated status notes are an
+audit trail, not current blockers. Twelve 30-second drafts are prepared; none is
+marked playback-checked. The user is reviewing the original nine; their MP4s are
+unchanged in this update. QA-02, QA-03, and SEC-02 are the new drafts.
+
+### QA-02 — current Do / Say / See
+
+**Do:** Open PR #10's saved weak plan and result, then CodeRabbit fix PR #14.
+Show the downloaded corrected plan and final result under `QA-02-corrected-export`.
+**Say:** “The original QA run exposed the ten-item defect. CodeRabbit supplied
+the correction. The preserved corrected execution records the four expected
+responses. These PR-specific plans differ; this is not a fixed-suite replay.”
+**See:** Exact run IDs, SHAs, literal HTTP totals, and the saved final result.
+Keep the weak run's unresolved criteria, unknown corrected runtime, and the
+non-authoritative-results caveat visible. Label downloaded evidence as an export.
+The Review Stack access problem does not prevent using these recovered artifacts.
+
+### QA-03 — current Do / Say / See
+
+**Do:** Open Test Suites → mmani-demo → saved QA-03 journey → run history.
+Compare weak job `8ac582c9-4662-4d25-94d5-a089c0409038` with corrected job
+`554ca141-3818-4c95-8383-893f73ef4307`; expand the saved result with Enter if
+clicking its disclosure does not open it. Open the HTTP evidence files.
+**Say:** “The same saved journey revision catches the boundary failure and
+passes on CodeRabbit's correction. Both runs used Node v24.20.0. The expected
+values did not change.”
+**See:** Revision 1, commits b2dcfc46 and 4e6f38b0, 12,990 versus 11,691 at ten
+items, then all four correct totals. The managed runtime differs from the
+repository's 24.19.0 pin. The probe implementations differ; the journey and
+literal requirements remain fixed. No browser execution is claimed.
+
+### SEC-02 — current Do / Say / See
+
+**Do:** Open [scan history](https://app.coderabbit.ai/security/activity?search=mmani-demo),
+select scan `af366706-e2bf-4852-9424-07c2af52c036`, expand Last scan details,
+open its finding, then inspect the repository Attack surface tab and the
+`addedLines` sink at `scripts/changed-coverage.mjs:42`.
+**Say:** “This repository-wide scan records a specific commit and one Medium
+finding. Its trace follows contributor-controlled input through CI validation to
+an unchecked numeric loop. The mapped point is verified while its finding stays
+open; verified coverage does not mean vulnerability-free.”
+**See:** Completed in 18m 35s, triggered October 19 at 1:09 PM Pacific; scanned
+commit `18ea929f0694fd31695376de007ff953374ecd4e`. Finding
+`d865a373-04a1-4293-bb26-5da3b4335aa0` is Medium, Open, CWE-835, with External
+reachability and Moderate exploitability as reported by CodeRabbit. First/last
+seen: 1:29 PM Pacific. The current surface shows **73/73 verified**, zero stale/
+unverified, and warns that 15 points were checked within the repository and
+further checks need external evidence. The earlier 81-point map is a historical
+snapshot with a different denominator; do not claim a fixed-denominator trend.
+
+[Scan provenance](../assets/demo-evidence/captures-2026-10-19/SEC-02-scan-provenance.txt),
+[finding trace](../assets/demo-evidence/captures-2026-10-19/SEC-02-finding-trace.txt),
+and [surface](../assets/demo-evidence/captures-2026-10-19/SEC-02-surface-completed.txt).
+No reproducer was executed, no fix was triggered, and no vulnerability was merged
+to seed this scan. Remediation is not part of this investigation-only segment;
+any later correction must be produced by CodeRabbit.
+
+Freshness check: all 16 demo PRs remain open and unmerged, every auto-merge
+request is absent, and repository automatic merging is disabled. Triage-specific
+automatic rules remain unverified. Recheck this before presenting. No new local
+application test pass is claimed by this documentation/media-only update.
+
+## QA-03 comparison execution — October 19, 2026
+
+**Comparison complete:** corrected job finished in **4m 56s**, with the single
+journey **passed**. Execution run `e579e311-45fb-420f-9d07-1132e29dfdc8` tested
+`4e6f38b08d23d81ae408afdaed418b6aaccc2064`, journey revision **1**, on
+`Web-Dev-MMANI` with Node **v24.20.0**, matching the weak run's runtime.
+Recorded HTTP responses for quantities 9, 10, 11, and 15 were all HTTP 200 and
+exactly matched totals **11,691 / 11,691 / 12,860 / 17,537** cents. The corrected
+probe also verified exact fields, integer values, and no duplicate JSON fields.
+The saved journey and literal expectations were unchanged; generated probe code
+is not byte-identical between runs. Final repository state was clean and service
+shutdown recorded. Neither run started a browser session.
+
+[Corrected summary](../assets/demo-evidence/captures-2026-10-19/QA-03-corrected-completed.txt)
+and [corrected HTTP observations](../assets/demo-evidence/captures-2026-10-19/QA-03-corrected-http-evidence.txt)
+complete the fixed-journey failure/pass evidence. Runtime deviation from the
+repository's 24.19.0 pin remains documented for both runs. QA-03 evidence is
+verified within this scope; its 30-second recording is still pending.
+The launch/in-progress notes below are retained as history.
+
+Weak job completed in **7m 24s** with **one bug found**. Execution run ID:
+`cbf91494-d0c3-43cd-af67-9860a2c2c71d`. All four HTTP cases executed on the
+expected weak SHA: quantity ten returned **12,990**, expected **11,691** cents;
+quantities 9, 11, and 15 matched 11,691, 12,860, and 17,537 respectively.
+The UI records Node **v24.20.0** as a deviation from the repository pin,
+with validity shown as `none`; retain this label without interpreting it as a
+runtime-compliance pass. Final checkout was clean and service shutdown verified.
+[Completed summary](../assets/demo-evidence/captures-2026-10-19/QA-03-weak-completed.txt)
+and [HTTP observations](../assets/demo-evidence/captures-2026-10-19/QA-03-weak-http-evidence.txt).
+
+Started corrected job `554ca141-3818-4c95-8383-893f73ef4307` at **2:12 PM Pacific**
+on `coderabbitai/chat/b2dcfc4`, confirmed commit prefix `4e6f38b0`, unchanged
+journey revision **1** and environment readiness revision **2**. Status:
+**in progress**; corrected outcome and runtime remain to be captured.
+
+User authorized execution of the saved journey. Started weak-branch job
+`8ac582c9-4662-4d25-94d5-a089c0409038` at 2:03 PM Pacific on
+`demo/qa-01-weak-assertions`, head `b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b`.
+Journey ID `53d66f3f-1fdb-4011-8e52-8c5b35b53d23`, revision **1**;
+environment `Web-Dev-MMANI`, readiness configuration revision **2** passed.
+The job progressed from queued to in progress. A final result is not yet claimed.
+Corrected comparison target remains `coderabbitai/chat/b2dcfc4`, head
+`4e6f38b08d23d81ae408afdaed418b6aaccc2064`; both PRs were confirmed open.
+
+## QA-03 reusable journey saved — October 19, 2026
+
+Added **QA-03 — TEAM10 inclusive boundary and exact pricing contract** to the
+`mmani-demo` Test Suites library, with seven steps and fixed literal HTTP
+expectations for quantities 9, 10, 11, and 15. The UI confirms one saved journey,
+seven steps, and **No recent result**. Environment: `Web-Dev-MMANI`; execution
+branch remains `main`. No run was started by this save operation.
+
+The managed environment supports only Node major-version pinning; the user
+reports v24.20.0. Each execution must record its actual Node version and tested
+SHA. The 24.19.0 repository pin deviation is explicit and does not cause a manual
+sandbox modification. Reuse this journey unchanged on PR #10's weak branch and
+PR #14's CodeRabbit-corrected branch; preserve both results and flag any runtime
+difference. Only CodeRabbit may remediate findings.
+
+[Saved steps](../assets/demo-evidence/QA-03-journey-steps.json) and
+[UI snapshot](../assets/demo-evidence/captures-2026-10-19/QA-03-journey-saved.txt).
+Implementation status: prepared; completed execution evidence and recording
+remain pending. This supersedes earlier statements that the library is empty.
+
+## QA-02 saved plan and final result recovered — October 19, 2026
+
+The second user-supplied archive, `saved-plan-and-run-metadata.zip`, supplies
+the corrected run's persisted plan and final result. Independent comparison
+confirms the plan extract equals the saved state's scenario values, the final
+result extract equals its saved result, and both previously downloaded execution
+files match the SHA-256 hashes recorded in that result. Run, PR, and commit match
+the QA-02 corrected evidence below. These checks establish consistency across
+the supplied exports; cloud origin was not independently fetched.
+
+- [Saved plan](../assets/demo-evidence/QA-02-corrected-export/saved-plan.json):
+  four HTTP requests, explicit input/output expectations, scope, and entry/exit
+  criteria. This was embedded in persisted state, not a separate plan object.
+- [Saved final result](../assets/demo-evidence/QA-02-corrected-export/saved-final-result.json):
+  one passed scenario, one passed entry criterion, five passed exit criteria;
+  no recorded scenario deviations or limitations. The run-level caveat is
+  “QA Agent results are non-authoritative.” Input validation and unrelated
+  endpoints were outside scope. Run completed October 16 at 10:00:09 PM Pacific.
+- [Metadata verification](../assets/demo-evidence/QA-02-corrected-export/metadata-verification.json)
+  records archive hash and comparisons. Internal organization/storage locator
+  fields are omitted from the public final-result copy; originals remain in
+  the supplied archive.
+
+QA-02's plan-to-execution-to-saved-result evidence is ready for the presenter
+script and video preparation. A separate final-validator document is not required
+to represent this saved final result accurately. Runtime version remains unknown:
+schema/model versions do not prove Node or agent runtime versions. Do not claim
+pinned-runtime compliance. No original browser video exists in these exports.
+The weak run's unresolved criteria and runtime deviation remain explicit, and
+the two PR-specific plans still differ. Recording remains pending; QA-03's fixed
+journey comparison remains separate. This section supersedes the earlier missing
+plan/final-result blockers below.
+
+## QA-02 downloaded evidence — October 19, 2026
+
+The user supplied `original-evidence.zip` for corrected PR #14 run
+`69a73d04-cc6e-416e-bbf5-72a604503bd0`, scenario
+`pricing-team10-inclusive-boundary`, commit
+`4e6f38b08d23d81ae408afdaed418b6aaccc2064`. Both enclosed execution artifacts
+match the supplied manifest's byte counts and MD5 checksums. This verifies
+archive consistency; the declared cloud origin was not independently fetched.
+Internal cloud locators remain in the original download and are not reproduced here.
+
+- [Execution result](../assets/demo-evidence/QA-02-corrected-export/execution-result.txt)
+  records one entry and five exit criteria passed.
+- [Execution log](../assets/demo-evidence/QA-02-corrected-export/execution-log.txt)
+  contains four HTTP 200 responses and exact JSON matches: quantities 9, 10,
+  11, and 15 return totals 11,691, 11,691, 12,860, and 17,537 cents. Requests
+  were recorded October 16 at 9:58:56 PM Pacific. Git status was clean before
+  and after the probe. These are historical agent observations, not a new local run.
+- [Independent archive checks](../assets/demo-evidence/QA-02-corrected-export/verification.json)
+  preserve hashes and limitations. The archive lacks a standalone initial plan,
+  runtime version, and separate final-validator report. Its browser recording
+  reports `not_started` and `interrupted`; there is no recorded browser video.
+
+The missing corrected HTTP execution evidence is now recovered despite the
+Review Stack access blocker. Use the downloaded artifacts in QA-02's result
+beat and label their source. Full plan/runtime/final-validation provenance remains
+pending; do not mark the clip checked. Preserve the weak run's runtime deviation
+and unresolved criteria. These different PR-specific scenarios are not a fixed
+Test Suite replay and do not replace QA-03. The user also reports Deep Scan
+completed; completed scan artifacts have not yet been inspected in this update.
+
+## Latest readiness update — October 19, 2026, afternoon (Pacific)
+
+This update supersedes the Test Suites enrollment and scan-not-started blockers
+in the earlier capture below. The user completed repository/environment setup
+and initiated the Deep Scan. Read-only UI verification confirms:
+
+- **QA-03:** `mmani-demo` is enrolled, execution branch `main`, environment
+  `Web-Dev-MMANI`. The library still displays “Build your user journey library”
+  and unpublished drafts displays “No unpublished drafts.” Setup is available;
+  a saved fixed journey and completed weak/corrected runs are still pending.
+  [Setup evidence](../assets/demo-evidence/captures-2026-10-19/QA-03-setup-ready-latest.txt)
+  and [draft check](../assets/demo-evidence/captures-2026-10-19/QA-03-drafts-empty-latest.txt).
+- **SEC-02:** repository-wide scan `af366706-e2bf-4852-9424-07c2af52c036`
+  was initiated by Mahesh Mani at 1:09 PM Pacific. Scan history reports
+  **Estimating**, with duration and cost not yet available. Completed results,
+  tested commit, findings, and refreshed surface evidence remain pending.
+  [Scan history](https://app.coderabbit.ai/security/activity?search=mmani-demo)
+  and [captured state](../assets/demo-evidence/captures-2026-10-19/SEC-02-running-latest.txt).
+
+No duplicate scan or QA run was started during this verification. Recording
+status remains nine drafts; QA-02, QA-03, and SEC-02 are not completed clips.
+
 ## Continuation evidence — October 19, 2026 (Pacific)
 
 This dated update supersedes earlier access, delivery, and recording-pending
@@ -143,10 +357,10 @@ can reference these PRs without combining their defects. All video targets are
 | GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit code fix #15 passes 58 tests; separate CodeRabbit cleanup #16 verified and unmerged | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | [30s draft](../assets/demo-videos/GUIDE-01-30s-draft.mp4); playback QA pending |
 | PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | [30s draft](../assets/demo-videos/PATH-01-30s-draft.mp4); playback QA pending |
 | QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | [30s draft](../assets/demo-videos/QA-01-30s-draft.mp4); playback QA pending |
-| QA-02 | QA Agent behavioral evidence | Weak plan/result/checks captured with runtime deviation; corrected detail page blocked by missing Review Stack | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | Storyboarded; detailed artifacts/footage pending |
-| QA-03 | Reusable Test Suites | UI available; mmani-demo not enrolled | Needs repository environment, fixed journey revision and runs | Blocked; no footage |
+| QA-02 | QA Agent behavioral evidence | Weak UI artifacts and corrected exported plan/result verified; runtime caveats preserved | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | 30-second draft assembled; playback review pending |
+| QA-03 | Reusable Test Suites | Verified weak failure and corrected pass, same journey revision 1, Node v24.20.0 | Jobs 8ac582c9 / 554ca141; exact SHAs and HTTP evidence above | 30-second draft assembled; playback review pending |
 | CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | [30s draft](../assets/demo-videos/CONFIG-01-30s-draft.mp4); playback QA pending |
-| SEC-02 | Deep Scan / attack-surface extension | UI available; 0/81 verified points; no completed scan | No scan started; separately scoped evidence needed | Blocked; no footage |
+| SEC-02 | Deep Scan / attack-surface extension | Completed scan af366706 at 18ea929; one open Medium finding; 73/73 mapped points verified | Scan provenance, finding trace, surface snapshots captured | 30-second draft assembled; playback review pending |
 
 Use-case IDs stay stable across PR revisions and recordings. Add a separate ID
 and clip if another configuration setting is selected for the demo.

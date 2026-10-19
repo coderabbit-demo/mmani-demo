@@ -1,0 +1,290 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices"
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Admin navigation":
+  - button "Back to work":
+    - generic: Back to work
+  - region "General":
+    - button "General" [expanded]:
+      - text: General
+    - link "Connected repositories":
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link "Connections":
+      - /url: /connections
+      - generic: Connections
+    - link "Scopes":
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link "Environments":
+      - /url: /setup/environments
+      - generic: Environments
+  - region "Product":
+    - button "Product" [expanded]:
+      - text: Product
+    - button "Reviews":
+      - generic: Reviews
+    - button "Expand Reviews":
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button "Triage":
+      - generic: Triage
+    - button "Expand Triage":
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button "Security":
+      - generic: Security
+    - button "Expand Security":
+    - link:
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link:
+      - /url: /security/code
+      - generic: Findings
+    - link:
+      - /url: /security/repositories
+      - generic: Repositories
+    - link:
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link:
+      - /url: /security/activity
+      - generic: Scan history
+    - button "Coding Beta":
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button "Automations Beta":
+      - generic: Automations
+      - generic: Beta
+    - button "Expand Automations":
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button "QA Agent Beta" [expanded]:
+      - generic: QA Agent
+      - generic: Beta
+    - button "Collapse QA Agent" [expanded]:
+    - link "Activity":
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link "Test suites":
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region "Communication":
+    - button "Communication" [expanded]:
+      - text: Communication
+    - button "Slack":
+      - generic: Slack
+    - button "Expand Slack":
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button "CodeRabbit Replay":
+    - generic: CodeRabbit Replay
+  - button "Expand CodeRabbit Replay":
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region "Administration":
+    - button "Administration" [expanded]:
+      - text: Administration
+    - button "Billing" [expanded]:
+      - generic: Billing
+    - button "Collapse Billing" [expanded]:
+    - link "Plans & payments":
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link "Team management":
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link "Roles":
+      - /url: /settings/roles
+      - generic: Roles
+    - button "Account":
+      - generic: Account
+    - button "Expand Account":
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region "Support":
+    - button "Support" [expanded]:
+      - text: Support
+    - link "Documentation":
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link "Contact support":
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button "CR-1485CF":
+      - generic: CR-1485CF
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - link "QA Agent":
+      - /url: /qa-agent/activity
+      - generic: QA Agent
+    - link "Test suites":
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+    - link "mmani-demo":
+      - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc
+      - generic: mmani-demo
+    - generic: User journeys
+- main "User journeys":
+  - region "QA repositories":
+    - complementary "Repository navigation":
+      - paragraph: Repository
+      - combobox "Repository selector":
+        - generic: mmani-demo
+      - textbox: 210d110e-226a-4833-ae7d-851d51314acc
+      - navigation "Repository sections":
+        - link "User journeys":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=cujs
+          - text: User journeys
+        - link "Findings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=findings
+          - text: Findings
+        - link "Settings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+          - text: Settings
+    - status "Run outcome"
+    - region "Repository QA":
+      - heading "User journeys" [level=2]
+      - paragraph: Map critical user journeys and test them across branches.
+      - button "Run all (1)":
+        - generic: Run all (1)
+      - button "Add user journey":
+        - generic: Add user journey
+      - button "More journey actions":
+      - button "Unpublished drafts":
+        - generic: Unpublished drafts
+      - tabpanel:
+        - generic: Execution branch
+        - combobox "Execution branch":
+          - generic: main
+        - textbox: main
+        - paragraph: Environment
+        - link "Change environment (Web-Dev-MMANI) in repository settings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+          - generic: Web-Dev-MMANI
+        - button "Repository run history" [disabled]:
+          - generic: Repository run history
+        - link "View runs in Activity":
+          - /url: /qa-agent/activity?repositoryId=1422896534&source=repository&days=7
+          - generic: View runs in Activity
+        - button "Copy view link":
+          - generic: Copy view link
+        - generic: Search user journeys
+        - textbox "Search user journeys":
+          - /placeholder: Search by name, role or tag
+        - generic: Outcome
+        - combobox "Outcome":
+          - generic: All outcomes
+        - textbox: all
+        - button "Filter by tags":
+          - generic: Filter by tags
+        - status: 1 of 1 user journeys
+        - status "Journey outcome updates":
+          - paragraph: Whole library · 1 journeys
+          - list "Journey outcome summary":
+            - strong: "1"
+            - text: No recent result
+        - button "Outcome key":
+          - generic: Outcome key
+        - group "Journey selection":
+          - paragraph: Select all selects the 1 matching journeys. Journeys selected outside these filters stay selected.
+          - table:
+            - rowgroup:
+              - row "Select all rows on this page Journey Latest matching run Actions":
+                - columnheader "Select all rows on this page":
+                  - checkbox "Select all rows on this page":
+                  - checkbox
+                - columnheader "Journey":
+                  - button "Journey":
+                    - text: Journey
+                - columnheader "Latest matching run":
+                  - button "Latest matching run":
+                    - text: Latest matching run
+                - columnheader "Actions"
+            - rowgroup:
+              - 'row "Select user journey: QA-03 — TEAM10 inclusive boundary and exact pricing contract QA-03 — TEAM10 inclusive boundary and exact pricing contract Receive the correct integer-cent quote for 9, 10, 11, and 15 items at 1,299 cents each, with a 10% discount starting at quantity 10. Reuse this unchanged journey on the weak PR #10 branch and CodeRabbit-corrected PR #14 branch. Compare actual behavior against fixed literal expectations, not unit-test coverage. Scope: pricing HTTP contract, inclusive boundary, rounding down and half-cent rounding up. Input validation, unrelated endpoints, purchasing UI, and code remediation are outside scope. A checkout consumer requesting a quote from the pricing API · 7 steps No recent result Actions for QA-03 — TEAM10 inclusive boundary and exact pricing contract"':
+                - 'cell "Select user journey: QA-03 — TEAM10 inclusive boundary and exact pricing contract"':
+                  - 'checkbox "Select user journey: QA-03 — TEAM10 inclusive boundary and exact pricing contract"':
+                  - checkbox
+                - 'cell "QA-03 — TEAM10 inclusive boundary and exact pricing contract Receive the correct integer-cent quote for 9, 10, 11, and 15 items at 1,299 cents each, with a 10% discount starting at quantity 10. Reuse this unchanged journey on the weak PR #10 branch and CodeRabbit-corrected PR #14 branch. Compare actual behavior against fixed literal expectations, not unit-test coverage. Scope: pricing HTTP contract, inclusive boundary, rounding down and half-cent rounding up. Input validation, unrelated endpoints, purchasing UI, and code remediation are outside scope. A checkout consumer requesting a quote from the pricing API · 7 steps"':
+                  - button "QA-03 — TEAM10 inclusive boundary and exact pricing contract":
+                    - text: QA-03 — TEAM10 inclusive boundary and exact pricing contract
+                  - paragraph: "Receive the correct integer-cent quote for 9, 10, 11, and 15 items at 1,299 cents each, with a 10% discount starting at quantity 10. Reuse this unchanged journey on the weak PR #10 branch and CodeRabbit-corrected PR #14 branch. Compare actual behavior against fixed literal expectations, not unit-test coverage. Scope: pricing HTTP contract, inclusive boundary, rounding down and half-cent rounding up. Input validation, unrelated endpoints, purchasing UI, and code remediation are outside scope."
+                  - paragraph: A checkout consumer requesting a quote from the pricing API · 7 steps
+                - cell "No recent result":
+                  - generic: No recent result
+                - cell "Actions for QA-03 — TEAM10 inclusive boundary and exact pricing contract":
+                  - button "Actions for QA-03 — TEAM10 inclusive boundary and exact pricing contract":
+        - paragraph:
+          - text: Outcomes use executions from this repository’s 50 most recent jobs, filtered by branch, environment, and journey revision. Older matching results may be missing.
+          - link "Browse run history":
+            - /url: /qa-agent/activity?repositoryId=1422896534&source=repository&days=90
+- region "Notifications":
+  - status:
+    - list
+- iframe
+- iframe
+- generic: 0s

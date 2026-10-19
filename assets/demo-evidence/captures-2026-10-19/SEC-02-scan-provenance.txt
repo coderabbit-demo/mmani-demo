@@ -1,0 +1,307 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices":
+  - alert:
+    - generic: MCP connection "Context7" has tools paused until their current definitions are approved. 4 more connections need attention.
+    - link "Review tools":
+      - /url: /connections?product=review&reviewConnection=workspace%3A79872caf-fbef-4353-a7b3-b81f8e67b2c0&focus=pausedTools
+      - text: Review
+    - link "4 more connections need attention. View all connections.":
+      - /url: /connections
+      - text: View all
+    - button "Dismiss":
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Admin navigation":
+  - button "Back to work":
+    - generic: Back to work
+  - region "General":
+    - button "General" [expanded]:
+      - text: General
+    - link "Connected repositories":
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link "Connections":
+      - /url: /connections
+      - generic: Connections
+    - link "Scopes":
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link "Environments":
+      - /url: /setup/environments
+      - generic: Environments
+  - region "Product":
+    - button "Product" [expanded]:
+      - text: Product
+    - button "Reviews":
+      - generic: Reviews
+    - button "Expand Reviews":
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button "Triage":
+      - generic: Triage
+    - button "Expand Triage":
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button "Security" [expanded]:
+      - generic: Security
+    - button "Collapse Security" [expanded]:
+    - link "Attack surface":
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link "Findings":
+      - /url: /security/code
+      - generic: Findings
+    - link "Repositories":
+      - /url: /security/repositories
+      - generic: Repositories
+    - link "PR security reviews":
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link "Scan history":
+      - /url: /security/activity
+      - generic: Scan history
+    - button "Coding Beta":
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button "Automations Beta":
+      - generic: Automations
+      - generic: Beta
+    - button "Expand Automations":
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button "QA Agent Beta":
+      - generic: QA Agent
+      - generic: Beta
+    - button "Expand QA Agent":
+    - link:
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link:
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region "Communication":
+    - button "Communication" [expanded]:
+      - text: Communication
+    - button "Slack":
+      - generic: Slack
+    - button "Expand Slack":
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button "CodeRabbit Replay":
+    - generic: CodeRabbit Replay
+  - button "Expand CodeRabbit Replay":
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region "Administration":
+    - button "Administration" [expanded]:
+      - text: Administration
+    - button "Billing":
+      - generic: Billing
+    - button "Expand Billing":
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button "Account":
+      - generic: Account
+    - button "Expand Account":
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region "Support":
+    - button "Support" [expanded]:
+      - text: Support
+    - link "Documentation":
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link "Contact support":
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button "CR-1485CF":
+      - generic: CR-1485CF
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - link "Security":
+      - /url: /security/repositories
+      - generic: Security
+    - link "Repositories":
+      - /url: /security/repositories
+      - generic: Repositories
+    - generic: mmani-demo
+  - button "Run deep scan":
+    - generic: Run deep scan
+- main "mmani-demo":
+  - status
+  - heading "mmani-demo" [level=1]
+  - paragraph: Review this repository’s attack surface, findings, scan history, and configuration.
+  - heading "Security Agent" [level=3]
+  - generic: Cancels at renewal
+  - paragraph: Security stays active until the end of your billing term.
+  - tablist "Repository sections":
+    - tab "Attack surface"
+    - tab "Findings" [selected]
+    - tab "Scan history"
+    - tab "Learnings"
+    - tab "Settings"
+  - tabpanel "Findings":
+    - status "Scan results loading updates"
+    - region "Scan activity details":
+      - button "Last scan details" [expanded] [active]:
+        - generic: Last scan details
+      - region "Last scan details":
+        - term: Repository
+        - definition: coderabbit-demo/mmani-demo
+        - term: Triggered by
+        - definition:
+          - generic: Mahesh Mani
+          - generic: Admin
+        - term: Triggered at
+        - definition: Oct 19, 2026, 1:09 PM
+        - term: Runtime
+        - definition: 18m 35s
+        - term: Status
+        - definition:
+          - generic: Completed
+        - term: Coverage scope
+        - definition: Repository
+        - term: Scan ID
+        - definition:
+          - generic: af366706-e2bf-4852-9424-07c2af52c036
+          - button "Copy scan ID":
+        - term: Commit
+        - definition:
+          - link "18ea929f0694fd31695376de007ff953374ecd4e":
+            - /url: https://github.com/coderabbit-demo/mmani-demo/commit/18ea929f0694fd31695376de007ff953374ecd4e
+            - generic: 18ea929f0694fd31695376de007ff953374ecd4e
+        - status:
+          - region "Outcome":
+            - paragraph: Outcome
+            - text: 1 finding · 1 medium
+    - separator
+    - heading "Findings summary" [level=2]
+    - status "Findings summary": 1 finding · 1 medium
+    - tablist "Finding type":
+      - tab "Vulnerabilities" [selected]
+      - tab "Secrets"
+    - tabpanel "Vulnerabilities":
+      - textbox "Search findings..."
+      - button "Filters, 1 active":
+        - generic: Filter
+        - generic: "1"
+      - button "Export findings":
+        - generic: Export findings
+      - group "Active finding filters":
+        - generic: "Showing:"
+        - generic: Selected scan
+        - 'button "Remove state: Open"':
+          - generic: "State: Open"
+        - button "Clear filters":
+          - generic: Clear filters
+      - table:
+        - rowgroup:
+          - row "Category Subsystem State Fixed by Severity File Actions":
+            - columnheader "Category":
+              - button "Category":
+                - text: Category
+            - columnheader "Subsystem"
+            - columnheader "State"
+            - columnheader "Fixed by"
+            - columnheader "Severity":
+              - button "Severity":
+                - text: Severity
+            - columnheader "File":
+              - button "File":
+                - text: File
+            - columnheader "Actions":
+              - generic: Actions
+        - rowgroup:
+          - 'row "View finding: Denial of service, coderabbit-demo/mmani-demo, scripts/changed-coverage.mjs:42 CWE-835 Runtime and validation tooling Open — medium scripts/changed-coverage.mjs:42 Finding recheck status Finding actions"':
+            - 'cell "View finding: Denial of service, coderabbit-demo/mmani-demo, scripts/changed-coverage.mjs:42 CWE-835"':
+              - 'button "View finding: Denial of service, coderabbit-demo/mmani-demo, scripts/changed-coverage.mjs:42"': Denial of service
+              - generic: CWE-835
+            - cell "Runtime and validation tooling":
+              - generic "Runtime and validation tooling"
+            - cell "Open":
+              - generic: Open
+            - cell "—"
+            - cell "medium":
+              - generic: medium
+            - cell "scripts/changed-coverage.mjs:42":
+              - generic "scripts/changed-coverage.mjs:42"
+            - cell "Finding recheck status Finding actions":
+              - status "Finding recheck status"
+              - button "Finding actions":
+      - navigation "Pagination":
+        - 'button "Rows per page: 25"':
+          - text: "25"
+- region "Notifications":
+  - status:
+    - list
+- iframe
+- iframe

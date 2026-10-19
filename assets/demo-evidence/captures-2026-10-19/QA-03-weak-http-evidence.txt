@@ -1,0 +1,302 @@
+Shell command 14
+
+text/plain; charset=utf-8 · 11 KB
+
+/bin/bash -c "cat > /tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-api-probe.py <<'PY'
+import urllib.request, urllib.error, json, pathlib, datetime, subprocess
+ROOT=pathlib.Path('/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d')
+OUT=ROOT/'observations'
+BASE='http://127.0.0.1:3000'
+COMMON={'scenarioId':'53d66f3f-1fdb-4011-8e52-8c5b35b53d23','runId':ROOT.name,'journeyRevision':1,'testedSha':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()}
+def save(name, record):
+ record={**COMMON, 'timestamp':datetime.datetime.now(datetime.timezone.utc).isoformat(), **record}
+ path=OUT/name
+ path.write_text(json.dumps(record,indent=2)+'\\n')
+ print(json.dumps({'artifact':str(path),**record},indent=2))
+ return record
+with urllib.request.urlopen(BASE+'/health',timeout=5) as response:
+ health={'status':response.status,'headers':dict(response.headers.items()),'body':response.read().decode()}
+entry_valid=health['status']==200 and json.loads(health['body'])=={'status':'ok'}
+save('qa03-002-entry-state.json',{'observationId':'qa03-002','request':{'method':'GET','url':BASE+'/health'},'response':health,'entryCriteriaEstablished':entry_valid,'fixtureValidity':{'setupMethod':'Repository-supported npm ci, npm run build, npm start -- --built; in-memory disposable synthetic service, caller-provided quote payloads.','accountOrAuthenticationRequired':False,'persistentRecordsRequired':False,'evidence':['setup-001','setup-002','setup-003','setup-004','setup-005','qa03-001'],'guidance':'README: no secrets, database server, frontend framework, or runtime npm dependencies needed; synthetic subtotal is caller-provided; service does not charge money or persist orders. src/app.ts confirms direct quote route with no authentication middleware.'}})
+if not entry_valid:
+ raise SystemExit('Entry state not established; behavior requests not run.')
+cases=[(2,9,11691,11691,'application/json'),(3,10,12990,11691,'application/json; charset=utf-8'),(4,11,14289,12860,'application/json'),(5,15,19485,17537,'application/json')]
+for task,quantity,subtotal,total,content_type in cases:
+ observation_id='qa03-'+str(task+1).zfill(3)
+ request_body={'subtotalCents':subtotal,'itemCount':quantity}
+ expected={'subtotalCents':subtotal,'itemCount':quantity,'totalCents':total}
+ encoded=json.dumps(request_body,separators=(',',':')).encode()
+ request=urllib.request.Request(BASE+'/api/pricing/quote',data=encoded,headers={'Content-Type':content_type},method='POST')
+ try:
+  with urllib.request.urlopen(request,timeout=5) as response:
+   result={'status':response.status,'headers':dict(response.headers.items()),'body':response.read().decode()}
+ except urllib.error.HTTPError as error:
+  result={'status':error.code,'headers':dict(error.headers.items()),'body':error.read().decode()}
+ try:
+  actual=json.loads(result['body'])
+ except json.JSONDecodeError:
+  actual=None
+ integer_fields=isinstance(actual,dict) and all(type(actual.get(key)) is int for key in expected)
+ fields_exact=isinstance(actual,dict) and set(actual)==set(expected)
+ comparison={'httpStatusMatches':result['status']==200,'fieldsMatchExactly':fields_exact,'allValuesAreIntegers':integer_fields,'valuesMatchExactly':actual==expected}
+ comparison['passed']=all(comparison.values())
+ save(observation_id+'-quantity-'+str(quantity)+'.json',{'observationId':observation_id,'taskIndex':task,'request':{'method':'POST','url':BASE+'/api/pricing/quote','headers':{'Content-Type':content_type},'body':encoded.decode(),'json':request_body},'response':result,'expectedStatus':200,'expected':expected,'actual':actual,'comparison':comparison,'entryStateEvidenceObservationIds':['qa03-001','qa03-002']})
+PY
+python3 /tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-api-probe.py"
+{
+  "artifact": "/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-002-entry-state.json",
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "runId": "cbf91494-d0c3-43cd-af67-9860a2c2c71d",
+  "journeyRevision": 1,
+  "testedSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+  "timestamp": "2026-10-19T21:07:39.326664+00:00",
+  "observationId": "qa03-002",
+  "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/health"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:07:39 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "body": "{\"status\":\"ok\"}"
+  },
+  "entryCriteriaEstablished": true,
+  "fixtureValidity": {
+    "setupMethod": "Repository-supported npm ci, npm run build, npm start -- --built; in-memory disposable synthetic service, caller-provided quote payloads.",
+    "accountOrAuthenticationRequired": false,
+    "persistentRecordsRequired": false,
+    "evidence": [
+      "setup-001",
+      "setup-002",
+      "setup-003",
+      "setup-004",
+      "setup-005",
+      "qa03-001"
+    ],
+    "guidance": "README: no secrets, database server, frontend framework, or runtime npm dependencies needed; synthetic subtotal is caller-provided; service does not charge money or persist orders. src/app.ts confirms direct quote route with no authentication middleware."
+  }
+}
+{
+  "artifact": "/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-003-quantity-9.json",
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "runId": "cbf91494-d0c3-43cd-af67-9860a2c2c71d",
+  "journeyRevision": 1,
+  "testedSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+  "timestamp": "2026-10-19T21:07:39.328981+00:00",
+  "observationId": "qa03-003",
+  "taskIndex": 2,
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"subtotalCents\":11691,\"itemCount\":9}",
+    "json": {
+      "subtotalCents": 11691,
+      "itemCount": 9
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:07:39 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "body": "{\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}"
+  },
+  "expectedStatus": 200,
+  "expected": {
+    "subtotalCents": 11691,
+    "itemCount": 9,
+    "totalCents": 11691
+  },
+  "actual": {
+    "subtotalCents": 11691,
+    "itemCount": 9,
+    "totalCents": 11691
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "fieldsMatchExactly": true,
+    "allValuesAreIntegers": true,
+    "valuesMatchExactly": true,
+    "passed": true
+  },
+  "entryStateEvidenceObservationIds": [
+    "qa03-001",
+    "qa03-002"
+  ]
+}
+{
+  "artifact": "/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-004-quantity-10.json",
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "runId": "cbf91494-d0c3-43cd-af67-9860a2c2c71d",
+  "journeyRevision": 1,
+  "testedSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+  "timestamp": "2026-10-19T21:07:39.329971+00:00",
+  "observationId": "qa03-004",
+  "taskIndex": 3,
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "{\"subtotalCents\":12990,\"itemCount\":10}",
+    "json": {
+      "subtotalCents": 12990,
+      "itemCount": 10
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:07:39 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "body": "{\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":12990}"
+  },
+  "expectedStatus": 200,
+  "expected": {
+    "subtotalCents": 12990,
+    "itemCount": 10,
+    "totalCents": 11691
+  },
+  "actual": {
+    "subtotalCents": 12990,
+    "itemCount": 10,
+    "totalCents": 12990
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "fieldsMatchExactly": true,
+    "allValuesAreIntegers": true,
+    "valuesMatchExactly": false,
+    "passed": false
+  },
+  "entryStateEvidenceObservationIds": [
+    "qa03-001",
+    "qa03-002"
+  ]
+}
+{
+  "artifact": "/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-005-quantity-11.json",
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "runId": "cbf91494-d0c3-43cd-af67-9860a2c2c71d",
+  "journeyRevision": 1,
+  "testedSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+  "timestamp": "2026-10-19T21:07:39.330868+00:00",
+  "observationId": "qa03-005",
+  "taskIndex": 4,
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"subtotalCents\":14289,\"itemCount\":11}",
+    "json": {
+      "subtotalCents": 14289,
+      "itemCount": 11
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:07:39 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "body": "{\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}"
+  },
+  "expectedStatus": 200,
+  "expected": {
+    "subtotalCents": 14289,
+    "itemCount": 11,
+    "totalCents": 12860
+  },
+  "actual": {
+    "subtotalCents": 14289,
+    "itemCount": 11,
+    "totalCents": 12860
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "fieldsMatchExactly": true,
+    "allValuesAreIntegers": true,
+    "valuesMatchExactly": true,
+    "passed": true
+  },
+  "entryStateEvidenceObservationIds": [
+    "qa03-001",
+    "qa03-002"
+  ]
+}
+{
+  "artifact": "/tmp/qa-agent/cbf91494-d0c3-43cd-af67-9860a2c2c71d/observations/qa03-006-quantity-15.json",
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "runId": "cbf91494-d0c3-43cd-af67-9860a2c2c71d",
+  "journeyRevision": 1,
+  "testedSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+  "timestamp": "2026-10-19T21:07:39.331674+00:00",
+  "observationId": "qa03-006",
+  "taskIndex": 5,
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"subtotalCents\":19485,\"itemCount\":15}",
+    "json": {
+      "subtotalCents": 19485,
+      "itemCount": 15
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:07:39 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "body": "{\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}"
+  },
+  "expectedStatus": 200,
+  "expected": {
+    "subtotalCents": 19485,
+    "itemCount": 15,
+    "totalCents": 17537
+  },
+  "actual": {
+    "subtotalCents": 19485,
+    "itemCount": 15,
+    "totalCents": 17537
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "fieldsMatchExactly": true,
+    "allValuesAreIntegers": true,
+    "valuesMatchExactly": true,
+    "passed": true
+  },
+  "entryStateEvidenceObservationIds": [
+    "qa03-001",
+    "qa03-002"
+  ]
+}
+
+Close preview
+Download

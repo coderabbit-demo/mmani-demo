@@ -1,0 +1,251 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices"
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Admin navigation":
+  - button "Back to work":
+    - generic: Back to work
+  - region "General":
+    - button "General" [expanded]:
+      - text: General
+    - link "Connected repositories":
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link "Connections":
+      - /url: /connections
+      - generic: Connections
+    - link "Scopes":
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link "Environments":
+      - /url: /setup/environments
+      - generic: Environments
+  - region "Product":
+    - button "Product" [expanded]:
+      - text: Product
+    - button "Reviews":
+      - generic: Reviews
+    - button "Expand Reviews":
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button "Triage":
+      - generic: Triage
+    - button "Expand Triage":
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button "Security" [expanded]:
+      - generic: Security
+    - button "Collapse Security" [expanded]:
+    - link "Attack surface":
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link "Findings":
+      - /url: /security/code
+      - generic: Findings
+    - link "Repositories":
+      - /url: /security/repositories
+      - generic: Repositories
+    - link "PR security reviews":
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link "Scan history":
+      - /url: /security/activity
+      - generic: Scan history
+    - button "Coding Beta":
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button "Automations Beta":
+      - generic: Automations
+      - generic: Beta
+    - button "Expand Automations":
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button "QA Agent Beta" [expanded]:
+      - generic: QA Agent
+      - generic: Beta
+    - button "Collapse QA Agent" [expanded]:
+    - link "Activity":
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link "Test suites":
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region "Communication":
+    - button "Communication" [expanded]:
+      - text: Communication
+    - button "Slack":
+      - generic: Slack
+    - button "Expand Slack":
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button "CodeRabbit Replay":
+    - generic: CodeRabbit Replay
+  - button "Expand CodeRabbit Replay":
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region "Administration":
+    - button "Administration" [expanded]:
+      - text: Administration
+    - button "Billing":
+      - generic: Billing
+    - button "Expand Billing":
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button "Account":
+      - generic: Account
+    - button "Expand Account":
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region "Support":
+    - button "Support" [expanded]:
+      - text: Support
+    - link "Documentation":
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link "Contact support":
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button "CR-1485CF":
+      - generic: CR-1485CF
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - link "Security":
+      - /url: /security
+      - generic: Security
+    - generic: Scan history
+  - button "Run deep scan":
+    - generic: Run deep scan
+- main "Scan history":
+  - status: 1 scan running
+  - heading "Scan history" [level=1]
+  - paragraph: Track scan runs, outcomes, and credit usage across your repositories.
+  - heading "Security Agent" [level=3]
+  - generic: Cancels at renewal
+  - paragraph: Security stays active until the end of your billing term.
+  - textbox "Search history..." [active]: mmani-demo
+  - button "Clear search":
+  - button "Repository":
+    - generic: Repository
+  - button "Date range All time":
+    - generic: Date range
+    - generic: All time
+  - button "Triggered by":
+    - generic: Triggered by
+  - table:
+    - rowgroup:
+      - row "Scan Repository Coverage Status Duration Cost Triggered by":
+        - columnheader "Scan":
+          - button "Scan":
+            - text: Scan
+        - columnheader "Repository":
+          - button "Repository":
+            - text: Repository
+        - columnheader "Coverage"
+        - columnheader "Status":
+          - button "Status":
+            - text: Status
+        - columnheader "Duration":
+          - button "Duration":
+            - text: Duration
+        - columnheader "Cost":
+          - button "Cost":
+            - text: Cost
+        - columnheader "Triggered by":
+          - button "Triggered by":
+            - text: Triggered by
+    - rowgroup:
+      - row "af366706 coderabbit-demo/mmani-demo Repository Estimating - - Mahesh Mani Admin Oct 19, 2026":
+        - cell "af366706":
+          - generic "af366706-e2bf-4852-9424-07c2af52c036": af366706
+        - cell "coderabbit-demo/mmani-demo":
+          - generic "coderabbit-demo/mmani-demo"
+        - cell "Repository":
+          - generic: Repository
+        - cell "Estimating":
+          - generic: Estimating
+        - cell "-"
+        - cell "-"
+        - cell "Mahesh Mani Admin Oct 19, 2026":
+          - generic: Mahesh Mani
+          - generic: Admin
+          - generic: ·
+          - generic "Oct 19, 2026, 1:09 PM": Oct 19, 2026
+  - navigation "Pagination":
+    - 'button "Rows per page: 25"':
+      - text: "25"
+    - generic: per page
+    - generic: 1 of 1
+- region "Notifications":
+  - status:
+    - list
+- iframe
+- iframe

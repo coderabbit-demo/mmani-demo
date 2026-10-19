@@ -1,0 +1,14 @@
+{
+  "title": "QA-03 — TEAM10 inclusive boundary and exact pricing contract",
+  "steps": [
+    "Record the selected execution branch, git rev-parse HEAD, git status --porcelain, node --version, and npm --version before testing. Use the configured Web-Dev-MMANI environment (Node major 24). Report the exact runtime version; the repository pin is 24.19.0 but this managed environment currently supplies 24.20.0 and only supports major-version pinning. Record this deviation without modifying the runtime or repository. Preserve the saved journey revision and run ID with the results.",
+    "Install locked dependencies with npm ci, build using the repository documented build command, and start the compiled service with npm start. Use a disposable local service only. If startup fails, report the setup failure; do not edit source, tests, configuration, or expectations. Record the service base URL.",
+    "POST /api/pricing/quote with Content-Type: application/json and JSON body {\"subtotalCents\":11691,\"itemCount\":9}. Require HTTP 200 and exact JSON {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}. Save the request, response, expected value, actual value, and comparison result.",
+    "POST /api/pricing/quote with Content-Type: application/json; charset=utf-8 and JSON body {\"subtotalCents\":12990,\"itemCount\":10}. Require HTTP 200 and exact JSON {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}. The ten-item boundary is inclusive. Save the request, response, expected value, actual value, and comparison result. A response total of 12990 is a failure; never change the expected total to match it.",
+    "POST /api/pricing/quote with Content-Type: application/json and JSON body {\"subtotalCents\":14289,\"itemCount\":11}. Require HTTP 200 and exact JSON {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}. Save the request, response, expected value, actual value, and comparison result.",
+    "POST /api/pricing/quote with Content-Type: application/json and JSON body {\"subtotalCents\":19485,\"itemCount\":15}. Require HTTP 200 and exact JSON {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}. Save the request, response, expected value, actual value, and comparison result.",
+    "Report all four case outcomes, continuing after a failed assertion when the service remains available. Check exact response fields and integer-cent values against the literal expectations above. Record git status --porcelain after testing and any environment limitations. Preserve logs and final checks with the tested SHA, run ID, and journey revision. Do not remediate findings or modify the saved journey. Stop the service started for this run."
+  ],
+  "status": "saved; not executed",
+  "environment": "Web-Dev-MMANI"
+}

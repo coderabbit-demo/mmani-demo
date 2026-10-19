@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+A reusable journey keeps the same pricing expectations across two execution branches.
+
+2
+00:00:05,000 --> 00:00:13,000
+Revision one catches the weak branch returning twelve thousand nine hundred ninety cents at exactly ten items.
+
+3
+00:00:13,000 --> 00:00:21,000
+After completion, the same journey passes on CodeRabbit’s corrected commit. Both runs record Node twenty-four point twenty.
+
+4
+00:00:21,000 --> 00:00:28,000
+All four corrected totals match. Keep the tested commits, environment deviation, and unchanged journey revision with the evidence.
+
+5
+00:00:28,000 --> 00:00:30,000
+Replay fixed expectations.

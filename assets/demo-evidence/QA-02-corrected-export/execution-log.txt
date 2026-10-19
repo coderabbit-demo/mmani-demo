@@ -1,0 +1,246 @@
+Observation: observation-10
+Kind: probe
+Exit code: 0
+Title: Shell command 4
+Command: /bin/bash -c "python3 - <<'PY'
+import json, subprocess, urllib.request, urllib.error
+from datetime import datetime, timezone
+from pathlib import Path
+root=Path('/home/vercel-sandbox/workspace/repos/github.com/coderabbit-demo/mmani-demo')
+out=Path('/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts')
+out.mkdir(parents=True, exist_ok=True)
+scenario='pricing-team10-inclusive-boundary'
+revision=subprocess.check_output(['git','rev-parse','HEAD'], cwd=root, text=True).strip()
+status_before=subprocess.check_output(['git','status','--porcelain'], cwd=root, text=True)
+fixtures=[(11691,9,11691,'application/json'),(12990,10,11691,'application/json; charset=utf-8'),(14289,11,12860,'application/json'),(19485,15,17537,'application/json')]
+observations=[]
+for i,(subtotal,count,total,ctype) in enumerate(fixtures,1):
+    request_body={'subtotalCents':subtotal,'itemCount':count}
+    expected={'subtotalCents':subtotal,'itemCount':count,'totalCents':total}
+    request=urllib.request.Request('http://127.0.0.1:3000/api/pricing/quote',data=json.dumps(request_body,separators=(',',':')).encode(),method='POST',headers={'Content-Type':ctype})
+    observation={'observationId':f'{scenario}-http-{i:03d}','recordedAt':datetime.now(timezone.utc).isoformat(),'surface':'http','revision':revision,'request':{'method':'POST','url':request.full_url,'headers':{'Content-Type':ctype},'body':request_body},'expected':{'status':200,'json':expected}}
+    try:
+        try:
+            response=urllib.request.urlopen(request,timeout=15)
+        except urllib.error.HTTPError as error:
+            response=error
+        with response:
+            raw=response.read().decode('utf-8')
+            observation['response']={'status':response.status,'headers':dict(response.headers.items()),'rawBody':raw}
+        try:
+            parsed=json.loads(raw)
+            observation['response']['json']=parsed
+            observation['exactJsonMatch']=parsed==expected
+        except json.JSONDecodeError as error:
+            observation['jsonError']=str(error)
+            observation['exactJsonMatch']=False
+        observation['statusMatches']=observation['response']['status']==200
+        observation['conclusion']='pass' if observation['statusMatches'] and observation['exactJsonMatch'] else 'fail'
+    except Exception as error:
+        observation['executionError']={'type':type(error).__name__,'message':str(error)}
+        observation['conclusion']='error'
+    path=out/f'{scenario}-http-{i:03d}.json'
+    path.write_text(json.dumps(observation,indent=2)+'\\n')
+    observation['artifactPath']=str(path)
+    observations.append(observation)
+status_after=subprocess.check_output(['git','status','--porcelain'], cwd=root, text=True)
+summary={'scenarioId':scenario,'revision':revision,'gitStatusBefore':status_before,'gitStatusAfter':status_after,'observations':observations}
+path=out/f'{scenario}-http-observations.json'
+path.write_text(json.dumps(summary,indent=2)+'\\n')
+print(json.dumps(summary,indent=2))
+print('Evidence bundle: '+str(path))
+PY"
+{
+  "scenarioId": "pricing-team10-inclusive-boundary",
+  "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "gitStatusBefore": "",
+  "gitStatusAfter": "",
+  "observations": [
+    {
+      "observationId": "pricing-team10-inclusive-boundary-http-001",
+      "recordedAt": "2026-10-17T04:58:56.189538+00:00",
+      "surface": "http",
+      "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3000/api/pricing/quote",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "subtotalCents": 11691,
+          "itemCount": 9
+        }
+      },
+      "expected": {
+        "status": 200,
+        "json": {
+          "subtotalCents": 11691,
+          "itemCount": 9,
+          "totalCents": 11691
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "Date": "Sat, 17 Oct 2026 04:58:56 GMT",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "rawBody": "{\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}",
+        "json": {
+          "subtotalCents": 11691,
+          "itemCount": 9,
+          "totalCents": 11691
+        }
+      },
+      "exactJsonMatch": true,
+      "statusMatches": true,
+      "conclusion": "pass",
+      "artifactPath": "/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-001.json"
+    },
+    {
+      "observationId": "pricing-team10-inclusive-boundary-http-002",
+      "recordedAt": "2026-10-17T04:58:56.200214+00:00",
+      "surface": "http",
+      "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3000/api/pricing/quote",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "subtotalCents": 12990,
+          "itemCount": 10
+        }
+      },
+      "expected": {
+        "status": 200,
+        "json": {
+          "subtotalCents": 12990,
+          "itemCount": 10,
+          "totalCents": 11691
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "Date": "Sat, 17 Oct 2026 04:58:56 GMT",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "rawBody": "{\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}",
+        "json": {
+          "subtotalCents": 12990,
+          "itemCount": 10,
+          "totalCents": 11691
+        }
+      },
+      "exactJsonMatch": true,
+      "statusMatches": true,
+      "conclusion": "pass",
+      "artifactPath": "/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-002.json"
+    },
+    {
+      "observationId": "pricing-team10-inclusive-boundary-http-003",
+      "recordedAt": "2026-10-17T04:58:56.201786+00:00",
+      "surface": "http",
+      "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3000/api/pricing/quote",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "subtotalCents": 14289,
+          "itemCount": 11
+        }
+      },
+      "expected": {
+        "status": 200,
+        "json": {
+          "subtotalCents": 14289,
+          "itemCount": 11,
+          "totalCents": 12860
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "Date": "Sat, 17 Oct 2026 04:58:56 GMT",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "rawBody": "{\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}",
+        "json": {
+          "subtotalCents": 14289,
+          "itemCount": 11,
+          "totalCents": 12860
+        }
+      },
+      "exactJsonMatch": true,
+      "statusMatches": true,
+      "conclusion": "pass",
+      "artifactPath": "/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-003.json"
+    },
+    {
+      "observationId": "pricing-team10-inclusive-boundary-http-004",
+      "recordedAt": "2026-10-17T04:58:56.203220+00:00",
+      "surface": "http",
+      "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3000/api/pricing/quote",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "subtotalCents": 19485,
+          "itemCount": 15
+        }
+      },
+      "expected": {
+        "status": 200,
+        "json": {
+          "subtotalCents": 19485,
+          "itemCount": 15,
+          "totalCents": 17537
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "Date": "Sat, 17 Oct 2026 04:58:56 GMT",
+          "Connection": "close",
+          "Transfer-Encoding": "chunked"
+        },
+        "rawBody": "{\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}",
+        "json": {
+          "subtotalCents": 19485,
+          "itemCount": 15,
+          "totalCents": 17537
+        }
+      },
+      "exactJsonMatch": true,
+      "statusMatches": true,
+      "conclusion": "pass",
+      "artifactPath": "/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-004.json"
+    }
+  ]
+}
+Evidence bundle: /tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-observations.json
+
+
+Observation: recording-33b2ebf623776096
+Kind: probe
+Exit code: 0
+Title: Browser session recording
+Command: runtime recording finalization
+{"status":"not_started","interrupted":true}
+

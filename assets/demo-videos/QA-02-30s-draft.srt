@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+Start with the saved QA Agent plan for this focused pricing pull request.
+
+2
+00:00:05,000 --> 00:00:13,000
+The weak run exposes the ten-item boundary defect. Its final checks retain unresolved criteria and a runtime deviation.
+
+3
+00:00:13,000 --> 00:00:21,000
+CodeRabbit produces the correction in a separate pull request. After completion, we inspect the downloaded execution evidence.
+
+4
+00:00:21,000 --> 00:00:28,000
+All four corrected responses match their literal expectations. The saved plans differ, and the corrected runtime version is unknown.
+
+5
+00:00:28,000 --> 00:00:30,000
+Preserve those limits.

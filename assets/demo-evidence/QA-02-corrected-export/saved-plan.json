@@ -1,0 +1,36 @@
+[
+  {
+    "schemaVersion": 3,
+    "scenarioId": "pricing-team10-inclusive-boundary",
+    "title": "It applies the TEAM10 discount starting at ten items",
+    "description": "Verify the inclusive threshold, exact pricing response, and rounding down and half-cent rounding up through the pricing API.",
+    "testPlan": [
+      "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":11691,\"itemCount\":9}; inspect the status and JSON response.",
+      "POST /api/pricing/quote with Content-Type: application/json; charset=utf-8 and body {\"subtotalCents\":12990,\"itemCount\":10}; inspect the status and JSON response.",
+      "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":14289,\"itemCount\":11}; inspect the status and JSON response.",
+      "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":19485,\"itemCount\":15}; inspect the status and JSON response."
+    ],
+    "inScope": [
+      "TEAM10 eligibility below, at, and above ten items",
+      "Integer-cent totals, including rounding down and half-cent rounding up",
+      "Exact pricing API response contract"
+    ],
+    "outOfScope": [
+      "Unchanged input validation and unrelated endpoints"
+    ],
+    "entryCriteria": [
+      "The pricing API is available at the target base URL."
+    ],
+    "exitCriteria": [
+      "It returns HTTP 200 for each request.",
+      "It returns exactly {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691} for nine items.",
+      "It returns exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691} for ten items.",
+      "It returns exactly {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860} for eleven items.",
+      "It returns exactly {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537} for fifteen items."
+    ],
+    "requiredCapabilities": [
+      "http"
+    ],
+    "priority": 1
+  }
+]

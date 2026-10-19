@@ -1,0 +1,458 @@
+- status
+- link:
+  - /url: "#main"
+  - text: Skip to content
+- region:
+  - alert:
+    - generic: MCP connection "Context7" has tools paused until their current definitions are approved. 4 more connections need attention.
+    - link:
+      - /url: /connections?product=review&reviewConnection=workspace%3A79872caf-fbef-4353-a7b3-b81f8e67b2c0&focus=pausedTools
+      - text: Review
+    - link:
+      - /url: /connections
+      - text: View all
+    - button:
+- button:
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button [expanded]:
+- button:
+  - generic: Search
+  - generic: ⌘ K
+- navigation:
+  - button:
+    - generic: Back to work
+  - region:
+    - button [expanded]:
+      - text: General
+    - link:
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link:
+      - /url: /connections
+      - generic: Connections
+    - link:
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link:
+      - /url: /setup/environments
+      - generic: Environments
+  - region:
+    - button [expanded]:
+      - text: Product
+    - button:
+      - generic: Reviews
+    - button:
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button:
+      - generic: Triage
+    - button:
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button [expanded]:
+      - generic: Security
+    - button [expanded]:
+    - link:
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link:
+      - /url: /security/code
+      - generic: Findings
+    - link:
+      - /url: /security/repositories
+      - generic: Repositories
+    - link:
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link:
+      - /url: /security/activity
+      - generic: Scan history
+    - button:
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button:
+      - generic: Automations
+      - generic: Beta
+    - button:
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button:
+      - generic: QA Agent
+      - generic: Beta
+    - button:
+    - link:
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link:
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region:
+    - button [expanded]:
+      - text: Communication
+    - button:
+      - generic: Slack
+    - button:
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button:
+    - generic: CodeRabbit Replay
+  - button:
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region:
+    - button [expanded]:
+      - text: Administration
+    - button:
+      - generic: Billing
+    - button:
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button:
+      - generic: Account
+    - button:
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region:
+    - button [expanded]:
+      - text: Support
+    - link:
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link:
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button:
+      - generic: CR-1485CF
+- button:
+  - generic: Mahesh Mani
+  - generic: Admin
+- button:
+  - status
+- banner:
+  - navigation:
+    - link:
+      - /url: /security/repositories
+      - generic: Security
+    - link:
+      - /url: /security/repositories
+      - generic: Repositories
+    - generic: mmani-demo
+  - button:
+    - generic: Run deep scan
+- main:
+  - status
+  - heading [level=1]: mmani-demo
+  - paragraph: Review this repository’s attack surface, findings, scan history, and configuration.
+  - heading [level=3]: Security Agent
+  - generic: Cancels at renewal
+  - paragraph: Security stays active until the end of your billing term.
+  - tablist:
+    - tab [selected]: Attack surface
+    - tab: Findings
+    - tab: Scan history
+    - tab: Learnings
+    - tab: Settings
+  - tabpanel:
+    - heading [level=2]: Attack surface map
+    - paragraph: PR reviews update existing security points. Deep Scan runs discover and add new ones.
+    - status:
+      - paragraph: 15 points were checked within this repository. Further checks need external evidence. Link relevant repositories to provide more context for future scans.
+      - link:
+        - /url: /security/repositories?owner=coderabbit-demo&repo=mmani-demo&tab=settings
+        - text: Link repositories
+    - button:
+      - text: Verified
+    - generic: 100%
+    - paragraph: 73 of 73 points
+    - paragraph:
+      - generic: ▲
+      - generic: 100% · 7d
+    - button:
+      - text: Stale / unverified
+    - generic: 0%
+    - paragraph: everything mapped is verified
+    - paragraph:
+      - generic: ▼
+      - generic: 100% · 7d
+    - generic: Mapped points
+    - generic: "73"
+    - paragraph: repository-wide security surface
+    - button:
+      - generic: Continuous monitoring
+      - generic: 7d
+    - heading [level=3]:
+      - text: Verification coverage
+      - button:
+    - generic: Fully verified
+    - generic: Unverified
+    - generic: Stale
+    - generic: High/critical finding
+    - generic: Medium finding
+    - paragraph: Each tile represents a security-relevant point in your code. Hover for details, or select a tile to view findings and connections. Select a numbered tile to see all points in that lane.
+    - text: Submodules
+    - button: Entry points
+    - generic: Trust & guardrails
+    - button: Trust boundaries
+    - button: Access controls
+    - button: Sinks
+    - button: Security config
+    - generic: Runtime and validation tooling
+    - generic: 30/30 verified
+    - button:
+      - progressbar:
+        - generic: "100"
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - generic: HTTP service and exported application APIs
+    - generic: 19/19 verified
+    - button:
+      - progressbar:
+        - generic: "100"
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - generic: CI validation workflow
+    - generic: 15/15 verified
+    - button:
+      - progressbar:
+        - generic: "100"
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - generic: (root)
+    - generic: 9/9 verified
+    - button:
+      - progressbar:
+        - generic: "100"
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+    - button
+- region "Notifications":
+  - status:
+    - list
+- dialog "Runtime and validation tooling" [active]:
+  - heading "Runtime and validation tooling" [level=2]:
+    - generic: Runtime and validation tooling
+  - paragraph: addedLines · Sinks
+  - button "Close security point relationships":
+  - tablist "Security point details":
+    - tab "Issue details" [selected]
+    - tab "Data flow"
+  - tabpanel "Issue details":
+    - heading "Denial of service" [level=2]
+    - generic: medium
+    - generic: Open
+    - button "Share":
+      - generic: Share
+    - button "Fix":
+      - generic: Fix
+    - button "More finding actions":
+    - paragraph:
+      - code: scripts/changed-coverage.mjs:42-42
+    - paragraph: This is an AI-generated finding by CodeRabbit.
+    - tablist "Finding details":
+      - tab "Details" [selected]
+      - tab "Reproducer"
+    - tabpanel "Details":
+      - term: CWE
+      - definition:
+        - link "CWE-835":
+          - /url: https://cwe.mitre.org/data/definitions/835.html
+          - text: CWE-835
+        - generic: (Loop with Unreachable Exit Condition ('Infinite Loop'))
+      - term:
+        - text: Reachability
+        - button "About reachability":
+      - definition:
+        - generic: External
+      - term: Exploitability
+      - definition:
+        - generic: Moderate
+      - term: First seen
+      - definition: Oct 19, 2026, 1:29 PM
+      - term: Last seen
+      - definition: Oct 19, 2026, 1:29 PM
+      - region "Finding scan coverage":
+        - heading "Scan coverage scope" [level=3]
+        - generic: Repository
+      - generic: Description
+      - article:
+        - paragraph: The diff parser accepts apparent hunk headers following carriage returns embedded in source comments. It expands their unchecked numeric ranges, allowing an attacker to supply a start value that JavaScript cannot increment and make the loop run indefinitely.
+      - button "Reachability" [expanded]:
+        - generic: Reachability
+      - region "Reachability":
+        - list:
+          - generic: Entry
+          - button ".github/workflows/validate.yml:5":
+            - code: .github/workflows/validate.yml:5
+          - generic: pull_request starts the validation job.
+          - generic: Source
+          - generic: A contributor-controlled comment containing a carriage return followed by @@ -1 +9007199254740992,2 @@ in an existing src/**/*.ts file.
+          - button ".github/workflows/validate.yml:27":
+            - code: .github/workflows/validate.yml:27
+          - generic: the job invokes coverage:changed with --base.
+          - button "package.json:15":
+            - code: package.json:15
+          - generic: the npm script launches scripts/changed-coverage.mjs.
+          - button "scripts/changed-coverage.mjs:95":
+            - code: scripts/changed-coverage.mjs:95
+          - generic: the CLI guard calls main().
+          - button "scripts/changed-coverage.mjs:82":
+            - code: scripts/changed-coverage.mjs:82
+          - generic: main passes Git diff output for an existing source file to addedLines().
+          - button "scripts/changed-coverage.mjs:39":
+            - code: scripts/changed-coverage.mjs:39
+          - generic: the multiline matcher accepts the header following an embedded carriage return.
+          - button "scripts/changed-coverage.mjs:42" [expanded]:
+            - code: scripts/changed-coverage.mjs:42
+          - generic: i++ cannot advance the supplied numeric start, causing an infinite loop [sink].
+          - generic: scripts/changed-coverage.mjs:42
+          - link "Open":
+            - /url: https://github.com/coderabbit-demo/mmani-demo/blob/18ea929f0694fd31695376de007ff953374ecd4e/scripts/changed-coverage.mjs#L42
+            - text: Open
+          - generic: "36"
+          - generic: "37"
+          - generic: "export function addedLines(diff) {"
+          - generic: "38"
+          - generic: const lines = new Set();
+          - generic: "39"
+          - generic: "for (const match of diff.matchAll(/^@@ -\\d+(?:,\\d+)? \\+(\\d+)(?:,(\\d+))? @@/gm)) {"
+          - generic: "40"
+          - generic: const start = Number(match[1]);
+          - generic: "41"
+          - generic: "const count = match[2] === undefined ? 1 : Number(match[2]);"
+          - generic: "42"
+          - generic: for (let i = start; i < start + count; i++) lines.add(i);
+          - generic: "43"
+          - generic: "}"
+          - generic: "44"
+          - generic: return lines;
+          - generic: "45"
+          - generic: "}"
+          - generic: "46"
+          - generic: "47"
+          - generic: "export function coverageResult(hits, allowEmpty = false) {"
+          - generic: "48"
+          - generic: "if (!hits.length) {"
+      - generic: Recommendation
+      - article:
+        - paragraph: Parse Git output using actual LF-delimited records and accept hunk headers only in their structural position. Validate range endpoints as safe integers, and check coverage-line membership against intervals instead of expanding attacker-influenced ranges.
+      - status "Finding recheck result"

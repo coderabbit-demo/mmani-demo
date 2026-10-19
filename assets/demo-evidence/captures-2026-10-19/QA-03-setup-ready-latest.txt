@@ -1,0 +1,265 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices":
+  - alert:
+    - generic: MCP connection "Context7" has tools paused until their current definitions are approved. 4 more connections need attention.
+    - link "Review tools":
+      - /url: /connections?product=review&reviewConnection=workspace%3A79872caf-fbef-4353-a7b3-b81f8e67b2c0&focus=pausedTools
+      - text: Review
+    - link "4 more connections need attention. View all connections.":
+      - /url: /connections
+      - text: View all
+    - button "Dismiss":
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Admin navigation":
+  - button "Back to work":
+    - generic: Back to work
+  - region "General":
+    - button "General" [expanded]:
+      - text: General
+    - link "Connected repositories":
+      - /url: /settings/repositories
+      - generic: Connected repositories
+    - link "Connections":
+      - /url: /connections
+      - generic: Connections
+    - link "Scopes":
+      - /url: /setup/scopes
+      - generic: Scopes
+    - link "Environments":
+      - /url: /setup/environments
+      - generic: Environments
+  - region "Product":
+    - button "Product" [expanded]:
+      - text: Product
+    - button "Reviews":
+      - generic: Reviews
+    - button "Expand Reviews":
+    - link:
+      - /url: /review/repositories
+      - generic: Repository settings
+    - link:
+      - /url: /learnings
+      - generic: Learnings
+    - link:
+      - /url: /organization/settings
+      - generic: Organization settings
+    - button "Triage":
+      - generic: Triage
+    - button "Expand Triage":
+    - link:
+      - /url: /triage/settings
+      - generic: Rules
+    - button "Security":
+      - generic: Security
+    - button "Expand Security":
+    - link:
+      - /url: /security/attack-surface
+      - generic: Attack surface
+    - link:
+      - /url: /security/code
+      - generic: Findings
+    - link:
+      - /url: /security/repositories
+      - generic: Repositories
+    - link:
+      - /url: /security/pull-requests
+      - generic: PR security reviews
+    - link:
+      - /url: /security/activity
+      - generic: Scan history
+    - button "Coding Beta":
+      - generic: Coding
+      - generic: Beta
+    - link:
+      - /url: /code/activity
+      - generic: Activity
+    - link:
+      - /url: /code/tasks
+      - generic: Tasks
+    - link:
+      - /url: /code/skills
+      - generic: Skills
+    - link:
+      - /url: /code/configurations
+      - generic: Configuration
+    - button "Automations Beta":
+      - generic: Automations
+      - generic: Beta
+    - button "Expand Automations":
+    - link:
+      - /url: /automations
+      - generic: Home
+    - link:
+      - /url: /automations/activity
+      - generic: Activity
+    - button "QA Agent Beta" [expanded]:
+      - generic: QA Agent
+      - generic: Beta
+    - button "Collapse QA Agent" [expanded]:
+    - link "Activity":
+      - /url: /qa-agent/activity
+      - generic: Activity
+    - link "Test suites":
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+  - region "Communication":
+    - button "Communication" [expanded]:
+      - text: Communication
+    - button "Slack":
+      - generic: Slack
+    - button "Expand Slack":
+    - link:
+      - /url: /slack/scopes
+      - generic: Channel mappings
+    - link:
+      - /url: /slack/automations
+      - generic: Automations
+    - link:
+      - /url: /slack/knowledge-base
+      - generic: Knowledge base
+    - link:
+      - /url: /slack/activity
+      - generic: Activity
+    - link:
+      - /url: /slack/reviewer-mappings
+      - generic: GitHub and Slack mappings
+    - link:
+      - /url: /slack/organization-settings
+      - generic: Organization settings
+  - button "CodeRabbit Replay":
+    - generic: CodeRabbit Replay
+  - button "Expand CodeRabbit Replay":
+  - link:
+    - /url: /coderabbit-replay/run
+    - generic: Run replay
+  - link:
+    - /url: /coderabbit-replay/history
+    - generic: Past replays
+  - region "Administration":
+    - button "Administration" [expanded]:
+      - text: Administration
+    - button "Billing":
+      - generic: Billing
+    - button "Expand Billing":
+    - link:
+      - /url: /settings/billing
+      - generic: Plans & payments
+    - link:
+      - /url: /settings/roles-permissions
+      - generic: Team management
+    - link:
+      - /url: /settings/roles
+      - generic: Roles
+    - button "Account":
+      - generic: Account
+    - button "Expand Account":
+    - link:
+      - /url: /settings/audit-logs
+      - generic: Audit logs
+    - link:
+      - /url: /settings/api-keys
+      - generic: API keys
+  - region "Support":
+    - button "Support" [expanded]:
+      - text: Support
+    - link "Documentation":
+      - /url: https://docs.coderabbit.ai/
+      - generic: Documentation
+    - link "Contact support":
+      - /url: https://www.coderabbit.ai/contact-us/support
+      - generic: Contact support
+    - button "CR-1485CF":
+      - generic: CR-1485CF
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - link "QA Agent":
+      - /url: /qa-agent/activity
+      - generic: QA Agent
+    - link "Test suites":
+      - /url: /qa-agent/repositories
+      - generic: Test suites
+    - link "mmani-demo":
+      - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc
+      - generic: mmani-demo
+    - generic: User journeys
+- main "User journeys":
+  - region "QA repositories":
+    - complementary "Repository navigation":
+      - paragraph: Repository
+      - combobox "Repository selector":
+        - generic: mmani-demo
+      - textbox: 210d110e-226a-4833-ae7d-851d51314acc
+      - navigation "Repository sections":
+        - link "User journeys":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=cujs
+          - text: User journeys
+        - link "Findings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=findings
+          - text: Findings
+        - link "Settings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+          - text: Settings
+    - status "Run outcome"
+    - region "Repository QA":
+      - heading "User journeys" [level=2]
+      - paragraph: Map critical user journeys and test them across branches.
+      - button "Unpublished drafts" [active]:
+        - generic: Unpublished drafts
+      - tabpanel:
+        - generic: Execution branch
+        - combobox "Execution branch":
+          - generic: main
+        - textbox: main
+        - paragraph: Environment
+        - link "Change environment (Web-Dev-MMANI) in repository settings":
+          - /url: /qa-agent/repositories/210d110e-226a-4833-ae7d-851d51314acc?view=settings
+          - generic: Web-Dev-MMANI
+        - button "Repository run history" [disabled]:
+          - generic: Repository run history
+        - link "View runs in Activity":
+          - /url: /qa-agent/activity?repositoryId=1422896534&source=repository&days=7
+          - generic: View runs in Activity
+        - button "Copy view link":
+          - generic: Copy view link
+        - heading "Build your user journey library" [level=2]
+        - paragraph: Map this repository to discover its users, goals, and tasks, then run those journeys against a branch.
+        - list "Build and run your first journey":
+          - heading "Discover" [level=3]
+          - paragraph: Map the repository to identify users, goals and test steps.
+          - heading "Review" [level=3]
+          - paragraph: Inspect the resulting library and edit the journeys before running them.
+          - heading "Run" [level=3]
+          - paragraph: Choose a branch and environment, then review outcomes and evidence.
+        - region "Example journey":
+          - paragraph: Example journey · adapt this to your repository
+          - heading "Save an item and find it again" [level=3]
+          - paragraph: "User: A signed-in team member"
+          - paragraph: "Goal: Save an item and confirm it survives a page refresh."
+          - list:
+            - listitem: Create an item with a unique name.
+            - listitem: Refresh the page and search for that name.
+            - listitem: Verify the item appears once with the saved details.
+        - button "Start mapping":
+          - generic: Start mapping
+        - button "Add user journey":
+          - generic: Add user journey
+- region "Notifications":
+  - status:
+    - list
+- iframe
+- iframe

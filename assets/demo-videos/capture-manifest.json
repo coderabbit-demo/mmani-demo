@@ -358,5 +358,125 @@
         "narration": "Verify effective configuration."
       }
     ]
+  },
+  {
+    "id": "QA-02",
+    "file": "assets/demo-videos/QA-02-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "QA-02-weak-plan.jpg",
+        "narration": "Start with the saved QA Agent plan for this focused pricing pull request."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "QA-02-weak-result.jpg",
+        "narration": "The weak run exposes the ten-item boundary defect. Its final checks retain unresolved criteria and a runtime deviation."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "QA-01-diff.jpg",
+        "narration": "CodeRabbit produces the correction in a separate pull request. After completion, we inspect the downloaded execution evidence."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "QA-02-export-card.jpg",
+        "narration": "All four corrected responses match their literal expectations. The saved plans differ, and the corrected runtime version is unknown."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "QA-02-export-card.jpg",
+        "narration": "Preserve those limits."
+      }
+    ]
+  },
+  {
+    "id": "QA-03",
+    "file": "assets/demo-videos/QA-03-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "QA-03-journey-saved.jpg",
+        "narration": "A reusable journey keeps the same pricing expectations across two execution branches."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "QA-03-weak-completed.jpg",
+        "narration": "Revision one catches the weak branch returning twelve thousand nine hundred ninety cents at exactly ten items."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "QA-03-corrected-completed.jpg",
+        "narration": "After completion, the same journey passes on CodeRabbit\u2019s corrected commit. Both runs record Node twenty-four point twenty."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "QA-03-comparison-card.jpg",
+        "narration": "All four corrected totals match. Keep the tested commits, environment deviation, and unchanged journey revision with the evidence."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "QA-03-comparison-card.jpg",
+        "narration": "Replay fixed expectations."
+      }
+    ]
+  },
+  {
+    "id": "SEC-02",
+    "file": "assets/demo-videos/SEC-02-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "SEC-02-scan-provenance.jpg",
+        "narration": "This repository-wide Deep Scan records its commit, scope, and completed execution."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "SEC-02-finding-trace.jpg",
+        "narration": "CodeRabbit reports one medium denial-of-service finding, tracing contributor-controlled input through validation to an unchecked numeric loop."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "SEC-02-point-finding.jpg",
+        "narration": "The mapped sink remains associated with an open finding. This segment shows investigation evidence; no remediation is claimed."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "SEC-02-surface-completed.jpg",
+        "narration": "The surface reports seventy-three of seventy-three points verified. Further checks need external evidence; verified does not mean vulnerability-free."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "SEC-02-surface-completed.jpg",
+        "narration": "Keep scope visible."
+      }
+    ]
   }
 ]

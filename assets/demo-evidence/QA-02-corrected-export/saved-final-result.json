@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 3,
+  "locator": {
+    "schemaVersion": 1,
+    "runId": "69a73d04-cc6e-416e-bbf5-72a604503bd0",
+    "repositoryId": "1422896534",
+    "pullRequestNumber": 14,
+    "headSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064"
+  },
+  "status": "passed",
+  "summary": "Passed. Recorded HTTP responses confirm the inclusive ten-item discount, exact JSON contract, and rounding down and half-cent rounding up. No regressions or coverage gaps were observed within the assigned scope; input validation and unrelated endpoints were outside scope. Advisory merge risk: Low within this scope because all four specified cases matched exactly.",
+  "executionEnvironmentSummary": {
+    "source": "default",
+    "setupMethod": "automatic",
+    "repositorySnapshot": "reused"
+  },
+  "scenarios": [
+    {
+      "schemaVersion": 3,
+      "scenario": {
+        "schemaVersion": 3,
+        "scenarioId": "pricing-team10-inclusive-boundary",
+        "title": "It applies the TEAM10 discount starting at ten items",
+        "description": "Verify the inclusive threshold, exact pricing response, and rounding down and half-cent rounding up through the pricing API.",
+        "testPlan": [
+          "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":11691,\"itemCount\":9}; inspect the status and JSON response.",
+          "POST /api/pricing/quote with Content-Type: application/json; charset=utf-8 and body {\"subtotalCents\":12990,\"itemCount\":10}; inspect the status and JSON response.",
+          "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":14289,\"itemCount\":11}; inspect the status and JSON response.",
+          "POST /api/pricing/quote with Content-Type: application/json and body {\"subtotalCents\":19485,\"itemCount\":15}; inspect the status and JSON response."
+        ],
+        "inScope": [
+          "TEAM10 eligibility below, at, and above ten items",
+          "Integer-cent totals, including rounding down and half-cent rounding up",
+          "Exact pricing API response contract"
+        ],
+        "outOfScope": [
+          "Unchanged input validation and unrelated endpoints"
+        ],
+        "entryCriteria": [
+          "The pricing API is available at the target base URL."
+        ],
+        "exitCriteria": [
+          "It returns HTTP 200 for each request.",
+          "It returns exactly {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691} for nine items.",
+          "It returns exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691} for ten items.",
+          "It returns exactly {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860} for eleven items.",
+          "It returns exactly {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537} for fifteen items."
+        ],
+        "requiredCapabilities": [
+          "http"
+        ],
+        "priority": 1
+      },
+      "status": "passed",
+      "summary": "All criteria passed on revision 4e6f38b08d23d81ae408afdaed418b6aaccc2064 through real HTTP requests. The working tree was clean before and after testing.",
+      "criteria": [
+        {
+          "criterionId": "3f206f70ac5f62634ee18126",
+          "kind": "entry",
+          "criterionIndex": 0,
+          "criterion": "The pricing API is available at the target base URL.",
+          "expected": "The pricing API is available at the target base URL.",
+          "actual": "POST /api/pricing/quote returned HTTP 200 with pricing JSON.",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        },
+        {
+          "criterionId": "ea8f3100077d9475727c3272",
+          "kind": "exit",
+          "criterionIndex": 0,
+          "criterion": "It returns HTTP 200 for each request.",
+          "expected": "It returns HTTP 200 for each request.",
+          "actual": "All four requests returned HTTP 200, including the ten-item request using application/json; charset=utf-8.",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        },
+        {
+          "criterionId": "eb8f3293067d92e2737c3405",
+          "kind": "exit",
+          "criterionIndex": 1,
+          "criterion": "It returns exactly {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691} for nine items.",
+          "expected": "It returns exactly {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691} for nine items.",
+          "actual": "{\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        },
+        {
+          "criterionId": "ec8f3426057d914f707c2f4c",
+          "kind": "exit",
+          "criterionIndex": 2,
+          "criterion": "It returns exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691} for ten items.",
+          "expected": "It returns exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691} for ten items.",
+          "actual": "{\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        },
+        {
+          "criterionId": "ed8f35b9047d8fbc717c30df",
+          "kind": "exit",
+          "criterionIndex": 3,
+          "criterion": "It returns exactly {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860} for eleven items.",
+          "expected": "It returns exactly {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860} for eleven items.",
+          "actual": "{\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        },
+        {
+          "criterionId": "ee8f374c037d8e296e7c2c26",
+          "kind": "exit",
+          "criterionIndex": 4,
+          "criterion": "It returns exactly {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537} for fifteen items.",
+          "expected": "It returns exactly {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537} for fifteen items.",
+          "actual": "{\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}",
+          "conclusion": "passed",
+          "evidenceArtifactIds": [
+            "b2f5385f963c428230c2ae8d"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "schemaVersion": 3,
+          "artifactId": "579640d472252831e42a806e",
+          "scenarioId": "pricing-team10-inclusive-boundary",
+          "kind": "text",
+          "title": "Execution result",
+          "mimeType": "text/plain; charset=utf-8",
+          "byteSize": 1332,
+          "sha256": "be967456cae29b1e84a4680b5e798e5cfa074449e36a771882610bf9367c420d",
+          "capturedAt": "2026-10-17T04:59:58.202Z",
+          "producer": "qa_agent",
+          "provenance": "Captured inside the isolated scenario sandbox and uploaded host-side.",
+          "redactionStatus": "not_needed",
+          "textExcerpt": "Scenario: pricing-team10-inclusive-boundary\nStatus: passed\nSummary: All criteria passed on revision 4e6f38b08d23d81ae408afdaed418b6aaccc2064 through real HTTP requests. The working tree was clean before and after testing.\n\nCriteria:\n- entry 1: passed\n  Expected: The pricing API is available at the target base URL.\n  Actual: POST /api/pricing/quote returned HTTP 200 with pricing JSON.\n- exit 1: passed\n  Expected: It returns HTTP 200 for each request.\n  Actual: All four requests returned HTTP 200, including the ten-item request using application/json; charset=utf-8.\n- exit 2: passed\n  Expected: It returns exactly {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691} for nine items.\n  Actual: {\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}\n- exit 3: passed\n  Expected: It returns exactly {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691} for ten items.\n  Actual: {\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}\n- exit 4: passed\n  Expected: It returns exactly {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860} for eleven items.\n  Actual: {\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}\n- exit 5: passed\n  Expected: It returns exactly {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537} for fifteen items.\n  Actual: {\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}"
+        },
+        {
+          "schemaVersion": 3,
+          "artifactId": "b2f5385f963c428230c2ae8d",
+          "scenarioId": "pricing-team10-inclusive-boundary",
+          "kind": "log",
+          "title": "Execution log",
+          "mimeType": "text/plain; charset=utf-8",
+          "byteSize": 8981,
+          "sha256": "317b8769be6c8697c301972b61345db0eaee34330dd00a9d0bbdee42fafa62fe",
+          "capturedAt": "2026-10-17T04:59:58.940Z",
+          "producer": "runtime",
+          "provenance": "Captured inside the isolated scenario sandbox and uploaded host-side.",
+          "redactionStatus": "not_needed",
+          "textExcerpt": "Observation: observation-10\nKind: probe\nExit code: 0\nTitle: Shell command 4\nCommand: /bin/bash -c \"python3 - <<'PY'\nimport json, subprocess, urllib.request, urllib.error\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nroot=Path('/home/vercel-sandbox/workspace/repos/github.com/coderabbit-demo/mmani-demo')\nout=Path('/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts')\nout.mkdir(parents=True, exist_ok=True)\nscenario='pricing-team10-inclusive-boundary'\nrevision=subprocess.check_output(['git','rev-parse','HEAD'], cwd=root, text=True).strip()\nstatus_before=subprocess.check_output(['git','status','--porcelain'], cwd=root, text=True)\nfixtures=[(11691,9,11691,'application/json'),(12990,10,11691,'application/json; charset=utf-8'),(14289,11,12860,'application/json'),(19485,15,17537,'application/json')]\nobservations=[]\nfor i,(subtotal,count,total,ctype) in enumerate(fixtures,1):\n    request_body={'subtotalCents':subtotal,'itemCount':count}\n    expected={'subtotalCents':subtotal,'itemCount':count,'totalCents':total}\n    request=urllib.request.Request('http://127.0.0.1:3000/api/pricing/quote',data=json.dumps(request_body,separators=(',',':')).encode(),method='POST',headers={'Content-Type':ctype})\n    observation={'observationId':f'{scenario}-http-{i:03d}','recordedAt':datetime.now(timezone.utc).isoformat(),'surface':'http','revision':revision,'request':{'method':'POST','url':request.full_url,'headers':{'Content-Type':ctype},'body':request_body},'expected':{'status':200,'json':expected}}\n    try:\n        try:\n            response=urllib.request.urlopen(request,timeout=15)\n        except urllib.error.HTTPError as error:\n            response=error\n        with response:\n            raw=response.read().decode('utf-8')\n            observation['response']={'status':response.status,'headers':dict(response.headers.items()),'rawBody':raw}\n        try:\n            parsed=json.loads(raw)\n            observation['response']['json']=parsed\n            observation['exactJsonMatch']=parsed==expected\n        except json.JSONDecodeError as error:\n            observation['jsonError']=str(error)\n            observation['exactJsonMatch']=False\n        observation['statusMatches']=observation['response']['status']==200\n        observation['conclusion']='pass' if observation['statusMatches'] and observation['exactJsonMatch'] else 'fail'\n    except Exception as error:\n        observation['executionError']={'type':type(error).__name__,'message':str(error)}\n        observation['conclusion']='error'\n    path=out/f'{scenario}-http-{i:03d}.json'\n    path.write_text(json.dumps(observation,indent=2)+'\\\\n')\n    observation['artifactPath']=str(path)\n    observations.append(observation)\nstatus_after=subprocess.check_output(['git','status','--porcelain'], cwd=root, text=True)\nsummary={'scenarioId':scenario,'revision':revision,'gitStatusBefore':status_before,'gitStatusAfter':status_after,'observations':observations}\npath=out/f'{scenario}-http-observations.json'\npath.write_text(json.dumps(summary,indent=2)+'\\\\n')\nprint(json.dumps(summary,indent=2))\nprint('Evidence bundle: '+str(path))\nPY\"\n{\n  \"scenarioId\": \"pricing-team10-inclusive-boundary\",\n  \"revision\": \"4e6f38b08d23d81ae408afdaed418b6aaccc2064\",\n  \"gitStatusBefore\": \"\",\n  \"gitStatusAfter\": \"\",\n  \"observations\": [\n    {\n      \"observationId\": \"pricing-team10-inclusive-boundary-http-001\",\n      \"recordedAt\": \"2026-10-17T04:58:56.189538+00:00\",\n      \"surface\": \"http\",\n      \"revision\": \"4e6f38b08d23d81ae408afdaed418b6aaccc2064\",\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"http://127.0.0.1:3000/api/pricing/quote\",\n        \"headers\": {\n          \"Content-Type\": \"application/json\"\n        },\n        \"body\": {\n          \"subtotalCents\": 11691,\n          \"itemCount\": 9\n        }\n      },\n      \"expected\": {\n        \"status\": 200,\n        \"json\": {\n          \"subtotalCents\": 11691,\n          \"itemCount\": 9,\n          \"totalCents\": 11691\n        }\n      },\n      \"response\": {\n        \"status\": 200,\n        \"headers\": {\n          \"content-type\": \"application/json\",\n          \"Date\": \"Sat, 17 Oct 2026 04:58:56 GMT\",\n          \"Connection\": \"close\",\n          \"Transfer-Encoding\": \"chunked\"\n        },\n        \"rawBody\": \"{\\\"subtotalCents\\\":11691,\\\"itemCount\\\":9,\\\"totalCents\\\":11691}\",\n        \"json\": {\n          \"subtotalCents\": 11691,\n          \"itemCount\": 9,\n          \"totalCents\": 11691\n        }\n      },\n      \"exactJsonMatch\": true,\n      \"statusMatches\": true,\n      \"conclusion\": \"pass\",\n      \"artifactPath\": \"/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-001.json\"\n    },\n    {\n      \"observationId\": \"pricing-team10-inclusive-boundary-http-002\",\n      \"recordedAt\": \"2026-10-17T04:58:56.200214+00:00\",\n      \"surface\": \"http\",\n      \"revision\": \"4e6f38b08d23d81ae408afdaed418b6aaccc2064\",\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"http://127.0.0.1:3000/api/pricing/quote\",\n        \"headers\": {\n          \"Content-Type\": \"application/json; charset=utf-8\"\n        },\n        \"body\": {\n          \"subtotalCents\": 12990,\n          \"itemCount\": 10\n        }\n      },\n      \"expected\": {\n        \"status\": 200,\n        \"json\": {\n          \"subtotalCents\": 12990,\n          \"itemCount\": 10,\n          \"totalCents\": 11691\n        }\n      },\n      \"response\": {\n        \"status\": 200,\n        \"headers\": {\n          \"content-type\": \"application/json\",\n          \"Date\": \"Sat, 17 Oct 2026 04:58:56 GMT\",\n          \"Connection\": \"close\",\n          \"Transfer-Encoding\": \"chunked\"\n        },\n        \"rawBody\": \"{\\\"subtotalCents\\\":12990,\\\"itemCount\\\":10,\\\"totalCents\\\":11691}\",\n        \"json\": {\n          \"subtotalCents\": 12990,\n          \"itemCount\": 10,\n          \"totalCents\": 11691\n        }\n      },\n      \"exactJsonMatch\": true,\n      \"statusMatches\": true,\n      \"conclusion\": \"pass\",\n      \"artifactPath\": \"/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-002.json\"\n    },\n    {\n      \"observationId\": \"pricing-team10-inclusive-boundary-http-003\",\n      \"recordedAt\": \"2026-10-17T04:58:56.201786+00:00\",\n      \"surface\": \"http\",\n      \"revision\": \"4e6f38b08d23d81ae408afdaed418b6aaccc2064\",\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"http://127.0.0.1:3000/api/pricing/quote\",\n        \"headers\": {\n          \"Content-Type\": \"application/json\"\n        },\n        \"body\": {\n          \"subtotalCents\": 14289,\n          \"itemCount\": 11\n        }\n      },\n      \"expected\": {\n        \"status\": 200,\n        \"json\": {\n          \"subtotalCents\": 14289,\n          \"itemCount\": 11,\n          \"totalCents\": 12860\n        }\n      },\n      \"response\": {\n        \"status\": 200,\n        \"headers\": {\n          \"content-type\": \"application/json\",\n          \"Date\": \"Sat, 17 Oct 2026 04:58:56 GMT\",\n          \"Connection\": \"close\",\n          \"Transfer-Encoding\": \"chunked\"\n        },\n        \"rawBody\": \"{\\\"subtotalCents\\\":14289,\\\"itemCount\\\":11,\\\"totalCents\\\":12860}\",\n        \"json\": {\n          \"subtotalCents\": 14289,\n          \"itemCount\": 11,\n          \"totalCents\": 12860\n        }\n      },\n      \"exactJsonMatch\": true,\n      \"statusMatches\": true,\n      \"conclusion\": \"pass\",\n      \"artifactPath\": \"/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-003.json\"\n    },\n    {\n      \"observationId\": \"pricing-team10-inclusive-boundary-http-004\",\n      \"recordedAt\": \"2026-10-17T04:58:56.203220+00:00\",\n      \"surface\": \"http\",\n      \"revision\": \"4e6f38b08d23d81ae408afdaed418b6aaccc2064\",\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"http://127.0.0.1:3000/api/pricing/quote\",\n        \"headers\": {\n          \"Content-Type\": \"application/json\"\n        },\n        \"body\": {\n          \"subtotalCents\": 19485,\n          \"itemCount\": 15\n        }\n      },\n      \"expected\": {\n        \"status\": 200,\n        \"json\": {\n          \"subtotalCents\": 19485,\n          \"itemCount\": 15,\n          \"totalCents\": 17537\n        }\n      },\n      \"response\": {\n        \"status\": 200,\n        \"headers\": {\n          \"content-type\": \"application/json\",\n          \"Date\": \"Sat, 17 Oct 2026 04:58:56 GMT\",\n          \"Connection\": \"close\",\n          \"Transfer-Encoding\": \"chunked\"\n        },\n        \"rawBody\": \"{\\\"subtotalCents\\\":19485,\\\"itemCount\\\":15,\\\"totalCents\\\":17537}\",\n        \"json\": {\n          \"subtotalCents\": 19485,\n          \"itemCount\": 15,\n          \"totalCents\": 17537\n        }\n      },\n      \"exactJsonMatch\": true,\n      \"statusMatches\": true,\n      \"conclusion\": \"pass\",\n      \"artifactPath\": \"/tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-004.json\"\n    }\n  ]\n}\nEvidence bundle: /tmp/qa-agent/3b7ea09e0422c1036ec9ca70/artifacts/pricing-team10-inclusive-boundary-http-observations.json\n\n\nObservation: recording-33b2ebf623776096\nKind: probe\nExit code: 0\nTitle: Browser session recording\nCommand: runtime recording finalization\n{\"status\":\"not_started\",\"interrupted\":true}\n\n"
+        }
+      ],
+      "limitations": [],
+      "deviations": [],
+      "additionalFindings": [],
+      "findings": {
+        "schemaVersion": 1,
+        "bugs": [],
+        "testabilityIssues": []
+      },
+      "startedAt": "2026-10-17T04:57:27.347Z",
+      "completedAt": "2026-10-17T04:59:58.944Z"
+    }
+  ],
+  "caveats": [
+    "QA Agent results are non-authoritative."
+  ],
+  "startedAt": "2026-10-17T04:55:56.243Z",
+  "completedAt": "2026-10-17T05:00:09.197Z"
+}

@@ -1,0 +1,34 @@
+{
+  "source": "User-provided original-evidence.zip; cloud origin declared by supplied manifest, not independently fetched",
+  "archiveSha256": "320a3bd8b5df60794f4abd2668dbd09dfc78aceadf617ca7e1742e2c5e551e10",
+  "runId": "69a73d04-cc6e-416e-bbf5-72a604503bd0",
+  "pullRequest": "https://github.com/coderabbit-demo/mmani-demo/pull/14",
+  "revision": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "scenarioId": "pricing-team10-inclusive-boundary",
+  "artifactChecks": [
+    {
+      "file": "execution-result.txt",
+      "bytes": 1332,
+      "bytesMatch": true,
+      "md5Matches": true,
+      "sha256": "be967456cae29b1e84a4680b5e798e5cfa074449e36a771882610bf9367c420d"
+    },
+    {
+      "file": "execution-log.txt",
+      "bytes": 8981,
+      "bytesMatch": true,
+      "md5Matches": true,
+      "sha256": "317b8769be6c8697c301972b61345db0eaee34330dd00a9d0bbdee42fafa62fe"
+    }
+  ],
+  "httpResponsesVerified": 4,
+  "workingTreeBefore": "",
+  "workingTreeAfter": "",
+  "limitations": [
+    "Standalone saved plan absent",
+    "Runtime version absent",
+    "Separate final-validator report absent",
+    "Browser recording reports not_started/interrupted",
+    "Original cloud locator metadata retained only in user download, omitted from public evidence"
+  ]
+}

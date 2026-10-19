@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+This repository-wide Deep Scan records its commit, scope, and completed execution.
+
+2
+00:00:05,000 --> 00:00:13,000
+CodeRabbit reports one medium denial-of-service finding, tracing contributor-controlled input through validation to an unchecked numeric loop.
+
+3
+00:00:13,000 --> 00:00:21,000
+The mapped sink remains associated with an open finding. This segment shows investigation evidence; no remediation is claimed.
+
+4
+00:00:21,000 --> 00:00:28,000
+The surface reports seventy-three of seventy-three points verified. Further checks need external evidence; verified does not mean vulnerability-free.
+
+5
+00:00:28,000 --> 00:00:30,000
+Keep scope visible.

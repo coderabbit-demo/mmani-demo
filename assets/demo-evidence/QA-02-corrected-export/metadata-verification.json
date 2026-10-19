@@ -1,0 +1,23 @@
+{
+  "source": "User-supplied saved-plan-and-run-metadata.zip; persisted-state export, not independently fetched",
+  "archiveSha256": "d9477217d22d41cf8b79744d1381c38cb072e7782ce55744f974fb5d578c11c0",
+  "planMatchesSavedState": true,
+  "finalResultMatchesSavedState": true,
+  "previousArtifactsMatchSavedResult": [
+    {
+      "file": "execution-result.txt",
+      "matchesSavedResultSha256": true
+    },
+    {
+      "file": "execution-log.txt",
+      "matchesSavedResultSha256": true
+    }
+  ],
+  "publicCopyOmissions": [
+    "organizationId",
+    "objectKey"
+  ],
+  "runtimeVersion": "not established",
+  "separateFinalValidationReport": "not included; saved final result available",
+  "recording": "not_started/interrupted; no video"
+}

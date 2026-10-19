@@ -1,0 +1,288 @@
+Shell command 6
+
+text/plain; charset=utf-8 · 9 KB
+
+/bin/bash -c "python3 - <<'PY'
+import datetime, json, pathlib, urllib.request, urllib.error
+out=pathlib.Path('/tmp/qa-agent/e579e311-45fb-420f-9d07-1132e29dfdc8/evidence/53d66f3f-1fdb-4011-8e52-8c5b35b53d23')
+cases=[('pricing-9-001','application/json',{'subtotalCents':11691,'itemCount':9},{'subtotalCents':11691,'itemCount':9,'totalCents':11691}),('pricing-10-001','application/json; charset=utf-8',{'subtotalCents':12990,'itemCount':10},{'subtotalCents':12990,'itemCount':10,'totalCents':11691}),('pricing-11-001','application/json',{'subtotalCents':14289,'itemCount':11},{'subtotalCents':14289,'itemCount':11,'totalCents':12860}),('pricing-15-001','application/json',{'subtotalCents':19485,'itemCount':15},{'subtotalCents':19485,'itemCount':15,'totalCents':17537})]
+for oid,content_type,body,expected in cases:
+ url='http://127.0.0.1:3000/api/pricing/quote'
+ raw_request=json.dumps(body,separators=(',',':'))
+ request=urllib.request.Request(url,data=raw_request.encode('utf-8'),headers={'Content-Type':content_type},method='POST')
+ obs={'observationId':oid,'recordedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'runId':'e579e311-45fb-420f-9d07-1132e29dfdc8','journeyRevision':1,'scenarioId':'53d66f3f-1fdb-4011-8e52-8c5b35b53d23','testedSha':'4e6f38b08d23d81ae408afdaed418b6aaccc2064','surface':'HTTP API through CLI Python urllib.request','request':{'method':'POST','url':url,'headers':{'Content-Type':content_type},'body':body,'rawBody':raw_request},'expected':{'status':200,'json':expected}}
+ try:
+  try: response=urllib.request.urlopen(request,timeout=10)
+  except urllib.error.HTTPError as error: response=error
+  with response:
+   raw=response.read().decode('utf-8')
+   status=response.status
+   headers=dict(response.headers)
+  pairs=[]
+  def parse_obj(values):
+   pairs.extend(values)
+   return dict(values)
+  parse_error=None
+  try: actual=json.loads(raw,object_pairs_hook=parse_obj)
+  except json.JSONDecodeError as error:
+   actual=None
+   parse_error=str(error)
+  comparison={'httpStatusMatches':status==200,'validJson':parse_error is None,'exactFields':isinstance(actual,dict) and set(actual)==set(expected),'exactIntegerValues':isinstance(actual,dict) and all(type(actual.get(k)) is int and actual.get(k)==v for k,v in expected.items()),'noDuplicateFields':len(pairs)==len(dict(pairs)),'jsonEquality':actual==expected}
+  comparison['passed']=all(comparison.values())
+  obs.update({'response':{'status':status,'headers':headers,'rawBody':raw,'json':actual,'parseError':parse_error},'actual':{'status':status,'json':actual},'comparison':comparison})
+ except Exception as error:
+  obs.update({'executionError':{'type':type(error).__name__,'message':str(error)},'comparison':{'passed':False,'unresolved':True}})
+ (out/(oid+'.json')).write_text(json.dumps(obs,indent=2)+'\\n')
+ print(json.dumps(obs,indent=2))
+PY"
+{
+  "observationId": "pricing-9-001",
+  "recordedAt": "2026-10-19T21:14:38.385855+00:00",
+  "runId": "e579e311-45fb-420f-9d07-1132e29dfdc8",
+  "journeyRevision": 1,
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "testedSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "surface": "HTTP API through CLI Python urllib.request",
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "subtotalCents": 11691,
+      "itemCount": 9
+    },
+    "rawBody": "{\"subtotalCents\":11691,\"itemCount\":9}"
+  },
+  "expected": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 11691,
+      "itemCount": 9,
+      "totalCents": 11691
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:14:38 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "rawBody": "{\"subtotalCents\":11691,\"itemCount\":9,\"totalCents\":11691}",
+    "json": {
+      "subtotalCents": 11691,
+      "itemCount": 9,
+      "totalCents": 11691
+    },
+    "parseError": null
+  },
+  "actual": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 11691,
+      "itemCount": 9,
+      "totalCents": 11691
+    }
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "validJson": true,
+    "exactFields": true,
+    "exactIntegerValues": true,
+    "noDuplicateFields": true,
+    "jsonEquality": true,
+    "passed": true
+  }
+}
+{
+  "observationId": "pricing-10-001",
+  "recordedAt": "2026-10-19T21:14:38.390509+00:00",
+  "runId": "e579e311-45fb-420f-9d07-1132e29dfdc8",
+  "journeyRevision": 1,
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "testedSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "surface": "HTTP API through CLI Python urllib.request",
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "subtotalCents": 12990,
+      "itemCount": 10
+    },
+    "rawBody": "{\"subtotalCents\":12990,\"itemCount\":10}"
+  },
+  "expected": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 12990,
+      "itemCount": 10,
+      "totalCents": 11691
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:14:38 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "rawBody": "{\"subtotalCents\":12990,\"itemCount\":10,\"totalCents\":11691}",
+    "json": {
+      "subtotalCents": 12990,
+      "itemCount": 10,
+      "totalCents": 11691
+    },
+    "parseError": null
+  },
+  "actual": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 12990,
+      "itemCount": 10,
+      "totalCents": 11691
+    }
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "validJson": true,
+    "exactFields": true,
+    "exactIntegerValues": true,
+    "noDuplicateFields": true,
+    "jsonEquality": true,
+    "passed": true
+  }
+}
+{
+  "observationId": "pricing-11-001",
+  "recordedAt": "2026-10-19T21:14:38.391912+00:00",
+  "runId": "e579e311-45fb-420f-9d07-1132e29dfdc8",
+  "journeyRevision": 1,
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "testedSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "surface": "HTTP API through CLI Python urllib.request",
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "subtotalCents": 14289,
+      "itemCount": 11
+    },
+    "rawBody": "{\"subtotalCents\":14289,\"itemCount\":11}"
+  },
+  "expected": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 14289,
+      "itemCount": 11,
+      "totalCents": 12860
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:14:38 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "rawBody": "{\"subtotalCents\":14289,\"itemCount\":11,\"totalCents\":12860}",
+    "json": {
+      "subtotalCents": 14289,
+      "itemCount": 11,
+      "totalCents": 12860
+    },
+    "parseError": null
+  },
+  "actual": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 14289,
+      "itemCount": 11,
+      "totalCents": 12860
+    }
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "validJson": true,
+    "exactFields": true,
+    "exactIntegerValues": true,
+    "noDuplicateFields": true,
+    "jsonEquality": true,
+    "passed": true
+  }
+}
+{
+  "observationId": "pricing-15-001",
+  "recordedAt": "2026-10-19T21:14:38.392997+00:00",
+  "runId": "e579e311-45fb-420f-9d07-1132e29dfdc8",
+  "journeyRevision": 1,
+  "scenarioId": "53d66f3f-1fdb-4011-8e52-8c5b35b53d23",
+  "testedSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+  "surface": "HTTP API through CLI Python urllib.request",
+  "request": {
+    "method": "POST",
+    "url": "http://127.0.0.1:3000/api/pricing/quote",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "subtotalCents": 19485,
+      "itemCount": 15
+    },
+    "rawBody": "{\"subtotalCents\":19485,\"itemCount\":15}"
+  },
+  "expected": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 19485,
+      "itemCount": 15,
+      "totalCents": 17537
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "Date": "Mon, 19 Oct 2026 21:14:38 GMT",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    },
+    "rawBody": "{\"subtotalCents\":19485,\"itemCount\":15,\"totalCents\":17537}",
+    "json": {
+      "subtotalCents": 19485,
+      "itemCount": 15,
+      "totalCents": 17537
+    },
+    "parseError": null
+  },
+  "actual": {
+    "status": 200,
+    "json": {
+      "subtotalCents": 19485,
+      "itemCount": 15,
+      "totalCents": 17537
+    }
+  },
+  "comparison": {
+    "httpStatusMatches": true,
+    "validJson": true,
+    "exactFields": true,
+    "exactIntegerValues": true,
+    "noDuplicateFields": true,
+    "jsonEquality": true,
+    "passed": true
+  }
+}
+
+Close preview
+Download

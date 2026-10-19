@@ -1,0 +1,23 @@
+Scenario: pricing-team10-inclusive-boundary
+Status: passed
+Summary: All criteria passed on revision 4e6f38b08d23d81ae408afdaed418b6aaccc2064 through real HTTP requests. The working tree was clean before and after testing.
+
+Criteria:
+- entry 1: passed
+  Expected: The pricing API is available at the target base URL.
+  Actual: POST /api/pricing/quote returned HTTP 200 with pricing JSON.
+- exit 1: passed
+  Expected: It returns HTTP 200 for each request.
+  Actual: All four requests returned HTTP 200, including the ten-item request using application/json; charset=utf-8.
+- exit 2: passed
+  Expected: It returns exactly {"subtotalCents":11691,"itemCount":9,"totalCents":11691} for nine items.
+  Actual: {"subtotalCents":11691,"itemCount":9,"totalCents":11691}
+- exit 3: passed
+  Expected: It returns exactly {"subtotalCents":12990,"itemCount":10,"totalCents":11691} for ten items.
+  Actual: {"subtotalCents":12990,"itemCount":10,"totalCents":11691}
+- exit 4: passed
+  Expected: It returns exactly {"subtotalCents":14289,"itemCount":11,"totalCents":12860} for eleven items.
+  Actual: {"subtotalCents":14289,"itemCount":11,"totalCents":12860}
+- exit 5: passed
+  Expected: It returns exactly {"subtotalCents":19485,"itemCount":15,"totalCents":17537} for fifteen items.
+  Actual: {"subtotalCents":19485,"itemCount":15,"totalCents":17537}
