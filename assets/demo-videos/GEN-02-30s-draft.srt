@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+Triage helps a reviewer select a change and understand its priority.
+
+2
+00:00:05,000 --> 00:00:13,000
+Open the boundary pull request in Change Stack. Its single layer groups the related file and explains the change.
+
+3
+00:00:13,000 --> 00:00:21,000
+Inspect the comparison and the supporting finding. Exactly ten items miss the discount, giving a concrete behavior to verify.
+
+4
+00:00:21,000 --> 00:00:28,000
+The completed CodeRabbit correction has passing hosted tests. These views organize review; they do not replace judgment.
+
+5
+00:00:28,000 --> 00:00:30,000
+Review the evidence.

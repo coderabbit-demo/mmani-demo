@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+A provider response rename can break a consumer in another repository.
+
+2
+00:00:05,000 --> 00:00:13,000
+In this follow-up, CodeRabbit retrieves the consumer source and identifies the checkout call site that still reads total cents.
+
+3
+00:00:13,000 --> 00:00:21,000
+After completion, the generated correction restores the public field. The actual consumer probe is separate runtime evidence.
+
+4
+00:00:21,000 --> 00:00:28,000
+Fifty-three hosted provider tests pass. Preserve the named consumer source and its exact revision when explaining the compatibility impact.
+
+5
+00:00:28,000 --> 00:00:30,000
+Check the consumer contract.

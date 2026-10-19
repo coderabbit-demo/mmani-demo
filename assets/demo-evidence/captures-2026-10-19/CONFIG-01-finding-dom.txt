@@ -1,0 +1,341 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] CONFIG-01: repository review profile - #13" [level=1]':
+    - text: "[Demo - do not merge] CONFIG-01: repository review profile"
+    - generic: "- #13"
+  - generic: "#13"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 1 commit into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/config-01-review-profile":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/config-01-review-profile
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/13
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5895011579"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - 'heading "CONFIG-01: versioned review profile" [level=2]'
+  - paragraph:
+    - text: This isolated configuration demo changes only
+    - code: reviews.profile
+    - text: from
+    - code: assertive
+    - text: to
+    - code: chill
+    - text: . Observe which profile CodeRabbit actually reports in its Run configuration before claiming the override took effect. The baseline remains assertive; no merge is intended.
+  - paragraph: This demonstrates a versioned repository setting, separately from path instructions, external coding guidelines, and linked repository context. Profile choice changes review style, not a security guarantee or GitHub merge enforcement. There is no inheritance or organization-settings change in this PR. No application code or tests change; validation is the one-line YAML diff and the hosted effective configuration report.
+  - paragraph: Do not merge. Any review finding must be fixed through CodeRabbit's Fix with AI / Auto Fix / Fix with CodeRabbit Code workflow.
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: Chores
+    - list:
+      - listitem: Adjusted the automated review profile.
+  - generic "Add or remove reactions":
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(config): demonstrate a repository review profile override"':
+      - /url: /coderabbit-demo/mmani-demo/pull/13/commits/51053d1eead9af9d21d313a3dbf4d3bcc9d38c59
+  - code:
+    - link "51053d1":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/commits/51053d1eead9af9d21d313a3dbf4d3bcc9d38c59
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229837239"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "Review in Change Stack → No actionable comments were generated in the recent review. 🎉 ### Architecture Summary Architecture risk: 🔵 Low · up to 51053 The changed surface does not map to a changed system, dependency edge, entrypoint, or external dependency. Changed systems: None identified. Architecture concerns No architecture-level concerns identified. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+        - 'cell "Review in Change Stack → No actionable comments were generated in the recent review. 🎉 ### Architecture Summary Architecture risk: 🔵 Low · up to 51053 The changed surface does not map to a changed system, dependency edge, entrypoint, or external dependency. Changed systems: None identified. Architecture concerns No architecture-level concerns identified. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/13?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - paragraph: No actionable comments were generated in the recent review. 🎉
+          - generic "ℹ️ Recent review info":
+            - strong: ℹ️ Recent review info
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: ⚪ Minimal · up to 51053"':
+            - strong: "Merge Risk:"
+            - strong: ⚪ Minimal
+            - text: · up to
+            - code: "51053"
+          - text: "### Architecture Summary"
+          - paragraph:
+            - strong: "Architecture risk:"
+            - strong: 🔵 Low
+            - text: · up to
+            - code: "51053"
+          - paragraph: The changed surface does not map to a changed system, dependency edge, entrypoint, or external dependency.
+          - paragraph:
+            - strong: "Changed systems:"
+            - text: None identified.
+          - paragraph:
+            - strong: Architecture concerns
+            - text: No architecture-level concerns identified.
+          - generic "Review details":
+            - strong: Review details
+          - 'generic "Pre-merge checks: Passed 6"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: "6"
+          - generic "✨ Finishing Touches":
+            - strong: ✨ Finishing Touches
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33503854491"
+  - text: — with
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add
+  - link ".patch":
+    - /url: /coderabbit-demo/mmani-demo/pull/13.patch
+  - text: or
+  - link ".diff":
+    - /url: /coderabbit-demo/mmani-demo/pull/13.diff
+  - text: to the end of URLs for Git’s plaintext views.
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - generic: Loading suggestions…
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

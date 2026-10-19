@@ -1,0 +1,122 @@
+[
+  {
+    "id": "BUG-01",
+    "file": "assets/demo-videos/BUG-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-02-layer.jpg",
+        "narration": "The discount should start at ten items. This change accidentally excludes exactly ten."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "CodeRabbit identifies the boundary error: the price becomes twelve thousand nine hundred ninety cents, instead of eleven thousand six hundred ninety-one."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "GEN-01-action.jpg",
+        "narration": "We delegate the correction to CodeRabbit, preserving the original snapshot and every regression assertion."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "After completion, the generated fix passes all fifty-three tests in hosted validation. Bot re-review was skipped."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "BUG-01-ci.jpg",
+        "narration": "Verify the requirement."
+      }
+    ]
+  },
+  {
+    "id": "GEN-01",
+    "file": "assets/demo-videos/GEN-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-01-summary.jpg",
+        "narration": "Start with one focused pull request and the generated author summary."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "The review identifies the exact boundary error and explains its effect on the customer price, with a concrete expected value."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "GEN-01-action.jpg",
+        "narration": "We ask CodeRabbit to produce the correction while preserving regression assertions and the original demo snapshot."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "After completion, inspect the generated pull request and fifty-three passing hosted tests. The bot re-review was skipped."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "BUG-01-finding.jpg",
+        "narration": "Keep the evidence."
+      }
+    ]
+  },
+  {
+    "id": "GEN-02",
+    "file": "assets/demo-videos/GEN-02-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-02-triage.jpg",
+        "narration": "Triage helps a reviewer select a change and understand its priority."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "GEN-02-layer.jpg",
+        "narration": "Open the boundary pull request in Change Stack. Its single layer groups the related file and explains the change."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "Inspect the comparison and the supporting finding. Exactly ten items miss the discount, giving a concrete behavior to verify."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "The completed CodeRabbit correction has passing hosted tests. These views organize review; they do not replace judgment."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "GEN-02-layer.jpg",
+        "narration": "Review the evidence."
+      }
+    ]
+  }
+]

@@ -1,0 +1,879 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] QA-01: green coverage with weak assertions - #10" [level=1]':
+    - text: "[Demo - do not merge] QA-01: green coverage with weak assertions"
+    - generic: "- #10"
+  - generic: "#10"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Draft
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 1 commit into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/qa-01-weak-assertions":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/qa-01-weak-assertions
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/10
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/10/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/10/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/10/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5894787625"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - paragraph: Dedicated QA assertion-quality comparison. Demo - Do not merge.
+  - paragraph: The production code matches the original BUG-01 snapshot; this PR intentionally replaces independent quote expectations with a circular unit expectation and an HTTP field-presence assertion. The correct baseline and its regression assertions remain unchanged on main. Do not treat green coverage as proof of correctness.
+  - paragraph: "Acceptance criteria: a 1,299-cent unit price, 10% discount at itemCount >= 10, one rounding operation, and integer-cent response fields. For quantities 9, 10, 11, and 15, POST /api/pricing/quote with subtotalCents equal to quantity * 1299 must return totalCents 11691, 11691, 12860, and 17537 respectively. This is an API quote demo with synthetic data; there is no checkout UI or payment processing."
+  - paragraph: "Local evidence: all 53 tests pass; overall executable lines 49/49 (100%), changed executable lines 1/1 (100%), branch coverage 94.44%. An independent acceptance probe fails: exactly ten items returns 12990 instead of 11691. The original strong suite against the same production code reports two boundary failures. Tests and coverage are separate from QA Agent execution."
+  - paragraph: "Review request: explain the assertion weaknesses against the acceptance criteria. Preserve this original snapshot at demo/qa-01-before-fix. Any future remediation must use CodeRabbit Fix with AI, Auto Fix, or Fix with CodeRabbit Code in a separate PR; do not manually fix findings or merge."
+  - paragraph: "Startup: Node 24, npm ci, npm start. The service binds 127.0.0.1:3000; GET /health must return {\"status\":\"ok\"}. Run actual HTTP quote checks against that process. See README.md and docs/demo-workflow.md on main for commands and the QA-01/QA-02 recording register."
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: Bug Fixes
+    - list:
+      - listitem: Discount eligibility now requires more than 10 items. Orders with exactly 10 items no longer qualify, aligning the discount threshold with the stated rule. This clarifies how the item-count cutoff is applied when determining whether a discount is available.
+  - generic "Add or remove reactions":
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(QA-01): contrast green coverage with weak assertions"':
+      - /url: /coderabbit-demo/mmani-demo/pull/10/commits/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+  - code:
+    - link "b2dcfc4":
+      - /url: /coderabbit-demo/mmani-demo/pull/10/commits/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33502640601"
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229563477"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai full review Please review this dedicated draft QA demo against its acceptance criteria. Focus on whether the assertions independently establish the exact-ten boundary and literal totals. Do not fix, merge, or weaken additional tests; preserve the original snapshot for the comparison.":
+        - cell "@coderabbitai full review Please review this dedicated draft QA demo against its acceptance criteria. Focus on whether the assertions independently establish the exact-ten boundary and literal totals. Do not fix, merge, or weaken additional tests; preserve the original snapshot for the comparison.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: full review
+          - paragraph: Please review this dedicated draft QA demo against its acceptance criteria. Focus on whether the assertions independently establish the exact-ten boundary and literal totals. Do not fix, merge, or weaken additional tests; preserve the original snapshot for the comparison.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229563608"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "Review in Change Stack → ### Architecture Summary Architecture risk: 🔵 Low · up to b2dcf The change affects 2 systems. Changed systems: src, tests Architecture concerns No architecture-level concerns identified. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+        - 'cell "Review in Change Stack → ### Architecture Summary Architecture risk: 🔵 Low · up to b2dcf The change affects 2 systems. Changed systems: src, tests Architecture concerns No architecture-level concerns identified. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: 🟠 High · up to b2dcf"':
+            - strong: "Merge Risk:"
+            - strong: 🟠 High
+            - text: · up to
+            - code: b2dcf
+          - text: "### Architecture Summary"
+          - paragraph:
+            - strong: "Architecture risk:"
+            - strong: 🔵 Low
+            - text: · up to
+            - code: b2dcf
+          - paragraph: The change affects 2 systems.
+          - paragraph:
+            - strong: "Changed systems:"
+            - code: src
+            - text: ","
+            - code: tests
+          - paragraph:
+            - strong: Architecture concerns
+            - text: No architecture-level concerns identified.
+          - generic "Review details":
+            - strong: Review details
+          - 'generic "Pre-merge checks: Passed 6"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: "6"
+          - generic "✨ Finishing Touches":
+            - strong: ✨ Finishing Touches
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229563648"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai test":
+        - cell "@coderabbitai test":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: test
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229564467"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - generic "✅ Action performed"
+  - generic "Add or remove reactions":
+  - link "coderabbitai[bot]":
+    - /url: /apps/coderabbitai
+    - img "coderabbitai[bot]"
+  - strong:
+    - link "coderabbitai":
+      - /url: /apps/coderabbitai
+    - generic: Bot
+  - text: reviewed
+  - link "Oct 16, 20263 days ago":
+    - /url: "#pullrequestreview-5556131213"
+  - link "View reviewed changes":
+    - /url: /coderabbit-demo/mmani-demo/pull/10/files/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+    - generic: View reviewed changes
+  - heading "coderabbitai Bot left a comment" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: "Actionable comments posted: 2"
+  - separator
+  - list:
+    - checkbox "Incomplete task" [disabled]
+    - text: "🪄 Fix comments: Fix CodeRabbit comments on this PR"
+  - generic "🤖 Prompt to fix review comments"
+  - separator
+  - generic "ℹ️ Review info"
+  - generic "Add or remove reactions":
+  - button "Comment thread" [expanded]:
+  - link "src/bugs/discount.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/10/files/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b#diff-99f8a32557f9351d2e94d91efa0303c46893b487555104f94c639568d9f76270
+  - table:
+    - rowgroup:
+      - row "1 + /** Check the TEAM10 item-count threshold. */":
+        - cell
+        - cell "1"
+        - cell "+ /** Check the TEAM10 item-count threshold. */":
+          - generic: + /** Check the TEAM10 item-count threshold. */
+      - 'row "2 2 export function qualifiesForDiscount(itemCount: number): boolean {"':
+        - cell "2"
+        - cell "2"
+        - 'cell "export function qualifiesForDiscount(itemCount: number): boolean {"':
+          - generic: "export function qualifiesForDiscount(itemCount: number): boolean {"
+      - row "3 - return itemCount >= 10;":
+        - cell "3"
+        - cell
+        - cell "- return itemCount >= 10;":
+          - generic: "- return itemCount >= 10;"
+      - row "3 + return itemCount > 10;":
+        - cell
+        - cell "3"
+        - cell "+ return itemCount > 10;":
+          - generic: + return itemCount > 10;
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301338265"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🎯 Functional Correctness
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Keep the ten-item threshold inclusive.
+  - paragraph:
+    - text: The acceptance criteria require a discount when
+    - code: itemCount >= 10
+    - text: . With 10 items at 1,299 cents each, this condition returns a quote of 12,990 cents instead of 11,691 cents. The linked consumer maps
+    - code: totalCents
+    - text: to
+    - code: amountDueCents
+    - text: (
+    - code: coderabbit-demo/security-harness-consumer/src/checkout.ts:17-26
+    - text: ).
+  - generic "🤖 Prompt for AI Agents"
+  - paragraph:
+    - emphasis: "Source: Linked repositories"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - button "Comment thread" [expanded]:
+  - link "tests/baseline.test.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/10/files/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b#diff-9c878dcef758aaff12e85b0f74d8ea1e2e05f0c25b91450ca6021993cbe0b03b
+  - generic: Comment on lines +29 to +30
+  - table:
+    - rowgroup:
+      - 'row "29 + // Deliberately weak QA fixture: the expected value repeats production logic."':
+        - cell
+        - cell "29"
+        - 'cell "+ // Deliberately weak QA fixture: the expected value repeats production logic."':
+          - generic: "+ // Deliberately weak QA fixture: the expected value repeats production logic."
+      - 'row "30 + expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"':
+        - cell
+        - cell "30"
+        - 'cell "+ expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"':
+          - generic: "+ expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301338268"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🎯 Functional Correctness
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph: Both assertions remove an independent check of the required quote values. The tests can pass while the service returns an incorrect price.
+  - list:
+    - code: tests/baseline.test.ts#L29-L30
+    - text: ": replace the self-comparison with literal expected quote values for item counts 9, 10, 11, and 15: 11,691, 11,691, 12,860, and 17,537 cents."
+    - code: tests/baseline.test.ts#L59-L59
+    - text: ": assert the expected HTTP response fields and exact"
+    - code: totalCents
+    - text: ", not only property presence."
+  - generic "📍 Affects 1 file"
+  - generic "🤖 Prompt for AI Agents"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229596313"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "QA Agent · 1 scenario failed 1 scenario complete · 1 failed Tested commit b2dcfc4 Review evidence Run summary Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned). Needs attention Result Scenario ❌ Failed It applies the discount starting at ten items and returns exact integer-cent totals Comment @coderabbitai test to run again. Tests ran in an emulated environment. Results supplement CI and human review."':
+        - 'cell "QA Agent · 1 scenario failed 1 scenario complete · 1 failed Tested commit b2dcfc4 Review evidence Run summary Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned). Needs attention Result Scenario ❌ Failed It applies the discount starting at ten items and returns exact integer-cent totals Comment @coderabbitai test to run again. Tests ran in an emulated environment. Results supplement CI and human review."':
+          - heading "QA Agent · 1 scenario failed" [level=2]
+          - paragraph:
+            - strong: 1 scenario complete · 1 failed
+          - paragraph:
+            - text: Tested commit
+            - link "b2dcfc4":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/commit/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+              - code: b2dcfc4
+          - paragraph:
+            - link "Review evidence":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent
+              - img "Review evidence"
+          - heading "Run summary" [level=3]
+          - paragraph: "Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned)."
+          - heading "Needs attention" [level=3]
+          - table:
+            - rowgroup:
+              - row "Result Scenario":
+                - columnheader "Result"
+                - columnheader "Scenario"
+            - rowgroup:
+              - row "❌ Failed It applies the discount starting at ten items and returns exact integer-cent totals":
+                - cell "❌ Failed"
+                - cell "It applies the discount starting at ten items and returns exact integer-cent totals":
+                  - link "It applies the discount starting at ten items and returns exact integer-cent totals":
+                    - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent?scenario=pricing-discount-001
+          - generic "Run limitations"
+          - paragraph:
+            - text: Comment
+            - code: "@coderabbitai test"
+            - text: to run again.
+          - paragraph:
+            - subscript: Tests ran in an emulated environment. Results supplement CI and human review.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229834546"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - 'row "@coderabbitai autofix Please use your coding workflow / Fix with CodeRabbit Code to create a separate remediation PR for both reviewed issues on this QA comparison: restore the inclusive ten-item boundary, and replace the deliberately weak self-comparison and presence-only assertions with independent literal expectations. Use 1299-cent unit price and quantities 9,10,11,15 with totals 11691,11691,12860,17537, and verify the exact HTTP response fields. Preserve all other regression assertions and the unchanged original QA branch/head so the queued QA Agent run remains attributable to its weak snapshot. Keep it simple; no dependencies or unrelated changes. Validate typecheck, build, tests, coverage and HTTP smoke; report actual results. Do not merge. This explicitly authorizes CodeRabbit to generate the fix, not a manual fix by this assistant."':
+        - 'cell "@coderabbitai autofix Please use your coding workflow / Fix with CodeRabbit Code to create a separate remediation PR for both reviewed issues on this QA comparison: restore the inclusive ten-item boundary, and replace the deliberately weak self-comparison and presence-only assertions with independent literal expectations. Use 1299-cent unit price and quantities 9,10,11,15 with totals 11691,11691,12860,17537, and verify the exact HTTP response fields. Preserve all other regression assertions and the unchanged original QA branch/head so the queued QA Agent run remains attributable to its weak snapshot. Keep it simple; no dependencies or unrelated changes. Validate typecheck, build, tests, coverage and HTTP smoke; report actual results. Do not merge. This explicitly authorizes CodeRabbit to generate the fix, not a manual fix by this assistant."':
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: autofix
+            - text: "Please use your coding workflow / Fix with CodeRabbit Code to create a separate remediation PR for both reviewed issues on this QA comparison: restore the inclusive ten-item boundary, and replace the deliberately weak self-comparison and presence-only assertions with independent literal expectations. Use 1299-cent unit price and quantities 9,10,11,15 with totals 11691,11691,12860,17537, and verify the exact HTTP response fields. Preserve all other regression assertions and the unchanged original QA branch/head so the queued QA Agent run remains attributable to its weak snapshot. Keep it simple; no dependencies or unrelated changes. Validate typecheck, build, tests, coverage and HTTP smoke; report actual results. Do not merge. This explicitly authorizes CodeRabbit to generate the fix, not a manual fix by this assistant."
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229850090"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai QA Agent has completed run fcff9300-2e35-4c5c-b17b-97994fc328d9 on b2dcfc4 with scenario pricing-discount-001 failed (0 passed, 1 failed, 4 unresolved exit criteria). For the demo evidence record, can you report the actual preserved scenario plan, tested inputs, observed versus expected values, and why four criteria remain unresolved, with links to the actual run artifacts? Distinguish QA Agent execution evidence from your own code inspection or independent tests; do not reconstruct missing execution details. No new run or code changes are requested by this comment. The separate autofix request remains in progress.":
+        - cell "@coderabbitai QA Agent has completed run fcff9300-2e35-4c5c-b17b-97994fc328d9 on b2dcfc4 with scenario pricing-discount-001 failed (0 passed, 1 failed, 4 unresolved exit criteria). For the demo evidence record, can you report the actual preserved scenario plan, tested inputs, observed versus expected values, and why four criteria remain unresolved, with links to the actual run artifacts? Distinguish QA Agent execution evidence from your own code inspection or independent tests; do not reconstruct missing execution details. No new run or code changes are requested by this comment. The separate autofix request remains in progress.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: QA Agent has completed run fcff9300-2e35-4c5c-b17b-97994fc328d9 on
+            - link "b2dcfc4":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/commit/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+            - text: with scenario pricing-discount-001 failed (0 passed, 1 failed, 4 unresolved exit criteria). For the demo evidence record, can you report the actual preserved scenario plan, tested inputs, observed versus expected values, and why four criteria remain unresolved, with links to the actual run artifacts? Distinguish QA Agent execution evidence from your own code inspection or independent tests; do not reconstruct missing execution details. No new run or code changes are requested by this comment. The separate autofix request remains in progress.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229859268"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll hand this to the coding workflow for a separate remediation PR. Inspection confirms both weak assertions and the exclusive > 10 boundary at commit b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b. Restore the inclusive ten-item discount boundary. Replace both weak assertions with independent literal expectations. Preserve the original QA branch/head and all other regression assertions. Validate the remediation and report actual results. Do not merge. Validation has not run during this inspection. The coding workflow must report its execution and PR delivery results. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+        - cell "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll hand this to the coding workflow for a separate remediation PR. Inspection confirms both weak assertions and the exclusive > 10 boundary at commit b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b. Restore the inclusive ten-item discount boundary. Replace both weak assertions with independent literal expectations. Preserve the original QA branch/head and all other regression assertions. Validate the remediation and report actual results. Do not merge. Validation has not run during this inspection. The coding workflow must report its execution and PR delivery results. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I’ll hand this to the coding workflow for a separate remediation PR. Inspection confirms both weak assertions and the exclusive
+            - code: "> 10"
+            - text: boundary at commit
+            - code: b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+            - text: .
+          - list:
+            - listitem: Restore the inclusive ten-item discount boundary.
+            - listitem: Replace both weak assertions with independent literal expectations.
+            - listitem: Preserve the original QA branch/head and all other regression assertions.
+            - listitem: Validate the remediation and report actual results. Do not merge.
+          - paragraph: Validation has not run during this inspection. The coding workflow must report its execution and PR delivery results.
+          - separator
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: ✅ Pull request created - (🔄 Check again to retry)
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - link "coderabbitai":
+    - /url: /apps/coderabbitai
+  - generic: Bot
+  - text: mentioned this pull request
+  - link "Oct 16, 20263 days ago":
+    - /url: "#ref-pullrequest-5895036449"
+  - 'link "📝 CodeRabbit Chat: Restore the Inclusive Discount Boundary and Strengthen Regression Assertions #14"':
+    - /url: /coderabbit-demo/mmani-demo/pull/14
+  - 'generic "Status: Open"':
+    - text: Open
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229868087"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+        - 'cell "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+          - paragraph:
+            - text: "✅ The requested changes have been implemented and a pull request has been created:"
+            - link "View PR":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/14
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229885368"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I verified the preserved GitHub summary, but I could not retrieve the detailed run artifacts.
+            - strong: The available evidence does not establish the executed inputs, observed values, or reasons for the four unresolved criteria.
+          - heading "Verified QA Agent record" [level=3]
+          - paragraph:
+            - text: "Source:"
+            - link "preserved QA Agent comment":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313
+            - text: .
+          - table:
+            - rowgroup:
+              - row "Field Preserved value":
+                - columnheader "Field"
+                - columnheader "Preserved value"
+            - rowgroup:
+              - row "Run ID fcff9300-2e35-4c5c-b17b-97994fc328d9":
+                - cell "Run ID"
+                - cell "fcff9300-2e35-4c5c-b17b-97994fc328d9":
+                  - code: fcff9300-2e35-4c5c-b17b-97994fc328d9
+              - row "Tested commit b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b":
+                - cell "Tested commit"
+                - cell "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b":
+                  - link "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b":
+                    - /url: https://github.com/coderabbit-demo/mmani-demo/commit/b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+                    - code: b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+              - row "Scenario pricing-discount-001":
+                - cell "Scenario"
+                - cell "pricing-discount-001":
+                  - code: pricing-discount-001
+              - row "Scenario title “It applies the discount starting at ten items and returns exact integer-cent totals”":
+                - cell "Scenario title"
+                - cell "“It applies the discount starting at ten items and returns exact integer-cent totals”"
+              - row "Scenario result 1 complete; 1 failed":
+                - cell "Scenario result"
+                - cell "1 complete; 1 failed"
+              - 'row "Exit criteria 5 assigned: 0 passed, 1 failed, 4 unresolved"':
+                - cell "Exit criteria"
+                - 'cell "5 assigned: 0 passed, 1 failed, 4 unresolved"'
+              - row "Stated limitations Emulated environment; non-authoritative results that supplement CI and human review":
+                - cell "Stated limitations"
+                - cell "Emulated environment; non-authoritative results that supplement CI and human review"
+          - heading "Evidence gaps" [level=3]
+          - table:
+            - rowgroup:
+              - row "Requested detail Retrieval result":
+                - columnheader "Requested detail"
+                - columnheader "Retrieval result"
+            - rowgroup:
+              - row "Preserved scenario plan and steps Not retrieved. The summary contains only the scenario title.":
+                - cell "Preserved scenario plan and steps"
+                - cell "Not retrieved. The summary contains only the scenario title."
+              - row "Actual tested inputs Not present in the summary.":
+                - cell "Actual tested inputs"
+                - cell "Not present in the summary."
+              - row "Observed versus expected values Not present in the summary.":
+                - cell "Observed versus expected values"
+                - cell "Not present in the summary."
+              - row "Individual criterion statuses and unresolved reasons Not present in the summary. The aggregate counts do not explain the reasons.":
+                - cell "Individual criterion statuses and unresolved reasons"
+                - cell "Not present in the summary. The aggregate counts do not explain the reasons."
+              - row "Logs, request/response captures, or other execution artifacts No direct artifact links were retrieved.":
+                - cell "Logs, request/response captures, or other execution artifacts"
+                - cell "No direct artifact links were retrieved."
+          - paragraph:
+            - text: The summary links to the
+            - link "QA Agent evidence page":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent
+            - text: and the
+            - link "scenario detail page":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/10/qa-agent?scenario=pricing-discount-001
+            - text: . The page request returned application HTML, not run evidence, and the capture ended with a write error. No connected MCP source was available to retrieve the artifacts.
+          - heading "Acceptance expectations are not execution evidence" [level=3]
+          - paragraph: "The supplied acceptance criteria specify these values at a 1,299-cent unit price:"
+          - table:
+            - rowgroup:
+              - row "Quantity Subtotal cents Expected total cents QA Agent observed value":
+                - columnheader "Quantity"
+                - columnheader "Subtotal cents"
+                - columnheader "Expected total cents"
+                - columnheader "QA Agent observed value"
+            - rowgroup:
+              - row "9 11691 11691 Not retrieved":
+                - cell "9"
+                - cell "11691"
+                - cell "11691"
+                - cell "Not retrieved"
+              - row "10 12990 11691 Not retrieved":
+                - cell "10"
+                - cell "12990"
+                - cell "11691"
+                - cell "Not retrieved"
+              - row "11 14289 12860 Not retrieved":
+                - cell "11"
+                - cell "14289"
+                - cell "12860"
+                - cell "Not retrieved"
+              - row "15 19485 17537 Not retrieved":
+                - cell "15"
+                - cell "19485"
+                - cell "17537"
+                - cell "Not retrieved"
+          - paragraph:
+            - text: These rows do
+            - strong: not
+            - text: establish that QA Agent tested all four inputs. The PR description’s reported exact-ten result of
+            - code: "12990"
+            - text: versus expected
+            - code: "11691"
+            - text: belongs to its independent acceptance probe. I cannot attribute that observation to this QA Agent run.
+          - paragraph: Please share or export the preserved scenario plan, execution log, and criterion assessments from the linked evidence page, or ask me to retry artifact retrieval. Until then, the detailed execution record remains unverified. I did not start a new run, execute independent tests, or change code.
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add comments to specific lines under
+  - link "Files changed":
+    - /url: /coderabbit-demo/mmani-demo/pull/10/files
+  - text: .
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - link "@coderabbitai":
+      - /url: /apps/coderabbitai
+      - img "@coderabbitai"
+    - link "coderabbitai[bot]":
+      - /url: /apps/coderabbitai
+    - link "coderabbitai[bot] left review comments":
+      - /url: /coderabbit-demo/mmani-demo/pull/10/changes/BASE..b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

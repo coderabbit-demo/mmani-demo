@@ -1,0 +1,160 @@
+{
+  "capture_date": "2026-10-19",
+  "source": "GitHub CLI authenticated API",
+  "data": [
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T05:15:56Z",
+      "databaseId": 39005621473,
+      "headSha": "ebc5102d6aa63501eeb1a76ebb41404b204731ee",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T05:09:43Z",
+      "databaseId": 39005237979,
+      "headSha": "5b37991faee1bc85c17b2e5cb3c0559b2c9ab6c3",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T05:05:29Z",
+      "databaseId": 39004985027,
+      "headSha": "2ede14e3636f09d6e45004589a647f66aa4e6705",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T05:03:06Z",
+      "databaseId": 39004836442,
+      "headSha": "9692ba997b87fad57918f76b2197f1cc1c0213d5",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T05:01:36Z",
+      "databaseId": 39004741780,
+      "headSha": "f95264bf7f801834d7e26a9ae90554b0f93a510f",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:54:44Z",
+      "databaseId": 39004325679,
+      "headSha": "4e6f38b08d23d81ae408afdaed418b6aaccc2064",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:53:02Z",
+      "databaseId": 39004222521,
+      "headSha": "c86566cd43e54bfa9d3fd9ead836c8dda88cf82b",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:50:43Z",
+      "databaseId": 39004083305,
+      "headSha": "51053d1eead9af9d21d313a3dbf4d3bcc9d38c59",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:23:34Z",
+      "databaseId": 39002392635,
+      "headSha": "742c06cb1baae25731b8ed2abc97024158d17a12",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:23:28Z",
+      "databaseId": 39002386378,
+      "headSha": "594b72efe4fcda46fa55941d4471517e9a2804af",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:19:55Z",
+      "databaseId": 39002157960,
+      "headSha": "b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:17:53Z",
+      "databaseId": 39002032038,
+      "headSha": "153527f5e19b6bae8701b681f05c9416a9c7f88e",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:17:11Z",
+      "databaseId": 39001989431,
+      "headSha": "134ae8b9b9d30a2b5e0890c0f84ddb26b05f37a5",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:15:19Z",
+      "databaseId": 39001872012,
+      "headSha": "4e86c7d0c61f62698266c59bbc46ef46d68ac823",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:14:42Z",
+      "databaseId": 39001830389,
+      "headSha": "c571c3afdec166e825d5a6889e0b98a45eb3b4d3",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:14:00Z",
+      "databaseId": 39001785039,
+      "headSha": "60ec6c940d70238f2a60004858ac7cce19ee0bc3",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:07:18Z",
+      "databaseId": 39001366086,
+      "headSha": "83848ae90f2df6d05f0a7d1564081d59c37452e5",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:07:14Z",
+      "databaseId": 39001361751,
+      "headSha": "49f7a2d1782ae832b93b93448ac3bb1c283f497e",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:07:10Z",
+      "databaseId": 39001357844,
+      "headSha": "925a1a5d03dc04740e6182b767c952bd51183b70",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:07:06Z",
+      "databaseId": 39001353827,
+      "headSha": "66354f26a5a93ff1e740531cab3d47495535b770",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-10-17T04:06:10Z",
+      "databaseId": 39001295943,
+      "headSha": "91fd477c994760fd9fce61189ef86e92093c2b40",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-10-17T04:04:08Z",
+      "databaseId": 39001168131,
+      "headSha": "916e3862f2bbf6f2b8a680d70692abc3b0df25a3",
+      "status": "completed"
+    }
+  ]
+}

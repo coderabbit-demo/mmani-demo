@@ -1,0 +1,300 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "📝 CodeRabbit Chat: Restore the totalCents field in the pricing quote provider - #7" [level=1]':
+    - text: "📝 CodeRabbit Chat: Restore the totalCents field in the pricing quote provider"
+    - generic: "- #7"
+  - generic: "#7"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "coderabbitai[bot]":
+    - /url: /coderabbitai[bot]
+  - text: wants to merge 1 commit into
+  - link "demo/multi-01-response-contract":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/multi-01-response-contract
+  - generic: from
+  - link "coderabbitai/chat/925a1a5":
+    - /url: /coderabbit-demo/mmani-demo/tree/coderabbitai/chat/925a1a5
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/7
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/7/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/7/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/7/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 1
+  - generic: viewed
+  - generic: 0 of 1 file viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem "src/pricing" [expanded] [level=1]:
+      - generic: src/pricing
+      - treeitem "quote.ts" [level=2]:
+        - link "quote.ts":
+          - /url: "#diff-017b37891d26f76eb91b2938cc4fd5d9b32518771a28211b7fa206ef146cc550"
+  - slider "Draggable pane splitter"
+  - region "‎src/pricing/quote.ts‎":
+    - button "Collapse file":
+    - heading "‎src/pricing/quote.ts‎" [level=3]:
+      - link "‎src/pricing/quote.ts‎":
+        - /url: "#diff-017b37891d26f76eb91b2938cc4fd5d9b32518771a28211b7fa206ef146cc550"
+        - code: ‎src/pricing/quote.ts‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: src/pricing/quote.ts"':
+    - generic: "+3"
+    - generic: "-3"
+    - generic: "Lines changed: 3 additions & 3 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: src/pricing/quote.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - 'row "@@ -3,7 +3,7 @@ import { qualifiesForDiscount } from \"../bugs/discount.ts\";"':
+          - 'gridcell "@@ -3,7 +3,7 @@ import { qualifiesForDiscount } from \"../bugs/discount.ts\";"':
+            - button:
+            - code:
+              - generic: "@@ -3,7 +3,7 @@ import { qualifiesForDiscount } from \"../bugs/discount.ts\";"
+        - 'row "3 3 export interface PriceQuote {"':
+          - gridcell "3"
+          - gridcell "3"
+          - 'gridcell "export interface PriceQuote {"':
+            - code:
+              - generic: "export interface PriceQuote {"
+        - 'row "4 4 subtotalCents: number;"':
+          - gridcell "4"
+          - gridcell "4"
+          - 'gridcell "subtotalCents: number;"':
+            - code:
+              - generic: "subtotalCents: number;"
+        - 'row "5 5 itemCount: number;"':
+          - gridcell "5"
+          - gridcell "5"
+          - 'gridcell "itemCount: number;"':
+            - code:
+              - generic: "itemCount: number;"
+        - 'row "6 - amountDueCents: number;"':
+          - gridcell "6"
+          - gridcell
+          - 'gridcell "- amountDueCents: number;"':
+            - code:
+              - generic: "-"
+              - generic: "amountDueCents: number;"
+        - 'row "6 + totalCents: number;"':
+          - gridcell
+          - gridcell "6"
+          - 'gridcell "+ totalCents: number;"':
+            - code:
+              - generic: +
+              - generic: "totalCents: number;"
+        - 'row "7 7 }"':
+          - gridcell "7"
+          - gridcell "7"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+        - row "8 8":
+          - gridcell "8"
+          - gridcell "8"
+          - gridcell:
+            - code
+        - row "9 9 /** Quote an integer-cent subtotal; this demo does not charge a payment method. */":
+          - gridcell "9"
+          - gridcell "9"
+          - gridcell /** Quote an integer-cent subtotal; this demo does not charge a payment method. */:
+            - code:
+              - generic: /** Quote an integer-cent subtotal; this demo does not charge a payment method. */
+        - 'row "@@ -18,8 +18,8 @@ export function quote(input: unknown): PriceQuote {"':
+          - 'gridcell "@@ -18,8 +18,8 @@ export function quote(input: unknown): PriceQuote {"':
+            - button:
+            - code:
+              - generic: "@@ -18,8 +18,8 @@ export function quote(input: unknown): PriceQuote {"
+        - 'row "18 18 || itemCount < 1 || itemCount > 10_000) {"':
+          - gridcell "18"
+          - gridcell "18"
+          - 'gridcell "|| itemCount < 1 || itemCount > 10_000) {"':
+            - code:
+              - generic: "|| itemCount < 1 || itemCount > 10_000) {"
+        - row "19 19 throw new TypeError(\"Expected subtotalCents (0..100000000) and itemCount (1..10000) as integers\");":
+          - gridcell "19"
+          - gridcell "19"
+          - gridcell "throw new TypeError(\"Expected subtotalCents (0..100000000) and itemCount (1..10000) as integers\");":
+            - code:
+              - generic: throw new TypeError("Expected subtotalCents (0..100000000) and itemCount (1..10000) as integers");
+        - 'row "20 20 }"':
+          - gridcell "20"
+          - gridcell "20"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+        - row "21 - const amountDueCents = qualifiesForDiscount(itemCount)":
+          - gridcell "21"
+          - gridcell
+          - gridcell "- const amountDueCents = qualifiesForDiscount(itemCount)":
+            - code:
+              - generic: "-"
+              - generic: const amountDueCents = qualifiesForDiscount(itemCount)
+        - row "21 + const totalCents = qualifiesForDiscount(itemCount)":
+          - gridcell
+          - gridcell "21"
+          - gridcell "+ const totalCents = qualifiesForDiscount(itemCount)":
+            - code:
+              - generic: +
+              - generic: const totalCents = qualifiesForDiscount(itemCount)
+        - row "22 22 ? Math.round(subtotalCents * 90 / 100)":
+          - gridcell "22"
+          - gridcell "22"
+          - gridcell "? Math.round(subtotalCents * 90 / 100)":
+            - code:
+              - generic: "? Math.round(subtotalCents * 90 / 100)"
+        - 'row "23 23 : subtotalCents;"':
+          - gridcell "23"
+          - gridcell "23"
+          - 'gridcell ": subtotalCents;"':
+            - code:
+              - generic: ": subtotalCents;"
+        - 'row "24 - return { subtotalCents, itemCount, amountDueCents };"':
+          - gridcell "24"
+          - gridcell
+          - 'gridcell "- return { subtotalCents, itemCount, amountDueCents };"':
+            - code:
+              - generic: "-"
+              - generic: "return { subtotalCents, itemCount, amountDueCents };"
+        - 'row "24 + return { subtotalCents, itemCount, totalCents };"':
+          - gridcell
+          - gridcell "24"
+          - 'gridcell "+ return { subtotalCents, itemCount, totalCents };"':
+            - code:
+              - generic: +
+              - generic: "return { subtotalCents, itemCount, totalCents };"
+        - 'row "25 25 }"':
+          - gridcell "25"
+          - gridcell "25"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

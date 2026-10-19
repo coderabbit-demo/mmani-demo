@@ -1,0 +1,175 @@
+- status "Archive notification"
+- link "Skip to content":
+  - /url: "#main"
+- region "Application notices":
+  - alert:
+    - generic: MCP connection "Context7" has tools paused until their current definitions are approved. 4 more connections need attention.
+    - link "Review tools":
+      - /url: /connections?product=review&reviewConnection=workspace%3A79872caf-fbef-4353-a7b3-b81f8e67b2c0&focus=pausedTools
+      - text: Review
+    - link "4 more connections need attention. View all connections.":
+      - /url: /connections
+      - text: View all
+    - button "Dismiss":
+- button "coderabbit-demo avatar coderabbit-demo Enterprise":
+  - img "coderabbit-demo avatar"
+  - generic: coderabbit-demo
+  - generic: Enterprise
+- button "Collapse sidebar" [expanded]:
+- button "Search ⌘ K":
+  - generic: Search
+  - generic: ⌘ K
+- navigation "Workspace navigation":
+  - link "Triage":
+    - /url: /triage
+    - generic: Triage
+  - link "New coding task Beta":
+    - /url: /code/new
+    - generic: New coding task
+    - generic: Beta
+  - link "Run deep scan":
+    - /url: /deep-scans
+    - generic: Run deep scan
+  - button "Analytics":
+    - generic: Analytics
+  - button "Expand Analytics":
+  - link:
+    - /url: /analytics/summary
+    - generic: PR reviews
+  - link:
+    - /url: /analytics/ide-cli-summary
+    - generic: IDE/CLI reviews
+  - link:
+    - /url: /dashboard/review-capacity
+    - generic: Review usage
+  - link:
+    - /url: /reports
+    - generic: Reports
+  - separator
+  - complementary "Tasks"
+  - region "Recents":
+    - button "Recents" [expanded]:
+      - text: Recents
+    - button "New coding task in Recents":
+    - complementary "Tasks":
+      - link "Open Replace broken demo workflow evidence links with the authoritative workflow link":
+        - /url: /code/tasks/c9557282-4f73-41d8-b11b-e5dd46628bd7?source=coding_agent_task_list
+        - img "Thinking":
+        - generic: Replace broken demo workflow evidence links with the authoritative workflow link
+      - 'link "Open Move the PR #95 fixed entry into the 2.3.0 changelog section"':
+        - /url: /code/tasks/74b20800-43de-4254-ba1a-e92b014f5801?source=coding_agent_task_list
+        - img "Done, not opened"
+        - generic: "Move the PR #95 fixed entry into the 2.3.0 changelog section"
+      - link "Open Fix timezone parsing, tooltip text, and HTML escaping findings":
+        - /url: /code/tasks/04a4aeea-ef31-4896-bf21-1710aafb1c45?source=coding_agent_task_list
+        - img "Done, not opened"
+        - generic: Fix timezone parsing, tooltip text, and HTML escaping findings
+      - link "Open Clarify repository activity wording and add a regression test":
+        - /url: /code/tasks/848584ad-e54a-47a8-af7e-90d26b390448?source=coding_agent_task_list
+        - img "Done, not opened"
+        - generic: Clarify repository activity wording and add a regression test
+      - link "Open Catch OSError for invalid timezone directory keys":
+        - /url: /code/tasks/7cdd8ad0-d300-42b2-957d-41d58b336dfa?source=coding_agent_task_list
+        - img "Done, not opened"
+        - generic: Catch OSError for invalid timezone directory keys
+      - button "Show more tasks":
+        - generic: Show more
+  - separator
+  - generic: Quick actions
+  - link "Add repositories":
+    - /url: /settings/repositories
+    - generic: Add repositories
+  - link "Personal scope":
+    - /url: /setup/personal-scope
+    - generic: Personal scope
+  - separator
+  - link "Settings":
+    - /url: /settings/repositories
+    - generic: Settings
+- button "MM Mahesh Mani Admin":
+  - img "MM"
+  - generic: Mahesh Mani
+  - generic: Admin
+- button "Notifications, unread notifications":
+  - status "Unread notifications"
+- banner:
+  - navigation:
+    - generic: Triage
+  - heading "Triage" [level=1]
+- main "Triage":
+  - button "Repositories (1)":
+    - generic: Repositories (1)
+  - button "Edit Search filter":
+    - generic: "Search: BUG-01"
+  - combobox "Search pull requests" [active]
+  - button "Clear query":
+  - button [expanded]:
+  - paragraph: Repeat a filter or use commas for alternatives. Use arrow keys and Tab to complete suggestions. Press Escape to close suggestions. Enter applies the draft or the selected filter value.
+  - button "Display options":
+    - generic: Display
+  - button "Rules":
+    - generic: Rules
+  - button "Following":
+    - generic: Following
+  - generic "Triage board":
+    - complementary "Triage navigation":
+      - navigation "Triage views":
+        - heading "Views" [level=2]
+        - button "Requires my action 1 pull request":
+          - generic: Requires my action
+          - generic "1 pull request": "1"
+        - button "All PRs 1 pull request":
+          - generic: All PRs
+          - generic "1 pull request": "1"
+        - button "Close candidates 0 pull requests":
+          - generic: Close candidates
+          - generic "0 pull requests": "0"
+    - region "P1 · High priority board column":
+      - button "Expand P1 · High priority, 0 pull requests":
+        - generic "0 pull requests in P1 · High priority": "0"
+        - generic: P1 · High priority
+    - region "P2 · Medium priority board column":
+      - button "Expand P2 · Medium priority, 0 pull requests":
+        - generic "0 pull requests in P2 · Medium priority": "0"
+        - generic: P2 · Medium priority
+    - region "P3 · Low priority board column":
+      - button "Collapse P3 · Low priority" [expanded]:
+      - generic: P3 · Low priority
+      - generic "1 pull request in P3 · Low priority": "1"
+      - region "P3 · Low priority pull requests":
+        - 'link "Change Stack for mmani-demo #2"':
+          - /url: /triage/review/coderabbit-demo/mmani-demo/pull/2/overview?triageReturnTo=%2Ftriage%3Frepo%3Dmmani-demo%26global.q%3DBUG-01
+        - 'button "Open priority activity for mmani-demo #2. Current priority: P3 · Low priority"':
+          - generic: P3
+        - 'heading "[Demo - do not merge] BUG-01: Inclusive discount boundary" [level=3]'
+        - generic: Defer this change because it narrowly adjusts whether exactly 10 items qualify for a discount in a synthetic demo.
+        - 'link "Open pull request on GitHub for mmani-demo #2"':
+          - /url: https://github.com/coderabbit-demo/mmani-demo/pull/2
+          - generic "coderabbit-demo/mmani-demo": mmani-demo
+          - generic: "#2"
+        - 'button "Failed checks for mmani-demo #2"':
+        - generic "@manimahesh (Mahesh Mani)":
+          - text: "@manimahesh"
+          - generic: (Mahesh Mani)
+        - generic "Friday, October 16, 2026 at 9:07 PM": 2d ago
+        - generic "2 lines added, 2 lines removed":
+          - generic: "+2"
+          - generic: −2
+        - 'button "Add reviewers for mmani-demo #2"':
+        - generic "CodeRabbit’s classification of the pull request’s primary change":
+          - generic: Bugfix
+        - generic "CodeRabbit assesses this pull request's blast radius as medium.":
+          - generic: Medium blast radius
+        - generic "Mahesh Mani (@manimahesh)":
+          - img "Mahesh Mani"
+        - generic: Fix CI
+        - 'button "Fix CI coderabbit-demo/mmani-demo #2"':
+          - generic: Fix CI
+        - 'button "Card actions for coderabbit-demo/mmani-demo #2"':
+    - region "Close candidates board column":
+      - button "Expand Close candidates, 0 pull requests":
+        - generic "0 pull requests in Close candidates": "0"
+        - generic: Close candidates
+- region "Notifications":
+  - status:
+    - list

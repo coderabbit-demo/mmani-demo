@@ -1,0 +1,61 @@
+Selected scenario details
+It applies the discount starting at ten items and returns exact integer-cent totals
+Bugs
+Edit scenario
+Fix with AI
+
+2m 49s
+
+Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned). A testing deviation left the original revision unverified. When available, the execution result records the tester's assessment before validation; these counts reflect the final checks.
+
+Evidence
+2
+Checks
+6
+Test steps
+4
+Observations
+3
+Recurrences
+Scenario description
+
+Verify the public quote contract using literal expectations for items priced at 1299 cents: no discount below ten items, a 10% discount starting at ten, and rounding once on the discounted subtotal.
+
+1
+
+POST /api/pricing/quote with Content-Type: application/json and body {"subtotalCents":11691,"itemCount":9}; inspect the status and complete JSON response.
+
+2
+
+POST /api/pricing/quote with Content-Type: application/json and body {"subtotalCents":12990,"itemCount":10}; inspect the status and complete JSON response.
+
+3
+
+POST /api/pricing/quote with Content-Type: application/json and body {"subtotalCents":14289,"itemCount":11}; inspect the status and complete JSON response.
+
+4
+
+POST /api/pricing/quote with Content-Type: application/json and body {"subtotalCents":19485,"itemCount":15}; inspect the status and complete JSON response.
+
+Scope
+What this scenario does and does not validate
+4 in scope · 2 out of scope
+In scope
+4
+Inclusive ten-item discount threshold and below-threshold control
+Literal totals for all four documented acceptance quantities
+Single rounding of the discounted subtotal
+Exact HTTP response fields and numeric integer-cent values
+Out of scope
+2
+Checkout UI and payment processing
+Unrelated API endpoints
+
+Priority 1
+
+View technical details
+Previous
+
+1 of 1 scenarios
+
+Next

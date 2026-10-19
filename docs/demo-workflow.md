@@ -1,5 +1,90 @@
 # Demo workflow and recording register
 
+## Continuation evidence — October 19, 2026 (Pacific)
+
+This dated update supersedes earlier access, delivery, and recording-pending
+statements below. Earlier test results remain tied to their original SHAs and
+environments; they were not rerun on this Mac.
+
+- Local GitHub and CodeRabbit CLI authentication work outside the sandbox. The
+  sandbox's initial credential/network failures were environmental, not invalid
+  sign-ins. CodeRabbit CLI and browser context were selected as `coderabbit-demo`.
+  This Mac has Node 24.13.0; no new pinned-runtime local test pass is claimed.
+- Before retrying PR #15: all 15 PRs were open, no delivery branch existed, all
+  listed GitHub jobs were complete, and CodeRabbit's repository task listing
+  returned zero tasks. The old checked create-PR action and unanswered diagnosis
+  remain preserved in [delivery evidence](../assets/demo-evidence/2026-10-19-pr15-delivery.json).
+- One bounded retry used **CodeRabbit CLI `code new`**, then **`code push --stacked`**.
+  [Task c9557282](https://app.coderabbit.ai/code/tasks/c9557282-4f73-41d8-b11b-e5dd46628bd7)
+  produced [documentation cleanup PR #16](https://github.com/coderabbit-demo/mmani-demo/pull/16).
+  Base: `f95264bf7f801834d7e26a9ae90554b0f93a510f`; generated head:
+  `09dd2e649a9f49918332f4d9ca425e6b3aa6e6b4`. Git records CodeRabbit as both author
+  and committer. Only `docs/demo-workflow.md` changes. Independent comparison of
+  every other path is empty, and `git diff --check` passes. CodeRabbit validated
+  the three absolute links with HTTP 200. No manual finding fix was applied.
+  [Independent diff/tree checks](../assets/demo-evidence/2026-10-19-cleanup-independent-check.json).
+- [PR #16 CI passed](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39314026551).
+  Its bot review was **skipped**, despite the successful status context; this is
+  not a completed re-review. [Validation](../assets/demo-evidence/2026-10-19-pr16-validation.json)
+  and [bot response](../assets/demo-evidence/2026-10-19-pr16-comments.json) are separate.
+  PR #16 is open against PR #15's branch; neither was merged. PR #15's own head
+  still contains the old documentation, so demonstrate the separate cleanup artifact.
+- All **16 PRs are open, unmerged, with auto-merge absent**. PR #16 has the
+  **Demo - Do not merge** label. Exact current base/head SHAs are in
+  [PR snapshot](../assets/demo-evidence/2026-10-19-pr-state.json).
+- Authenticated Triage and Change Stack work in the demo organization. GEN-02's
+  actual click path is Triage → repository `mmani-demo` → search `BUG-01` →
+  P3 card #2 → layer “Update discount threshold” → `src/bugs/discount.ts`.
+  Layers are within the PR; no branch stacking is implied. No merge or fix button
+  was activated during capture. Triage automatic rules remain unverified.
+- QA-02's original saved plan, execution result, and final checks are now captured
+  [here](../assets/demo-evidence/captures-2026-10-19/). The result records actual
+  12,990 versus expected 11,691 cents at quantity ten. It used **Node 24.14.1**,
+  not pinned 24.19.0. The final validator retains **1 failed / 4 unresolved** exit
+  criteria due to this deviation, although the execution artifact reports other
+  cases passed. Preserve both layers of evidence; do not promote them to four
+  validated passes. Run/commit IDs remain those in `qa-agent-runs.json`.
+- The corrected PR #14 QA evidence URL currently returns **No Review Stack for
+  this pull request**. Its public pass summary remains available; detailed
+  corrected artifacts are blocked. Do not launch another run or present a fixed
+  Test Suite replay as a workaround for missing original evidence.
+- Test Suites UI is available, but searching its repository selector for
+  `mmani-demo` returns **No matching repositories**. QA-03 needs repository setup,
+  a fixed journey revision/environment, and completed weak/corrected runs before
+  its intended clip can be completed. No setup settings were changed.
+- Deep Scan UI is available. This repository reports **no completed analysis**,
+  **0 / 81 verified security points**, mapping dated October 16, 9:14 PM Pacific,
+  and last scanned **Never**. SEC-02 remains blocked on separately scoped scan
+  evidence; no scan was started and no vulnerable branch was merged.
+
+### Video delivery and remaining gates
+
+Nine actual MP4 drafts now exist in [demo-videos](../assets/demo-videos/).
+They are **edited real UI still captures**, not continuous cursor recordings,
+with synthetic Samantha narration, burned-in narration, separate SRT captions,
+and explicit “After completion” cuts. Each is 1920×1080, 30 fps, 900 frames,
+and exactly 30.000 seconds. The capture date is October 19; historical CI dates
+remain visible. The QA-01 acceptance card is explicitly labeled local evidence.
+
+[Capture manifest](../assets/demo-videos/capture-manifest.json) records each shot,
+narration, timing, asset path, and duration. [Media validation](../assets/demo-videos/media-validation.json)
+records stream/duration/audio-signal checks. Public source URLs and DOM snapshots
+are preserved in the capture directory. **Drafts are not marked checked**:
+full playback, narration pace, final crops, and claim-to-shot alignment need review.
+GEN-01/BUG-01/GEN-02 reuse the same focused PR #2→#6 evidence appropriately.
+
+QA-02, QA-03, and SEC-02 retain scripts only; no substitute videos were fabricated.
+GUIDE-01's draft shows the verified code result, while the separate documentation
+cleanup is PR #16. CONFIG-01's fresh UI shows the observed before/after setting;
+its original CHILL run-profile report is retained separately in `pr-13-review.json`.
+Before final export, align that specific report with the effective-profile beat.
+
+Freshness/reset: recheck the recorded SHAs and URLs; keep snapshot tags and all
+PRs open; never rerun fix actions during playback. Revisit the original QA artifact
+URLs after access is repaired, without replacing historical runs. Refresh clip
+crops if product UI changes. No current video implies execution finished in thirty
+seconds. Repository main remains the only authoritative status register.
+
 ## Preparation status
 
 The correct baseline is published at `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`
@@ -50,18 +135,18 @@ can reference these PRs without combining their defects. All video targets are
 
 | ID | Segment | Implementation status | PR / finding / fix evidence | Recording status |
 | --- | --- | --- | --- | --- |
-| GEN-01 | Author: summary → finding → CodeRabbit fix | Finding and CodeRabbit fix locally verified; bot re-review skipped | PR #2 → #6 | Storyboarded; footage pending |
-| GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |
-| SEC-01 | SQL injection | CodeRabbit fix #9 locally verified: 61 tests pass; bot re-review skipped | [PR #1](https://github.com/coderabbit-demo/mmani-demo/pull/1), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/1#issuecomment-6229490251) | Storyboarded; footage pending |
-| BUG-01 | Inclusive discount boundary | CodeRabbit fix #6 locally verified: 53 tests pass; bot re-review skipped | [PR #2](https://github.com/coderabbit-demo/mmani-demo/pull/2), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/2#discussion_r4301285165), [CodeRabbit fix PR #6](https://github.com/coderabbit-demo/mmani-demo/pull/6) | Storyboarded; footage pending |
-| MULTI-01 | Downstream response contract | CodeRabbit fix #7 and actual consumer pass; direct consumer-source retrieval and impact confirmed | [PR #3](https://github.com/coderabbit-demo/mmani-demo/pull/3), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/3#discussion_r4301284933), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229464959) | Storyboarded; footage pending |
-| GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit code fix #15 passes 58 tests; generated branch documentation cleanup pending | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | Storyboarded; external evidence pending |
-| PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | Storyboarded; footage pending |
-| QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | Storyboarded; footage pending |
-| QA-02 | QA Agent behavioral evidence | Weak run failed (1 failed/4 unresolved exit criteria); corrected run passed one scenario, with scope limits | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | Storyboarded; detailed artifacts/footage pending |
-| QA-03 | Reusable Test Suites | Entitlement/access verification pending | Pending journey revisions and runs | Planned |
-| CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | Storyboarded; footage pending |
-| SEC-02 | Deep Scan / attack-surface extension | Availability-dependent; no scan requested | Pending separately scoped scan evidence | Planned |
+| GEN-01 | Author: summary → finding → CodeRabbit fix | Finding and CodeRabbit fix locally verified; bot re-review skipped | PR #2 → #6 | [30s draft](../assets/demo-videos/GEN-01-30s-draft.mp4); playback QA pending |
+| GEN-02 | Reviewer: Triage → Change Stack → evidence | Authenticated views and PR #2 layer verified October 19 | PR #2 → #6; captured Triage/layer | [30s draft](../assets/demo-videos/GEN-02-30s-draft.mp4); playback QA pending |
+| SEC-01 | SQL injection | CodeRabbit fix #9 locally verified: 61 tests pass; bot re-review skipped | [PR #1](https://github.com/coderabbit-demo/mmani-demo/pull/1), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/1#issuecomment-6229490251) | [30s draft](../assets/demo-videos/SEC-01-30s-draft.mp4); playback QA pending |
+| BUG-01 | Inclusive discount boundary | CodeRabbit fix #6 locally verified: 53 tests pass; bot re-review skipped | [PR #2](https://github.com/coderabbit-demo/mmani-demo/pull/2), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/2#discussion_r4301285165), [CodeRabbit fix PR #6](https://github.com/coderabbit-demo/mmani-demo/pull/6) | [30s draft](../assets/demo-videos/BUG-01-30s-draft.mp4); playback QA pending |
+| MULTI-01 | Downstream response contract | CodeRabbit fix #7 and actual consumer pass; direct consumer-source retrieval and impact confirmed | [PR #3](https://github.com/coderabbit-demo/mmani-demo/pull/3), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/3#discussion_r4301284933), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229464959) | [30s draft](../assets/demo-videos/MULTI-01-30s-draft.mp4); playback QA pending |
+| GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit code fix #15 passes 58 tests; separate CodeRabbit cleanup #16 verified and unmerged | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | [30s draft](../assets/demo-videos/GUIDE-01-30s-draft.mp4); playback QA pending |
+| PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | [30s draft](../assets/demo-videos/PATH-01-30s-draft.mp4); playback QA pending |
+| QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | [30s draft](../assets/demo-videos/QA-01-30s-draft.mp4); playback QA pending |
+| QA-02 | QA Agent behavioral evidence | Weak plan/result/checks captured with runtime deviation; corrected detail page blocked by missing Review Stack | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | Storyboarded; detailed artifacts/footage pending |
+| QA-03 | Reusable Test Suites | UI available; mmani-demo not enrolled | Needs repository environment, fixed journey revision and runs | Blocked; no footage |
+| CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | [30s draft](../assets/demo-videos/CONFIG-01-30s-draft.mp4); playback QA pending |
+| SEC-02 | Deep Scan / attack-surface extension | UI available; 0/81 verified points; no completed scan | No scan started; separately scoped evidence needed | Blocked; no footage |
 
 Use-case IDs stay stable across PR revisions and recordings. Add a separate ID
 and clip if another configuration setting is selected for the demo.

@@ -1,0 +1,694 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] GUIDE-01: external timeout guideline on HTTP handler - #12" [level=1]':
+    - text: "[Demo - do not merge] GUIDE-01: external timeout guideline on HTTP handler"
+    - generic: "- #12"
+  - generic: "#12"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 2 commits into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/guide-01-handler":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/guide-01-handler
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/12
+      - text: Conversation
+    - link "Commits (2)":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/commits
+      - text: Commits
+      - generic: "2"
+      - generic: (2)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5895009990"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - 'heading "GUIDE-01: external coding guidelines on a real request path" [level=2]'
+  - paragraph:
+    - text: Dedicated replacement for the original test-only scenario in
+    - link "#4":
+      - /url: https://github.com/coderabbit-demo/mmani-demo/pull/4
+    - text: . This PR contains the exact CodeRabbit-generated commit from
+    - link "#11":
+      - /url: https://github.com/coderabbit-demo/mmani-demo/pull/11
+    - text: (
+    - code: 742c06cb1baae25731b8ed2abc97024158d17a12
+    - text: ), with no manual code edits. It targets main so both the missing timeout and the real request handler are visible. A separate PR author allows CodeRabbit to review its generated scenario; its own PR
+    - link "#11":
+      - /url: https://github.com/coderabbit-demo/mmani-demo/pull/11
+    - text: was skipped.
+  - paragraph:
+    - code: GET /api/guidelines/service-status
+    - text: calls the unbounded
+    - code: serviceIsHealthy()
+    - text: helper using a server-controlled local fixture URL. The external guideline lives in
+    - code: coderabbit-demo/coderabbit-standards:guidelines/typescript.md
+    - text: ; please inspect and cite the actual rule if applicable.
+  - paragraph:
+    - text: "Local validation: typecheck/build pass, 56 tests pass and the preserved unresponsive-service test fails as intended. Four new handler tests pass; source and compiled HTTP smoke checks pass. Original"
+    - link "#4":
+      - /url: https://github.com/coderabbit-demo/mmani-demo/pull/4
+    - text: and snapshot tags remain preserved. Do not merge. Finding remediation must use CodeRabbit Fix with AI / Auto Fix / Fix with CodeRabbit Code.
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: New Features
+    - list:
+      - listitem: Added a service-status endpoint that reports healthy services with a success response and distinguishes unhealthy services from health-check errors.
+    - strong: Documentation
+    - list:
+      - listitem: Updated demo workflow guidance with scenario results, review and CI evidence, snapshot restoration steps, and draft scripts and shot lists.
+      - listitem: Documented the prepared HTTP replacement scenario and clearly noted which evidence is still pending.
+    - strong: Tests
+    - list:
+      - listitem: Added coverage for service-status responses, including unhealthy services and connection failures.
+  - generic "Add or remove reactions":
+  - text: Mahesh Mani and others added 2 commits
+  - link "October 17, 2026 04:053 days ago":
+    - /url: "#commits-pushed-49f7a2d"
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(GUIDE-01): simplify outbound service request"':
+      - /url: /coderabbit-demo/mmani-demo/pull/12/commits/49f7a2d1782ae832b93b93448ac3bb1c283f497e
+  - code:
+    - link "49f7a2d":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/commits/49f7a2d1782ae832b93b93448ac3bb1c283f497e
+  - link "@coderabbitai":
+    - /url: /marketplace/coderabbitai
+    - img "@coderabbitai"
+  - code:
+    - 'link "📝 CodeRabbit Chat: Add GUIDE-01 scenario HTTP handler and tests again…"':
+      - /url: /coderabbit-demo/mmani-demo/pull/12/commits/742c06cb1baae25731b8ed2abc97024158d17a12
+  - button "Commit message body": …
+  - code:
+    - link "742c06c":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/commits/742c06cb1baae25731b8ed2abc97024158d17a12
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229835422"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Review in Change Stack → Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+        - cell "Review in Change Stack → Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/12?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: 🟡 Moderate · up to 742c0"':
+            - strong: "Merge Risk:"
+            - strong: 🟡 Moderate
+            - text: · up to
+            - code: 742c0
+          - 'generic "Security architecture risk: 🔵 Low · up to 742c0"':
+            - strong: "Security architecture risk:"
+            - strong: 🔵 Low
+            - text: · up to
+            - code: 742c0
+          - 'generic "Pre-merge checks: Passed 4 · Failed 2"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: 4 ·
+              - superscript:
+                - img "Failed"
+              - text: "2"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: Fix all pre-merge checks with AI
+          - 'generic "✨ Finishing Touches: 💡 2"':
+            - strong: "✨ Finishing Touches: 💡 2"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33503853790"
+  - text: — with
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+  - link "coderabbitai[bot]":
+    - /url: /apps/coderabbitai
+    - img "coderabbitai[bot]"
+  - strong:
+    - link "coderabbitai":
+      - /url: /apps/coderabbitai
+    - generic: Bot
+  - text: reviewed
+  - link "Oct 16, 20263 days ago":
+    - /url: "#pullrequestreview-5556282149"
+  - link "View reviewed changes":
+    - /url: /coderabbit-demo/mmani-demo/pull/12/files/742c06cb1baae25731b8ed2abc97024158d17a12
+    - generic: View reviewed changes
+  - heading "coderabbitai Bot left a comment" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: "Actionable comments posted: 2"
+  - separator
+  - list:
+    - checkbox "Incomplete task" [disabled]
+    - text: "🪄 Fix comments: Fix CodeRabbit comments on this PR"
+  - generic "🤖 Prompt to fix review comments"
+  - separator
+  - generic "ℹ️ Review info"
+  - generic "Add or remove reactions":
+  - button "Comment thread" [expanded]:
+  - link "docs/demo-workflow.md":
+    - /url: /coderabbit-demo/mmani-demo/pull/12/files/742c06cb1baae25731b8ed2abc97024158d17a12#diff-568319bded257f2f405047f148ea92e72bb5455de9e10fc72baf70d0685c0808
+  - table:
+    - rowgroup:
+      - row "45 51 | ID | Segment | Implementation status | PR / finding / fix evidence | Recording status |":
+        - cell "45"
+        - cell "51"
+        - cell "| ID | Segment | Implementation status | PR / finding / fix evidence | Recording status |":
+          - generic: "| ID | Segment | Implementation status | PR / finding / fix evidence | Recording status |"
+      - row "46 52 | --- | --- | --- | --- | --- |":
+        - cell "46"
+        - cell "52"
+        - cell "| --- | --- | --- | --- | --- |":
+          - generic: "| --- | --- | --- | --- | --- |"
+      - 'row "47 - | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"':
+        - cell "47"
+        - cell
+        - 'cell "- | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"':
+          - generic: "- | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"
+      - 'row "53 + | GEN-01 | Author: summary → finding → CodeRabbit fix | Hosted finding available; fix pending | PR #2 | Storyboarded; footage pending |"':
+        - cell
+        - cell "53"
+        - 'cell "+ | GEN-01 | Author: summary → finding → CodeRabbit fix | Hosted finding available; fix pending | PR #2 | Storyboarded; footage pending |"':
+          - generic: "+ | GEN-01 | Author: summary → finding → CodeRabbit fix | Hosted finding available; fix pending | PR #2 | Storyboarded; footage pending |"
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301450028"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 📐 Maintainability & Code Quality
+    - text: "|"
+    - strong: 🟡 Minor
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong:
+      - text: Align the GEN-01 fix status with PR
+      - code: "#6"
+      - text: .
+  - paragraph:
+    - text: Both GEN-01 and BUG-01 reference PR
+    - code: "#2"
+    - text: ", but this row says the CodeRabbit fix is pending while BUG-01 records CodeRabbit fix PR"
+    - code: "#6"
+    - text: . State whether PR
+    - code: "#6"
+    - text: satisfies GEN-01 or identify the separate pending fix.
+  - generic "🤖 Prompt for AI Agents"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - button "Comment thread" [expanded]:
+  - link "src/guidelines/service-status.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/12/files/742c06cb1baae25731b8ed2abc97024158d17a12#diff-7a264ee81f9638dd989682d4cfe25acc5ab6f6a5467170f8c8d03deb5d1d0448
+  - table:
+    - rowgroup:
+      - row "1 + /** Check a developer-configured service. */":
+        - cell
+        - cell "1"
+        - cell "+ /** Check a developer-configured service. */":
+          - generic: + /** Check a developer-configured service. */
+      - 'row "2 2 export async function serviceIsHealthy(url: string): Promise<boolean> {"':
+        - cell "2"
+        - cell "2"
+        - 'cell "export async function serviceIsHealthy(url: string): Promise<boolean> {"':
+          - generic: "export async function serviceIsHealthy(url: string): Promise<boolean> {"
+      - 'row "3 - const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });"':
+        - cell "3"
+        - cell
+        - 'cell "- const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });"':
+          - generic: "- const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });"
+      - row "3 + const response = await fetch(url);":
+        - cell
+        - cell "3"
+        - cell "+ const response = await fetch(url);":
+          - generic: + const response = await fetch(url);
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301450030"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🩺 Stability & Availability
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Restore a deadline on the outbound health check.
+  - paragraph:
+    - text: If the selected service stalls,
+    - code: fetch(url)
+    - text: leaves the service-status handler waiting instead of promptly returning its 502 response. The server’s
+    - code: requestTimeout
+    - text: and
+    - code: headersTimeout
+    - text: limit receipt of incoming requests; they do not bound this outbound call. Pass
+    - code: "signal: AbortSignal.timeout(1_000)"
+    - text: to
+    - code: fetch
+    - text: ", or set another explicit outbound deadline. The cited external TypeScript guideline requires a bounded timeout for every outbound"
+    - code: fetch
+    - text: from a request handler. (
+    - link "r2.nodejs.org":
+      - /url: https://r2.nodejs.org/docs/latest-v24.x/api/http.html?utm_source=openai
+    - text: )
+  - generic "Proposed change"
+  - generic "📝 Committable suggestion"
+  - text: 3 - 3 +
+  - generic "🤖 Prompt for AI Agents"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229865871"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: autofix
+            - text: Please use Fix with CodeRabbit Code / your coding workflow to create a separate remediation PR for the findings in this review. Restore a bounded outbound fetch deadline, preserve all existing assertions, and include a meaningful real-handler stalled-service check if needed to demonstrate the actual request path returns 502 within the deadline. Preserve the original PR
+            - link "#12":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/12
+            - text: "snapshot, and do not merge. Also resolve your workflow-status finding on this branch: PR"
+            - link "#6":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/6
+            - text: satisfies GEN-01's fix demonstration; local validation passed but CodeRabbit skipped reviewing its own fix PR. Current main's shared register already tracks that distinction, so do not claim a completed bot re-review or duplicate stale status tables. Keep code simple and dependencies unchanged; run typecheck/build/tests/coverage and both smoke modes, reporting actual results.
+          - paragraph: For provenance, please also identify the exact external guideline repository/file/rule actually retrieved for discussion_r4301450030, distinguishing it from a generic timeout recommendation.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229912759"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I’m routing this request to the coding workflow for a
+            - strong: separate remediation PR
+            - text: . Preserve PR
+            - code: "#12"
+            - text: at
+            - code: 742c06cb1baae25731b8ed2abc97024158d17a12
+            - text: . Do not update its branch or merge either PR.
+          - heading "Guideline provenance" [level=3]
+          - paragraph: "I retrieved this source during this follow-up:"
+          - list:
+            - strong: "Repository:"
+            - code: coderabbit-demo/coderabbit-standards
+            - strong: "File:"
+            - link "guidelines/typescript.md":
+              - /url: https://github.com/coderabbit-demo/coderabbit-standards/blob/main/guidelines/typescript.md#no-unbounded-outbound-calls
+              - code: guidelines/typescript.md
+            - strong: "Rule:"
+            - text: “No unbounded outbound calls”
+            - strong: "Retrieved file blob:"
+            - code: ac80b0584885f88e9e64ff651914b880aaa803a8
+          - paragraph: "The rule states:"
+          - blockquote:
+            - paragraph:
+              - text: Every outbound
+              - code: fetch
+              - text: from a request handler must carry a bounded timeout (
+              - code: AbortSignal.timeout(...)
+              - text: ). A handler must not stay pending on an unresponsive dependency.
+          - paragraph:
+            - text: This rule applies to PR
+            - code: "#12"
+            - text: ’s real handler through
+            - code: serviceIsHealthy()
+            - text: . It does
+            - strong: not
+            - text: specify 1,000 ms. That value comes from the previous implementation.
+          - paragraph:
+            - strong:
+              - text: I cannot verify that the original review retrieved this file for
+              - link "discussion_r4301450030":
+                - /url: https://github.com/coderabbit-demo/mmani-demo/pull/12#discussion_r4301450030
+              - text: .
+            - text: The published comment links Node.js documentation, not the guideline. Current configuration selects the external repository, but configuration does not prove review-time retrieval. My original attribution was too strong. Exact historical provenance requires the retrieval trace for review run
+            - code: b7cea767-ff75-49ba-8e70-0d64869f49db
+            - text: .
+          - heading "Remediation plan" [level=3]
+          - list:
+            - listitem: Restore the 1,000 ms outbound deadline without changing dependencies.
+            - listitem: Preserve every existing assertion and add a real-handler stalled-service regression.
+            - listitem: Correct the stale GEN-01 status in the remediation branch without duplicating main’s shared register.
+            - listitem: Run all requested validation in the coding environment and report actual results.
+          - paragraph: I ran read-only inspection only. No validation commands ran, and no remediation PR has been created in this interaction.
+          - paragraph: Thanks for clarifying the GEN-01 evidence.
+          - separator
+          - generic "✏️ Learnings added"
+          - separator
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: ✅ Pull request created - (🔄 Check again to retry)
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - link "coderabbitai":
+    - /url: /apps/coderabbitai
+  - generic: Bot
+  - text: mentioned this pull request
+  - link "Oct 16, 20263 days ago":
+    - /url: "#ref-pullrequest-5895079530"
+  - 'link "📝 CodeRabbit Chat: Add a 1-second service-status timeout and stalled-handler regression test #15"':
+    - /url: /coderabbit-demo/mmani-demo/pull/15
+  - 'generic "Status: Open"':
+    - text: Open
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229922047"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+        - 'cell "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+          - paragraph:
+            - text: "✅ The requested changes have been implemented and a pull request has been created:"
+            - link "View PR":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/15
+  - generic "Add or remove reactions":
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add
+  - link ".patch":
+    - /url: /coderabbit-demo/mmani-demo/pull/12.patch
+  - text: or
+  - link ".diff":
+    - /url: /coderabbit-demo/mmani-demo/pull/12.diff
+  - text: to the end of URLs for Git’s plaintext views.
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - link "@coderabbitai":
+      - /url: /apps/coderabbitai
+      - img "@coderabbitai"
+    - link "coderabbitai[bot]":
+      - /url: /apps/coderabbitai
+    - link "coderabbitai[bot] left review comments":
+      - /url: /coderabbit-demo/mmani-demo/pull/12/changes/BASE..742c06cb1baae25731b8ed2abc97024158d17a12
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

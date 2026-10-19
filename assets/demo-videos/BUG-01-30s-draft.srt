@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+The discount should start at ten items. This change accidentally excludes exactly ten.
+
+2
+00:00:05,000 --> 00:00:13,000
+CodeRabbit identifies the boundary error: the price becomes twelve thousand nine hundred ninety cents, instead of eleven thousand six hundred ninety-one.
+
+3
+00:00:13,000 --> 00:00:21,000
+We delegate the correction to CodeRabbit, preserving the original snapshot and every regression assertion.
+
+4
+00:00:21,000 --> 00:00:28,000
+After completion, the generated fix passes all fifty-three tests in hosted validation. Bot re-review was skipped.
+
+5
+00:00:28,000 --> 00:00:30,000
+Verify the requirement.

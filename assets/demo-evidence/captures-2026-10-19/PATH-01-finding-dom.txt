@@ -1,0 +1,551 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] PATH-01: Path-specific zero-based pagination - #5" [level=1]':
+    - text: "[Demo - do not merge] PATH-01: Path-specific zero-based pagination"
+    - generic: "- #5"
+  - generic: "#5"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 1 commit into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/path-01-pagination":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/path-01-pagination
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/5
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/5/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/5/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/5/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5894683633"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - paragraph: Demonstrates PATH-01 only. Keep this synthetic-data demo open and unmerged.
+  - paragraph: "The scoped pagination helper uses (page - 1) * pageSize. Page zero produces a negative offset. Expected source: reviews.path_instructions."
+  - paragraph: "Local validation: TypeScript passes; unchanged regression tests report 50 pass, 3 fail. These failures are intentional, not suppressed. The original branch snapshot must be retained for recording."
+  - paragraph: Expected review behavior is a hypothesis until a real CodeRabbit review confirms it. Remediation must use CodeRabbit Fix with AI, Auto Fix, or Fix with CodeRabbit Code; never manually fix findings. Record the generated artifact, tested SHA, and re-review outcome.
+  - paragraph: "Recording: one 30-second segment for PATH-01; docs/demo-workflow.md on main is the shared tracking register. Do not deploy the seeded branch publicly."
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: Bug Fixes
+    - list:
+      - listitem: Pagination offsets now align with one-based page numbering, returning the correct starting position for each page.
+  - generic "Add or remove reactions":
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(PATH-01): calculate offset from page number"':
+      - /url: /coderabbit-demo/mmani-demo/pull/5/commits/83848ae90f2df6d05f0a7d1564081d59c37452e5
+  - code:
+    - link "83848ae":
+      - /url: /coderabbit-demo/mmani-demo/pull/5/commits/83848ae90f2df6d05f0a7d1564081d59c37452e5
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33501992134"
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229451094"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. ### Architecture Summary Architecture risk: 🔵 Low · up to 83848 The change affects 1 system. Changed systems: src Architecture concerns No architecture-level concerns identified. Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+        - 'cell "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. ### Architecture Summary Architecture risk: 🔵 Low · up to 83848 The change affects 1 system. Changed systems: src Architecture concerns No architecture-level concerns identified. Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands."':
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/5?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - paragraph:
+            - text: Note
+          - paragraph: Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names.
+          - 'generic "Skipped guideline sources: 1"':
+            - strong: "Skipped guideline sources: 1"
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: 🟡 Moderate · up to 83848"':
+            - strong: "Merge Risk:"
+            - strong: 🟡 Moderate
+            - text: · up to
+            - code: "83848"
+          - text: "### Architecture Summary"
+          - paragraph:
+            - strong: "Architecture risk:"
+            - strong: 🔵 Low
+            - text: · up to
+            - code: "83848"
+          - paragraph: The change affects 1 system.
+          - paragraph:
+            - strong: "Changed systems:"
+            - code: src
+          - paragraph:
+            - strong: Architecture concerns
+            - text: No architecture-level concerns identified.
+          - generic "Review details":
+            - strong: Review details
+          - 'generic "Pre-merge checks: Passed 5 · Failed 1"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: 5 ·
+              - superscript:
+                - img "Failed"
+              - text: "1"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: Fix all pre-merge checks with AI
+          - 'generic "✨ Finishing Touches: 💡 1"':
+            - strong: "✨ Finishing Touches: 💡 1"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "coderabbitai[bot]":
+    - /url: /apps/coderabbitai
+    - img "coderabbitai[bot]"
+  - strong:
+    - link "coderabbitai":
+      - /url: /apps/coderabbitai
+    - generic: Bot
+  - text: reviewed
+  - link "Oct 16, 20263 days ago":
+    - /url: "#pullrequestreview-5556046817"
+  - link "View reviewed changes":
+    - /url: /coderabbit-demo/mmani-demo/pull/5/files/83848ae90f2df6d05f0a7d1564081d59c37452e5
+    - generic: View reviewed changes
+  - heading "coderabbitai Bot left a comment" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: "Actionable comments posted: 1"
+  - separator
+  - list:
+    - checkbox "Incomplete task" [disabled]
+    - text: "🪄 Fix comments: Fix CodeRabbit comments on this PR"
+  - generic "🤖 Prompt to fix review comments"
+  - separator
+  - generic "ℹ️ Review info"
+  - generic "Add or remove reactions":
+  - button "Comment thread" [expanded]:
+  - link "src/path-instructions/pagination.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/5/files/83848ae90f2df6d05f0a7d1564081d59c37452e5#diff-d0ea2610382422e29af912c91225c42df375f5f53c3052ac195230557153f5e6
+  - table:
+    - rowgroup:
+      - row "6 6 throw new TypeError(\"Invalid page or page size\");":
+        - cell "6"
+        - cell "6"
+        - cell "throw new TypeError(\"Invalid page or page size\");":
+          - generic: throw new TypeError("Invalid page or page size");
+      - 'row "7 7 }"':
+        - cell "7"
+        - cell "7"
+        - 'cell "}"':
+          - generic: "}"
+      - row "8 - return page * pageSize;":
+        - cell "8"
+        - cell
+        - cell "- return page * pageSize;":
+          - generic: "- return page * pageSize;"
+      - row "8 + return (page - 1) * pageSize;":
+        - cell
+        - cell "8"
+        - cell "+ return (page - 1) * pageSize;":
+          - generic: + return (page - 1) * pageSize;
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301286142"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🎯 Functional Correctness
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Calculate the offset from the zero-based page index.
+  - paragraph:
+    - code: pageOffset(0, 10)
+    - text: returns
+    - code: "-10"
+    - text: ", and page 1 returns"
+    - code: "0"
+    - text: instead of
+    - code: "10"
+    - text: . This shifts every valid page back by one page.
+    - code: tests/baseline.test.ts
+    - text: expects offsets 0, 10, and 75 for pages 0, 1, and 3. Return
+    - code: page * pageSize
+    - text: .
+  - paragraph: As per path instructions, “Pagination in this directory uses a zero-based page index. Calculate the offset as page * pageSize.”
+  - generic "🤖 Prompt for AI Agents"
+  - paragraph:
+    - emphasis: "Source: Path instructions"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229490395"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai autofix Use CodeRabbit Auto Fix to restore the zero-based pagination behavior required by the path instruction. Preserve and run all existing assertions. Do not merge. Original snapshot is tagged demo/path-01-before-fix.":
+        - cell "@coderabbitai autofix Use CodeRabbit Auto Fix to restore the zero-based pagination behavior required by the path instruction. Preserve and run all existing assertions. Do not merge. Original snapshot is tagged demo/path-01-before-fix.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: autofix
+          - paragraph: Use CodeRabbit Auto Fix to restore the zero-based pagination behavior required by the path instruction. Preserve and run all existing assertions. Do not merge. Original snapshot is tagged demo/path-01-before-fix.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229520444"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Tip For best results, initiate chat on the files or code changes. @manimahesh The helper violates the path instruction in .coderabbit.yaml. I’m handing the fix to the coding workflow. No files have changed, and no tests have run yet. Restore pageOffset() to return page * pageSize. Preserve validation and every existing test assertion. Run TypeScript checks and the full test suite. Preserve the original snapshot. Do not merge or deploy. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+        - cell "Tip For best results, initiate chat on the files or code changes. @manimahesh The helper violates the path instruction in .coderabbit.yaml. I’m handing the fix to the coding workflow. No files have changed, and no tests have run yet. Restore pageOffset() to return page * pageSize. Preserve validation and every existing test assertion. Run TypeScript checks and the full test suite. Preserve the original snapshot. Do not merge or deploy. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: The helper violates the path instruction in
+            - code: .coderabbit.yaml
+            - text: . I’m handing the fix to the coding workflow. No files have changed, and no tests have run yet.
+          - list:
+            - text: Restore
+            - code: pageOffset()
+            - text: to return
+            - code: page * pageSize
+            - text: .
+            - listitem: Preserve validation and every existing test assertion.
+            - listitem: Run TypeScript checks and the full test suite.
+            - listitem: Preserve the original snapshot. Do not merge or deploy.
+          - separator
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: ✅ Pull request created - (🔄 Check again to retry)
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - link "coderabbitai":
+    - /url: /apps/coderabbitai
+  - generic: Bot
+  - text: mentioned this pull request
+  - link "Oct 16, 20263 days ago":
+    - /url: "#ref-pullrequest-5894767463"
+  - 'link "📝 CodeRabbit Chat: Restore zero-based page offsets in pagination helper #8"':
+    - /url: /coderabbit-demo/mmani-demo/pull/8
+  - 'generic "Status: Open"':
+    - text: Open
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229539284"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+        - 'cell "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+          - paragraph:
+            - text: "✅ The requested changes have been implemented and a pull request has been created:"
+            - link "View PR":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/8
+  - generic "Add or remove reactions":
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add
+  - link ".patch":
+    - /url: /coderabbit-demo/mmani-demo/pull/5.patch
+  - text: or
+  - link ".diff":
+    - /url: /coderabbit-demo/mmani-demo/pull/5.diff
+  - text: to the end of URLs for Git’s plaintext views.
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - link "@coderabbitai":
+      - /url: /apps/coderabbitai
+      - img "@coderabbitai"
+    - link "coderabbitai[bot]":
+      - /url: /apps/coderabbitai
+    - link "coderabbitai[bot] left review comments":
+      - /url: /coderabbit-demo/mmani-demo/pull/5/changes/BASE..83848ae90f2df6d05f0a7d1564081d59c37452e5
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

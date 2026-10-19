@@ -1,0 +1,362 @@
+[
+  {
+    "id": "BUG-01",
+    "file": "assets/demo-videos/BUG-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-02-layer.jpg",
+        "narration": "The discount should start at ten items. This change accidentally excludes exactly ten."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "CodeRabbit identifies the boundary error: the price becomes twelve thousand nine hundred ninety cents, instead of eleven thousand six hundred ninety-one."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "GEN-01-action.jpg",
+        "narration": "We delegate the correction to CodeRabbit, preserving the original snapshot and every regression assertion."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "After completion, the generated fix passes all fifty-three tests in hosted validation. Bot re-review was skipped."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "BUG-01-ci.jpg",
+        "narration": "Verify the requirement."
+      }
+    ]
+  },
+  {
+    "id": "GEN-01",
+    "file": "assets/demo-videos/GEN-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-01-summary.jpg",
+        "narration": "Start with one focused pull request and the generated author summary."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "The review identifies the exact boundary error and explains its effect on the customer price, with a concrete expected value."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "GEN-01-action.jpg",
+        "narration": "We ask CodeRabbit to produce the correction while preserving regression assertions and the original demo snapshot."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "After completion, inspect the generated pull request and fifty-three passing hosted tests. The bot re-review was skipped."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "BUG-01-finding.jpg",
+        "narration": "Keep the evidence."
+      }
+    ]
+  },
+  {
+    "id": "GEN-02",
+    "file": "assets/demo-videos/GEN-02-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GEN-02-triage.jpg",
+        "narration": "Triage helps a reviewer select a change and understand its priority."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "GEN-02-layer.jpg",
+        "narration": "Open the boundary pull request in Change Stack. Its single layer groups the related file and explains the change."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "BUG-01-finding.jpg",
+        "narration": "Inspect the comparison and the supporting finding. Exactly ten items miss the discount, giving a concrete behavior to verify."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "BUG-01-ci.jpg",
+        "narration": "The completed CodeRabbit correction has passing hosted tests. These views organize review; they do not replace judgment."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "GEN-02-layer.jpg",
+        "narration": "Review the evidence."
+      }
+    ]
+  },
+  {
+    "id": "SEC-01",
+    "file": "assets/demo-videos/SEC-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "SEC-01-finding.jpg",
+        "narration": "This public search path puts user input directly into a SQL query."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "SEC-01-finding.jpg",
+        "narration": "CodeRabbit identifies SQL injection and a related literal-search regression. The finding connects the request input to the query sink."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "SEC-01-diff.jpg",
+        "narration": "After completion, inspect CodeRabbit\u2019s generated correction. Bound query parameters keep search input separate from executable SQL."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "SEC-01-ci.jpg",
+        "narration": "The generated change passes sixty-one hosted tests, including added regressions. This evidence supports the specific correction, not exhaustive security."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "SEC-01-diff.jpg",
+        "narration": "Keep input as data."
+      }
+    ]
+  },
+  {
+    "id": "PATH-01",
+    "file": "assets/demo-videos/PATH-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "PATH-01-finding.jpg",
+        "narration": "This directory uses zero-based pagination, with a scoped local review instruction."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "PATH-01-finding.jpg",
+        "narration": "Subtracting one page makes page zero produce a negative offset. CodeRabbit explicitly attributes the finding to Path instructions."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "PATH-01-diff.jpg",
+        "narration": "After completion, inspect the correction generated by CodeRabbit. The existing page-zero, page-one, and page-three expectations remain unchanged."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "PATH-01-ci.jpg",
+        "narration": "All fifty-three hosted tests pass on the generated correction. The path rule remains distinct from shared external standards."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "PATH-01-finding.jpg",
+        "narration": "Verify the scoped rule."
+      }
+    ]
+  },
+  {
+    "id": "MULTI-01",
+    "file": "assets/demo-videos/MULTI-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "MULTI-01-finding.jpg",
+        "narration": "A provider response rename can break a consumer in another repository."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "MULTI-01-finding.jpg",
+        "narration": "In this follow-up, CodeRabbit retrieves the consumer source and identifies the checkout call site that still reads total cents."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "MULTI-01-diff.jpg",
+        "narration": "After completion, the generated correction restores the public field. The actual consumer probe is separate runtime evidence."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "MULTI-01-ci.jpg",
+        "narration": "Fifty-three hosted provider tests pass. Preserve the named consumer source and its exact revision when explaining the compatibility impact."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "MULTI-01-finding.jpg",
+        "narration": "Check the consumer contract."
+      }
+    ]
+  },
+  {
+    "id": "GUIDE-01",
+    "file": "assets/demo-videos/GUIDE-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "GUIDE-01-finding.jpg",
+        "narration": "The shared timeout standard lives outside this repository, in the engineering guidelines."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "GUIDE-01-finding.jpg",
+        "narration": "This follow-up retrieves the external rule and confirms its request-handler scope. Original review retrieval remains unverified."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "GUIDE-01-diff.jpg",
+        "narration": "After completion, CodeRabbit\u2019s correction bounds the outbound request and adds a stalled-service regression for the real HTTP handler."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "GUIDE-01-ci.jpg",
+        "narration": "The generated code passes fifty-eight hosted tests. Keep documentation cleanup and bot re-review status separate from that result."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "GUIDE-01-finding.jpg",
+        "narration": "Preserve source provenance."
+      }
+    ]
+  },
+  {
+    "id": "QA-01",
+    "file": "assets/demo-videos/QA-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "QA-01-ci.jpg",
+        "narration": "These intentionally weak tests pass while the exact-ten pricing defect remains."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "QA-01-finding.jpg",
+        "narration": "CodeRabbit explains that weak assertions accept the incorrect result. Coverage alone does not establish that the price is correct."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "QA-01-probe.jpg",
+        "narration": "An independent local acceptance probe expects eleven thousand six hundred ninety-one cents and receives twelve thousand nine hundred ninety."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "QA-01-diff.jpg",
+        "narration": "The generated correction restores the boundary and strong literal assertions. Preserve both the original failure and the corrected evidence."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "QA-01-probe.jpg",
+        "narration": "Assert the actual requirement."
+      }
+    ]
+  },
+  {
+    "id": "CONFIG-01",
+    "file": "assets/demo-videos/CONFIG-01-30s-draft.mp4",
+    "duration": 30.0,
+    "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
+    "capture_date": "2026-10-19",
+    "status": "assembled draft; final audio/readability review pending",
+    "beats": [
+      {
+        "start": 0,
+        "duration": 5,
+        "source": "CONFIG-01-diff.jpg",
+        "narration": "This focused pull request changes just one repository review-profile setting."
+      },
+      {
+        "start": 5,
+        "duration": 8,
+        "source": "CONFIG-01-diff.jpg",
+        "narration": "The versioned YAML moves from assertive to chill. It changes review style, without changing the application or its tests."
+      },
+      {
+        "start": 13,
+        "duration": 8,
+        "source": "CONFIG-01-observed-effect.jpg",
+        "narration": "The hosted review describes the before-and-after setting. The preserved original report separately records the effective chill profile."
+      },
+      {
+        "start": 21,
+        "duration": 7,
+        "source": "CONFIG-01-observed-effect.jpg",
+        "narration": "This is evidence of a repository setting taking effect. It does not prove fewer defects, inheritance, or merge enforcement."
+      },
+      {
+        "start": 28,
+        "duration": 2,
+        "source": "CONFIG-01-diff.jpg",
+        "narration": "Verify effective configuration."
+      }
+    ]
+  }
+]

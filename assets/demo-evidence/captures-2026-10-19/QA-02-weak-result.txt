@@ -1,0 +1,66 @@
+Selected scenario details
+It applies the discount starting at ten items and returns exact integer-cent totals
+Bugs
+Edit scenario
+Fix with AI
+
+2m 49s
+
+Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned). A testing deviation left the original revision unverified. When available, the execution result records the tester's assessment before validation; these counts reflect the final checks.
+
+Evidence
+2
+Checks
+6
+Test steps
+4
+Observations
+3
+Recurrences
+Execution result
+Result
+Execution log
+Log
+Execution result
+Result · Captured Oct 16, 9:29 PM
+Copy text
+Download
+Scenario: pricing-discount-001
+Status: failed
+Summary: Direct HTTP evidence establishes one discount-boundary defect on revision b2dcfc46b3de2a1c69350a2ab3de046e8fcc821b. The other three quote responses match exactly. No repository or source changes were made.
+
+Criteria:
+- entry 1: passed
+  Expected: The pricing API is accessible at a known base URL.
+  Actual: The prepared base URL was available, and all four POST requests reached the pricing endpoint and returned HTTP 200.
+- exit 1: passed
+  Expected: It returns HTTP 200 for each of the four quote requests.
+  Actual: All requests for item counts 9, 10, 11, and 15 returned HTTP 200.
+- exit 2: passed
+  Expected: It returns exactly {"subtotalCents":11691,"itemCount":9,"totalCents":11691} for nine items.
+  Actual: Returned exactly {"subtotalCents":11691,"itemCount":9,"totalCents":11691}, with three integer-valued fields.
+- exit 3: failed
+  Expected: It returns exactly {"subtotalCents":12990,"itemCount":10,"totalCents":11691} for ten items.
+  Actual: Returned {"subtotalCents":12990,"itemCount":10,"totalCents":12990}; the required discount was absent.
+- exit 4: passed
+  Expected: It returns exactly {"subtotalCents":14289,"itemCount":11,"totalCents":12860} for eleven items.
+  Actual: Returned exactly {"subtotalCents":14289,"itemCount":11,"totalCents":12860}, with three integer-valued fields.
+- exit 5: passed
+  Expected: It returns exactly {"subtotalCents":19485,"itemCount":15,"totalCents":17537} for fifteen items.
+  Actual: Returned exactly {"subtotalCents":19485,"itemCount":15,"totalCents":17537}, with three integer-valued fields.
+
+Limitations:
+- Testing used Node 24.14.1 rather than the repository’s pinned Node 24.19.0. Conclusions establish behavior on the observed runtime; the pinned runtime remains unverified.
+
+Deviations:
+- Intended: Execute the scenario using the repository’s pinned Node 24.19.0 runtime.
+  Blocker: The prepared service used the available Node 24.14.1 runtime.
+  Alternative: Tested the unchanged original revision through its live HTTP endpoint using Node 24.14.1.
+  Validity impact: reduced
+1 / 2
+View technical details
+Previous
+
+1 of 1 scenarios
+
+Next

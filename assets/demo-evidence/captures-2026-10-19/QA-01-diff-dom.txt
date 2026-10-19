@@ -1,0 +1,407 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "📝 CodeRabbit Chat: Restore the Inclusive Discount Boundary and Strengthen Regression Assertions - #14" [level=1]':
+    - text: "📝 CodeRabbit Chat: Restore the Inclusive Discount Boundary and Strengthen Regression Assertions"
+    - generic: "- #14"
+  - generic: "#14"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "coderabbitai[bot]":
+    - /url: /coderabbitai[bot]
+  - text: wants to merge 1 commit into
+  - link "demo/qa-01-weak-assertions":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/qa-01-weak-assertions
+  - generic: from
+  - link "coderabbitai/chat/b2dcfc4":
+    - /url: /coderabbit-demo/mmani-demo/tree/coderabbitai/chat/b2dcfc4
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/14
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/14/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/14/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/14/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 2
+  - generic: viewed
+  - generic: 0 of 2 files viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem "src/bugs" [expanded] [level=1]:
+      - generic: src/bugs
+      - treeitem "discount.ts" [level=2]:
+        - link "discount.ts":
+          - /url: "#diff-99f8a32557f9351d2e94d91efa0303c46893b487555104f94c639568d9f76270"
+    - treeitem "tests" [expanded] [level=1]:
+      - generic: tests
+      - treeitem "baseline.test.ts" [level=2]:
+        - link "baseline.test.ts":
+          - /url: "#diff-9c878dcef758aaff12e85b0f74d8ea1e2e05f0c25b91450ca6021993cbe0b03b"
+  - slider "Draggable pane splitter"
+  - region "‎src/bugs/discount.ts‎":
+    - button "Collapse file":
+    - heading "‎src/bugs/discount.ts‎" [level=3]:
+      - link "‎src/bugs/discount.ts‎":
+        - /url: "#diff-99f8a32557f9351d2e94d91efa0303c46893b487555104f94c639568d9f76270"
+        - code: ‎src/bugs/discount.ts‎
+    - button "Copy file name to clipboard":
+    - generic: "+2"
+    - generic: "-2"
+    - generic: "Lines changed: 2 additions & 2 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: src/bugs/discount.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - row "@@ -1,4 +1,4 @@":
+          - gridcell "@@ -1,4 +1,4 @@":
+            - code:
+              - generic: "@@ -1,4 +1,4 @@"
+        - row "1 - /** Check the TEAM10 item-count threshold. */":
+          - gridcell "1"
+          - gridcell
+          - gridcell "- /** Check the TEAM10 item-count threshold. */":
+            - code:
+              - generic: "-"
+              - generic: /** Check the TEAM10 item-count threshold. */
+        - row "1 + /** TEAM10 includes the ten-item boundary. */":
+          - gridcell
+          - gridcell "1"
+          - gridcell "+ /** TEAM10 includes the ten-item boundary. */":
+            - code:
+              - generic: +
+              - generic: /** TEAM10 includes the ten-item boundary. */
+        - 'row "2 2 export function qualifiesForDiscount(itemCount: number): boolean {"':
+          - gridcell "2"
+          - gridcell "2"
+          - 'gridcell "export function qualifiesForDiscount(itemCount: number): boolean {"':
+            - code:
+              - generic: "export function qualifiesForDiscount(itemCount: number): boolean {"
+        - row "3 - return itemCount > 10;":
+          - gridcell "3"
+          - gridcell
+          - gridcell "- return itemCount > 10;":
+            - code:
+              - generic: "-"
+              - generic: return itemCount > 10;
+        - row "3 + return itemCount >= 10;":
+          - gridcell
+          - gridcell "3"
+          - gridcell "+ return itemCount >= 10;":
+            - code:
+              - generic: +
+              - text: return itemCount
+              - generic: ">="
+              - text: 10;
+        - 'row "4 4 }"':
+          - gridcell "4"
+          - gridcell "4"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+  - region "‎tests/baseline.test.ts‎":
+    - button "Collapse file":
+    - heading "‎tests/baseline.test.ts‎" [level=3]:
+      - link "‎tests/baseline.test.ts‎":
+        - /url: "#diff-9c878dcef758aaff12e85b0f74d8ea1e2e05f0c25b91450ca6021993cbe0b03b"
+        - code: ‎tests/baseline.test.ts‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: tests/baseline.test.ts"':
+    - generic: "+6"
+    - generic: "-4"
+    - generic: "Lines changed: 6 additions & 4 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: tests/baseline.test.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - 'row "@@ -26,8 +26,7 @@ describe(\"integer-cent pricing and the inclusive boundary\", () => {"':
+          - 'gridcell "@@ -26,8 +26,7 @@ describe(\"integer-cent pricing and the inclusive boundary\", () => {"':
+            - button:
+            - code:
+              - generic: "@@ -26,8 +26,7 @@ describe(\"integer-cent pricing and the inclusive boundary\", () => {"
+        - row "26 26 [9, 11_691, 11_691], [10, 12_990, 11_691],":
+          - gridcell "26"
+          - gridcell "26"
+          - gridcell "[9, 11_691, 11_691], [10, 12_990, 11_691],":
+            - code:
+              - generic: "[9, 11_691, 11_691], [10, 12_990, 11_691],"
+        - row "27 27 [11, 14_289, 12_860], [15, 19_485, 17_537],":
+          - gridcell "27"
+          - gridcell "27"
+          - gridcell "[11, 14_289, 12_860], [15, 19_485, 17_537],":
+            - code:
+              - generic: "[11, 14_289, 12_860], [15, 19_485, 17_537],"
+        - 'row "28 28 ])(\"quotes %i items\", (itemCount, subtotalCents, totalCents) => {"':
+          - gridcell "28"
+          - gridcell "28"
+          - 'gridcell "])(\"quotes %i items\", (itemCount, subtotalCents, totalCents) => {"':
+            - code:
+              - generic: "])(\"quotes %i items\", (itemCount, subtotalCents, totalCents) => {"
+        - 'row "29 - // Deliberately weak QA fixture: the expected value repeats production logic."':
+          - gridcell "29"
+          - gridcell
+          - 'gridcell "- // Deliberately weak QA fixture: the expected value repeats production logic."':
+            - code:
+              - generic: "-"
+              - generic: "// Deliberately weak QA fixture: the expected value repeats production logic."
+        - 'row "30 - expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"':
+          - gridcell "30"
+          - gridcell
+          - 'gridcell "- expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"':
+            - code:
+              - generic: "-"
+              - generic: "expect(quote({ itemCount, subtotalCents })).toEqual(quote({ itemCount, subtotalCents }));"
+        - 'row "29 + expect(quote({ itemCount, subtotalCents })).toEqual({ subtotalCents, itemCount, totalCents });"':
+          - gridcell
+          - gridcell "29"
+          - 'gridcell "+ expect(quote({ itemCount, subtotalCents })).toEqual({ subtotalCents, itemCount, totalCents });"':
+            - code:
+              - generic: +
+              - generic: "expect(quote({ itemCount, subtotalCents })).toEqual({ subtotalCents, itemCount, totalCents });"
+        - 'row "31 30 });"':
+          - gridcell "31"
+          - gridcell "30"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - 'row "32 31 it.each([null, [], \"1299\", {}, { subtotalCents: -1, itemCount: 1 },"':
+          - gridcell "32"
+          - gridcell "31"
+          - 'gridcell "it.each([null, [], \"1299\", {}, { subtotalCents: -1, itemCount: 1 },"':
+            - code:
+              - generic: "it.each([null, [], \"1299\", {}, { subtotalCents: -1, itemCount: 1 },"
+        - 'row "33 32 { subtotalCents: 1.5, itemCount: 1 }, { subtotalCents: 1, itemCount: 0 },"':
+          - gridcell "33"
+          - gridcell "32"
+          - 'gridcell "{ subtotalCents: 1.5, itemCount: 1 }, { subtotalCents: 1, itemCount: 0 },"':
+            - code:
+              - generic: "{ subtotalCents: 1.5, itemCount: 1 }, { subtotalCents: 1, itemCount: 0 },"
+        - 'row "@@ -55,8 +54,11 @@ describe(\"real HTTP requests\", () => {"':
+          - 'gridcell "@@ -55,8 +54,11 @@ describe(\"real HTTP requests\", () => {"':
+            - button:
+            - button:
+            - code:
+              - generic: "@@ -55,8 +54,11 @@ describe(\"real HTTP requests\", () => {"
+        - 'row "55 54 body: JSON.stringify({ subtotalCents: 12_990, itemCount: 10 }),"':
+          - gridcell "55"
+          - gridcell "54"
+          - 'gridcell "body: JSON.stringify({ subtotalCents: 12_990, itemCount: 10 }),"':
+            - code:
+              - generic: "body: JSON.stringify({ subtotalCents: 12_990, itemCount: 10 }),"
+        - 'row "56 55 });"':
+          - gridcell "56"
+          - gridcell "55"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - row "57 56 expect(response.status).toBe(200);":
+          - gridcell "57"
+          - gridcell "56"
+          - gridcell "expect(response.status).toBe(200);":
+            - code:
+              - generic: expect(response.status).toBe(200);
+        - 'row "58 - // Deliberately weak QA fixture: presence alone does not establish the price."':
+          - gridcell "58"
+          - gridcell
+          - 'gridcell "- // Deliberately weak QA fixture: presence alone does not establish the price."':
+            - code:
+              - generic: "-"
+              - generic: "// Deliberately weak QA fixture: presence alone does not establish the price."
+        - row "59 - expect(await response.json()).toHaveProperty(\"totalCents\");":
+          - gridcell "59"
+          - gridcell
+          - gridcell "- expect(await response.json()).toHaveProperty(\"totalCents\");":
+            - code:
+              - generic: "-"
+              - generic: expect(await response.json()).toHaveProperty("totalCents");
+        - 'row "57 + expect(await response.json()).toEqual({"':
+          - gridcell
+          - gridcell "57"
+          - 'gridcell "+ expect(await response.json()).toEqual({"':
+            - code:
+              - generic: +
+              - generic: "expect(await response.json()).toEqual({"
+        - 'row "58 + subtotalCents: 12_990,"':
+          - gridcell
+          - gridcell "58"
+          - 'gridcell "+ subtotalCents: 12_990,"':
+            - code:
+              - generic: +
+              - generic: "subtotalCents: 12_990,"
+        - 'row "59 + itemCount: 10,"':
+          - gridcell
+          - gridcell "59"
+          - 'gridcell "+ itemCount: 10,"':
+            - code:
+              - generic: +
+              - generic: "itemCount: 10,"
+        - 'row "60 + totalCents: 11_691,"':
+          - gridcell
+          - gridcell "60"
+          - 'gridcell "+ totalCents: 11_691,"':
+            - code:
+              - generic: +
+              - generic: "totalCents: 11_691,"
+        - 'row "61 + });"':
+          - gridcell
+          - gridcell "61"
+          - 'gridcell "+ });"':
+            - code:
+              - generic: +
+              - generic: "});"
+        - 'row "60 62 });"':
+          - gridcell "60"
+          - gridcell "62"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - 'row "61 63 it.each([\"{\", \"null\", ''{\"subtotalCents\":-1,\"itemCount\":10}''])"':
+          - gridcell "61"
+          - gridcell "63"
+          - 'gridcell "it.each([\"{\", \"null\", ''{\"subtotalCents\":-1,\"itemCount\":10}''])"':
+            - code:
+              - generic: "it.each([\"{\", \"null\", '{\"subtotalCents\":-1,\"itemCount\":10}'])"
+        - 'row "62 64 (\"rejects invalid JSON or quote input: %s\", async (body) => {"':
+          - gridcell "62"
+          - gridcell "64"
+          - 'gridcell "(\"rejects invalid JSON or quote input: %s\", async (body) => {"':
+            - code:
+              - generic: "(\"rejects invalid JSON or quote input: %s\", async (body) => {"
+        - row:
+          - gridcell:
+            - button:
+            - code
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

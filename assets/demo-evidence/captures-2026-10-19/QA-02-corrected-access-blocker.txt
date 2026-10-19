@@ -1,0 +1,13 @@
+- heading "No Review Stack for this pull request" [level=1]
+- paragraph: CodeRabbit hasn't produced a Review Stack for this pull request yet. Start a review below, then try again once it finishes.
+- button "Start CodeRabbit review":
+  - generic: Start CodeRabbit review
+- button "Try again":
+  - generic: Try again
+- link "Open on GitHub (opens in a new tab)":
+  - /url: https://github.com/coderabbit-demo/mmani-demo/pull/14
+  - text: Open on GitHub
+  - generic: (opens in a new tab)
+- region "Notifications":
+  - status:
+    - list

@@ -1,0 +1,735 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] MULTI-01: Downstream pricing response contract - #3" [level=1]':
+    - text: "[Demo - do not merge] MULTI-01: Downstream pricing response contract"
+    - generic: "- #3"
+  - generic: "#3"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 2 commits into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/multi-01-response-contract":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/multi-01-response-contract
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/3
+      - text: Conversation
+    - link "Commits (2)":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/commits
+      - text: Commits
+      - generic: "2"
+      - generic: (2)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5894682444"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - paragraph: Demonstrates MULTI-01 only. Keep this synthetic-data demo open and unmerged.
+  - paragraph: The response renames totalCents to amountDueCents while retaining integer cents and the request shape. The downstream consumer still reads quote.totalCents.
+  - paragraph: "Local validation: TypeScript passes; unchanged regression tests report 47 pass, 6 fail. These failures are intentional, not suppressed. The original branch snapshot must be retained for recording."
+  - paragraph: Expected review behavior is a hypothesis until a real CodeRabbit review confirms it. Remediation must use CodeRabbit Fix with AI, Auto Fix, or Fix with CodeRabbit Code; never manually fix findings. Record the generated artifact, tested SHA, and re-review outcome.
+  - paragraph: "Recording: one 30-second segment for MULTI-01; docs/demo-workflow.md on main is the shared tracking register. Do not deploy the seeded branch publicly."
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: Updates
+    - list:
+      - listitem: Pricing quotes now report the discounted or undiscounted subtotal as the amount due. The quote field previously used for the total has been replaced, so integrations reading that field will need to use the new amount-due field instead.
+  - generic "Add or remove reactions":
+  - text: Mahesh Mani added 2 commits
+  - link "October 17, 2026 04:053 days ago":
+    - /url: "#commits-pushed-ef8b503"
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(MULTI-01): rename quote total to amount due"':
+      - /url: /coderabbit-demo/mmani-demo/pull/3/commits/ef8b503204b3636b498abf3d38e4ed3c91bc5580
+  - code:
+    - link "ef8b503":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/commits/ef8b503204b3636b498abf3d38e4ed3c91bc5580
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(MULTI-01): keep the request contract unchanged"':
+      - /url: /coderabbit-demo/mmani-demo/pull/3/commits/925a1a5d03dc04740e6182b767c952bd51183b70
+  - code:
+    - link "925a1a5":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/commits/925a1a5d03dc04740e6182b767c952bd51183b70
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33501986669"
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229446230"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+        - cell "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/3?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - paragraph:
+            - text: Note
+          - paragraph: Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names.
+          - 'generic "Skipped guideline sources: 1"':
+            - strong: "Skipped guideline sources: 1"
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: 🟡 Moderate · up to 925a1"':
+            - strong: "Merge Risk:"
+            - strong: 🟡 Moderate
+            - text: · up to
+            - code: 925a1
+          - 'generic "Security architecture risk: 🟡 Moderate · up to 925a1"':
+            - strong: "Security architecture risk:"
+            - strong: 🟡 Moderate
+            - text: · up to
+            - code: 925a1
+          - 'generic "Pre-merge checks: Passed 6"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: "6"
+          - 'generic "✨ Finishing Touches: 💡 1"':
+            - strong: "✨ Finishing Touches: 💡 1"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "coderabbitai[bot]":
+    - /url: /apps/coderabbitai
+    - img "coderabbitai[bot]"
+  - strong:
+    - link "coderabbitai":
+      - /url: /apps/coderabbitai
+    - generic: Bot
+  - text: reviewed
+  - link "Oct 16, 20263 days ago":
+    - /url: "#pullrequestreview-5556044670"
+  - link "View reviewed changes":
+    - /url: /coderabbit-demo/mmani-demo/pull/3/files/925a1a5d03dc04740e6182b767c952bd51183b70
+    - generic: View reviewed changes
+  - heading "coderabbitai Bot left a comment" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: "Actionable comments posted: 1"
+  - separator
+  - list:
+    - checkbox "Incomplete task" [disabled]
+    - text: "🪄 Fix comments: Fix CodeRabbit comments on this PR"
+  - generic "🤖 Prompt to fix review comments"
+  - separator
+  - generic "ℹ️ Review info"
+  - generic "Add or remove reactions":
+  - button "Comment thread" [expanded]:
+  - link "src/pricing/quote.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/3/files/925a1a5d03dc04740e6182b767c952bd51183b70#diff-017b37891d26f76eb91b2938cc4fd5d9b32518771a28211b7fa206ef146cc550
+  - table:
+    - rowgroup:
+      - row "22 22 ? Math.round(subtotalCents * 90 / 100)":
+        - cell "22"
+        - cell "22"
+        - cell "? Math.round(subtotalCents * 90 / 100)":
+          - generic: "? Math.round(subtotalCents * 90 / 100)"
+      - 'row "23 23 : subtotalCents;"':
+        - cell "23"
+        - cell "23"
+        - 'cell ": subtotalCents;"':
+          - generic: ": subtotalCents;"
+      - 'row "24 - return { subtotalCents, itemCount, totalCents };"':
+        - cell "24"
+        - cell
+        - 'cell "- return { subtotalCents, itemCount, totalCents };"':
+          - generic: "- return { subtotalCents, itemCount, totalCents };"
+      - 'row "24 + return { subtotalCents, itemCount, amountDueCents };"':
+        - cell
+        - cell "24"
+        - 'cell "+ return { subtotalCents, itemCount, amountDueCents };"':
+          - generic: "+ return { subtotalCents, itemCount, amountDueCents };"
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301284933"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🗄️ Data Integrity & Integration
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Update the downstream consumer with this response rename.
+  - paragraph:
+    - code: quote
+    - text: now returns
+    - code: amountDueCents
+    - text: ", but the downstream consumer still reads"
+    - code: quote.totalCents
+    - text: . That read returns
+    - code: undefined
+    - text: ", so the consumer no longer receives the amount. Update the consumer and the regression assertions that still expect"
+    - code: totalCents
+    - text: in the same change.
+  - generic "🤖 Prompt for AI Agents"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229464959"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai autofix Preserve backward compatibility by restoring the provider response field totalCents. Keep integer cents, the request contract, the external consumer, and all existing tests unchanged. Use CodeRabbit Auto Fix; do not update consumer expectations to bless the breaking rename and do not merge. Original evidence is preserved at tag demo/multi-01-before-fix. Record your generated commit and validation.":
+        - cell "@coderabbitai autofix Preserve backward compatibility by restoring the provider response field totalCents. Keep integer cents, the request contract, the external consumer, and all existing tests unchanged. Use CodeRabbit Auto Fix; do not update consumer expectations to bless the breaking rename and do not merge. Original evidence is preserved at tag demo/multi-01-before-fix. Record your generated commit and validation.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: autofix
+          - paragraph: Preserve backward compatibility by restoring the provider response field totalCents. Keep integer cents, the request contract, the external consumer, and all existing tests unchanged. Use CodeRabbit Auto Fix; do not update consumer expectations to bless the breaking rename and do not merge. Original evidence is preserved at tag demo/multi-01-before-fix. Record your generated commit and validation.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229489763"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai Please verify this response rename against the configured linked repository coderabbit-demo/security-harness-consumer. Identify the exact consumer file and expression affected, and state whether you actually retrieved its source or are inferring impact from this PR's description. Do not change either repository. This request is for evidence attribution; the requested CodeRabbit Auto Fix must preserve the existing provider contract and regression assertions.":
+        - cell "@coderabbitai Please verify this response rename against the configured linked repository coderabbit-demo/security-harness-consumer. Identify the exact consumer file and expression affected, and state whether you actually retrieved its source or are inferring impact from this PR's description. Do not change either repository. This request is for evidence attribution; the requested CodeRabbit Auto Fix must preserve the existing provider contract and regression assertions.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: Please verify this response rename against the configured linked repository coderabbit-demo/security-harness-consumer. Identify the exact consumer file and expression affected, and state whether you actually retrieved its source or are inferring impact from this PR's description. Do not change either repository. This request is for evidence attribution; the requested CodeRabbit Auto Fix must preserve the existing provider contract and regression assertions.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229507465"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll route this request to the coding workflow. The inspected provider returns amountDueCents, while the unchanged regression tests require totalCents. No fix commit or validation result exists from this inspection. The tag demo/multi-01-before-fix was not available in the local clone, so snapshot verification is inconclusive. Restore totalCents in the provider only. Keep integer-cent calculations, request validation, the external consumer, and all existing tests unchanged. Preserve the original snapshot. Do not merge or deploy. Record the generated commit, tested SHA, validation results, and re-review outcome. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+        - cell "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll route this request to the coding workflow. The inspected provider returns amountDueCents, while the unchanged regression tests require totalCents. No fix commit or validation result exists from this inspection. The tag demo/multi-01-before-fix was not available in the local clone, so snapshot verification is inconclusive. Restore totalCents in the provider only. Keep integer-cent calculations, request validation, the external consumer, and all existing tests unchanged. Preserve the original snapshot. Do not merge or deploy. Record the generated commit, tested SHA, validation results, and re-review outcome. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I’ll route this request to the coding workflow. The inspected provider returns
+            - code: amountDueCents
+            - text: ", while the unchanged regression tests require"
+            - code: totalCents
+            - text: .
+          - paragraph:
+            - text: No fix commit or validation result exists from this inspection. The tag
+            - code: demo/multi-01-before-fix
+            - text: was not available in the local clone, so snapshot verification is inconclusive.
+          - list:
+            - text: Restore
+            - code: totalCents
+            - text: in the provider only.
+            - listitem: Keep integer-cent calculations, request validation, the external consumer, and all existing tests unchanged.
+            - listitem: Preserve the original snapshot. Do not merge or deploy.
+            - listitem: Record the generated commit, tested SHA, validation results, and re-review outcome.
+          - separator
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: ✅ Pull request created - (🔄 Check again to retry)
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - link "coderabbitai":
+    - /url: /apps/coderabbitai
+  - generic: Bot
+  - text: mentioned this pull request
+  - link "Oct 16, 20263 days ago":
+    - /url: "#ref-pullrequest-5894746860"
+  - 'link "📝 CodeRabbit Chat: Restore the totalCents field in the pricing quote provider #7"':
+    - /url: /coderabbit-demo/mmani-demo/pull/7
+  - 'generic "Status: Open"':
+    - text: Open
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229515047"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+        - 'cell "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+          - paragraph:
+            - text: "✅ The requested changes have been implemented and a pull request has been created:"
+            - link "View PR":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/7
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229529262"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I could not retrieve the consumer source.
+            - strong: Cross-repository verification remains inconclusive.
+          - list:
+            - strong: "Exact consumer file:"
+            - text: Not verified.
+            - strong: "Affected expression:"
+            - text: The PR description identifies
+            - code: quote.totalCents
+            - text: . I did not confirm that expression in consumer source.
+            - strong: "Retrieval evidence:"
+            - text: The GitHub API request for
+            - code: coderabbit-demo/security-harness-consumer
+            - text: returned HTTP 404. The external-tools search had no eligible MCP sources. Neither result establishes whether the configured native linked-repository connection works.
+          - paragraph:
+            - text: Based only on the PR description, renaming the response field to
+            - code: amountDueCents
+            - text: would leave
+            - code: quote.totalCents
+            - text: as
+            - code: undefined
+            - text: in the described consumer. This is
+            - strong: inferred impact
+            - text: ", not a source-verified finding."
+          - paragraph:
+            - text: I made no changes to either repository. The Auto Fix must restore the provider’s
+            - code: totalCents
+            - text: contract and preserve integer cents, the request contract, consumer code, and all existing regression assertions.
+          - paragraph: Please retry with linked-repository source retrieval available, or provide the consumer file at a specific commit so I can verify the exact path and expression.
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229577778"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai The owner has now made coderabbit-demo/security-harness-consumer public, and GitHub API confirms visibility=public. Please retry inspecting that linked repository's actual source for this PR. Cite the exact file, function, and accessed response field showing the impact of totalCents → amountDueCents. Clearly distinguish retrieved source from inference based on this PR's description; if retrieval still fails, report the failure. Do not change code or the consumer. This request is for cross-repository review evidence only.":
+        - cell "@coderabbitai The owner has now made coderabbit-demo/security-harness-consumer public, and GitHub API confirms visibility=public. Please retry inspecting that linked repository's actual source for this PR. Cite the exact file, function, and accessed response field showing the impact of totalCents → amountDueCents. Clearly distinguish retrieved source from inference based on this PR's description; if retrieval still fails, report the failure. Do not change code or the consumer. This request is for cross-repository review evidence only.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: The owner has now made coderabbit-demo/security-harness-consumer public, and GitHub API confirms visibility=public. Please retry inspecting that linked repository's actual source for this PR. Cite the exact file, function, and accessed response field showing the impact of totalCents → amountDueCents. Clearly distinguish retrieved source from inference based on this PR's description; if retrieval still fails, report the failure. Do not change code or the consumer. This request is for cross-repository review evidence only.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229583446"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row:
+        - cell:
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: Source retrieval succeeded. I inspected
+            - code: coderabbit-demo/security-harness-consumer
+            - text: at commit
+            - code: 8d814ccfa4bf014a57ff321c010e3e40b9545fd0
+            - text: .
+          - heading "Retrieved source evidence" [level=3]
+          - list:
+            - strong: "File and function:"
+            - link "src/checkout.ts, buildCheckoutSummary(cart)":
+              - /url: https://github.com/coderabbit-demo/security-harness-consumer/blob/8d814ccfa4bf014a57ff321c010e3e40b9545fd0/src/checkout.ts#L17-L27
+              - code: src/checkout.ts
+              - text: ","
+              - code: buildCheckoutSummary(cart)
+            - text: .
+            - strong: "Exact affected expression:"
+            - text: Line 25 reads
+            - code: quote.totalCents
+            - text: ":"
+            - generic: "amountDueCents: quote.totalCents,"
+            - button "Copy code to clipboard":
+            - strong: "Declared response contract:"
+            - link "src/client.ts, Line 11":
+              - /url: https://github.com/coderabbit-demo/security-harness-consumer/blob/8d814ccfa4bf014a57ff321c010e3e40b9545fd0/src/client.ts#L8-L12
+              - code: src/client.ts
+              - text: ", Line 11"
+            - text: requires
+            - code: "PriceQuote.totalCents: number"
+            - text: .
+            - strong: "HTTP response handling:"
+            - link "fetchQuote(req), Lines 21–31":
+              - /url: https://github.com/coderabbit-demo/security-harness-consumer/blob/8d814ccfa4bf014a57ff321c010e3e40b9545fd0/src/client.ts#L21-L31
+              - code: fetchQuote(req)
+              - text: ", Lines 21–31"
+            - text: calls
+            - code: POST /api/pricing/quote
+            - text: and returns the parsed JSON with a type assertion. It does not validate or remap response fields.
+          - heading "Impact" [level=3]
+          - paragraph:
+            - text: If the provider returns
+            - code: amountDueCents
+            - text: instead of
+            - code: totalCents
+            - text: ","
+            - code: buildCheckoutSummary()
+            - text: reads a missing property. Its returned
+            - code: amountDueCents
+            - text: value becomes
+            - code: undefined
+            - text: ", not integer cents. The consumer’s own output field named"
+            - code: amountDueCents
+            - text: does
+            - strong: not
+            - text: make the upstream rename compatible.
+          - paragraph:
+            - text: This is a
+            - strong: source-backed impact analysis
+            - text: ", not an inference from the PR description alone. I retrieved the consumer source, but I did not execute a runtime test."
+          - paragraph: I made no changes to either repository.
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add comments to specific lines under
+  - link "Files changed":
+    - /url: /coderabbit-demo/mmani-demo/pull/3/files
+  - text: .
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - link "@coderabbitai":
+      - /url: /apps/coderabbitai
+      - img "@coderabbitai"
+    - link "coderabbitai[bot]":
+      - /url: /apps/coderabbitai
+    - link "coderabbitai[bot] left review comments":
+      - /url: /coderabbit-demo/mmani-demo/pull/3/changes/BASE..925a1a5d03dc04740e6182b767c952bd51183b70
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

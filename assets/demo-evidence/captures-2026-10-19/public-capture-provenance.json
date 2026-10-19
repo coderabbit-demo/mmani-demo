@@ -1,0 +1,76 @@
+[
+  {
+    "id": "SEC-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/1#discussion_r4301289005",
+    "title": "[Demo - do not merge] SEC-01: SQL injection in catalog search by manimahesh · Pull Request #1 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "PATH-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142",
+    "title": "[Demo - do not merge] PATH-01: Path-specific zero-based pagination by manimahesh · Pull Request #5 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "MULTI-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229583446",
+    "title": "[Demo - do not merge] MULTI-01: Downstream pricing response contract by manimahesh · Pull Request #3 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "GUIDE-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/12#issuecomment-6229912759",
+    "title": "[Demo - do not merge] GUIDE-01: external timeout guideline on HTTP handler by manimahesh · Pull Request #12 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "CONFIG-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239",
+    "title": "[Demo - do not merge] CONFIG-01: repository review profile by manimahesh · Pull Request #13 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "QA-01",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/10#discussion_r4301338268",
+    "title": "[Demo - do not merge] QA-01: green coverage with weak assertions by manimahesh · Pull Request #10 · coderabbit-demo/mmani-demo"
+  },
+  {
+    "id": "SEC-01-ci",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39002032038"
+  },
+  {
+    "id": "PATH-01-ci",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001989431"
+  },
+  {
+    "id": "MULTI-01-ci",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001830389"
+  },
+  {
+    "id": "GUIDE-01-ci",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39004741780"
+  },
+  {
+    "id": "QA-01-ci",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/actions/runs/39002157960"
+  },
+  {
+    "id": "SEC-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/9/files"
+  },
+  {
+    "id": "PATH-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/8/files"
+  },
+  {
+    "id": "MULTI-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/7/files"
+  },
+  {
+    "id": "GUIDE-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/15/files"
+  },
+  {
+    "id": "QA-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/14/files"
+  },
+  {
+    "id": "CONFIG-01-diff",
+    "url": "https://github.com/coderabbit-demo/mmani-demo/pull/13/files"
+  }
+]

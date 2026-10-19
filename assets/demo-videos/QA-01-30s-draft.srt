@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+These intentionally weak tests pass while the exact-ten pricing defect remains.
+
+2
+00:00:05,000 --> 00:00:13,000
+CodeRabbit explains that weak assertions accept the incorrect result. Coverage alone does not establish that the price is correct.
+
+3
+00:00:13,000 --> 00:00:21,000
+An independent local acceptance probe expects eleven thousand six hundred ninety-one cents and receives twelve thousand nine hundred ninety.
+
+4
+00:00:21,000 --> 00:00:28,000
+The generated correction restores the boundary and strong literal assertions. Preserve both the original failure and the corrected evidence.
+
+5
+00:00:28,000 --> 00:00:30,000
+Assert the actual requirement.

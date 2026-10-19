@@ -1,0 +1,590 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - region "Can Stack Banner":
+    - heading "Can Stack Banner" [level=2]
+    - text: This pull request can be stacked with other pull requests.
+    - link "Learn more about stacks":
+      - /url: https://gh.io/stacks-overview
+    - button "Preview stack":
+      - generic: Preview stack
+    - button "Dismiss banner":
+  - 'heading "[Demo - do not merge] SEC-01: SQL injection in catalog search - #1" [level=1]':
+    - text: "[Demo - do not merge] SEC-01: SQL injection in catalog search"
+    - generic: "- #1"
+  - generic: "#1"
+  - button "Edit title":
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 1 commit into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/sec-01-sql-injection":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/sec-01-sql-injection
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/1
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/1/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/1/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/1/changes
+      - text: Files changed
+  - heading "Conversation" [level=2]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - heading "manimahesh commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issue-5894673970"
+    - generic: •
+    - button "edited by coderabbitai Bot":
+      - text: edited by coderabbitai
+      - generic: Bot
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - paragraph: "Demonstrates SEC-01 only: user input is interpolated into the product search SQL expression. Keep this synthetic-data demo open and unmerged."
+  - paragraph: "Expected review evidence: trace the HTTP search input to the SQL sink and explain parameter binding. An actual CodeRabbit finding and its Sources attribution are still pending; this PR does not claim they exist."
+  - paragraph: "Local validation at the branch head: TypeScript passes; the unchanged suite reports 52 passes and one failure. The injection-input test returns catalog rows instead of an empty result. The failure is intentional and is not suppressed."
+  - paragraph: Remediation must use CodeRabbit Fix with AI, Auto Fix, or Fix with CodeRabbit Code. Preserve the original snapshot, inspect/test the generated fix, and record its artifact and re-review. Do not manually remediate this finding.
+  - paragraph: "Recording: SEC-01, 30-second segment; see docs/demo-workflow.md on main for the register. Keep the vulnerable branch isolated and never deploy it publicly."
+  - heading "Summary by CodeRabbit" [level=2]
+  - list:
+    - strong: Search
+    - list:
+      - text: Product search results may differ when search terms include pattern characters such as
+      - code: "%"
+      - text: or
+      - code: _
+      - text: ", which can match multiple products. Ordinary search terms may also produce different matches than before."
+  - generic "Add or remove reactions":
+  - img "Mahesh Mani"
+  - code:
+    - 'link "demo(SEC-01): search product names with SQL LIKE"':
+      - /url: /coderabbit-demo/mmani-demo/pull/1/commits/91fd477c994760fd9fce61189ef86e92093c2b40
+  - code:
+    - link "91fd477":
+      - /url: /coderabbit-demo/mmani-demo/pull/1/commits/91fd477c994760fd9fce61189ef86e92093c2b40
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229436932"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+        - cell "Review in Change Stack → Note Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names. Incomplete task Fix all pre-merge checks with AI Incomplete task Autofix · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts Comment @coderabbitai help to get the list of available commands.":
+          - paragraph:
+            - link "Review in Change Stack →":
+              - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/1?scope=REDACTED&cs_source=review_comment
+              - img "Review in Change Stack →"
+          - paragraph:
+            - text: Note
+          - paragraph: Some coding-guideline sources were skipped; the reason is listed next to each one. Other guidelines were applied as usual. On a public repository, sources from your configuration are listed without their names.
+          - 'generic "Skipped guideline sources: 1"':
+            - strong: "Skipped guideline sources: 1"
+          - generic "📝 Walkthrough":
+            - strong: 📝 Walkthrough
+          - 'generic "Merge Risk: 🟠 High · up to 91fd4"':
+            - strong: "Merge Risk:"
+            - strong: 🟠 High
+            - text: · up to
+            - code: 91fd4
+          - 'generic "Security architecture risk: 🟡 Moderate · up to 91fd4"':
+            - strong: "Security architecture risk:"
+            - strong: 🟡 Moderate
+            - text: · up to
+            - code: 91fd4
+          - 'generic "Pre-merge checks: Passed 5 · Failed 1"':
+            - strong:
+              - text: "Pre-merge checks:"
+              - superscript:
+                - img "Passed"
+              - text: 5 ·
+              - superscript:
+                - img "Failed"
+              - text: "1"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: Fix all pre-merge checks with AI
+          - 'generic "✨ Finishing Touches: 💡 1"':
+            - strong: "✨ Finishing Touches: 💡 1"
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - strong: Autofix
+            - text: · Keep fixing CodeRabbit findings and required CI, and resolving merge conflicts
+          - paragraph:
+            - subscript:
+              - text: Comment
+              - code: "@coderabbitai help"
+              - text: to get the list of available commands.
+  - generic "Add or remove reactions":
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: added the
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+  - text: label
+  - link "Oct 16, 20263 days ago":
+    - /url: "#event-33502000142"
+  - text: — with
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+  - link "coderabbitai[bot]":
+    - /url: /apps/coderabbitai
+    - img "coderabbitai[bot]"
+  - strong:
+    - link "coderabbitai":
+      - /url: /apps/coderabbitai
+    - generic: Bot
+  - text: reviewed
+  - link "Oct 16, 20263 days ago":
+    - /url: "#pullrequestreview-5556051881"
+  - link "View reviewed changes":
+    - /url: /coderabbit-demo/mmani-demo/pull/1/files/91fd477c994760fd9fce61189ef86e92093c2b40
+    - generic: View reviewed changes
+  - heading "coderabbitai Bot left a comment" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: "Actionable comments posted: 2"
+  - separator
+  - list:
+    - checkbox "Incomplete task" [disabled]
+    - text: "🪄 Fix comments: Fix CodeRabbit comments on this PR"
+  - generic "🤖 Prompt to fix review comments"
+  - separator
+  - generic "ℹ️ Review info"
+  - generic "Add or remove reactions":
+  - button "Comment thread" [expanded]:
+  - link "src/security/products.ts":
+    - /url: /coderabbit-demo/mmani-demo/pull/1/files/91fd477c994760fd9fce61189ef86e92093c2b40#diff-eb23d0ad6e0c3b302bd30a0bef53b4aaa3221d257c0fac4e8263bed57f3b118a
+  - table:
+    - rowgroup:
+      - 'row "12 12 export function searchProducts(db: DatabaseSync, query: string) {"':
+        - cell "12"
+        - cell "12"
+        - 'cell "export function searchProducts(db: DatabaseSync, query: string) {"':
+          - generic: "export function searchProducts(db: DatabaseSync, query: string) {"
+      - row "13 - return db.prepare(\"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\")":
+        - cell "13"
+        - cell
+        - cell "- return db.prepare(\"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\")":
+          - generic: "- return db.prepare(\"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\")"
+      - row "14 - .all(query);":
+        - cell "14"
+        - cell
+        - cell "- .all(query);":
+          - generic: "- .all(query);"
+      - 'row "13 + return db.prepare(`SELECT id, name FROM products WHERE name LIKE ''%${query}%'' ORDER BY id`)"':
+        - cell
+        - cell "13"
+        - 'cell "+ return db.prepare(`SELECT id, name FROM products WHERE name LIKE ''%${query}%'' ORDER BY id`)"':
+          - generic: "+ return db.prepare(`SELECT id, name FROM products WHERE name LIKE '%${query}%' ORDER BY id`)"
+  - heading "@coderabbitai coderabbitai Bot Oct 16, 20263 days ago" [level=3]:
+    - img "@coderabbitai"
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - link "Oct 16, 20263 days ago":
+      - /url: "#discussion_r4301289005"
+  - button "Show options":
+    - img "Show options"
+  - paragraph:
+    - strong: 🔒 Security & Privacy
+    - text: "|"
+    - strong: 🛡️ Detected with Advanced Tier
+    - text: "|"
+    - strong: 🟠 Major
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Injection
+  - paragraph:
+    - strong: "Reachability:"
+    - text: External
+    - strong: "Exploitability:"
+    - text: Trivial
+    - strong: "CWE:"
+    - link "CWE-89":
+      - /url: https://cwe.mitre.org/data/definitions/89.html
+    - text: — Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+  - paragraph:
+    - link "View Security blast radius":
+      - /url: https://app.coderabbit.ai/change-stack/coderabbit-demo/mmani-demo/pull/1/blast-radius?scope=REDACTED&toCommitId=91fd477c994760fd9fce61189ef86e92093c2b40&reviewRunId=914a44a6-216c-4d05-863d-c5b927aafc81&securityFinding=dccbd8745022a066374e47da
+  - paragraph:
+    - strong: Bind the search value instead of interpolating it into SQL.
+  - paragraph:
+    - text: The anonymous
+    - code: /api/products/search
+    - text: handler passes
+    - code: q
+    - text: to
+    - code: searchProducts
+    - text: . A value such as
+    - code: "' OR 1=1 --"
+    - text: changes the
+    - code: WHERE
+    - text: condition and returns catalog rows instead of being searched as text. The 100-character limit does not block this payload. Keep the SQL expression fixed and bind the search value as a parameter. Based on learnings, use prepared statements for untrusted SQL values.
+  - generic "🤖 Prompt for AI Agents"
+  - separator
+  - paragraph:
+    - strong: 🎯 Functional Correctness
+    - text: "|"
+    - strong: 🟡 Minor
+    - text: "|"
+    - strong: ⚡ Quick win
+  - paragraph:
+    - strong: Preserve literal substring matching for LIKE wildcards.
+  - paragraph:
+    - text: If
+    - code: query
+    - text: contains
+    - code: "%"
+    - text: or
+    - code: _
+    - text: ", the new"
+    - code: LIKE
+    - text: expression treats those characters as wildcards. For example, searching for
+    - code: "%"
+    - text: returns every product instead of products whose names contain
+    - code: "%"
+    - text: . Parameter binding alone does not correct this behavior. Escape LIKE metacharacters with an
+    - code: ESCAPE
+    - text: clause, or retain a substring operation.
+  - generic "🤖 Prompt for AI Agents"
+  - generic "Add or remove reactions":
+  - img "@manimahesh"
+  - button "Reply..."
+  - button "Resolve conversation":
+    - generic: Resolve conversation
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - link "ChatGPT Codex Connector":
+    - /url: https://github.com/apps/chatgpt-codex-connector
+    - img "ChatGPT Codex Connector"
+  - heading "manimahesh commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "manimahesh":
+        - /url: /manimahesh
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229490251"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are a member of the coderabbit-demo organization.":
+    - generic: Member
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - table:
+    - rowgroup:
+      - row "@coderabbitai autofix Use CodeRabbit Auto Fix to address the SQL injection and preserve literal substring search, including percent and underscore characters. Preserve and run existing assertions; add focused regression cases if needed. Do not merge. Original snapshot is tagged demo/sec-01-before-fix.":
+        - cell "@coderabbitai autofix Use CodeRabbit Auto Fix to address the SQL injection and preserve literal substring search, including percent and underscore characters. Preserve and run existing assertions; add focused regression cases if needed. Do not merge. Original snapshot is tagged demo/sec-01-before-fix.":
+          - paragraph:
+            - link "@coderabbitai":
+              - /url: https://github.com/coderabbitai
+            - text: autofix
+          - paragraph: Use CodeRabbit Auto Fix to address the SQL injection and preserve literal substring search, including percent and underscore characters. Preserve and run existing assertions; add focused regression cases if needed. Do not merge. Original snapshot is tagged demo/sec-01-before-fix.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago •" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229531059"
+    - generic: •
+    - button "edited":
+      - text: edited
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - row "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll send this to the CodeRabbit coding workflow. The fix will use a bound parameter and preserve literal substring search. This inspection did not change files or run tests. Replace SQL interpolation with parameter binding. Preserve existing assertions and add focused regression cases. Run validation and report the results. Preserve demo/sec-01-before-fix. Do not merge or deploy the branch. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+        - cell "Tip For best results, initiate chat on the files or code changes. @manimahesh I’ll send this to the CodeRabbit coding workflow. The fix will use a bound parameter and preserve literal substring search. This inspection did not change files or run tests. Replace SQL interpolation with parameter binding. Preserve existing assertions and add focused regression cases. Run validation and report the results. Preserve demo/sec-01-before-fix. Do not merge or deploy the branch. Incomplete task ✅ Pull request created - (🔄 Check again to retry) You are interacting with an AI system.":
+          - paragraph:
+            - text: Tip
+          - paragraph: For best results, initiate chat on the files or code changes.
+          - generic "🧩 Analysis chain"
+          - paragraph:
+            - code: "@manimahesh"
+            - text: I’ll send this to the CodeRabbit coding workflow. The fix will use a bound parameter and preserve literal substring search. This inspection did not change files or run tests.
+          - list:
+            - listitem: Replace SQL interpolation with parameter binding.
+            - listitem: Preserve existing assertions and add focused regression cases.
+            - listitem: Run validation and report the results.
+            - text: Preserve
+            - code: demo/sec-01-before-fix
+            - text: . Do not merge or deploy the branch.
+          - separator
+          - list:
+            - checkbox "Incomplete task" [disabled]
+            - text: ✅ Pull request created - (🔄 Check again to retry)
+          - paragraph:
+            - emphasis: You are interacting with an AI system.
+  - generic "Add or remove reactions":
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - link "coderabbitai":
+    - /url: /apps/coderabbitai
+  - generic: Bot
+  - text: mentioned this pull request
+  - link "Oct 16, 20263 days ago":
+    - /url: "#ref-pullrequest-5894772448"
+  - 'link "📝 CodeRabbit Chat: Use Bound Parameters for Literal Product Searches #9"':
+    - /url: /coderabbit-demo/mmani-demo/pull/9
+  - 'generic "Status: Open"':
+    - text: Open
+  - link "@coderabbitai":
+    - /url: /apps/coderabbitai
+    - img "@coderabbitai"
+  - heading "coderabbitai Bot commented Oct 16, 20263 days ago" [level=3]:
+    - strong:
+      - link "coderabbitai":
+        - /url: /apps/coderabbitai
+      - generic: Bot
+    - text: commented
+    - link "Oct 16, 20263 days ago":
+      - /url: "#issuecomment-6229543991"
+  - button "Show options":
+    - img "Show options"
+  - table:
+    - rowgroup:
+      - 'row "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+        - 'cell "✅ The requested changes have been implemented and a pull request has been created: View PR"':
+          - paragraph:
+            - text: "✅ The requested changes have been implemented and a pull request has been created:"
+            - link "View PR":
+              - /url: https://github.com/coderabbit-demo/mmani-demo/pull/9
+  - generic "Add or remove reactions":
+  - generic: Loading
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Reference":
+      - button "Saved replies":
+      - button "Slash commands":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Close pull request":
+      - text: Close pull request
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add
+  - link ".patch":
+    - /url: /coderabbit-demo/mmani-demo/pull/1.patch
+  - text: or
+  - link ".diff":
+    - /url: /coderabbit-demo/mmani-demo/pull/1.diff
+  - text: to the end of URLs for Git’s plaintext views.
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - link "@coderabbitai":
+      - /url: /apps/coderabbitai
+      - img "@coderabbitai"
+    - link "coderabbitai[bot]":
+      - /url: /apps/coderabbitai
+    - link "coderabbitai[bot] left review comments":
+      - /url: /coderabbit-demo/mmani-demo/pull/1/changes/BASE..91fd477c994760fd9fce61189ef86e92093c2b40
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - link "Demo - Do not merge":
+    - /url: /coderabbit-demo/mmani-demo/issues?q=state%3Aopen%20label%3A%22Demo%20-%20Do%20not%20merge%22
+    - generic: Demo - Do not merge
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+  - generic: Loading
+  - heading "1 participant" [level=3]
+  - link "@manimahesh":
+    - /url: /manimahesh
+    - img "@manimahesh"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

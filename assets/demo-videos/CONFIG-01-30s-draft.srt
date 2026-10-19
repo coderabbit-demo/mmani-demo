@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+This focused pull request changes just one repository review-profile setting.
+
+2
+00:00:05,000 --> 00:00:13,000
+The versioned YAML moves from assertive to chill. It changes review style, without changing the application or its tests.
+
+3
+00:00:13,000 --> 00:00:21,000
+The hosted review describes the before-and-after setting. The preserved original report separately records the effective chill profile.
+
+4
+00:00:21,000 --> 00:00:28,000
+This is evidence of a repository setting taking effect. It does not prove fewer defects, inheritance, or merge enforcement.
+
+5
+00:00:28,000 --> 00:00:30,000
+Verify effective configuration.

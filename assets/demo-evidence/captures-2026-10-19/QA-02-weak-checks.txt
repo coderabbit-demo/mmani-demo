@@ -1,0 +1,96 @@
+Selected scenario details
+It applies the discount starting at ten items and returns exact integer-cent totals
+Bugs
+Edit scenario
+Fix with AI
+
+2m 49s
+
+Validated exit criteria: 0 passed, 1 failed, 4 unresolved (5 assigned). A testing deviation left the original revision unverified. When available, the execution result records the tester's assessment before validation; these counts reflect the final checks.
+
+Evidence
+2
+Checks
+6
+Test steps
+4
+Observations
+3
+Recurrences
+Preconditions
+1
+
+What must be true before testing.
+
+Jump to:
+Failed
+0
+Unresolved
+0
+Passed
+1
+Passed
+1
+The pricing API is accessible at a known base URL.
+
+Expected
+
+The pricing API is accessible at a known base URL.
+
+Observed
+
+The prepared base URL was available, and all four POST requests reached the pricing endpoint and returned HTTP 200.
+
+Evidence
+Execution log
+Assertions
+5
+
+What the product should do.
+
+Jump to:
+Failed
+1
+Unresolved
+4
+Passed
+0
+Failed
+1
+It returns exactly {"subtotalCents":12990,"itemCount":10,"totalCents":11691} for ten items.
+
+Expected
+
+It returns exactly {"subtotalCents":12990,"itemCount":10,"totalCents":11691} for ten items.
+
+Observed
+
+Returned {"subtotalCents":12990,"itemCount":10,"totalCents":12990}; the required discount was absent.
+
+Evidence
+Execution log
+Unresolved
+4
+It returns HTTP 200 for each of the four quote requests.
+
+Expected
+
+It returns HTTP 200 for each of the four quote requests.
+
+Observed
+
+All requests for item counts 9, 10, 11, and 15 returned HTTP 200.
+
+Limitation: A reported deviation affected verification of the original revision or lacks original-revision evidence.
+
+Evidence
+Execution log
+It returns exactly {"subtotalCents":11691,"itemCount":9,"totalCents":11691} for nine items.
+It returns exactly {"subtotalCents":14289,"itemCount":11,"totalCents":12860} for eleven items.
+It returns exactly {"subtotalCents":19485,"itemCount":15,"totalCents":17537} for fifteen items.
+View technical details
+Previous
+
+1 of 1 scenarios
+
+Next

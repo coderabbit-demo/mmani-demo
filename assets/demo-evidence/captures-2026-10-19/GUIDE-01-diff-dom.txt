@@ -1,0 +1,196 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "📝 CodeRabbit Chat: Add a 1-second service-status timeout and stalled-handler regression test - #15" [level=1]':
+    - text: "📝 CodeRabbit Chat: Add a 1-second service-status timeout and stalled-handler regression test"
+    - generic: "- #15"
+  - generic: "#15"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "coderabbitai[bot]":
+    - /url: /coderabbitai[bot]
+  - text: wants to merge 1 commit into
+  - link "demo/guide-01-handler":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/guide-01-handler
+  - generic: from
+  - link "coderabbitai/chat/742c06c":
+    - /url: /coderabbit-demo/mmani-demo/tree/coderabbitai/chat/742c06c
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/15
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/15/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/15/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/15/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 3
+  - generic: viewed
+  - generic: 0 of 3 files viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem "docs" [expanded] [level=1]:
+      - generic: docs
+      - treeitem "demo-workflow.md" [level=2]:
+        - link "demo-workflow.md":
+          - /url: "#diff-568319bded257f2f405047f148ea92e72bb5455de9e10fc72baf70d0685c0808"
+    - treeitem "src/guidelines" [expanded] [level=1]:
+      - generic: src/guidelines
+      - treeitem "service-status.ts" [level=2]:
+        - link "service-status.ts":
+          - /url: "#diff-7a264ee81f9638dd989682d4cfe25acc5ab6f6a5467170f8c8d03deb5d1d0448"
+    - treeitem "tests" [expanded] [level=1]:
+      - generic: tests
+      - treeitem "guidelines-http.test.ts" [level=2]:
+        - link "guidelines-http.test.ts":
+          - /url: "#diff-961ac51ebb6a4228d2589f3736eb3745873caf7a0484cd61d6d4dc530109f483"
+  - slider "Draggable pane splitter"
+  - region:
+    - button "Collapse file":
+    - heading "‎docs/demo-workflow.md‎" [level=3]:
+      - link "‎docs/demo-workflow.md‎":
+        - /url: "#diff-568319bded257f2f405047f148ea92e72bb5455de9e10fc72baf70d0685c0808"
+        - code: ‎docs/demo-workflow.md‎
+    - button "Copy file name to clipboard":
+    - generic: "+203"
+    - generic: "-25"
+    - generic: "Lines changed: 203 additions & 25 deletions"
+    - region "Loading docs/demo-workflow.md"
+  - region:
+    - button "Collapse file":
+    - heading "‎src/guidelines/service-status.ts‎" [level=3]:
+      - link "‎src/guidelines/service-status.ts‎":
+        - /url: "#diff-7a264ee81f9638dd989682d4cfe25acc5ab6f6a5467170f8c8d03deb5d1d0448"
+        - code: ‎src/guidelines/service-status.ts‎
+    - button "Copy file name to clipboard":
+    - generic: "+2"
+    - generic: "-2"
+    - generic: "Lines changed: 2 additions & 2 deletions"
+    - region "Loading src/guidelines/service-status.ts"
+  - region:
+    - button "Collapse file":
+    - heading "‎tests/guidelines-http.test.ts‎" [level=3]:
+      - link "‎tests/guidelines-http.test.ts‎":
+        - /url: "#diff-961ac51ebb6a4228d2589f3736eb3745873caf7a0484cd61d6d4dc530109f483"
+        - code: ‎tests/guidelines-http.test.ts‎
+    - button "Copy file name to clipboard":
+    - generic: "+23"
+    - generic: "Lines changed: 23 additions & 0 deletions"
+    - region "Loading tests/guidelines-http.test.ts"
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

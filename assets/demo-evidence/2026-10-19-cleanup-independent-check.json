@@ -1,0 +1,21 @@
+{
+  "capture_date": "2026-10-19",
+  "task": "https://app.coderabbit.ai/code/tasks/c9557282-4f73-41d8-b11b-e5dd46628bd7",
+  "pr": "https://github.com/coderabbit-demo/mmani-demo/pull/16",
+  "base": "f95264bf7f801834d7e26a9ae90554b0f93a510f",
+  "head": "09dd2e649a9f49918332f4d9ca425e6b3aa6e6b4",
+  "changed_paths": [
+    "docs/demo-workflow.md"
+  ],
+  "author": "coderabbitai[bot]",
+  "committer": "coderabbitai[bot]",
+  "diff_check": "passed",
+  "source_tree_base": "e138b8a64b6eb0ab42b436d6e390e89702fc025d",
+  "source_tree_head": "e138b8a64b6eb0ab42b436d6e390e89702fc025d",
+  "test_tree_base": "7592bfe9564a20775673cecbc0dc322b8f865112",
+  "test_tree_head": "7592bfe9564a20775673cecbc0dc322b8f865112",
+  "all_other_paths": "identical; only workflow path differs",
+  "local_application_tests": "not rerun; documentation-only",
+  "rereview": "skipped by CodeRabbit (bot-authored PR)",
+  "manual_finding_fixes": false
+}

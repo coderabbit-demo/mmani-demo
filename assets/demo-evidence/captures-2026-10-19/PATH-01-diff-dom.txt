@@ -1,0 +1,250 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "📝 CodeRabbit Chat: Restore zero-based page offsets in pagination helper - #8" [level=1]':
+    - text: "📝 CodeRabbit Chat: Restore zero-based page offsets in pagination helper"
+    - generic: "- #8"
+  - generic: "#8"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "coderabbitai[bot]":
+    - /url: /coderabbitai[bot]
+  - text: wants to merge 1 commit into
+  - link "demo/path-01-pagination":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/path-01-pagination
+  - generic: from
+  - link "coderabbitai/chat/83848ae":
+    - /url: /coderabbit-demo/mmani-demo/tree/coderabbitai/chat/83848ae
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/8
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/8/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/8/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/8/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 1
+  - generic: viewed
+  - generic: 0 of 1 file viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem "src/path-instructions" [expanded] [level=1]:
+      - generic: src/path-instructions
+      - treeitem "pagination.ts" [level=2]:
+        - link "pagination.ts":
+          - /url: "#diff-d0ea2610382422e29af912c91225c42df375f5f53c3052ac195230557153f5e6"
+  - slider "Draggable pane splitter"
+  - region "‎src/path-instructions/pagination.ts‎":
+    - button "Collapse file":
+    - heading "‎src/path-instructions/pagination.ts‎" [level=3]:
+      - link "‎src/path-instructions/pagination.ts‎":
+        - /url: "#diff-d0ea2610382422e29af912c91225c42df375f5f53c3052ac195230557153f5e6"
+        - code: ‎src/path-instructions/pagination.ts‎
+    - button "Copy file name to clipboard":
+    - generic: "+2"
+    - generic: "-2"
+    - generic: "Lines changed: 2 additions & 2 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: src/path-instructions/pagination.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - row "@@ -1,9 +1,9 @@":
+          - gridcell "@@ -1,9 +1,9 @@":
+            - code:
+              - generic: "@@ -1,9 +1,9 @@"
+        - row "1 - /** Convert a page index to a bounded row offset. */":
+          - gridcell "1"
+          - gridcell
+          - gridcell "- /** Convert a page index to a bounded row offset. */":
+            - code:
+              - generic: "-"
+              - generic: /** Convert a page index to a bounded row offset. */
+        - row "1 + /** Convert a zero-based page index to a bounded row offset. */":
+          - gridcell
+          - gridcell "1"
+          - gridcell "+ /** Convert a zero-based page index to a bounded row offset. */":
+            - code:
+              - generic: +
+              - generic: /** Convert a zero-based page index to a bounded row offset. */
+        - 'row "2 2 export function pageOffset(page: number, pageSize: number): number {"':
+          - gridcell "2"
+          - gridcell "2"
+          - 'gridcell "export function pageOffset(page: number, pageSize: number): number {"':
+            - code:
+              - generic: "export function pageOffset(page: number, pageSize: number): number {"
+        - row "3 3 if (!Number.isSafeInteger(page) || page < 0":
+          - gridcell "3"
+          - gridcell "3"
+          - gridcell "if (!Number.isSafeInteger(page) || page < 0":
+            - code:
+              - generic: if (!Number.isSafeInteger(page) || page < 0
+        - row "4 4 || !Number.isSafeInteger(pageSize) || pageSize < 1 || pageSize > 100":
+          - gridcell "4"
+          - gridcell "4"
+          - gridcell "|| !Number.isSafeInteger(pageSize) || pageSize < 1 || pageSize > 100":
+            - code:
+              - generic: "|| !Number.isSafeInteger(pageSize) || pageSize < 1 || pageSize > 100"
+        - 'row "5 5 || !Number.isSafeInteger(page * pageSize)) {"':
+          - gridcell "5"
+          - gridcell "5"
+          - 'gridcell "|| !Number.isSafeInteger(page * pageSize)) {"':
+            - code:
+              - generic: "|| !Number.isSafeInteger(page * pageSize)) {"
+        - row "6 6 throw new TypeError(\"Invalid page or page size\");":
+          - gridcell "6"
+          - gridcell "6"
+          - gridcell "throw new TypeError(\"Invalid page or page size\");":
+            - code:
+              - generic: throw new TypeError("Invalid page or page size");
+        - 'row "7 7 }"':
+          - gridcell "7"
+          - gridcell "7"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+        - row "8 - return (page - 1) * pageSize;":
+          - gridcell "8"
+          - gridcell
+          - gridcell "- return (page - 1) * pageSize;":
+            - code:
+              - generic: "-"
+              - generic: return (page - 1) * pageSize;
+        - row "8 + return page * pageSize;":
+          - gridcell
+          - gridcell "8"
+          - gridcell "+ return page * pageSize;":
+            - code:
+              - generic: +
+              - generic: return page * pageSize;
+        - 'row "9 9 }"':
+          - gridcell "9"
+          - gridcell "9"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+Start with one focused pull request and the generated author summary.
+
+2
+00:00:05,000 --> 00:00:13,000
+The review identifies the exact boundary error and explains its effect on the customer price, with a concrete expected value.
+
+3
+00:00:13,000 --> 00:00:21,000
+We ask CodeRabbit to produce the correction while preserving regression assertions and the original demo snapshot.
+
+4
+00:00:21,000 --> 00:00:28,000
+After completion, inspect the generated pull request and fifty-three passing hosted tests. The bot re-review was skipped.
+
+5
+00:00:28,000 --> 00:00:30,000
+Keep the evidence.

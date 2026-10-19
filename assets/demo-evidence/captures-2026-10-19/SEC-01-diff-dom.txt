@@ -1,0 +1,1146 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (option shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "📝 CodeRabbit Chat: Use Bound Parameters for Literal Product Searches - #9" [level=1]':
+    - text: "📝 CodeRabbit Chat: Use Bound Parameters for Literal Product Searches"
+    - generic: "- #9"
+  - generic: "#9"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "coderabbitai[bot]":
+    - /url: /coderabbitai[bot]
+  - text: wants to merge 1 commit into
+  - link "demo/sec-01-sql-injection":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/sec-01-sql-injection
+  - generic: from
+  - link "coderabbitai/chat/91fd477":
+    - /url: /coderabbit-demo/mmani-demo/tree/coderabbitai/chat/91fd477
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/9
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/9/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/9/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/9/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 3
+  - generic: viewed
+  - generic: 0 of 3 files viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem "docs" [expanded] [level=1]:
+      - generic: docs
+      - treeitem "demo-workflow.md" [level=2]:
+        - link "demo-workflow.md":
+          - /url: "#diff-568319bded257f2f405047f148ea92e72bb5455de9e10fc72baf70d0685c0808"
+    - treeitem "src/security" [expanded] [level=1]:
+      - generic: src/security
+      - treeitem "products.ts" [level=2]:
+        - link "products.ts":
+          - /url: "#diff-eb23d0ad6e0c3b302bd30a0bef53b4aaa3221d257c0fac4e8263bed57f3b118a"
+    - treeitem "tests" [expanded] [level=1]:
+      - generic: tests
+      - treeitem "baseline.test.ts" [level=2]:
+        - link "baseline.test.ts":
+          - /url: "#diff-9c878dcef758aaff12e85b0f74d8ea1e2e05f0c25b91450ca6021993cbe0b03b"
+  - slider "Draggable pane splitter"
+  - region "‎docs/demo-workflow.md‎":
+    - button "Collapse file":
+    - heading "‎docs/demo-workflow.md‎" [level=3]:
+      - link "‎docs/demo-workflow.md‎":
+        - /url: "#diff-568319bded257f2f405047f148ea92e72bb5455de9e10fc72baf70d0685c0808"
+        - code: ‎docs/demo-workflow.md‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: docs/demo-workflow.md"':
+    - generic: "+53"
+    - generic: "-1"
+    - generic: "Lines changed: 53 additions & 1 deletion"
+    - list "File view":
+      - button "Display the source diff" [pressed]:
+      - button "Display the rich diff":
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: docs/demo-workflow.md"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - row "@@ -46,7 +46,7 @@ can reference these PRs without combining their defects. All video targets are":
+          - gridcell "@@ -46,7 +46,7 @@ can reference these PRs without combining their defects. All video targets are":
+            - button:
+            - code:
+              - generic: "@@ -46,7 +46,7 @@ can reference these PRs without combining their defects. All video targets are"
+        - row "46 46 | --- | --- | --- | --- | --- |":
+          - gridcell "46"
+          - gridcell "46"
+          - gridcell "| --- | --- | --- | --- | --- |":
+            - code:
+              - generic: "| --- | --- | --- | --- | --- |"
+        - 'row "47 47 | GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"':
+          - gridcell "47"
+          - gridcell "47"
+          - 'gridcell "| GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"':
+            - code:
+              - generic: "| GEN-01 | Author: summary → finding → CodeRabbit fix | Baseline prepared | Pending | Planned |"
+        - 'row "48 48 | GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |"':
+          - gridcell "48"
+          - gridcell "48"
+          - 'gridcell "| GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |"':
+            - code:
+              - generic: "| GEN-02 | Reviewer: Triage → Change Stack → evidence | Platform access pending | Pending | Planned |"
+        - row "49 - | SEC-01 | SQL injection | Safe SQL baseline prepared | Pending dedicated PR | Planned |":
+          - gridcell "49"
+          - gridcell
+          - gridcell "- | SEC-01 | SQL injection | Safe SQL baseline prepared | Pending dedicated PR | Planned |":
+            - code:
+              - generic: "-"
+              - generic: "| SEC-01 | SQL injection | Safe SQL baseline prepared | Pending dedicated PR | Planned |"
+        - 'row "49 + | SEC-01 | SQL injection | Coding handoff implemented; full validation blocked by local HTTP connectivity | PR #1; local correction and regression evidence below; finding, Sources, fix artifact URL, and re-review pending | Planned |"':
+          - gridcell
+          - gridcell "49"
+          - 'gridcell "+ | SEC-01 | SQL injection | Coding handoff implemented; full validation blocked by local HTTP connectivity | PR #1; local correction and regression evidence below; finding, Sources, fix artifact URL, and re-review pending | Planned |"':
+            - code:
+              - generic: +
+              - text: "| SEC-01 | SQL injection | Coding handoff implemented; full validation blocked by local HTTP connectivity | PR"
+              - generic: "#1"
+              - text: ; local correction and regression evidence below; finding, Sources, fix artifact URL, and re-review pending | Planned |
+        - row "50 50 | BUG-01 | Inclusive discount boundary | Correct boundary prepared | Pending dedicated PR | Planned |":
+          - gridcell "50"
+          - gridcell "50"
+          - gridcell "| BUG-01 | Inclusive discount boundary | Correct boundary prepared | Pending dedicated PR | Planned |":
+            - code:
+              - generic: "| BUG-01 | Inclusive discount boundary | Correct boundary prepared | Pending dedicated PR | Planned |"
+        - row "51 51 | MULTI-01 | Downstream response contract | Actual consumer compatibility verified | Pending dedicated PR and Linked repositories attribution | Planned |":
+          - gridcell "51"
+          - gridcell "51"
+          - gridcell "| MULTI-01 | Downstream response contract | Actual consumer compatibility verified | Pending dedicated PR and Linked repositories attribution | Planned |":
+            - code:
+              - generic: "| MULTI-01 | Downstream response contract | Actual consumer compatibility verified | Pending dedicated PR and Linked repositories attribution | Planned |"
+        - row "52 52 | GUIDE-01 | External coding guidelines | Timed request and external guideline reference prepared | Pending dedicated PR and Coding guidelines attribution | Planned |":
+          - gridcell "52"
+          - gridcell "52"
+          - gridcell "| GUIDE-01 | External coding guidelines | Timed request and external guideline reference prepared | Pending dedicated PR and Coding guidelines attribution | Planned |":
+            - code:
+              - generic: "| GUIDE-01 | External coding guidelines | Timed request and external guideline reference prepared | Pending dedicated PR and Coding guidelines attribution | Planned |"
+        - row "@@ -71,6 +71,58 @@ Do not present source branches as functional layers or invent unavailable views.":
+          - gridcell "@@ -71,6 +71,58 @@ Do not present source branches as functional layers or invent unavailable views.":
+            - button:
+            - code:
+              - generic: "@@ -71,6 +71,58 @@ Do not present source branches as functional layers or invent unavailable views."
+        - row "71 71":
+          - gridcell "71"
+          - gridcell "71"
+          - gridcell:
+            - code
+        - 'row "72 72 ## Security — Do / Say / See"':
+          - gridcell "72"
+          - gridcell "72"
+          - gridcell "## Security — Do / Say / See":
+            - code:
+              - generic: "## Security — Do / Say / See"
+        - row "73 73":
+          - gridcell "73"
+          - gridcell "73"
+          - gridcell:
+            - code
+        - 'row "74 + ### SEC-01 coding handoff evidence"':
+          - gridcell
+          - gridcell "74"
+          - 'gridcell "+ ### SEC-01 coding handoff evidence"':
+            - code:
+              - generic: +
+              - generic: "### SEC-01 coding handoff evidence"
+        - row "75 +":
+          - gridcell
+          - gridcell "75"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - row "76 + This entry supplements the historical Phase 1 evidence above. The supplied":
+          - gridcell
+          - gridcell "76"
+          - gridcell "+ This entry supplements the historical Phase 1 evidence above. The supplied":
+            - code:
+              - generic: +
+              - generic: This entry supplements the historical Phase 1 evidence above. The supplied
+        - 'row "77 + PR #1 handoff requests a bound parameter with literal substring semantics."':
+          - gridcell
+          - gridcell "77"
+          - 'gridcell "+ PR #1 handoff requests a bound parameter with literal substring semantics."':
+            - code:
+              - generic: +
+              - text: PR
+              - generic: "#1"
+              - text: handoff requests a bound parameter with literal substring semantics.
+        - 'row "78 + The request flows from `GET /api/products/search?q=…` through"':
+          - gridcell
+          - gridcell "78"
+          - 'gridcell "+ The request flows from `GET /api/products/search?q=…` through"':
+            - code:
+              - generic: +
+              - generic: "The request flows from `GET /api/products/search?q=…` through"
+        - 'row "79 + `src/app.ts` to `searchProducts` in `src/security/products.ts`. The fixed SQL"':
+          - gridcell
+          - gridcell "79"
+          - 'gridcell "+ `src/app.ts` to `searchProducts` in `src/security/products.ts`. The fixed SQL"':
+            - code:
+              - generic: +
+              - generic: "`src/app.ts` to `searchProducts` in `src/security/products.ts`. The fixed SQL"
+        - 'row "80 + uses `instr(lower(name), lower(?))` and `.all(query)`, so quotes, percent, and"':
+          - gridcell
+          - gridcell "80"
+          - 'gridcell "+ uses `instr(lower(name), lower(?))` and `.all(query)`, so quotes, percent, and"':
+            - code:
+              - generic: +
+              - generic: "uses `instr(lower(name), lower(?))` and `.all(query)`, so quotes, percent, and"
+        - row "81 + underscore remain data. HTTP length validation and the default catalog are unchanged.":
+          - gridcell
+          - gridcell "81"
+          - gridcell "+ underscore remain data. HTTP length validation and the default catalog are unchanged.":
+            - code:
+              - generic: +
+              - generic: underscore remain data. HTTP length validation and the default catalog are unchanged.
+        - row "82 +":
+          - gridcell
+          - gridcell "82"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - 'row "83 + - Tested input commit: `91fd477c994760fd9fce61189ef86e92093c2b40`, plus"':
+          - gridcell
+          - gridcell "83"
+          - 'gridcell "+ - Tested input commit: `91fd477c994760fd9fce61189ef86e92093c2b40`, plus"':
+            - code:
+              - generic: +
+              - generic: "- Tested input commit: `91fd477c994760fd9fce61189ef86e92093c2b40`, plus"
+        - row "84 + the uncommitted correction and tests in this coding task. The generated commit":
+          - gridcell
+          - gridcell "84"
+          - gridcell "+ the uncommitted correction and tests in this coding task. The generated commit":
+            - code:
+              - generic: +
+              - generic: the uncommitted correction and tests in this coding task. The generated commit
+        - row "85 + and stacked PR URL must be recorded after the system publishes the artifact.":
+          - gridcell
+          - gridcell "85"
+          - gridcell "+ and stacked PR URL must be recorded after the system publishes the artifact.":
+            - code:
+              - generic: +
+              - generic: and stacked PR URL must be recorded after the system publishes the artifact.
+        - 'row "86 + The local base ref is `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`;"':
+          - gridcell
+          - gridcell "86"
+          - 'gridcell "+ The local base ref is `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`;"':
+            - code:
+              - generic: +
+              - generic: "The local base ref is `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`;"
+        - row "87 + this checkout cannot resolve its merge-base with HEAD.":
+          - gridcell
+          - gridcell "87"
+          - gridcell "+ this checkout cannot resolve its merge-base with HEAD.":
+            - code:
+              - generic: +
+              - generic: this checkout cannot resolve its merge-base with HEAD.
+        - 'row "88 + - Original snapshot: the vulnerable input commit remains unchanged."':
+          - gridcell
+          - gridcell "88"
+          - 'gridcell "+ - Original snapshot: the vulnerable input commit remains unchanged."':
+            - code:
+              - generic: +
+              - generic: "- Original snapshot: the vulnerable input commit remains unchanged."
+        - 'row "89 + `demo/sec-01-before-fix` is absent from local refs; no ref was created or moved"':
+          - gridcell
+          - gridcell "89"
+          - 'gridcell "+ `demo/sec-01-before-fix` is absent from local refs; no ref was created or moved"':
+            - code:
+              - generic: +
+              - generic: "`demo/sec-01-before-fix` is absent from local refs; no ref was created or moved"
+        - row "90 + and remote snapshot preservation has not been verified.":
+          - gridcell
+          - gridcell "90"
+          - gridcell "+ and remote snapshot preservation has not been verified.":
+            - code:
+              - generic: +
+              - generic: and remote snapshot preservation has not been verified.
+        - 'row "91 + - Fix provenance: implementation follows the supplied authoritative coding"':
+          - gridcell
+          - gridcell "91"
+          - 'gridcell "+ - Fix provenance: implementation follows the supplied authoritative coding"':
+            - code:
+              - generic: +
+              - generic: "- Fix provenance: implementation follows the supplied authoritative coding"
+        - row "92 + handoff. The exact product action, CodeRabbit task/result URL, original finding":
+          - gridcell
+          - gridcell "92"
+          - gridcell "+ handoff. The exact product action, CodeRabbit task/result URL, original finding":
+            - code:
+              - generic: +
+              - generic: handoff. The exact product action, CodeRabbit task/result URL, original finding
+        - row "93 + URL, and observed Sources label were not supplied. Do not mark the segment":
+          - gridcell
+          - gridcell "93"
+          - gridcell "+ URL, and observed Sources label were not supplied. Do not mark the segment":
+            - code:
+              - generic: +
+              - generic: URL, and observed Sources label were not supplied. Do not mark the segment
+        - row "94 + CodeRabbit-remediated or claim re-review until those artifacts are captured.":
+          - gridcell
+          - gridcell "94"
+          - gridcell "+ CodeRabbit-remediated or claim re-review until those artifacts are captured.":
+            - code:
+              - generic: +
+              - generic: CodeRabbit-remediated or claim re-review until those artifacts are captured.
+        - 'row "95 + - Diff artifact: `src/security/products.ts` and additive cases in"':
+          - gridcell
+          - gridcell "95"
+          - 'gridcell "+ - Diff artifact: `src/security/products.ts` and additive cases in"':
+            - code:
+              - generic: +
+              - generic: "- Diff artifact: `src/security/products.ts` and additive cases in"
+        - 'row "96 + `tests/baseline.test.ts`; every pre-existing assertion is retained, including"':
+          - gridcell
+          - gridcell "96"
+          - 'gridcell "+ `tests/baseline.test.ts`; every pre-existing assertion is retained, including"':
+            - code:
+              - generic: +
+              - generic: "`tests/baseline.test.ts`; every pre-existing assertion is retained, including"
+        - row "97 + the empty-result HTTP injection assertion. New isolated databases use bound":
+          - gridcell
+          - gridcell "97"
+          - gridcell "+ the empty-result HTTP injection assertion. New isolated databases use bound":
+            - code:
+              - generic: +
+              - generic: the empty-result HTTP injection assertion. New isolated databases use bound
+        - 'row "98 + fixture inserts and close in `finally`; shared catalog fixtures are unchanged."':
+          - gridcell
+          - gridcell "98"
+          - 'gridcell "+ fixture inserts and close in `finally`; shared catalog fixtures are unchanged."':
+            - code:
+              - generic: +
+              - generic: "fixture inserts and close in `finally`; shared catalog fixtures are unchanged."
+        - row "99 + - Before correction, the new isolated percent and underscore searches each":
+          - gridcell
+          - gridcell "99"
+          - gridcell "+ - Before correction, the new isolated percent and underscore searches each":
+            - code:
+              - generic: +
+              - generic: "- Before correction, the new isolated percent and underscore searches each"
+        - row "100 + returned all six rows instead of one, and the apostrophe search threw a SQL":
+          - gridcell
+          - gridcell "100"
+          - gridcell "+ returned all six rows instead of one, and the apostrophe search threw a SQL":
+            - code:
+              - generic: +
+              - generic: returned all six rows instead of one, and the apostrophe search threw a SQL
+        - row "101 + syntax error. After correction, all six isolated cases pass, covering those":
+          - gridcell
+          - gridcell "101"
+          - gridcell "+ syntax error. After correction, all six isolated cases pass, covering those":
+            - code:
+              - generic: +
+              - generic: syntax error. After correction, all six isolated cases pass, covering those
+        - row "102 + characters, SQL injection input, mixed-case matching, and ordered empty search.":
+          - gridcell
+          - gridcell "102"
+          - gridcell "+ characters, SQL injection input, mixed-case matching, and ordered empty search.":
+            - code:
+              - generic: +
+              - generic: characters, SQL injection input, mixed-case matching, and ordered empty search.
+        - row "103 +":
+          - gridcell
+          - gridcell "103"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - row "104 + Commands used Node **24.19.0** via":
+          - gridcell
+          - gridcell "104"
+          - gridcell "+ Commands used Node **24.19.0** via":
+            - code:
+              - generic: +
+              - generic: Commands used Node **24.19.0** via
+        - 'row "105 + `npm exec --yes --package=node@24.19.0 -- <command>`. Validation commands"':
+          - gridcell
+          - gridcell "105"
+          - 'gridcell "+ `npm exec --yes --package=node@24.19.0 -- <command>`. Validation commands"':
+            - code:
+              - generic: +
+              - generic: "`npm exec --yes --package=node@24.19.0 -- <command>`. Validation commands"
+        - 'row "106 + set `NODE_USE_ENV_PROXY=0` to avoid the environment proxy stalling local HTTP"':
+          - gridcell
+          - gridcell "106"
+          - 'gridcell "+ set `NODE_USE_ENV_PROXY=0` to avoid the environment proxy stalling local HTTP"':
+            - code:
+              - generic: +
+              - generic: "set `NODE_USE_ENV_PROXY=0` to avoid the environment proxy stalling local HTTP"
+        - 'row "107 + requests; direct loopback requests then failed with `ECONNREFUSED`."':
+          - gridcell
+          - gridcell "107"
+          - 'gridcell "+ requests; direct loopback requests then failed with `ECONNREFUSED`."':
+            - code:
+              - generic: +
+              - generic: "requests; direct loopback requests then failed with `ECONNREFUSED`."
+        - row "108 +":
+          - gridcell
+          - gridcell "108"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - row "109 + | Command inside the Node wrapper | Actual local result |":
+          - gridcell
+          - gridcell "109"
+          - gridcell "+ | Command inside the Node wrapper | Actual local result |":
+            - code:
+              - generic: +
+              - generic: "| Command inside the Node wrapper | Actual local result |"
+        - row "110 + | --- | --- |":
+          - gridcell
+          - gridcell "110"
+          - gridcell "+ | --- | --- |":
+            - code:
+              - generic: +
+              - generic: "| --- | --- |"
+        - 'row "111 + | `npm ci` | Passed; 52 packages installed, zero reported vulnerabilities |"':
+          - gridcell
+          - gridcell "111"
+          - 'gridcell "+ | `npm ci` | Passed; 52 packages installed, zero reported vulnerabilities |"':
+            - code:
+              - generic: +
+              - generic: "| `npm ci` | Passed; 52 packages installed, zero reported vulnerabilities |"
+        - 'row "112 + | `npm run typecheck` | Passed |"':
+          - gridcell
+          - gridcell "112"
+          - 'gridcell "+ | `npm run typecheck` | Passed |"':
+            - code:
+              - generic: +
+              - generic: "| `npm run typecheck` | Passed |"
+        - 'row "113 + | `npm test -- tests/baseline.test.ts -t ''literal catalog substring search''` | Six passed; 44 skipped by the explicit test-name filter |"':
+          - gridcell
+          - gridcell "113"
+          - 'gridcell "+ | `npm test -- tests/baseline.test.ts -t ''literal catalog substring search''` | Six passed; 44 skipped by the explicit test-name filter |"':
+            - code:
+              - generic: +
+              - generic: "| `npm test -- tests/baseline.test.ts -t 'literal catalog substring search'` | Six passed; 44 skipped by the explicit test-name filter |"
+        - 'row "114 + | `npm test` | 44 passed, 17 failed (61 total); failures are HTTP-dependent checks encountering loopback connection refusal, including the timeout assertion receiving a connection error |"':
+          - gridcell
+          - gridcell "114"
+          - 'gridcell "+ | `npm test` | 44 passed, 17 failed (61 total); failures are HTTP-dependent checks encountering loopback connection refusal, including the timeout assertion receiving a connection error |"':
+            - code:
+              - generic: +
+              - generic: "| `npm test` | 44 passed, 17 failed (61 total); failures are HTTP-dependent checks encountering loopback connection refusal, including the timeout assertion receiving a connection error |"
+        - 'row "115 + | `npm run check` | Typecheck and build passed; coverage test run failed on 17 HTTP-dependent tests (43 passed before the final isolated injection case was added); later coverage step did not execute |"':
+          - gridcell
+          - gridcell "115"
+          - 'gridcell "+ | `npm run check` | Typecheck and build passed; coverage test run failed on 17 HTTP-dependent tests (43 passed before the final isolated injection case was added); later coverage step did not execute |"':
+            - code:
+              - generic: +
+              - generic: "| `npm run check` | Typecheck and build passed; coverage test run failed on 17 HTTP-dependent tests (43 passed before the final isolated injection case was added); later coverage step did not execute |"
+        - 'row "116 + | `npm run coverage:changed -- --base 916e3862f2bbf6f2b8a680d70692abc3b0df25a3` | Blocked: `git merge-base` failed in this checkout |"':
+          - gridcell
+          - gridcell "116"
+          - 'gridcell "+ | `npm run coverage:changed -- --base 916e3862f2bbf6f2b8a680d70692abc3b0df25a3` | Blocked: `git merge-base` failed in this checkout |"':
+            - code:
+              - generic: +
+              - generic: "| `npm run coverage:changed -- --base 916e3862f2bbf6f2b8a680d70692abc3b0df25a3` | Blocked: `git merge-base` failed in this checkout |"
+        - 'row "117 + | `npm run coverage:changed -- --all` | Failed closed: `coverage/lcov.info` absent after failed coverage run; no coverage percentage claimed |"':
+          - gridcell
+          - gridcell "117"
+          - 'gridcell "+ | `npm run coverage:changed -- --all` | Failed closed: `coverage/lcov.info` absent after failed coverage run; no coverage percentage claimed |"':
+            - code:
+              - generic: +
+              - generic: "| `npm run coverage:changed -- --all` | Failed closed: `coverage/lcov.info` absent after failed coverage run; no coverage percentage claimed |"
+        - 'row "118 + | `npm run smoke` | Failed: loopback `ECONNREFUSED` |"':
+          - gridcell
+          - gridcell "118"
+          - 'gridcell "+ | `npm run smoke` | Failed: loopback `ECONNREFUSED` |"':
+            - code:
+              - generic: +
+              - generic: "| `npm run smoke` | Failed: loopback `ECONNREFUSED` |"
+        - row "119 +":
+          - gridcell
+          - gridcell "119"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - row "120 + Re-review has not occurred. Before recording, capture the actual finding/Sources,":
+          - gridcell
+          - gridcell "120"
+          - gridcell "+ Re-review has not occurred. Before recording, capture the actual finding/Sources,":
+            - code:
+              - generic: +
+              - generic: Re-review has not occurred. Before recording, capture the actual finding/Sources,
+        - row "121 + fix action and generated artifact, verify the preserved snapshot, and rerun the":
+          - gridcell
+          - gridcell "121"
+          - gridcell "+ fix action and generated artifact, verify the preserved snapshot, and rerun the":
+            - code:
+              - generic: +
+              - generic: fix action and generated artifact, verify the preserved snapshot, and rerun the
+        - row "122 + full checks with working loopback networking and complete Git history. Keep":
+          - gridcell
+          - gridcell "122"
+          - gridcell "+ full checks with working loopback networking and complete Git history. Keep":
+            - code:
+              - generic: +
+              - generic: full checks with working loopback networking and complete Git history. Keep
+        - 'row "123 + PR #1 open and unmerged. Recording remains planned; no clip or completed product"':
+          - gridcell
+          - gridcell "123"
+          - 'gridcell "+ PR #1 open and unmerged. Recording remains planned; no clip or completed product"':
+            - code:
+              - generic: +
+              - text: PR
+              - generic: "#1"
+              - text: open and unmerged. Recording remains planned; no clip or completed product
+        - row "124 + workflow is claimed by these local checks.":
+          - gridcell
+          - gridcell "124"
+          - gridcell "+ workflow is claimed by these local checks.":
+            - code:
+              - generic: +
+              - generic: workflow is claimed by these local checks.
+        - row "125 +":
+          - gridcell
+          - gridcell "125"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - row "74 126 **Do:** Follow request input to the SQL sink on SEC-01. Use **Fix with AI**,":
+          - gridcell "74"
+          - gridcell "126"
+          - gridcell "**Do:** Follow request input to the SQL sink on SEC-01. Use **Fix with AI**,":
+            - code:
+              - generic: "**Do:** Follow request input to the SQL sink on SEC-01. Use **Fix with AI**,"
+        - row "75 127 **Auto Fix**, or **Fix with CodeRabbit Code**, then inspect the generated correction.":
+          - gridcell "75"
+          - gridcell "127"
+          - gridcell "**Auto Fix**, or **Fix with CodeRabbit Code**, then inspect the generated correction.":
+            - code:
+              - generic: "**Auto Fix**, or **Fix with CodeRabbit Code**, then inspect the generated correction."
+        - row "76 128 **Say:** Explain query parameters and the regression that demonstrates the fix.":
+          - gridcell "76"
+          - gridcell "128"
+          - gridcell "**Say:** Explain query parameters and the regression that demonstrates the fix.":
+            - code:
+              - generic: "**Say:** Explain query parameters and the regression that demonstrates the fix."
+        - row:
+          - gridcell:
+            - button:
+            - code
+  - region "‎src/security/products.ts‎":
+    - button "Collapse file":
+    - heading "‎src/security/products.ts‎" [level=3]:
+      - link "‎src/security/products.ts‎":
+        - /url: "#diff-eb23d0ad6e0c3b302bd30a0bef53b4aaa3221d257c0fac4e8263bed57f3b118a"
+        - code: ‎src/security/products.ts‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: src/security/products.ts"':
+    - generic: "+4"
+    - generic: "-3"
+    - generic: "Lines changed: 4 additions & 3 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: src/security/products.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - 'row "@@ -8,8 +8,9 @@ export function createCatalog(): DatabaseSync {"':
+          - 'gridcell "@@ -8,8 +8,9 @@ export function createCatalog(): DatabaseSync {"':
+            - button:
+            - code:
+              - generic: "@@ -8,8 +8,9 @@ export function createCatalog(): DatabaseSync {"
+        - row "8 8 return db;":
+          - gridcell "8"
+          - gridcell "8"
+          - gridcell "return db;":
+            - code:
+              - generic: return db;
+        - 'row "9 9 }"':
+          - gridcell "9"
+          - gridcell "9"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+        - row "10 10":
+          - gridcell "10"
+          - gridcell "10"
+          - gridcell:
+            - code
+        - row "11 - /** Search product names using a SQL LIKE expression. */":
+          - gridcell "11"
+          - gridcell
+          - gridcell "- /** Search product names using a SQL LIKE expression. */":
+            - code:
+              - generic: "-"
+              - generic: /** Search product names using a SQL LIKE expression. */
+        - row "11 + /** Search product names using a case-insensitive literal substring. */":
+          - gridcell
+          - gridcell "11"
+          - gridcell "+ /** Search product names using a case-insensitive literal substring. */":
+            - code:
+              - generic: +
+              - generic: /** Search product names using a case-insensitive literal substring. */
+        - 'row "12 12 export function searchProducts(db: DatabaseSync, query: string) {"':
+          - gridcell "12"
+          - gridcell "12"
+          - 'gridcell "export function searchProducts(db: DatabaseSync, query: string) {"':
+            - code:
+              - generic: "export function searchProducts(db: DatabaseSync, query: string) {"
+        - 'row "13 - return db.prepare(`SELECT id, name FROM products WHERE name LIKE ''%${query}%'' ORDER BY id`)"':
+          - gridcell "13"
+          - gridcell
+          - 'gridcell "- return db.prepare(`SELECT id, name FROM products WHERE name LIKE ''%${query}%'' ORDER BY id`)"':
+            - code:
+              - generic: "-"
+              - text: return db.prepare(
+              - text: "`SELECT id, name FROM products WHERE name LIKE '%"
+              - generic: "${query}"
+              - text: "%' ORDER BY id`"
+              - text: )
+        - row "14 - .all();":
+          - gridcell "14"
+          - gridcell
+          - gridcell "- .all();":
+            - code:
+              - generic: "-"
+              - generic: .all();
+        - row "13 + return db.prepare(":
+          - gridcell
+          - gridcell "13"
+          - gridcell "+ return db.prepare(":
+            - code:
+              - generic: +
+              - generic: return db.prepare(
+        - row "14 + \"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\",":
+          - gridcell
+          - gridcell "14"
+          - gridcell "+ \"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\",":
+            - code:
+              - generic: +
+              - generic: "\"SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id\","
+        - row "15 + ).all(query);":
+          - gridcell
+          - gridcell "15"
+          - gridcell "+ ).all(query);":
+            - code:
+              - generic: +
+              - generic: ).all(query);
+        - 'row "15 16 }"':
+          - gridcell "15"
+          - gridcell "16"
+          - 'gridcell "}"':
+            - code:
+              - generic: "}"
+  - region "‎tests/baseline.test.ts‎":
+    - button "Collapse file":
+    - heading "‎tests/baseline.test.ts‎" [level=3]:
+      - link "‎tests/baseline.test.ts‎":
+        - /url: "#diff-9c878dcef758aaff12e85b0f74d8ea1e2e05f0c25b91450ca6021993cbe0b03b"
+        - code: ‎tests/baseline.test.ts‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: tests/baseline.test.ts"':
+    - generic: "+32"
+    - generic: "Lines changed: 32 additions & 0 deletions"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: tests/baseline.test.ts"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - 'row "@@ -5,6 +5,7 @@ import { createApp } from \"../src/app.ts\";"':
+          - 'gridcell "@@ -5,6 +5,7 @@ import { createApp } from \"../src/app.ts\";"':
+            - button:
+            - code:
+              - generic: "@@ -5,6 +5,7 @@ import { createApp } from \"../src/app.ts\";"
+        - 'row "5 5 import { quote } from \"../src/pricing/quote.ts\";"':
+          - gridcell "5"
+          - gridcell "5"
+          - 'gridcell "import { quote } from \"../src/pricing/quote.ts\";"':
+            - code:
+              - generic: "import { quote } from \"../src/pricing/quote.ts\";"
+        - 'row "6 6 import { pageOffset } from \"../src/path-instructions/pagination.ts\";"':
+          - gridcell "6"
+          - gridcell "6"
+          - 'gridcell "import { pageOffset } from \"../src/path-instructions/pagination.ts\";"':
+            - code:
+              - generic: "import { pageOffset } from \"../src/path-instructions/pagination.ts\";"
+        - 'row "7 7 import { serviceIsHealthy } from \"../src/guidelines/service-status.ts\";"':
+          - gridcell "7"
+          - gridcell "7"
+          - 'gridcell "import { serviceIsHealthy } from \"../src/guidelines/service-status.ts\";"':
+            - code:
+              - generic: "import { serviceIsHealthy } from \"../src/guidelines/service-status.ts\";"
+        - 'row "8 + import { createCatalog, searchProducts } from \"../src/security/products.ts\";"':
+          - gridcell
+          - gridcell "8"
+          - 'gridcell "+ import { createCatalog, searchProducts } from \"../src/security/products.ts\";"':
+            - code:
+              - generic: +
+              - generic: "import { createCatalog, searchProducts } from \"../src/security/products.ts\";"
+        - row "8 9":
+          - gridcell "8"
+          - gridcell "9"
+          - gridcell:
+            - code
+        - row "9 10 const app = createApp();":
+          - gridcell "9"
+          - gridcell "10"
+          - gridcell "const app = createApp();":
+            - code:
+              - generic: const app = createApp();
+        - 'row "10 11 let base: string;"':
+          - gridcell "10"
+          - gridcell "11"
+          - 'gridcell "let base: string;"':
+            - code:
+              - generic: "let base: string;"
+        - 'row "@@ -96,13 +97,44 @@ describe(\"real HTTP requests\", () => {"':
+          - 'gridcell "@@ -96,13 +97,44 @@ describe(\"real HTTP requests\", () => {"':
+            - button:
+            - button:
+            - code:
+              - generic: "@@ -96,13 +97,44 @@ describe(\"real HTTP requests\", () => {"
+        - row "96 97 expect(response.status).toBe(200);":
+          - gridcell "96"
+          - gridcell "97"
+          - gridcell "expect(response.status).toBe(200);":
+            - code:
+              - generic: expect(response.status).toBe(200);
+        - 'row "97 98 expect(await response.json()).toEqual({ products: [] });"':
+          - gridcell "97"
+          - gridcell "98"
+          - 'gridcell "expect(await response.json()).toEqual({ products: [] });"':
+            - code:
+              - generic: "expect(await response.json()).toEqual({ products: [] });"
+        - 'row "98 99 });"':
+          - gridcell "98"
+          - gridcell "99"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - 'row "100 + it.each([\"%\", \"_\"])(\"treats %s as literal HTTP search data\", async (query) => {"':
+          - gridcell
+          - gridcell "100"
+          - 'gridcell "+ it.each([\"%\", \"_\"])(\"treats %s as literal HTTP search data\", async (query) => {"':
+            - code:
+              - generic: +
+              - generic: "it.each([\"%\", \"_\"])(\"treats %s as literal HTTP search data\", async (query) => {"
+        - 'row "101 + const response = await fetch(`${base}/api/products/search?q=${encodeURIComponent(query)}`);"':
+          - gridcell
+          - gridcell "101"
+          - 'gridcell "+ const response = await fetch(`${base}/api/products/search?q=${encodeURIComponent(query)}`);"':
+            - code:
+              - generic: +
+              - text: const response = await fetch(
+              - text: "`"
+              - generic: "${base}"
+              - text: /api/products/search?q=
+              - generic: "${encodeURIComponent(query)}"
+              - text: "`"
+              - text: );
+        - row "102 + expect(response.status).toBe(200);":
+          - gridcell
+          - gridcell "102"
+          - gridcell "+ expect(response.status).toBe(200);":
+            - code:
+              - generic: +
+              - generic: expect(response.status).toBe(200);
+        - 'row "103 + expect(await response.json()).toEqual({ products: [] });"':
+          - gridcell
+          - gridcell "103"
+          - 'gridcell "+ expect(await response.json()).toEqual({ products: [] });"':
+            - code:
+              - generic: +
+              - generic: "expect(await response.json()).toEqual({ products: [] });"
+        - 'row "104 + });"':
+          - gridcell
+          - gridcell "104"
+          - 'gridcell "+ });"':
+            - code:
+              - generic: +
+              - generic: "});"
+        - 'row "99 105 it(\"rejects excessive search text\", async () => {"':
+          - gridcell "99"
+          - gridcell "105"
+          - 'gridcell "it(\"rejects excessive search text\", async () => {"':
+            - code:
+              - generic: "it(\"rejects excessive search text\", async () => {"
+        - 'row "100 106 const response = await fetch(`${base}/api/products/search?q=${\"a\".repeat(101)}`);"':
+          - gridcell "100"
+          - gridcell "106"
+          - 'gridcell "const response = await fetch(`${base}/api/products/search?q=${\"a\".repeat(101)}`);"':
+            - code:
+              - text: const response = await fetch(
+              - text: "`"
+              - generic: "${base}"
+              - text: /api/products/search?q=
+              - generic: "${\"a\".repeat(101)}"
+              - text: "`"
+              - text: );
+        - row "101 107 expect(response.status).toBe(400);":
+          - gridcell "101"
+          - gridcell "107"
+          - gridcell "expect(response.status).toBe(400);":
+            - code:
+              - generic: expect(response.status).toBe(400);
+        - row "102 108 await response.body?.cancel();":
+          - gridcell "102"
+          - gridcell "108"
+          - gridcell "await response.body?.cancel();":
+            - code:
+              - generic: await response.body?.cancel();
+        - 'row "103 109 });"':
+          - gridcell "103"
+          - gridcell "109"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - 'row "104 110 });"':
+          - gridcell "104"
+          - gridcell "110"
+          - 'gridcell "});"':
+            - code:
+              - generic: "});"
+        - row "105 111":
+          - gridcell "105"
+          - gridcell "111"
+          - gridcell:
+            - code
+        - 'row "112 + describe(\"literal catalog substring search\", () => {"':
+          - gridcell
+          - gridcell "112"
+          - 'gridcell "+ describe(\"literal catalog substring search\", () => {"':
+            - code:
+              - generic: +
+              - generic: "describe(\"literal catalog substring search\", () => {"
+        - row "113 + it.each([":
+          - gridcell
+          - gridcell "113"
+          - gridcell "+ it.each([":
+            - code:
+              - generic: +
+              - generic: it.each([
+        - 'row "114 + [\"%\", [{ id: 5, name: \"100% Cotton\" }]],"':
+          - gridcell
+          - gridcell "114"
+          - 'gridcell "+ [\"%\", [{ id: 5, name: \"100% Cotton\" }]],"':
+            - code:
+              - generic: +
+              - generic: "[\"%\", [{ id: 5, name: \"100% Cotton\" }]],"
+        - 'row "115 + [\"_\", [{ id: 4, name: \"part_number\" }]],"':
+          - gridcell
+          - gridcell "115"
+          - 'gridcell "+ [\"_\", [{ id: 4, name: \"part_number\" }]],"':
+            - code:
+              - generic: +
+              - generic: "[\"_\", [{ id: 4, name: \"part_number\" }]],"
+        - 'row "116 + [\"''\", [{ id: 6, name: \"Artist''s Pad\" }]],"':
+          - gridcell
+          - gridcell "116"
+          - 'gridcell "+ [\"''\", [{ id: 6, name: \"Artist''s Pad\" }]],"':
+            - code:
+              - generic: +
+              - generic: "[\"'\", [{ id: 6, name: \"Artist's Pad\" }]],"
+        - row "117 + [\"' OR 1=1 --\", []],":
+          - gridcell
+          - gridcell "117"
+          - gridcell "+ [\"' OR 1=1 --\", []],":
+            - code:
+              - generic: +
+              - generic: "[\"' OR 1=1 --\", []],"
+        - 'row "118 + [\"cOtToN\", [{ id: 5, name: \"100% Cotton\" }]],"':
+          - gridcell
+          - gridcell "118"
+          - 'gridcell "+ [\"cOtToN\", [{ id: 5, name: \"100% Cotton\" }]],"':
+            - code:
+              - generic: +
+              - generic: "[\"cOtToN\", [{ id: 5, name: \"100% Cotton\" }]],"
+        - row "119 + [\"\", [":
+          - gridcell
+          - gridcell "119"
+          - gridcell "+ [\"\", [":
+            - code:
+              - generic: +
+              - generic: "[\"\", ["
+        - 'row "120 + { id: 1, name: \"Notebook\" }, { id: 2, name: \"Pencil\" }, { id: 3, name: \"Folder\" },"':
+          - gridcell
+          - gridcell "120"
+          - 'gridcell "+ { id: 1, name: \"Notebook\" }, { id: 2, name: \"Pencil\" }, { id: 3, name: \"Folder\" },"':
+            - code:
+              - generic: +
+              - generic: "{ id: 1, name: \"Notebook\" }, { id: 2, name: \"Pencil\" }, { id: 3, name: \"Folder\" },"
+        - 'row "121 + { id: 4, name: \"part_number\" }, { id: 5, name: \"100% Cotton\" },"':
+          - gridcell
+          - gridcell "121"
+          - 'gridcell "+ { id: 4, name: \"part_number\" }, { id: 5, name: \"100% Cotton\" },"':
+            - code:
+              - generic: +
+              - generic: "{ id: 4, name: \"part_number\" }, { id: 5, name: \"100% Cotton\" },"
+        - 'row "122 + { id: 6, name: \"Artist''s Pad\" },"':
+          - gridcell
+          - gridcell "122"
+          - 'gridcell "+ { id: 6, name: \"Artist''s Pad\" },"':
+            - code:
+              - generic: +
+              - generic: "{ id: 6, name: \"Artist's Pad\" },"
+        - row "123 + ]],":
+          - gridcell
+          - gridcell "123"
+          - gridcell "+ ]],":
+            - code:
+              - generic: +
+              - generic: "]],"
+        - 'row "124 + ])(\"searches for literal %j with ordered results\", (query, expected) => {"':
+          - gridcell
+          - gridcell "124"
+          - 'gridcell "+ ])(\"searches for literal %j with ordered results\", (query, expected) => {"':
+            - code:
+              - generic: +
+              - generic: "])(\"searches for literal %j with ordered results\", (query, expected) => {"
+        - row "125 + const db = createCatalog();":
+          - gridcell
+          - gridcell "125"
+          - gridcell "+ const db = createCatalog();":
+            - code:
+              - generic: +
+              - generic: const db = createCatalog();
+        - 'row "126 + try {"':
+          - gridcell
+          - gridcell "126"
+          - 'gridcell "+ try {"':
+            - code:
+              - generic: +
+              - generic: "try {"
+        - row "127 + const insert = db.prepare(\"INSERT INTO products (id, name) VALUES (?, ?)\");":
+          - gridcell
+          - gridcell "127"
+          - gridcell "+ const insert = db.prepare(\"INSERT INTO products (id, name) VALUES (?, ?)\");":
+            - code:
+              - generic: +
+              - generic: const insert = db.prepare("INSERT INTO products (id, name) VALUES (?, ?)");
+        - row "128 + insert.run(6, \"Artist's Pad\");":
+          - gridcell
+          - gridcell "128"
+          - gridcell "+ insert.run(6, \"Artist's Pad\");":
+            - code:
+              - generic: +
+              - generic: insert.run(6, "Artist's Pad");
+        - row "129 + insert.run(5, \"100% Cotton\");":
+          - gridcell
+          - gridcell "129"
+          - gridcell "+ insert.run(5, \"100% Cotton\");":
+            - code:
+              - generic: +
+              - generic: insert.run(5, "100% Cotton");
+        - row "130 + insert.run(4, \"part_number\");":
+          - gridcell
+          - gridcell "130"
+          - gridcell "+ insert.run(4, \"part_number\");":
+            - code:
+              - generic: +
+              - generic: insert.run(4, "part_number");
+        - row "131 + expect(searchProducts(db, query)).toEqual(expected);":
+          - gridcell
+          - gridcell "131"
+          - gridcell "+ expect(searchProducts(db, query)).toEqual(expected);":
+            - code:
+              - generic: +
+              - generic: expect(searchProducts(db, query)).toEqual(expected);
+        - 'row "132 + } finally {"':
+          - gridcell
+          - gridcell "132"
+          - 'gridcell "+ } finally {"':
+            - code:
+              - generic: +
+              - generic: "} finally {"
+        - row "133 + db.close();":
+          - gridcell
+          - gridcell "133"
+          - gridcell "+ db.close();":
+            - code:
+              - generic: +
+              - generic: db.close();
+        - 'row "134 + }"':
+          - gridcell
+          - gridcell "134"
+          - 'gridcell "+ }"':
+            - code:
+              - generic: +
+              - generic: "}"
+        - 'row "135 + });"':
+          - gridcell
+          - gridcell "135"
+          - 'gridcell "+ });"':
+            - code:
+              - generic: +
+              - generic: "});"
+        - 'row "136 + });"':
+          - gridcell
+          - gridcell "136"
+          - 'gridcell "+ });"':
+            - code:
+              - generic: +
+              - generic: "});"
+        - row "137 +":
+          - gridcell
+          - gridcell "137"
+          - gridcell "+":
+            - code:
+              - generic: +
+        - 'row "106 138 describe(\"zero-based pagination\", () => {"':
+          - gridcell "106"
+          - gridcell "138"
+          - 'gridcell "describe(\"zero-based pagination\", () => {"':
+            - code:
+              - generic: "describe(\"zero-based pagination\", () => {"
+        - 'row "107 139 it.each([[0, 10, 0], [1, 10, 10], [3, 25, 75]])(\"page %i, size %i\", (page, size, offset) => {"':
+          - gridcell "107"
+          - gridcell "139"
+          - 'gridcell "it.each([[0, 10, 0], [1, 10, 10], [3, 25, 75]])(\"page %i, size %i\", (page, size, offset) => {"':
+            - code:
+              - generic: "it.each([[0, 10, 0], [1, 10, 10], [3, 25, 75]])(\"page %i, size %i\", (page, size, offset) => {"
+        - row "108 140 expect(pageOffset(page, size)).toBe(offset);":
+          - gridcell "108"
+          - gridcell "140"
+          - gridcell "expect(pageOffset(page, size)).toBe(offset);":
+            - code:
+              - generic: expect(pageOffset(page, size)).toBe(offset);
+        - row:
+          - gridcell:
+            - button:
+            - code
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

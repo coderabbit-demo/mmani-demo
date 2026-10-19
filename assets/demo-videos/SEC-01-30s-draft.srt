@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+This public search path puts user input directly into a SQL query.
+
+2
+00:00:05,000 --> 00:00:13,000
+CodeRabbit identifies SQL injection and a related literal-search regression. The finding connects the request input to the query sink.
+
+3
+00:00:13,000 --> 00:00:21,000
+After completion, inspect CodeRabbit’s generated correction. Bound query parameters keep search input separate from executable SQL.
+
+4
+00:00:21,000 --> 00:00:28,000
+The generated change passes sixty-one hosted tests, including added regressions. This evidence supports the specific correction, not exhaustive security.
+
+5
+00:00:28,000 --> 00:00:30,000
+Keep input as data.

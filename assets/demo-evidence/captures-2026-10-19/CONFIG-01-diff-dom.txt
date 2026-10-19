@@ -1,0 +1,233 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "coderabbit-demo":
+        - /url: /coderabbit-demo
+        - generic: coderabbit-demo
+      - link "mmani-demo":
+        - /url: /coderabbit-demo/mmani-demo
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "Mahesh Mani"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /coderabbit-demo/mmani-demo
+        - generic: Code
+      - link "Issues":
+        - /url: /coderabbit-demo/mmani-demo/issues
+        - generic: Issues
+      - link "Pull requests (15)":
+        - /url: /coderabbit-demo/mmani-demo/pulls
+        - generic: Pull requests
+        - generic: "15"
+        - generic: (15)
+      - link "Agents":
+        - /url: /coderabbit-demo/mmani-demo/agents?author=manimahesh
+        - generic: Agents
+      - link "Actions":
+        - /url: /coderabbit-demo/mmani-demo/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /coderabbit-demo/mmani-demo/projects
+        - generic: Projects
+      - link "Wiki":
+        - /url: /coderabbit-demo/mmani-demo/wiki
+        - generic: Wiki
+      - link "Security and quality":
+        - /url: /coderabbit-demo/mmani-demo/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /coderabbit-demo/mmani-demo/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /coderabbit-demo/mmani-demo/settings
+        - generic: Settings
+- main:
+  - 'heading "[Demo - do not merge] CONFIG-01: repository review profile - #13" [level=1]':
+    - text: "[Demo - do not merge] CONFIG-01: repository review profile"
+    - generic: "- #13"
+  - generic: "#13"
+  - button "Edit title":
+  - button "Preview":
+    - generic: Preview
+  - button "Merge status" [disabled]:
+    - generic: Loading
+    - generic: Merge status
+  - generic: Loading merge status
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Open
+  - link "manimahesh":
+    - /url: /manimahesh
+  - text: wants to merge 1 commit into
+  - link "main":
+    - /url: /coderabbit-demo/mmani-demo/tree/main
+  - generic: from
+  - link "demo/config-01-review-profile":
+    - /url: /coderabbit-demo/mmani-demo/tree/demo/config-01-review-profile
+  - button "Copy head branch name to clipboard":
+  - navigation "Pull request navigation":
+    - link "Conversation":
+      - /url: /coderabbit-demo/mmani-demo/pull/13
+      - text: Conversation
+    - link "Commits (1)":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/commits
+      - text: Commits
+      - generic: "1"
+      - generic: (1)
+    - link "Checks":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/checks
+      - text: Checks
+    - link "Files changed":
+      - /url: /coderabbit-demo/mmani-demo/pull/13/changes
+      - text: Files changed
+  - heading "Pull request toolbar" [level=2]
+  - button "Collapse file tree" [expanded]:
+  - button "All commits":
+    - generic: All commits
+  - text: 0 / 1
+  - generic: viewed
+  - generic: 0 of 1 file viewed
+  - button "Submit review":
+    - generic: Submit review
+  - button "Open diff view settings":
+  - button "Open overview panel":
+  - button "Open comments panel":
+  - button "Open Copilot panel":
+  - textbox "Filter files…"
+  - button "Filter options":
+  - heading "File tree" [level=2]
+  - tree "File Tree":
+    - treeitem ".coderabbit.yaml" [level=1]:
+      - link ".coderabbit.yaml":
+        - /url: "#diff-c0f93b6ec1bb8a9771fe87219aa22843985ba0cd27a23689b7be274bfb7baf57"
+  - slider "Draggable pane splitter"
+  - region "‎.coderabbit.yaml‎":
+    - button "Collapse file":
+    - heading "‎.coderabbit.yaml‎" [level=3]:
+      - link "‎.coderabbit.yaml‎":
+        - /url: "#diff-c0f93b6ec1bb8a9771fe87219aa22843985ba0cd27a23689b7be274bfb7baf57"
+        - code: ‎.coderabbit.yaml‎
+    - button "Copy file name to clipboard":
+    - 'button "Expand all lines: .coderabbit.yaml"':
+    - generic: "+1"
+    - generic: "-1"
+    - generic: "Lines changed: 1 addition & 1 deletion"
+    - button "Ask about this diff":
+    - button "Not Viewed":
+      - generic: Viewed
+    - button "Comment on this file":
+    - button "More options":
+    - 'grid "Diff for: .coderabbit.yaml"':
+      - rowgroup:
+        - row "Original file line number Diff line number Diff line change":
+          - columnheader "Original file line number"
+          - columnheader "Diff line number"
+          - columnheader "Diff line change"
+      - rowgroup:
+        - row "@@ -2,7 +2,7 @@":
+          - gridcell "@@ -2,7 +2,7 @@":
+            - button:
+            - code:
+              - generic: "@@ -2,7 +2,7 @@"
+        - 'row "2 2 language: en-US"':
+          - gridcell "2"
+          - gridcell "2"
+          - 'gridcell "language: en-US"':
+            - code:
+              - generic: "language: en-US"
+        - row "3 3":
+          - gridcell "3"
+          - gridcell "3"
+          - gridcell:
+            - code
+        - row "4 4 reviews:":
+          - gridcell "4"
+          - gridcell "4"
+          - gridcell "reviews:":
+            - code:
+              - generic: "reviews:"
+        - 'row "5 - profile: assertive"':
+          - gridcell "5"
+          - gridcell
+          - 'gridcell "- profile: assertive"':
+            - code:
+              - generic: "-"
+              - generic: "profile: assertive"
+        - 'row "5 + profile: chill"':
+          - gridcell
+          - gridcell "5"
+          - 'gridcell "+ profile: chill"':
+            - code:
+              - generic: +
+              - generic: "profile: chill"
+        - 'row "6 6 high_level_summary: true"':
+          - gridcell "6"
+          - gridcell "6"
+          - 'gridcell "high_level_summary: true"':
+            - code:
+              - generic: "high_level_summary: true"
+        - row "7 7 auto_review:":
+          - gridcell "7"
+          - gridcell "7"
+          - gridcell "auto_review:":
+            - code:
+              - generic: "auto_review:"
+        - 'row "8 8 enabled: true"':
+          - gridcell "8"
+          - gridcell "8"
+          - 'gridcell "enabled: true"':
+            - code:
+              - generic: "enabled: true"
+        - row:
+          - gridcell:
+            - button:
+            - code
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

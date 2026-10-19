@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+The shared timeout standard lives outside this repository, in the engineering guidelines.
+
+2
+00:00:05,000 --> 00:00:13,000
+This follow-up retrieves the external rule and confirms its request-handler scope. Original review retrieval remains unverified.
+
+3
+00:00:13,000 --> 00:00:21,000
+After completion, CodeRabbit’s correction bounds the outbound request and adds a stalled-service regression for the real HTTP handler.
+
+4
+00:00:21,000 --> 00:00:28,000
+The generated code passes fifty-eight hosted tests. Keep documentation cleanup and bot re-review status separate from that result.
+
+5
+00:00:28,000 --> 00:00:30,000
+Preserve source provenance.

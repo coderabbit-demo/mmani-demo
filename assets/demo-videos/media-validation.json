@@ -1,0 +1,110 @@
+[
+  {
+    "id": "BUG-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.4 dB",
+      "max_volume: -2.0 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "GEN-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.6 dB",
+      "max_volume: -1.9 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "GEN-02",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.4 dB",
+      "max_volume: -0.7 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "SEC-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.5 dB",
+      "max_volume: -1.9 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "PATH-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.3 dB",
+      "max_volume: -2.0 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "MULTI-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.3 dB",
+      "max_volume: -1.7 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "GUIDE-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -15.9 dB",
+      "max_volume: -0.9 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "QA-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -15.9 dB",
+      "max_volume: -1.8 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  },
+  {
+    "id": "CONFIG-01",
+    "duration_seconds": 30.0,
+    "frames": 900,
+    "resolution": "1920x1080",
+    "audio": "aac",
+    "audio_levels": [
+      "mean_volume: -16.2 dB",
+      "max_volume: -0.0 dB"
+    ],
+    "status": "technical checks passed; full playback review pending"
+  }
+]
