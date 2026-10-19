@@ -8,7 +8,8 @@ audit trail, not current blockers. Twelve 30-second clips are prepared. On
 October 19, the user approved the original nine: GEN-01, GEN-02, SEC-01, BUG-01,
 MULTI-01, GUIDE-01, PATH-01, QA-01, and CONFIG-01. Their recording status is
 **checked / user-approved**; approved file hashes are in the capture manifest.
-QA-02, QA-03, and SEC-02 remain drafts pending user review. Filenames retain
+The user subsequently approved QA-02, QA-03, and SEC-02 on October 19.
+**All twelve clips are checked / user-approved.** Filenames retain
 `-draft` to preserve existing links; approval does not alter the video bytes.
 
 ### QA-02 — current Do / Say / See
@@ -360,10 +361,10 @@ can reference these PRs without combining their defects. All video targets are
 | GUIDE-01 | External coding guidelines | Replacement reviewed; external source verified in follow-up, original review retrieval unverified; CodeRabbit code fix #15 passes 58 tests; separate CodeRabbit cleanup #16 verified and unmerged | [Replacement PR #12](https://github.com/coderabbit-demo/mmani-demo/pull/12), [generated original #11](https://github.com/coderabbit-demo/mmani-demo/pull/11); original #4 retained | [30s draft](../assets/demo-videos/GUIDE-01-30s-draft.mp4); checked / user-approved October 19 |
 | PATH-01 | Path-specific pagination | Explicit Path instructions attribution verified; CodeRabbit fix #8 passes 53 tests; bot re-review skipped | [PR #5](https://github.com/coderabbit-demo/mmani-demo/pull/5), [finding](https://github.com/coderabbit-demo/mmani-demo/pull/5#discussion_r4301286142), [fix request](https://github.com/coderabbit-demo/mmani-demo/pull/5#issuecomment-6229490395) | [30s draft](../assets/demo-videos/PATH-01-30s-draft.mp4); checked / user-approved October 19 |
 | QA-01 | Weak versus strong assertions | CodeRabbit fix #14 restores independent assertions and boundary; 53 tests and both smoke modes pass | [Weak PR #10](https://github.com/coderabbit-demo/mmani-demo/pull/10) → [fix #14](https://github.com/coderabbit-demo/mmani-demo/pull/14) | [30s draft](../assets/demo-videos/QA-01-30s-draft.mp4); checked / user-approved October 19 |
-| QA-02 | QA Agent behavioral evidence | Weak UI artifacts and corrected exported plan/result verified; runtime caveats preserved | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | 30-second draft assembled; playback review pending |
-| QA-03 | Reusable Test Suites | Verified weak failure and corrected pass, same journey revision 1, Node v24.20.0 | Jobs 8ac582c9 / 554ca141; exact SHAs and HTTP evidence above | 30-second draft assembled; playback review pending |
+| QA-02 | QA Agent behavioral evidence | Weak UI artifacts and corrected exported plan/result verified; runtime caveats preserved | [Weak status](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229596313) → [corrected status](https://github.com/coderabbit-demo/mmani-demo/pull/14#issuecomment-6229876787) | 30-second clip checked / user-approved October 19 |
+| QA-03 | Reusable Test Suites | Verified weak failure and corrected pass, same journey revision 1, Node v24.20.0 | Jobs 8ac582c9 / 554ca141; exact SHAs and HTTP evidence above | 30-second clip checked / user-approved October 19 |
 | CONFIG-01 | Versioned review configuration | Verified one-line assertive → chill override; hosted profile CHILL | [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13#issuecomment-6229837239) | [30s draft](../assets/demo-videos/CONFIG-01-30s-draft.mp4); checked / user-approved October 19 |
-| SEC-02 | Deep Scan / attack-surface extension | Completed scan af366706 at 18ea929; one open Medium finding; 73/73 mapped points verified | Scan provenance, finding trace, surface snapshots captured | 30-second draft assembled; playback review pending |
+| SEC-02 | Deep Scan / attack-surface extension | Completed scan af366706 at 18ea929; one open Medium finding; 73/73 mapped points verified | Scan provenance, finding trace, surface snapshots captured | 30-second clip checked / user-approved October 19 |
 
 Use-case IDs stay stable across PR revisions and recordings. Add a separate ID
 and clip if another configuration setting is selected for the demo.

@@ -419,7 +419,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -451,7 +451,13 @@
         "source": "QA-02-export-card.jpg",
         "narration": "Preserve those limits."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the final three drafts in this chat",
+      "sha256": "875d2ef288fdb1c853c038979dc8f115160e7a00a7f7be3420bc5c0cc5ed817b"
+    }
   },
   {
     "id": "QA-03",
@@ -459,7 +465,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -491,7 +497,13 @@
         "source": "QA-03-comparison-card.jpg",
         "narration": "Replay fixed expectations."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the final three drafts in this chat",
+      "sha256": "6ea69465b3ab06e8cab9ff43be1f816c2163819283a110d5228d59955983b238"
+    }
   },
   {
     "id": "SEC-02",
@@ -499,7 +511,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited genuine UI still captures and labeled evidence excerpts; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -531,6 +543,12 @@
         "source": "SEC-02-surface-completed.jpg",
         "narration": "Keep scope visible."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the final three drafts in this chat",
+      "sha256": "062a0b19dde90920ce219778b9b06cd6a403ecc55c29890ad41b68c5219eae44"
+    }
   }
 ]
