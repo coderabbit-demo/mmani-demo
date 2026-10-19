@@ -5,7 +5,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -37,7 +37,13 @@
         "source": "BUG-01-ci.jpg",
         "narration": "Verify the requirement."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "372ad1642c6e2fa74bbedb19375ffd12510facae463d7ee0f69820f9a6506017"
+    }
   },
   {
     "id": "GEN-01",
@@ -45,7 +51,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -77,7 +83,13 @@
         "source": "BUG-01-finding.jpg",
         "narration": "Keep the evidence."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "71aa774492ea2de127ef89473bba2c87092d384d73789f3357347a89930eb9ef"
+    }
   },
   {
     "id": "GEN-02",
@@ -85,7 +97,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -117,7 +129,13 @@
         "source": "GEN-02-layer.jpg",
         "narration": "Review the evidence."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "776c7547ed35130899d77669ca8f2ed75ec9efa08eb99c9e42963a938c3c07a3"
+    }
   },
   {
     "id": "SEC-01",
@@ -125,7 +143,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -157,7 +175,13 @@
         "source": "SEC-01-diff.jpg",
         "narration": "Keep input as data."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "b40a1c7e98fe512e882ce77219c1cc093e5f60e3d3b632c37d1a429eeb9a66e1"
+    }
   },
   {
     "id": "PATH-01",
@@ -165,7 +189,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -197,7 +221,13 @@
         "source": "PATH-01-finding.jpg",
         "narration": "Verify the scoped rule."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "942aa55afe9b25efd9e7234a06259453d0c6ac8fe5301337b3f7f09bf2ff2ef6"
+    }
   },
   {
     "id": "MULTI-01",
@@ -205,7 +235,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -237,7 +267,13 @@
         "source": "MULTI-01-finding.jpg",
         "narration": "Check the consumer contract."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "bfa0c909bfcdfbcba647cd1f776cb7736ed80ae122c90463b3c7b298a44c1ef9"
+    }
   },
   {
     "id": "GUIDE-01",
@@ -245,7 +281,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -277,7 +313,13 @@
         "source": "GUIDE-01-finding.jpg",
         "narration": "Preserve source provenance."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "38e54de8bea636ec714207a592492590d0fe37884ecd7b0e19d91cae08c320a7"
+    }
   },
   {
     "id": "QA-01",
@@ -285,7 +327,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -317,7 +359,13 @@
         "source": "QA-01-probe.jpg",
         "narration": "Assert the actual requirement."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "1b31b343be81d81442ae1b94843bab189b58011786ff7dfc0c28f6efc7e42c92"
+    }
   },
   {
     "id": "CONFIG-01",
@@ -325,7 +373,7 @@
     "duration": 30.0,
     "format": "1920x1080 30fps; edited real UI still captures; synthetic Samantha narration",
     "capture_date": "2026-10-19",
-    "status": "assembled draft; final audio/readability review pending",
+    "status": "checked; user-approved",
     "beats": [
       {
         "start": 0,
@@ -357,7 +405,13 @@
         "source": "CONFIG-01-diff.jpg",
         "narration": "Verify effective configuration."
       }
-    ]
+    ],
+    "approval": {
+      "date": "2026-10-19",
+      "timezone": "America/Los_Angeles",
+      "source": "User explicitly approved the original nine drafts in this chat",
+      "sha256": "5f7d442990183d178c114e060028337995bb329c043ea1aa3f040f87cc948cb3"
+    }
   },
   {
     "id": "QA-02",
