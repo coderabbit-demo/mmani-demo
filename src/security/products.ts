@@ -8,8 +8,8 @@ export function createCatalog(): DatabaseSync {
   return db;
 }
 
-/** Bind the search text as data, including quotes and SQL-looking strings. */
+/** Search product names using a SQL LIKE expression. */
 export function searchProducts(db: DatabaseSync, query: string) {
-  return db.prepare("SELECT id, name FROM products WHERE instr(lower(name), lower(?)) > 0 ORDER BY id")
-    .all(query);
+  return db.prepare(`SELECT id, name FROM products WHERE name LIKE '%${query}%' ORDER BY id`)
+    .all();
 }
