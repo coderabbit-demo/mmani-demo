@@ -3,7 +3,7 @@ import { qualifiesForDiscount } from "../bugs/discount.ts";
 export interface PriceQuote {
   subtotalCents: number;
   itemCount: number;
-  totalCents: number;
+  amountDueCents: number;
 }
 
 /** Quote an integer-cent subtotal; this demo does not charge a payment method. */
@@ -18,8 +18,8 @@ export function quote(input: unknown): PriceQuote {
       || itemCount < 1 || itemCount > 10_000) {
     throw new TypeError("Expected subtotalCents (0..100000000) and itemCount (1..10000) as integers");
   }
-  const totalCents = qualifiesForDiscount(itemCount)
+  const amountDueCents = qualifiesForDiscount(itemCount)
     ? Math.round(subtotalCents * 90 / 100)
     : subtotalCents;
-  return { subtotalCents, itemCount, totalCents };
+  return { subtotalCents, itemCount, amountDueCents };
 }
