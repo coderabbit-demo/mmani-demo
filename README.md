@@ -55,8 +55,20 @@ All `src/**/*.ts` files are in the coverage denominator; none are excluded.
 Tests, tooling, and the process launcher under `scripts/` are outside application
 coverage. The launcher is exercised by smoke tests; coverage-policy tests check
 failure behavior and a real temporary Git diff. Empty or incomplete coverage
-fails; a diff with no changed executable lines is N/A. GitHub Actions is configured
-but has not run here; required-check merge enforcement is not configured.
+fails; a diff with no changed executable lines is N/A.
+
+GitHub Actions has preserved hosted CI evidence: the
+[baseline run](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001168131)
+passed, and the five original seeded scenarios failed in test execution, as
+recorded in [phase2-ci.json](assets/demo-evidence/phase2-ci.json). The
+[October 19 CI snapshot](assets/demo-evidence/2026-10-19-ci-state.json) also
+records successful remediation runs. The authoritative workflow is
+[Baseline validation](.github/workflows/validate.yml).
+These are historical results at their recorded SHAs, not fresh live verification.
+GitHub API access from the reviewing cloud environment returned Forbidden;
+current live PR/check state and platform access were not reverified. Required-check
+merge enforcement remains unverified. See the workflow register for dated status
+and evidence-access caveats, including the original hosted-log limitation.
 
 ## Check the actual downstream consumer
 
@@ -79,4 +91,4 @@ sets `PRICING_SERVICE_URL` for that process, and checks the checkout summary and
 CodeRabbit's access to either repository.
 
 See [the single demo workflow and use-case register](docs/demo-workflow.md) for
-phase status, future PRs, evidence requirements, and 30-second recording plans.
+phase status, preserved PR evidence, approved 30-second clips, and freshness checks.

@@ -20,7 +20,7 @@ Their PR numbers, counts, screenshots, and run outcomes belong to older demos;
 capture fresh evidence for this repository. The user's separate-PR requirement
 replaces the General Demo runbook's flagship/hero structure.
 
-## Planned layout and scenarios
+## Repository layout and scenarios
 
 - `src/security/`: one isolated SQL or shell injection scenario. Prefer a small
   parameterized SQL example with local, disposable data and no external service.
@@ -30,13 +30,17 @@ replaces the General Demo runbook's flagship/hero structure.
   and the initial integer fields `subtotalCents`, `itemCount`, and `totalCents`.
 - `src/guidelines/`: a focused violation of the external engineering standards.
 - `src/path-instructions/`: a focused violation of the local path-specific rule.
-- `src/qa/`: an isolated TEAM10 pricing example for weak/strong assertion and
-  QA Agent comparisons, without changing the baseline pricing contract.
-- `docs/demo-workflow.md`: the eventual single presenter workflow covering
+- QA comparisons use `src/bugs/discount.ts`, `src/pricing/quote.ts`, and
+  `tests/baseline.test.ts` on dedicated demo/remediation branches. There is no
+  `src/qa/` directory on main; preserve the baseline pricing contract.
+- `docs/demo-workflow.md`: the single presenter workflow covering
   general review, security, QA Agent, and configuration management.
 
-The Phase 1 baseline implements the first five examples. The dedicated QA
-comparison remains planned. Track actual status in `docs/demo-workflow.md`.
+The baseline implements the first five examples. The dedicated weak/strong QA
+comparison, PR-specific QA Agent evidence, and reusable Test Suite revision 1
+comparison are completed in the preserved artifacts. Track dated outcomes,
+runtime caveats, recording approvals, and remaining freshness checks only in
+`docs/demo-workflow.md`; do not maintain another status register here.
 
 ## Implementation discipline
 
