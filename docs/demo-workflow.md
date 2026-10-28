@@ -1,5 +1,56 @@
 # Demo workflow and recording register
 
+## Documentation reconciliation — October 28, 2026
+
+This file is the only status/evidence register. The presenter release below and
+the use-case table describe the latest **preserved** outcomes, captured October
+19. Dated preparation, launch, and access notes are history; their superseded
+blockers do not reopen completed work. Raw evidence retains its original results.
+
+Repository inspection fetched `origin/main` at
+`83561906047f87d2e1012e0863c8d8d6d84431da`, matching the assessed main; there
+were no newer commits to inspect. Git fetch establishes the source revision.
+GitHub API access from the reviewing cloud environment returned **Forbidden**;
+current live PR state, checks, and CodeRabbit platform access were **not
+reverified**. The October 19 open/unmerged and automatic-merge observations below
+remain dated. No reviews, QA runs, scans, or fix tasks were restarted for this
+documentation reconciliation. No new application test pass is claimed.
+
+### Preserved outcomes and evidence precedence
+
+- **Recordings:** twelve MP4s and twelve corresponding SRTs exist in
+  [demo-videos](../assets/demo-videos/). All twelve are checked / user-approved
+  on October 19 in the [capture manifest](../assets/demo-videos/capture-manifest.json),
+  which holds final approval status and approved SHA-256 hashes. The intentional
+  `-draft` filenames remain. These are narrated edits of real UI still captures
+  and labeled evidence excerpts, not continuous cursor recordings or original
+  QA browser videos.
+- **Technical snapshot:** [media-validation.json](../assets/demo-videos/media-validation.json)
+  is an earlier technical-validation snapshot of duration, streams, and audio
+  signal. Its original “full playback review pending” results are preserved;
+  final approval is recorded separately in the capture manifest.
+- **GUIDE-01 cleanup:** [PR #16](https://github.com/coderabbit-demo/mmani-demo/pull/16)
+  delivered the documentation-only cleanup for PR #15, changing only this workflow
+  path on its branch. [Independent checks](../assets/demo-evidence/2026-10-19-cleanup-independent-check.json)
+  record identical source/test trees. It was open against PR #15's branch on
+  October 19; neither PR was merged. PR #15's own head retained the old docs.
+  Delivery of a separate cleanup PR does not mean it was merged into #15.
+- **QA:** corrected PR-specific plans/results were recovered as
+  [exports](../assets/demo-evidence/QA-02-corrected-export/). Those plans differ;
+  QA-03 separately demonstrates weak failure and corrected success with reusable
+  Test Suite revision 1. Preserve the runtime deviations, unknown corrected
+  QA-02 runtime, unresolved weak criteria, and non-authoritative-results caveat.
+- **Deep Scan:** completed evidence records one **Open Medium CWE-835** finding
+  and 73/73 mapped points verified. No reproducer or fix was executed. This is
+  investigation evidence, not an assurance of complete security.
+- **Hosted CI:** [phase2-ci.json](../assets/demo-evidence/phase2-ci.json), the
+  [October 19 snapshot](../assets/demo-evidence/2026-10-19-ci-state.json), and
+  [PR #16 validation](../assets/demo-evidence/2026-10-19-pr16-validation.json)
+  preserve completed hosted results at recorded SHAs. The authoritative workflow
+  is [Baseline validation](../.github/workflows/validate.yml). Earlier blocked log
+  access, local test counts, and skipped bot re-reviews remain separate evidence;
+  no fresh hosted execution or current platform availability is claimed.
+
 ## Presenter release — October 19, 2026, afternoon
 
 The current presenter script is the Do / Say / See walkthrough below, including
@@ -52,7 +103,7 @@ open; verified coverage does not mean vulnerability-free.”
 commit `18ea929f0694fd31695376de007ff953374ecd4e`. Finding
 `d865a373-04a1-4293-bb26-5da3b4335aa0` is Medium, Open, CWE-835, with External
 reachability and Moderate exploitability as reported by CodeRabbit. First/last
-seen: 1:29 PM Pacific. The current surface shows **73/73 verified**, zero stale/
+seen: 1:29 PM Pacific. The October 19 surface shows **73/73 verified**, zero stale/
 unverified, and warns that 15 points were checked within the repository and
 further checks need external evidence. The earlier 81-point map is a historical
 snapshot with a different denominator; do not claim a fixed-denominator trend.
@@ -64,9 +115,11 @@ No reproducer was executed, no fix was triggered, and no vulnerability was merge
 to seed this scan. Remediation is not part of this investigation-only segment;
 any later correction must be produced by CodeRabbit.
 
-Freshness check: all 16 demo PRs remain open and unmerged, every auto-merge
-request is absent, and repository automatic merging is disabled. Triage-specific
-automatic rules remain unverified. Recheck this before presenting. No new local
+October 19 freshness snapshot: all 16 demo PRs were open and unmerged, every
+auto-merge request was absent, and repository automatic merging was disabled.
+See the [final PR snapshot](../assets/demo-evidence/2026-10-19-final-pr-state.json).
+Triage-specific automatic rules remain unverified. Live state was not reverified
+in this reconciliation; recheck before presenting. No new local
 application test pass is claimed by this documentation/media-only update.
 
 ## QA-03 comparison execution — October 19, 2026
@@ -85,9 +138,9 @@ shutdown recorded. Neither run started a browser session.
 [Corrected summary](../assets/demo-evidence/captures-2026-10-19/QA-03-corrected-completed.txt)
 and [corrected HTTP observations](../assets/demo-evidence/captures-2026-10-19/QA-03-corrected-http-evidence.txt)
 complete the fixed-journey failure/pass evidence. Runtime deviation from the
-repository's 24.19.0 pin remains documented for both runs. QA-03 evidence is
-verified within this scope; its 30-second recording is still pending.
-The launch/in-progress notes below are retained as history.
+repository's 24.19.0 pin remains documented for both runs, including the UI's
+`Validity: none` label. QA-03 evidence is verified within this scope; its
+30-second clip was subsequently checked / user-approved on October 19.
 
 Weak job completed in **7m 24s** with **one bug found**. Execution run ID:
 `cbf91494-d0c3-43cd-af67-9860a2c2c71d`. All four HTTP cases executed on the
@@ -98,6 +151,11 @@ with validity shown as `none`; retain this label without interpreting it as a
 runtime-compliance pass. Final checkout was clean and service shutdown verified.
 [Completed summary](../assets/demo-evidence/captures-2026-10-19/QA-03-weak-completed.txt)
 and [HTTP observations](../assets/demo-evidence/captures-2026-10-19/QA-03-weak-http-evidence.txt).
+
+### Historical QA-03 launch notes — October 19, superseded by completed results above
+
+The following records the launch-time state only; both outcomes and runtimes
+were subsequently captured. PR openness here is an October 19 observation.
 
 Started corrected job `554ca141-3818-4c95-8383-893f73ef4307` at **2:12 PM Pacific**
 on `coderabbitai/chat/b2dcfc4`, confirmed commit prefix `4e6f38b0`, unchanged
@@ -114,6 +172,10 @@ Corrected comparison target remains `coderabbitai/chat/b2dcfc4`, head
 `4e6f38b08d23d81ae408afdaed418b6aaccc2064`; both PRs were confirmed open.
 
 ## QA-03 reusable journey saved — October 19, 2026
+
+**Historical save-time snapshot, superseded:** “No recent result” and pending
+execution/recording below describe the save operation. The comparison execution
+above and presenter release record the subsequent completed runs and approval.
 
 Added **QA-03 — TEAM10 inclusive boundary and exact pricing contract** to the
 `mmani-demo` Test Suites library, with seven steps and fixed literal HTTP
@@ -162,11 +224,18 @@ to represent this saved final result accurately. Runtime version remains unknown
 schema/model versions do not prove Node or agent runtime versions. Do not claim
 pinned-runtime compliance. No original browser video exists in these exports.
 The weak run's unresolved criteria and runtime deviation remain explicit, and
-the two PR-specific plans still differ. Recording remains pending; QA-03's fixed
-journey comparison remains separate. This section supersedes the earlier missing
-plan/final-result blockers below.
+the two PR-specific plans still differ. The later October 19 presenter release
+records the approved edited clip; QA-03's fixed journey comparison remains
+separate. This section supersedes the earlier missing plan/final-result blockers
+below.
 
 ## QA-02 downloaded evidence — October 19, 2026
+
+**Historical first-export snapshot, partially superseded:** the subsequent saved
+plan/final-result recovery above closes those gaps, and the presenter release
+records the approved clip and completed scan. Unknown runtime and the absence of
+original browser video remain valid caveats. The first archive's original
+limitations and verification results are preserved below and in raw evidence.
 
 The user supplied `original-evidence.zip` for corrected PR #14 run
 `69a73d04-cc6e-416e-bbf5-72a604503bd0`, scenario
@@ -196,7 +265,11 @@ and unresolved criteria. These different PR-specific scenarios are not a fixed
 Test Suite replay and do not replace QA-03. The user also reports Deep Scan
 completed; completed scan artifacts have not yet been inspected in this update.
 
-## Latest readiness update — October 19, 2026, afternoon (Pacific)
+## Historical readiness update — October 19, 2026, afternoon (Pacific)
+
+**Superseded:** these enrollment/estimating snapshots preceded the saved QA-03
+journey, its completed comparison, the completed Deep Scan, and the twelve
+approved clips recorded above. Pending statements here apply only to this stage.
 
 This update supersedes the Test Suites enrollment and scan-not-started blockers
 in the earlier capture below. The user completed repository/environment setup
@@ -219,6 +292,12 @@ No duplicate scan or QA run was started during this verification. Recording
 status remains nine drafts; QA-02, QA-03, and SEC-02 are not completed clips.
 
 ## Continuation evidence — October 19, 2026 (Pacific)
+
+**Historical intermediate snapshot, partially superseded:** the PR #16 delivery
+and captured UI evidence remain valid at their recorded revisions. Corrected QA
+artifacts were later recovered, QA-03 setup/runs and Deep Scan completed, and all
+twelve clips were approved. Earlier access claims apply to that Mac/session;
+they do not establish access from the reviewing cloud environment today.
 
 This dated update supersedes earlier access, delivery, and recording-pending
 statements below. Earlier test results remain tied to their original SHAs and
@@ -245,10 +324,11 @@ environments; they were not rerun on this Mac.
   Its bot review was **skipped**, despite the successful status context; this is
   not a completed re-review. [Validation](../assets/demo-evidence/2026-10-19-pr16-validation.json)
   and [bot response](../assets/demo-evidence/2026-10-19-pr16-comments.json) are separate.
-  PR #16 is open against PR #15's branch; neither was merged. PR #15's own head
-  still contains the old documentation, so demonstrate the separate cleanup artifact.
-- All **16 PRs are open, unmerged, with auto-merge absent**. PR #16 has the
-  **Demo - Do not merge** label. Exact current base/head SHAs are in
+  On October 19, PR #16 was open against PR #15's branch; neither was merged.
+  PR #15's own head still contains the old documentation, so demonstrate the
+  separate cleanup artifact.
+- On October 19, all **16 PRs were open, unmerged, with auto-merge absent**.
+  PR #16 had the **Demo - Do not merge** label. Exact captured base/head SHAs are in
   [PR snapshot](../assets/demo-evidence/2026-10-19-pr-state.json).
 - Authenticated Triage and Change Stack work in the demo organization. GEN-02's
   actual click path is Triage → repository `mmani-demo` → search `BUG-01` →
@@ -275,7 +355,12 @@ environments; they were not rerun on this Mac.
   and last scanned **Never**. SEC-02 remains blocked on separately scoped scan
   evidence; no scan was started and no vulnerable branch was merged.
 
-### Video delivery and remaining gates
+### Historical nine-draft delivery and gates — October 19, superseded
+
+The following describes the first nine drafts before playback approval and the
+three later clips. The presenter release and capture manifest supersede its
+counts, pending gates, and “scripts only” statements. The media-validation file
+retains technical checks before final approval; it is not the approval register.
 
 Nine actual MP4 drafts now exist in [demo-videos](../assets/demo-videos/).
 They are **edited real UI still captures**, not continuous cursor recordings,
@@ -301,9 +386,19 @@ Freshness/reset: recheck the recorded SHAs and URLs; keep snapshot tags and all
 PRs open; never rerun fix actions during playback. Revisit the original QA artifact
 URLs after access is repaired, without replacing historical runs. Refresh clip
 crops if product UI changes. No current video implies execution finished in thirty
-seconds. Repository main remains the only authoritative status register.
+seconds. `docs/demo-workflow.md` on main remains the only authoritative status
+register.
 
-## Preparation status
+## Historical preparation status — October 16–19, 2026
+
+**Superseded where pending:** baseline publication, original reviews/fixes, QA
+artifact recovery, Test Suites comparison, scan evidence, and video approvals
+are completed as recorded above. This section retains the earlier preparation
+observations, local test results, and access failures at their original scope.
+Its “Working” API status describes the historical preparation environment;
+the reviewing cloud environment returned Forbidden and live access was not
+reverified. The CLI failure below is likewise historical; the later October 19
+continuation records successful CLI use on the Mac.
 
 The correct baseline is published at `916e3862f2bbf6f2b8a680d70692abc3b0df25a3`
 on `main`, with a passing [hosted baseline run](https://github.com/coderabbit-demo/mmani-demo/actions/runs/39001168131).
@@ -326,8 +421,9 @@ Local evidence (October 16, 2026, Pacific):
 - Frozen-lockfile reinstall (`npm ci`) and full validation repeated successfully;
   `npm audit` reported zero vulnerabilities at validation time.
 
-Run `npm run check` and both smoke modes to refresh local evidence. Coverage
-reports are generated outputs, not hosted CI results. See README for commands.
+For a separately scoped local-evidence refresh, run `npm run check` and both
+smoke modes. No such run is needed for this documentation-only reconciliation.
+Coverage reports are generated outputs, not hosted CI results. See README for commands.
 
 | Prerequisite | Evidence / status |
 | --- | --- |
@@ -346,6 +442,10 @@ CLI note: the official installer installed CodeRabbit CLI to
 CodeRabbit's hosted GitHub reviews. Do not present this as CLI parity evidence.
 
 ## Use-case and recording register
+
+Status below reflects the October 19 preserved evidence and approvals. PR
+open/unmerged state and platform availability need a separate live freshness
+check; neither was reverified on October 28.
 
 Each use case gets a focused PR when implemented. General presentation segments
 can reference these PRs without combining their defects. All video targets are
@@ -371,7 +471,8 @@ and clip if another configuration setting is selected for the demo.
 
 ## Original snapshots and validation
 
-All five PRs target `main` and have the **Demo - Do not merge** label. Each starts
+The preserved preparation evidence records all five PRs targeting `main` with
+the **Demo - Do not merge** label. Each starts
 from the same correct baseline. The tests and assertions remain unchanged.
 
 | ID | Original snapshot tag | Local tests | Hosted seeded run |
@@ -411,9 +512,11 @@ evidence tied to their respective SHAs.
 
 ## CodeRabbit remediation and QA evidence
 
-All four fixes were produced by CodeRabbit's coding workflow and published using
-its **Create a pull request with these changes** action. No finding was repaired
-manually. The original demo branches remain unchanged and all PRs remain unmerged.
+These are preserved October 16–19 results, not fresh execution or live PR-state
+checks. All four fixes were produced by CodeRabbit's coding workflow and published
+using its **Create a pull request with these changes** action. No finding was repaired
+manually. The October 19 snapshot records unchanged original demo branches and
+all PRs open/unmerged; current state was not reverified.
 
 | Use case | CodeRabbit fix | Local validation |
 | --- | --- | --- |
@@ -465,14 +568,20 @@ and source/compiled HTTP smoke checks pass.
 A separate documentation check found that its copied workflow links to evidence
 files absent from the older branch. CodeRabbit confirmed all eleven missing targets
 and produced a [documentation-only proposal](https://github.com/coderabbit-demo/mmani-demo/pull/15#issuecomment-6229946259).
-Its create-PR action has been activated; delivery is pending. The proposal replaces
-the branch copy with a short canonical link and provenance, preserving verified
-source/tests. No manual fix was applied. The timeout remediation is locally verified;
-the generated PR is not fully ready until its documentation is reconciled.
-The authoritative workflow remains this file on main.
+Its initial create-PR action was activated without delivery at that time. The
+bounded October 19 CodeRabbit retry subsequently delivered
+[cleanup PR #16](https://github.com/coderabbit-demo/mmani-demo/pull/16), head
+`09dd2e649a9f49918332f4d9ca425e6b3aa6e6b4`, against the recorded PR #15 head.
+It replaces the branch copy with a short canonical link and provenance;
+[independent checks](../assets/demo-evidence/2026-10-19-cleanup-independent-check.json)
+confirm source/tests are identical. No manual fix was applied. The timeout fix
+and separate documentation cleanup were validated, but PR #16 was not merged
+into #15: the October 19 snapshot retains both open/unmerged, and #15's own
+head still has the old docs. The authoritative workflow remains this file on main.
 
 
-The consumer repository is now public, verified through GitHub's API.
+The consumer repository was verified public through GitHub's API during the
+original preparation; current visibility/access was not reverified.
 [CodeRabbit successfully retrieved its source](https://github.com/coderabbit-demo/mmani-demo/pull/3#issuecomment-6229583446)
 at `8d814ccfa4bf014a57ff321c010e3e40b9545fd0`: `src/checkout.ts`,
 `buildCheckoutSummary(cart)`, line 25 reads `quote.totalCents`. Its
@@ -506,7 +615,10 @@ completed on that exact generated commit: **one scenario passed**,
 `pricing-team10-inclusive-boundary`, run `69a73d04-cc6e-416e-bbf5-72a604503bd0`.
 The published summary reports that recorded HTTP responses matched all four cases,
 the exact JSON contract, and rounding behavior. Input validation and unrelated
-endpoints were outside scope; detailed response artifacts have not been retrieved.
+endpoints were outside scope. Detailed corrected responses, the saved plan, and
+the final result were later recovered as
+[exports](../assets/demo-evidence/QA-02-corrected-export/), with archive consistency
+checks recorded above; cloud origin was not independently fetched.
 Its plan differs from the weak run's `pricing-discount-001`, so this is not a replay
 of a fixed Test Suite. It ran in an emulated environment, warns that review context
 was unavailable, and describes its results as non-authoritative.
@@ -522,11 +634,14 @@ starting at ten items and returns exact integer-cent totals.” Exit criteria:
 the public status does not expose the full plan or actual/expected values.
 An [evidence request](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229850090)
 received a [retrieval response](https://github.com/coderabbit-demo/mmani-demo/pull/10#issuecomment-6229885368):
-CodeRabbit could verify only the public summary, not the saved plan, input/output
-artifacts, or reasons for unresolved criteria. The authenticated QA evidence page
-or an export of its original artifacts is needed to complete that segment. Do not
-substitute our independent local probe for QA Agent execution details. Reusable
-Test Suites are still unverified. Historical runbooks do not fill these gaps.
+At that stage, CodeRabbit could verify only the public summary, not the saved
+plan, input/output artifacts, or reasons for unresolved criteria. The October 19
+weak-run UI capture and corrected exports subsequently supplied those artifacts;
+retain the weak final validator's 1 failed / 4 unresolved criteria and Node
+24.14.1 deviation, alongside the unknown corrected runtime. Do not substitute
+our independent local probe for QA Agent execution details. QA-03 separately
+records completed failure/pass executions of reusable Test Suite revision 1 on
+Node v24.20.0. Historical retrieval limits remain in the linked raw response.
 
 CONFIG-01 [PR #13](https://github.com/coderabbit-demo/mmani-demo/pull/13), SHA
 `51053d1eead9af9d21d313a3dbf4d3bcc9d38c59`, changes only `reviews.profile` from
@@ -588,7 +703,9 @@ path instructions are app-managed and separate from PR-review YAML instructions.
 
 Draft roughly 60–70 spoken words, then time the narration. For asynchronous
 actions, label the cut **After completion**; the clip duration is not execution
-time. Use real UI, readable crops, and no secrets. No footage has been recorded.
+time. Use real UI, readable crops, and no secrets. Twelve approved narrated
+edits of real UI still captures now exist; no continuous cursor recording is
+claimed. Use the manifest's actual timing/narration for the approved exports.
 
 Before recording each segment, populate its evidence card:
 
@@ -599,6 +716,15 @@ Before recording each segment, populate its evidence card:
 - Exact click path, narration, timed shot list, and any labeled time cuts.
 - Video asset path, measured duration, capture date, and readability/audio check.
 - Freshness, original snapshot preservation, and reset instructions.
+
+### Historical recording preflight — October 16–19, superseded
+
+The notes below describe the initial caption/preflight preparation and stalled
+cleanup delivery. Later October 19 captures, PR #16 delivery, and twelve approved
+clips supersede those blockers. The earlier caption scripts remain unchanged;
+the matching delivered SRTs are in [demo-videos](../assets/demo-videos/).
+Tool availability, asset-network access, and authenticated sessions below apply
+only to the original environment, not the current reviewing cloud environment.
 
 Draft caption tracks for all twelve segments are in
 [assets/demo-captions](../assets/demo-captions/). Each spans exactly 30 seconds,
@@ -636,10 +762,12 @@ it or apply its hidden patch manually.
 
 ## Draft 30-second narration and shot lists
 
-These scripts are preparation artifacts, not recordings. Use the five timed
-beats above. Record a claimed fix/result only after CodeRabbit produces it and
-validation confirms it; otherwise leave the segment blocked. Adjust narration
-speed after a timed read, preserving a 30-second final export.
+These are historical preparation scripts, retained for provenance. Their
+completion gates describe the original plan; the presenter release and register
+record completed evidence and approvals. The capture manifest records the actual
+approved narration and shots, including the updated QA-02, QA-03, and SEC-02
+stories above. For a future edit, use the five timed beats above and show a claimed
+fix/result only after CodeRabbit produces it and validation confirms it.
 
 ### GEN-01 — Author workflow
 
@@ -789,12 +917,17 @@ the repository is safe or fully covered.”
 
 ## Next phases and presentation readiness
 
-1. Verify live platform prerequisites and publish the correct baseline when that
-   work is undertaken; do not call local checks a completed CodeRabbit review.
-2. Create the five independent demo PRs, preserving their original evidence.
-3. Create dedicated QA comparisons and prepare completed QA Agent runs.
-4. Rehearse selected configuration/security extensions and record actual outcomes.
-5. Complete the evidence cards, narration, recordings, and freshness checks here.
+| Phase | Completed in preserved evidence | Remaining freshness checks before a live presentation |
+| --- | --- | --- |
+| Baseline and platform preparation | Correct baseline published; hosted CI and reviews captured | Recheck live platform access and relevant current check/PR SHAs; local checks are not hosted reviews |
+| Focused demo PRs and CodeRabbit fixes | Five original scenarios, preserved snapshot tags, separate generated fixes, and documentation-only cleanup #16 delivered | Recheck open/unmerged state, labels, automatic-merge exclusions, and recorded links; do not imply #16 was merged into #15 |
+| QA comparisons | Weak/strong assertions, recovered PR-specific plans/results, and reusable journey revision 1 failure/pass completed | Recheck read-only artifact/UI access while retaining different PR plans, runtime deviations, unknown runtime, and unresolved criteria |
+| Configuration and security extensions | Effective-profile evidence and completed Deep Scan/finding/surface captures preserved | Recheck current schema/config protection, Triage rules, and evidence freshness; keep the recorded open CWE-835 finding and scope caveats visible |
+| Presenter release | Evidence cards, narration, twelve MP4/SRT pairs, and all twelve October 19 user approvals recorded | Check readability, playback, links, and manifest hashes before reuse; refresh crops only if needed and separately authorized |
+
+Freshness checks are outstanding; this cleanup does not perform them or restart
+historical reviews, QA runs, scans, or fix tasks. Preserve the original outcomes
+and raw snapshots when adding any separately authorized future observations.
 
 Never manually remediate findings. If a CodeRabbit fix action is unavailable,
 record it as blocked. Inspect/test generated fixes and route further findings
