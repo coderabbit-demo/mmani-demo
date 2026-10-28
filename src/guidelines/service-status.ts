@@ -1,6 +1,6 @@
-/** Check a developer-configured service with a bounded outbound request. */
+/** Check a developer-configured service. */
 export async function serviceIsHealthy(url: string): Promise<boolean> {
-  const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });
+  const response = await fetch(url);
   await response.body?.cancel();
   return response.ok;
 }
